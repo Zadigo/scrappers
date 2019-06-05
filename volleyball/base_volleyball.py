@@ -19,11 +19,6 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 DATA_DIR = os.path.join(BASE_DIR, 'data')
 
-URLS = {
-    'players': 'http://%s.fivb.com/en/competition/teams/%s/players',
-    'nations_league': 'https://www.volleyball.world/en/vnl/women/teams'
-}
-
 DATA_DIRS = {
     'player_csv': os.path.join(BASE_DIR, 'data')
 }
