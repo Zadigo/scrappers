@@ -177,7 +177,7 @@ class TeamPage(TeamsPage):
         """
         print('-'*15)
         responses = []
-        t = 0
+        # t = 0
         for team in self.get_teams:
             team_roster_url = urljoin(team[0], 'team_roster')
             current_date = datetime.datetime.now()
@@ -188,10 +188,10 @@ class TeamPage(TeamsPage):
             response[1] = response[1].find('section', id='roster')
             responses.append(response)
 
-            if t == 2:
-                break
+            # if t == 2:
+            #     break
 
-            t += 1
+            # t += 1
 
         players = []
 
@@ -300,15 +300,15 @@ class PlayerPage(Requestor):
             pass
         return position_number
 
-# if __name__ == "__main__":
-#     args = argparse.ArgumentParser(description='FiVB page parser')
-#     args.add_argument('-u', '--url', help='URL page')
-#     args.add_argument('-o', '--output_filename', help='Name to associate with the CSV file')
-#     parsed_args = args.parse_args()
+if __name__ == "__main__":
+    args = argparse.ArgumentParser(description='FiVB page parser')
+    args.add_argument('-u', '--url', help='URL page')
+    args.add_argument('-o', '--output_filename', help='Name to associate with the CSV file')
+    parsed_args = args.parse_args()
 
-#     if parsed_args.output_filename:
-#         data = TeamPage(url=parsed_args.url, file_name=parsed_args.output_filename)
-#         data.get_team_page()
+    # if parsed_args.output_filename:
+    data = TeamPage(url=parsed_args.url)
+    data.get_team_page()
 
 
 # ENHANCEMENT: Create threading
@@ -317,4 +317,4 @@ class PlayerPage(Requestor):
 # first_thread.start()
 # second_thread.start()
 
-PlayerPage('https://www.volleyball.world/en/vnl/women/teams/ita-italy/players/cristina-chirichella?id=71297')
+# PlayerPage('https://www.volleyball.world/en/vnl/women/teams/ita-italy/players/cristina-chirichella?id=71297')
