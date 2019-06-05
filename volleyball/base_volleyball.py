@@ -13,7 +13,7 @@ from urllib.parse import unquote, urlencode, urljoin, urlparse, splitquery
 import requests
 from bs4 import BeautifulSoup
 
-from ua import get_rand_agent
+from user_agent import get_rand_agent
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -28,37 +28,56 @@ DATA_DIRS = {
     'player_csv': os.path.join(BASE_DIR, 'data')
 }
 
-COUNTRIES = ['arg-argentina', 'aze-azerbaijan', 'bra-brazil',
-            'bul-bulgaria', 'cmr-cameroon', 'can-canada',
-            'chn-china', 'cub-cuba', 'dom-dominican%20republic',
-            'ger-germany', 'ita-italy', 'jpn-japan', 'kaz-kazakhstan',
-            'ken-kenya', 'kor-korea', 'mex-mexico',
-            'ned-netherlands', 'pur-puerto%20rico', 'rus-russia',
-            'srb-serbia', 'tha-thailand', 'tto-trinidad%20%20tobago',
-            'tur-turkey', 'usa-usa']
+# TODO: Erase countries -- unnecessary at this stage
+# COUNTRIES = ['arg-argentina', 'aze-azerbaijan', 'bra-brazil',
+#             'bul-bulgaria', 'cmr-cameroon', 'can-canada',
+#             'chn-china', 'cub-cuba', 'dom-dominican%20republic',
+#             'ger-germany', 'ita-italy', 'jpn-japan', 'kaz-kazakhstan',
+#             'ken-kenya', 'kor-korea', 'mex-mexico',
+#             'ned-netherlands', 'pur-puerto%20rico', 'rus-russia',
+#             'srb-serbia', 'tha-thailand', 'tto-trinidad%20%20tobago',
+#             'tur-turkey', 'usa-usa']
 
+# ENHANCEMENT: Subclass a list instead
 class Player(namedtuple('Player', ['name', 'link', 'date_of_birth',
                          'age', 'height', 'weight', 'spike', 'block'])):
+    """Player class used to create a volleyball player
+    """
     __slots__ = ()
 
+
 class WriteCSV:
+    """Use this class to write a CSV file containing
+    the data obtained from the website.
+    """
     current_file = None
 
     def _write(self, player=None):
-        """Write a volleyball player to a CSV file.
+        """Write a volleyball player.
         """
-        if self.current_file is not None:
-            with open(self.current_file, mode='a', encoding='utf-8', newline='') as f:
-                csv_file = csv.writer(f, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-                csv_file.writerow(player)
+        if self.current_file is None:
+            self.current_file = self.create_new_file
 
+            try:
+                # Create file and/or
+                # necessary directories
+                os.makedirs(os.path.dirname(self.current_file))
+            except FileExistsError:
+                pass
+
+        with open(self.current_file, mode='a', encoding='utf-8', newline='') as f:
+            csv_file = csv.writer(f, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+            csv_file.writerow(player)
+
+    @property
     def create_new_file(self):
-        """Create a new CSV file such as `month_year_token`.
+        """Return a new CSV file path such as `month_year_token`.
         """
         current_date = datetime.datetime.now().date()
         token = secrets.token_hex(5)
         filename = f'{current_date.month}_{current_date.year}_{token}.csv'
-        self.current_file = os.path.join(DATA_DIR, filename)
+        return os.path.join(DATA_DIR, filename)
+
 
 class Requestor:
     def create_request(self, url, user_agent=get_rand_agent(), **kwargs):
@@ -246,18 +265,18 @@ class PlayerPage(Requestor):
         update_values = [new_link, self.clean_text(position)]
         print(update_values)
 
-if __name__ == "__main__":
-    args = argparse.ArgumentParser(description='Volleyball page parser')
-    # args.add_argument('-o', '--output')
-    # args.add_argument('-f', '--filename')
-    # args.add_argument('-g', '--gethtml')
-    args.add_argument('method', help='Call teams_page, player_page or team_page')
-    parsed_args = args.parse_args()
-# 
-    if parsed_args.method == 'team_page':
-        url = input('Enter the FiVB volleyball team page: ')
-        print(url)
-        # TeamPage(create_file=True).get_team_page()
+# if __name__ == "__main__":
+#     args = argparse.ArgumentParser(description='Volleyball page parser')
+#     # args.add_argument('-o', '--output')
+#     # args.add_argument('-f', '--filename')
+#     # args.add_argument('-g', '--gethtml')
+#     args.add_argument('method', help='Call teams_page, player_page or team_page')
+#     parsed_args = args.parse_args()
+# # 
+#     if parsed_args.method == 'team_page':
+#         url = input('Enter the FiVB volleyball team page: ')
+#         print(url)
+#         # TeamPage(create_file=True).get_team_page()
     
 # first_thread = threading.Thread(target=Requestor.create_request, args=(Requestor, 'https://www.volleyball.world/en/vnl/women/teams'))
 # second_thread = threading.Thread(target=TeamPage.__init__, args=(TeamPage,))
