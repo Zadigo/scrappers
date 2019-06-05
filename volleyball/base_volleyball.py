@@ -38,13 +38,12 @@ DATA_DIRS = {
 #             'srb-serbia', 'tha-thailand', 'tto-trinidad%20%20tobago',
 #             'tur-turkey', 'usa-usa']
 
-# ENHANCEMENT: Subclass a list instead
+# ENHANCEMENT: Subclass a list instead?
 class Player(namedtuple('Player', ['name', 'link', 'date_of_birth',
                          'age', 'height', 'weight', 'spike', 'block'])):
     """Player class used to create a volleyball player
     """
     __slots__ = ()
-
 
 class WriteCSV:
     """Use this class to write a CSV file containing
@@ -52,7 +51,7 @@ class WriteCSV:
     """
     current_file = None
 
-    def _write(self, player=None):
+    def _write(self, players=[]):
         """Write a volleyball player.
         """
         if self.current_file is None:
@@ -67,7 +66,8 @@ class WriteCSV:
 
         with open(self.current_file, mode='a', encoding='utf-8', newline='') as f:
             csv_file = csv.writer(f, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-            csv_file.writerow(player)
+            for player in players:
+                csv_file.writerow(player)            
 
     @property
     def create_new_file(self):
@@ -77,7 +77,6 @@ class WriteCSV:
         token = secrets.token_hex(5)
         filename = f'{current_date.month}_{current_date.year}_{token}.csv'
         return os.path.join(DATA_DIR, filename)
-
 
 class Requestor:
     def create_request(self, url, user_agent=get_rand_agent(), **kwargs):
@@ -103,6 +102,7 @@ class Requestor:
     def create_soup(response):
         return BeautifulSoup(response.text, 'html.parser')
 
+    # TODO: Delete this method
     # def get_countries(self, path):
     #     """Return the countries with their paths
     #     present on a team's page.
@@ -123,13 +123,13 @@ class Requestor:
     def clean_text(self, text):
         return text.strip()
 
-class TeamsPage(Requestor):
-    def __init__(self, create_file=False):
-        self.write_player = WriteCSV()
-
-        # Create a new file to write to
-        if create_file:
-            self.write_player.create_new_file()
+class TeamsPage(Requestor, WriteCSV):
+    """This analyzes the page referencing the teams and parses the
+    different countries present on that page with their urls.
+    """
+    def __init__(self, url=None, file_name=None):
+        if file_name:
+            self.current_file = file_name
 
         response = self.create_request('https://www.volleyball.world/en/vnl/women/teams')
         soup = response[1]
@@ -139,14 +139,19 @@ class TeamsPage(Requestor):
         
         # <a></a>
         unparsed_links = section.find_all('a')
+
+        # TODO: If we send relative path to requests,
+        # there could be an issue
         parsed_links = self.parse_links(unparsed_links)
         
         self.teams = parsed_links
 
-
     def parse_links(self, links, relative=False):
-        """Parse the links on the teams page.
-        Returns a `list` such as [(link, country), ...]
+        """Parse the links on the teams page and returns a 
+        `list` such as [(link, country), ...].
+
+        If `relative` is true, the definition returns the path
+        of the link instead of the full url.
         """
         parsed_links = []
 
@@ -173,8 +178,11 @@ class TeamsPage(Requestor):
 
 class TeamPage(TeamsPage):
     def get_team_page(self):
+        """Parse a specific volleyball team's page.
+        """
         print('-'*15)
         responses = []
+        t = 0
         for team in self.get_teams:
             team_roster_url = urljoin(team[0], 'team_roster')
             current_date = datetime.datetime.now()
@@ -184,6 +192,13 @@ class TeamPage(TeamsPage):
             # section#roster
             response[1] = response[1].find('section', id='roster')
             responses.append(response)
+
+            if t == 2:
+                break
+
+            t += 1
+
+        players = []
 
         # [(response, sections#roster), ...]
         for response in responses:
@@ -197,7 +212,7 @@ class TeamPage(TeamsPage):
             for row in rows:
                 items = row.find_all('td')
                 
-                # Eugénie Constanza
+                # ex. Eugénie Constanza
                 player_name = items[1].find('a').text
                 # /en/vnl/women/teams/bel-belgium/players/eugenie-constanza?id=71449
                 player_profile_link = items[1].find('a')['href']
@@ -217,9 +232,13 @@ class TeamPage(TeamsPage):
                 player = Player(player_name, player_profile_link, date_of_birth,
                             age, height, weight, spike, block)
 
-                self.write_player._write(player=player)
+                # TODO: Append player object to an
+                # array that will then be passed to
+                # the WriteCSV class
+                players.append(player)
 
-        self.write_player._write
+        # TODO: Delete
+        self._write(players)
 
     @staticmethod
     def get_age(date_of_birth):
@@ -233,13 +252,29 @@ class TeamPage(TeamsPage):
 
 class PlayerPage(Requestor):
     def __init__(self, url):
-        response = self.create_request('https://www.volleyball.world/en/vnl/women/teams/ita-italy/players/cristina-chirichella?id=71297')
-        soup = response[1]
+        response = self.create_request(url)
+        self.soup = soup = response[1]
 
-        # .. IMAGE
-
+        # Construct image URL ...
         # section#playerDetails > img
-        image = soup.find('section', id='playerDetails').find('img')
+        image_url = self.image_url()
+
+        # ... > ul.line-list > span.role + strong
+        position = soup.find('section', id='playerCareer').find('ul') \
+                        .findChild('li').find('strong').getText()
+        
+        update_values = [image_url, self.clean_text(position)]
+
+        print(update_values)
+
+    def image_url(self, height=1200, width=800):
+        """Takes the existing image url present on the player's
+        page and reconstructs it in order to generate a bigger one.
+
+        Size is `1200 x 800` by default. 
+        """
+        # section#playerDetails > img
+        image = self.soup.find('section', id='playerDetails').find('img')
         splitted_url = splitquery(image['src'])
 
         # Parse number & type in query
@@ -254,31 +289,37 @@ class PlayerPage(Requestor):
             'width': '800'
         }
         params = urlencode(new_query)
-        new_link = splitted_url[0] + '?' + params
+        return splitted_url[0] + '?' + params
 
-        # .. POSITION
+    def transform_position(self, position):
+        """Transform position from string to number. For instance,
+        `middle blocker` becomes `3`.
+        """
+        positions = {
+            'Middle blocker': 3
+        }
 
-        # ... > ul.line-list > span.role + strong
-        position = soup.find('section', id='playerCareer').find('ul')\
-                    .findChild('li').find('strong').getText()
-        
-        update_values = [new_link, self.clean_text(position)]
-        print(update_values)
+        try:
+            position_number = positions[position]
+        except KeyError:
+            pass
+        return position_number
 
 # if __name__ == "__main__":
-#     args = argparse.ArgumentParser(description='Volleyball page parser')
-#     # args.add_argument('-o', '--output')
-#     # args.add_argument('-f', '--filename')
-#     # args.add_argument('-g', '--gethtml')
-#     args.add_argument('method', help='Call teams_page, player_page or team_page')
+#     args = argparse.ArgumentParser(description='FiVB page parser')
+#     args.add_argument('-u', '--url', help='URL page')
+#     args.add_argument('-o', '--output_filename', help='Name to associate with the CSV file')
 #     parsed_args = args.parse_args()
-# # 
-#     if parsed_args.method == 'team_page':
-#         url = input('Enter the FiVB volleyball team page: ')
-#         print(url)
-#         # TeamPage(create_file=True).get_team_page()
-    
+
+#     if parsed_args.output_filename:
+#         data = TeamPage(url=parsed_args.url, file_name=parsed_args.output_filename)
+#         data.get_team_page()
+
+
+# ENHANCEMENT: Create threading
 # first_thread = threading.Thread(target=Requestor.create_request, args=(Requestor, 'https://www.volleyball.world/en/vnl/women/teams'))
 # second_thread = threading.Thread(target=TeamPage.__init__, args=(TeamPage,))
 # first_thread.start()
 # second_thread.start()
+
+PlayerPage('https://www.volleyball.world/en/vnl/women/teams/ita-italy/players/cristina-chirichella?id=71297')
