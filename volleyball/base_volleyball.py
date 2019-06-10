@@ -1,14 +1,14 @@
 import argparse
 import csv
 import datetime
-import secrets
-import pickle
 import os
+import pickle
 import re
+import secrets
 import threading
 import time
 from collections import deque, namedtuple
-from urllib.parse import unquote, urlencode, urljoin, urlparse, splitquery
+from urllib.parse import splitquery, unquote, urlencode, urljoin, urlparse
 
 import requests
 from bs4 import BeautifulSoup
@@ -18,11 +18,6 @@ from user_agent import get_rand_agent
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 DATA_DIR = os.path.join(BASE_DIR, 'data')
-
-URLS = {
-    'players': 'http://%s.fivb.com/en/competition/teams/%s/players',
-    'nations_league': 'https://www.volleyball.world/en/vnl/women/teams'
-}
 
 DATA_DIRS = {
     'player_csv': os.path.join(BASE_DIR, 'data')
@@ -65,9 +60,10 @@ class WriteCSV:
                 pass
 
         with open(self.current_file, mode='a', encoding='utf-8', newline='') as f:
+            print('Writing players...')
             csv_file = csv.writer(f, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
             for player in players:
-                csv_file.writerow(player)            
+                csv_file.writerow(player)       
 
     @property
     def create_new_file(self):
@@ -131,7 +127,9 @@ class TeamsPage(Requestor, WriteCSV):
         if file_name:
             self.current_file = file_name
 
-        response = self.create_request('https://www.volleyball.world/en/vnl/women/teams')
+        # ENHANCEMENT: Test that the url follows the
+        # pattern /??/teams
+        response = self.create_request(url)
         soup = response[1]
 
         # section#pools
@@ -178,11 +176,13 @@ class TeamsPage(Requestor, WriteCSV):
 
 class TeamPage(TeamsPage):
     def get_team_page(self):
-        """Parse a specific volleyball team's page.
+        """Parse a specific volleyball team's page. By doing so,
+        we are trying to gather all the statistics of given players
+        in a volleyball team.
         """
         print('-'*15)
         responses = []
-        t = 0
+        # t = 0
         for team in self.get_teams:
             team_roster_url = urljoin(team[0], 'team_roster')
             current_date = datetime.datetime.now()
@@ -193,10 +193,10 @@ class TeamPage(TeamsPage):
             response[1] = response[1].find('section', id='roster')
             responses.append(response)
 
-            if t == 2:
-                break
+            # if t == 2:
+            #     break
 
-            t += 1
+            # t += 1
 
         players = []
 
@@ -232,7 +232,7 @@ class TeamPage(TeamsPage):
                 player = Player(player_name, player_profile_link, date_of_birth,
                             age, height, weight, spike, block)
 
-                # TODO: Append player object to an
+                # Append player object to an
                 # array that will then be passed to
                 # the WriteCSV class
                 players.append(player)
@@ -241,7 +241,7 @@ class TeamPage(TeamsPage):
         self._write(players)
 
     @staticmethod
-    def get_age(date_of_birth):
+    def get_age(date_of_birth, adjusted=False):
         current_year = datetime.datetime.now().year
         date = datetime.datetime.strptime(date_of_birth, '%d/%m/%Y')
         return current_year - date.year
@@ -251,6 +251,9 @@ class TeamPage(TeamsPage):
         pass
 
 class PlayerPage(Requestor):
+    """Parse a player's profile page. Use this class to add
+    extra information on an existing player profile.
+    """
     def __init__(self, url):
         response = self.create_request(url)
         self.soup = soup = response[1]
@@ -305,21 +308,25 @@ class PlayerPage(Requestor):
             pass
         return position_number
 
-# if __name__ == "__main__":
-#     args = argparse.ArgumentParser(description='FiVB page parser')
-#     args.add_argument('-u', '--url', help='URL page')
-#     args.add_argument('-o', '--output_filename', help='Name to associate with the CSV file')
-#     parsed_args = args.parse_args()
+if __name__ == "__main__":
+    args = argparse.ArgumentParser(description='FiVB page parser')
+    args.add_argument('-u', '--url', help='URL to query')
+    args.add_argument('-a', '--adjust-age', type=int, help='Adjust age to the year the tournament was played')
+    args.add_argument('-o', '--output_filename', help='Name to associate with the CSV file')
+    parsed_args = args.parse_args()
 
-#     if parsed_args.output_filename:
-#         data = TeamPage(url=parsed_args.url, file_name=parsed_args.output_filename)
-#         data.get_team_page()
+    # if parsed_args.output_filename:
+    # data = TeamPage(url=parsed_args.url)
+    # data.get_team_page()
+
+    data = TeamPage(url=parsed_args.url)
+    data.get_team_page()
 
 
-# ENHANCEMENT: Create threading
-# first_thread = threading.Thread(target=Requestor.create_request, args=(Requestor, 'https://www.volleyball.world/en/vnl/women/teams'))
-# second_thread = threading.Thread(target=TeamPage.__init__, args=(TeamPage,))
-# first_thread.start()
-# second_thread.start()
+    # ENHANCEMENT: Create threading
+    # first_thread = threading.Thread(target=Requestor.create_request, args=(Requestor, 'https://www.volleyball.world/en/vnl/women/teams'))
+    # second_thread = threading.Thread(target=TeamPage.__init__, args=(TeamPage,))
+    # first_thread.start()
+    # second_thread.start()
 
-PlayerPage('https://www.volleyball.world/en/vnl/women/teams/ita-italy/players/cristina-chirichella?id=71297')
+    # PlayerPage('https://www.volleyball.world/en/vnl/women/teams/ita-italy/players/cristina-chirichella?id=71297')

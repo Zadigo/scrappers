@@ -1,0 +1,4005 @@
+{
+    "tournament": "Nations League",
+    "records": [
+        {
+            "name": "Bieke Kindt",
+            "url_profile": "/en/vnl/women/teams/bel-belgium/players/bieke-kindt?id=71424",
+            "date_of_birth": "11/02/2000",
+            "age": "19",
+            "height": "191",
+            "weight": "74",
+            "spike": "302",
+            "block": "284"
+        },
+        {
+            "name": "Elise Van Sas",
+            "url_profile": "/en/vnl/women/teams/bel-belgium/players/elise-van-sas?id=71427",
+            "date_of_birth": "01/08/1997",
+            "age": "22",
+            "height": "188",
+            "weight": "74",
+            "spike": "296",
+            "block": "281"
+        },
+        {
+            "name": "Britt Herbots",
+            "url_profile": "/en/vnl/women/teams/bel-belgium/players/britt-herbots?id=71423",
+            "date_of_birth": "24/09/1999",
+            "age": "20",
+            "height": "182",
+            "weight": "63",
+            "spike": "310",
+            "block": "290"
+        },
+        {
+            "name": "Nathalie Lemmens",
+            "url_profile": "/en/vnl/women/teams/bel-belgium/players/nathalie-lemmens?id=71425",
+            "date_of_birth": "12/03/1995",
+            "age": "24",
+            "height": "192",
+            "weight": "85",
+            "spike": "311",
+            "block": "288"
+        },
+        {
+            "name": "Laura Heyrman",
+            "url_profile": "/en/vnl/women/teams/bel-belgium/players/laura-heyrman?id=71447",
+            "date_of_birth": "17/05/1993",
+            "age": "26",
+            "height": "186",
+            "weight": "74",
+            "spike": "310",
+            "block": "280"
+        },
+        {
+            "name": "Laure Flament",
+            "url_profile": "/en/vnl/women/teams/bel-belgium/players/laure-flament?id=71429",
+            "date_of_birth": "18/06/1998",
+            "age": "21",
+            "height": "182",
+            "weight": "76",
+            "spike": "295",
+            "block": "282"
+        },
+        {
+            "name": "Celine Van Gestel",
+            "url_profile": "/en/vnl/women/teams/bel-belgium/players/celine-van-gestel?id=71431",
+            "date_of_birth": "07/11/1997",
+            "age": "22",
+            "height": "183",
+            "weight": "70",
+            "spike": "310",
+            "block": "280"
+        },
+        {
+            "name": "Kaja Grobelna",
+            "url_profile": "/en/vnl/women/teams/bel-belgium/players/kaja-grobelna?id=71430",
+            "date_of_birth": "04/01/1995",
+            "age": "24",
+            "height": "188",
+            "weight": "72",
+            "spike": "318",
+            "block": "299"
+        },
+        {
+            "name": "Freya Aelbrecht",
+            "url_profile": "/en/vnl/women/teams/bel-belgium/players/freya-aelbrecht?id=71428",
+            "date_of_birth": "10/02/1990",
+            "age": "29",
+            "height": "186",
+            "weight": "82",
+            "spike": "308",
+            "block": "282"
+        },
+        {
+            "name": "Dominika Sobolska",
+            "url_profile": "/en/vnl/women/teams/bel-belgium/players/dominika-sobolska?id=71450",
+            "date_of_birth": "03/12/1991",
+            "age": "28",
+            "height": "187",
+            "weight": "83",
+            "spike": "309",
+            "block": "292"
+        },
+        {
+            "name": "Iris Vandewiele",
+            "url_profile": "/en/vnl/women/teams/bel-belgium/players/iris-vandewiele?id=71452",
+            "date_of_birth": "07/03/1994",
+            "age": "25",
+            "height": "189",
+            "weight": "71",
+            "spike": "295",
+            "block": "286"
+        },
+        {
+            "name": "Dominika Strumilo",
+            "url_profile": "/en/vnl/women/teams/bel-belgium/players/dominika-strumilo?id=71436",
+            "date_of_birth": "26/12/1996",
+            "age": "23",
+            "height": "187",
+            "weight": "63",
+            "spike": "311",
+            "block": "292"
+        },
+        {
+            "name": "Marlies Janssens",
+            "url_profile": "/en/vnl/women/teams/bel-belgium/players/marlies-janssens?id=71434",
+            "date_of_birth": "04/06/1997",
+            "age": "22",
+            "height": "193",
+            "weight": "79",
+            "spike": "312",
+            "block": "299"
+        },
+        {
+            "name": "Jutta Van De Vyver",
+            "url_profile": "/en/vnl/women/teams/bel-belgium/players/jutta-van-de-vyver?id=71438",
+            "date_of_birth": "11/06/1996",
+            "age": "23",
+            "height": "175",
+            "weight": "72",
+            "spike": "290",
+            "block": "270"
+        },
+        {
+            "name": "Karolina Goliat",
+            "url_profile": "/en/vnl/women/teams/bel-belgium/players/karolina-goliat?id=71439",
+            "date_of_birth": "25/10/1996",
+            "age": "23",
+            "height": "189",
+            "weight": "79",
+            "spike": "308",
+            "block": "295"
+        },
+        {
+            "name": "Ilka Van De Vyver",
+            "url_profile": "/en/vnl/women/teams/bel-belgium/players/ilka-van-de-vyver?id=71437",
+            "date_of_birth": "26/01/1993",
+            "age": "26",
+            "height": "170",
+            "weight": "79",
+            "spike": "296",
+            "block": "273"
+        },
+        {
+            "name": "Oriane Moulin",
+            "url_profile": "/en/vnl/women/teams/bel-belgium/players/oriane-moulin?id=71426",
+            "date_of_birth": "18/02/2000",
+            "age": "19",
+            "height": "181",
+            "weight": "63",
+            "spike": "303",
+            "block": "287"
+        },
+        {
+            "name": "Silke Van Avermaet",
+            "url_profile": "/en/vnl/women/teams/bel-belgium/players/silke-van-avermaet?id=71444",
+            "date_of_birth": "02/06/1999",
+            "age": "20",
+            "height": "192",
+            "weight": "76",
+            "spike": "311",
+            "block": "290"
+        },
+        {
+            "name": "Jodie Guilliams",
+            "url_profile": "/en/vnl/women/teams/bel-belgium/players/jodie-guilliams?id=71440",
+            "date_of_birth": "26/04/1997",
+            "age": "22",
+            "height": "180",
+            "weight": "73",
+            "spike": "305",
+            "block": "289"
+        },
+        {
+            "name": "Manon Stragier",
+            "url_profile": "/en/vnl/women/teams/bel-belgium/players/manon-stragier?id=71442",
+            "date_of_birth": "12/03/1999",
+            "age": "20",
+            "height": "182",
+            "weight": "69",
+            "spike": "308",
+            "block": "283"
+        },
+        {
+            "name": "Anna Valkenborg",
+            "url_profile": "/en/vnl/women/teams/bel-belgium/players/anna-valkenborg?id=71443",
+            "date_of_birth": "04/01/1998",
+            "age": "21",
+            "height": "174",
+            "weight": "59",
+            "spike": "290",
+            "block": "270"
+        },
+        {
+            "name": "Felice Vanassche",
+            "url_profile": "/en/vnl/women/teams/bel-belgium/players/felice-vanassche?id=71432",
+            "date_of_birth": "20/07/2000",
+            "age": "19",
+            "height": "185",
+            "weight": "71",
+            "spike": "300",
+            "block": "285"
+        },
+        {
+            "name": "Britt Rampelberg",
+            "url_profile": "/en/vnl/women/teams/bel-belgium/players/britt-rampelberg?id=71441",
+            "date_of_birth": "05/06/2000",
+            "age": "19",
+            "height": "165",
+            "weight": "58",
+            "spike": "283",
+            "block": "269"
+        },
+        {
+            "name": "Charlotte Krenicky",
+            "url_profile": "/en/vnl/women/teams/bel-belgium/players/charlotte-krenicky?id=71448",
+            "date_of_birth": "29/06/2000",
+            "age": "19",
+            "height": "189",
+            "weight": "80",
+            "spike": "312",
+            "block": "282"
+        },
+        {
+            "name": "Britt Ruysschaert",
+            "url_profile": "/en/vnl/women/teams/bel-belgium/players/britt-ruysschaert?id=71449",
+            "date_of_birth": "27/05/1994",
+            "age": "25",
+            "height": "180",
+            "weight": "60",
+            "spike": "302",
+            "block": "281"
+        },
+        {
+            "name": "Mara Ferreira Leao",
+            "url_profile": "/en/vnl/women/teams/bra-brazil/players/mara-ferreira-leao?id=71722",
+            "date_of_birth": "26/07/1991",
+            "age": "28",
+            "height": "190",
+            "weight": "84",
+            "spike": "320",
+            "block": "301"
+        },
+        {
+            "name": "Macris Carneiro",
+            "url_profile": "/en/vnl/women/teams/bra-brazil/players/macris-carneiro?id=71716",
+            "date_of_birth": "03/03/1989",
+            "age": "30",
+            "height": "178",
+            "weight": "64",
+            "spike": "292",
+            "block": "275"
+        },
+        {
+            "name": "Lara Nobre Cardoso G Filomeno",
+            "url_profile": "/en/vnl/women/teams/bra-brazil/players/lara-nobre-cardoso-g-filomeno?id=72483",
+            "date_of_birth": "11/02/1989",
+            "age": "30",
+            "height": "185",
+            "weight": "69",
+            "spike": "306",
+            "block": "290"
+        },
+        {
+            "name": "Ana Paula Borgo Bedani Guedes",
+            "url_profile": "/en/vnl/women/teams/bra-brazil/players/ana-paula-borgo-bedani-guedes?id=71712",
+            "date_of_birth": "20/10/1993",
+            "age": "26",
+            "height": "187",
+            "weight": "76",
+            "spike": "305",
+            "block": "290"
+        },
+        {
+            "name": "Julia Isabelle Bergmann",
+            "url_profile": "/en/vnl/women/teams/bra-brazil/players/julia-isabelle-bergmann?id=71711",
+            "date_of_birth": "21/02/2001",
+            "age": "18",
+            "height": "196",
+            "weight": "78",
+            "spike": "301",
+            "block": "289"
+        },
+        {
+            "name": "Juma Silva",
+            "url_profile": "/en/vnl/women/teams/bra-brazil/players/juma-silva?id=71733",
+            "date_of_birth": "17/01/1993",
+            "age": "26",
+            "height": "181",
+            "weight": "68",
+            "spike": "295",
+            "block": "280"
+        },
+        {
+            "name": "Roberta Silva Ratzke",
+            "url_profile": "/en/vnl/women/teams/bra-brazil/players/roberta-silva-ratzke?id=71732",
+            "date_of_birth": "28/04/1990",
+            "age": "29",
+            "height": "185",
+            "weight": "71",
+            "spike": "287",
+            "block": "278"
+        },
+        {
+            "name": "Gabriela Braga Guimaraes",
+            "url_profile": "/en/vnl/women/teams/bra-brazil/players/gabriela-braga-guimaraes?id=71713",
+            "date_of_birth": "19/05/1994",
+            "age": "25",
+            "height": "180",
+            "weight": "65",
+            "spike": "305",
+            "block": "289"
+        },
+        {
+            "name": "Tainara Lemes Santos",
+            "url_profile": "/en/vnl/women/teams/bra-brazil/players/tainara-lemes-santos?id=71728",
+            "date_of_birth": "09/03/2000",
+            "age": "19",
+            "height": "190",
+            "weight": "81",
+            "spike": "306",
+            "block": "289"
+        },
+        {
+            "name": "Natalia Pereira",
+            "url_profile": "/en/vnl/women/teams/bra-brazil/players/natalia-pereira?id=71741",
+            "date_of_birth": "04/04/1989",
+            "age": "30",
+            "height": "186",
+            "weight": "83",
+            "spike": "311",
+            "block": "295"
+        },
+        {
+            "name": "Amanda Francisco",
+            "url_profile": "/en/vnl/women/teams/bra-brazil/players/amanda-francisco?id=71723",
+            "date_of_birth": "16/08/1988",
+            "age": "31",
+            "height": "180",
+            "weight": "62",
+            "spike": "304",
+            "block": "286"
+        },
+        {
+            "name": "Josefa Fabiola Almeida De Sousa Alves",
+            "url_profile": "/en/vnl/women/teams/bra-brazil/players/josefa-fabiola-almeida-de-sousa-alves?id=71502",
+            "date_of_birth": "03/02/1983",
+            "age": "36",
+            "height": "184",
+            "weight": "70",
+            "spike": "300",
+            "block": "285"
+        },
+        {
+            "name": "Ana Carolina Da Silva",
+            "url_profile": "/en/vnl/women/teams/bra-brazil/players/ana-carolina-da-silva?id=71719",
+            "date_of_birth": "08/04/1991",
+            "age": "28",
+            "height": "183",
+            "weight": "73",
+            "spike": "290",
+            "block": "290"
+        },
+        {
+            "name": "Tandara Caixeta",
+            "url_profile": "/en/vnl/women/teams/bra-brazil/players/tandara-caixeta?id=71715",
+            "date_of_birth": "30/10/1988",
+            "age": "31",
+            "height": "184",
+            "weight": "87",
+            "spike": "305",
+            "block": "297"
+        },
+        {
+            "name": "Suelen Pinto",
+            "url_profile": "/en/vnl/women/teams/bra-brazil/players/suelen-pinto?id=71731",
+            "date_of_birth": "04/10/1987",
+            "age": "32",
+            "height": "166",
+            "weight": "81",
+            "spike": "256",
+            "block": "238"
+        },
+        {
+            "name": "Leia Henrique Da Silva Nicolosi",
+            "url_profile": "/en/vnl/women/teams/bra-brazil/players/leia-henrique-da-silva-nicolosi?id=71724",
+            "date_of_birth": "01/03/1985",
+            "age": "34",
+            "height": "160",
+            "weight": "60",
+            "spike": "275",
+            "block": "269"
+        },
+        {
+            "name": "Ana Beatriz Correa",
+            "url_profile": "/en/vnl/women/teams/bra-brazil/players/ana-beatriz-correa?id=71718",
+            "date_of_birth": "07/02/1992",
+            "age": "27",
+            "height": "187",
+            "weight": "70",
+            "spike": "298",
+            "block": "292"
+        },
+        {
+            "name": "Maira Cipriano Claro",
+            "url_profile": "/en/vnl/women/teams/bra-brazil/players/maira-cipriano-claro?id=71717",
+            "date_of_birth": "07/03/1995",
+            "age": "24",
+            "height": "187",
+            "weight": "62",
+            "spike": "300",
+            "block": "278"
+        },
+        {
+            "name": "Lana Concei\u00e7\u00e3o",
+            "url_profile": "/en/vnl/women/teams/bra-brazil/players/lana-concei%c3%a7%c3%a3o?id=71738",
+            "date_of_birth": "08/12/1996",
+            "age": "23",
+            "height": "178",
+            "weight": "74",
+            "spike": "305",
+            "block": "288"
+        },
+        {
+            "name": "Edinara Brancher",
+            "url_profile": "/en/vnl/women/teams/bra-brazil/players/edinara-brancher?id=71714",
+            "date_of_birth": "01/02/1996",
+            "age": "23",
+            "height": "186",
+            "weight": "80",
+            "spike": "295",
+            "block": "285"
+        },
+        {
+            "name": "Lorenne Geraldo Teixeira",
+            "url_profile": "/en/vnl/women/teams/bra-brazil/players/lorenne-geraldo-teixeira?id=71727",
+            "date_of_birth": "08/01/1996",
+            "age": "23",
+            "height": "187",
+            "weight": "72",
+            "spike": "306",
+            "block": "289"
+        },
+        {
+            "name": "Milka Marc\u00edlia Medeiros Silva",
+            "url_profile": "/en/vnl/women/teams/bra-brazil/players/milka-marc%c3%adlia-medeiros-silva?id=71734",
+            "date_of_birth": "18/07/1994",
+            "age": "25",
+            "height": "190",
+            "weight": "75",
+            "spike": "307",
+            "block": "291"
+        },
+        {
+            "name": "Nat\u00e1lia Araujo",
+            "url_profile": "/en/vnl/women/teams/bra-brazil/players/nat%c3%a1lia-araujo?id=71709",
+            "date_of_birth": "10/04/1997",
+            "age": "22",
+            "height": "162",
+            "weight": "59",
+            "spike": "228",
+            "block": "215"
+        },
+        {
+            "name": "Lais Vasques",
+            "url_profile": "/en/vnl/women/teams/bra-brazil/players/lais-vasques?id=71736",
+            "date_of_birth": "12/02/1996",
+            "age": "23",
+            "height": "171",
+            "weight": "70",
+            "spike": "275",
+            "block": "274"
+        },
+        {
+            "name": "Mayany Cristina Araujo De Souza",
+            "url_profile": "/en/vnl/women/teams/bra-brazil/players/mayany-cristina-araujo-de-souza?id=71710",
+            "date_of_birth": "24/11/1996",
+            "age": "23",
+            "height": "185",
+            "weight": "72",
+            "spike": "293",
+            "block": "282"
+        },
+        {
+            "name": "Gergana Dimitrova",
+            "url_profile": "/en/vnl/women/teams/bul-bulgaria/players/gergana-dimitrova?id=70844",
+            "date_of_birth": "28/02/1996",
+            "age": "23",
+            "height": "184",
+            "weight": "71",
+            "spike": "305",
+            "block": "288"
+        },
+        {
+            "name": "Nasya Dimitrova",
+            "url_profile": "/en/vnl/women/teams/bul-bulgaria/players/nasya-dimitrova?id=70845",
+            "date_of_birth": "06/11/1992",
+            "age": "27",
+            "height": "190",
+            "weight": "70",
+            "spike": "305",
+            "block": "290"
+        },
+        {
+            "name": "Kristiana Petrova",
+            "url_profile": "/en/vnl/women/teams/bul-bulgaria/players/kristiana-petrova?id=70854",
+            "date_of_birth": "13/07/1997",
+            "age": "22",
+            "height": "177",
+            "weight": "70",
+            "spike": "290",
+            "block": "282"
+        },
+        {
+            "name": "Maria Dancheva",
+            "url_profile": "/en/vnl/women/teams/bul-bulgaria/players/maria-dancheva?id=70842",
+            "date_of_birth": "04/12/1995",
+            "age": "24",
+            "height": "195",
+            "weight": "73",
+            "spike": "314",
+            "block": "302"
+        },
+        {
+            "name": "Simona Dimitrova",
+            "url_profile": "/en/vnl/women/teams/bul-bulgaria/players/simona-dimitrova?id=70846",
+            "date_of_birth": "17/07/1994",
+            "age": "25",
+            "height": "185",
+            "weight": "82",
+            "spike": "290",
+            "block": "280"
+        },
+        {
+            "name": "Miroslava Paskova",
+            "url_profile": "/en/vnl/women/teams/bul-bulgaria/players/miroslava-paskova?id=70853",
+            "date_of_birth": "16/02/1996",
+            "age": "23",
+            "height": "180",
+            "weight": "67",
+            "spike": "299",
+            "block": "280"
+        },
+        {
+            "name": "Lora Kitipova",
+            "url_profile": "/en/vnl/women/teams/bul-bulgaria/players/lora-kitipova?id=70849",
+            "date_of_birth": "19/05/1991",
+            "age": "28",
+            "height": "184",
+            "weight": "66",
+            "spike": "290",
+            "block": "283"
+        },
+        {
+            "name": "Petya Barakova",
+            "url_profile": "/en/vnl/women/teams/bul-bulgaria/players/petya-barakova?id=70839",
+            "date_of_birth": "18/06/1994",
+            "age": "25",
+            "height": "180",
+            "weight": "76",
+            "spike": "283",
+            "block": "271"
+        },
+        {
+            "name": "Monika Krasteva",
+            "url_profile": "/en/vnl/women/teams/bul-bulgaria/players/monika-krasteva?id=71161",
+            "date_of_birth": "09/05/1999",
+            "age": "20",
+            "height": "183",
+            "weight": "64",
+            "spike": "292",
+            "block": "285"
+        },
+        {
+            "name": "Mira Todorova",
+            "url_profile": "/en/vnl/women/teams/bul-bulgaria/players/mira-todorova?id=70857",
+            "date_of_birth": "12/04/1994",
+            "age": "25",
+            "height": "187",
+            "weight": "73",
+            "spike": "312",
+            "block": "300"
+        },
+        {
+            "name": "Gergana Georgieva",
+            "url_profile": "/en/vnl/women/teams/bul-bulgaria/players/gergana-georgieva?id=70847",
+            "date_of_birth": "15/10/1998",
+            "age": "21",
+            "height": "176",
+            "weight": "61",
+            "spike": "289",
+            "block": "272"
+        },
+        {
+            "name": "Mariya Karakasheva",
+            "url_profile": "/en/vnl/women/teams/bul-bulgaria/players/mariya-karakasheva?id=70848",
+            "date_of_birth": "27/10/1988",
+            "age": "31",
+            "height": "182",
+            "weight": "68",
+            "spike": "295",
+            "block": "290"
+        },
+        {
+            "name": "Mirela Shahpazova",
+            "url_profile": "/en/vnl/women/teams/bul-bulgaria/players/mirela-shahpazova?id=70856",
+            "date_of_birth": "28/10/1997",
+            "age": "22",
+            "height": "175",
+            "weight": "65",
+            "spike": "280",
+            "block": "270"
+        },
+        {
+            "name": "Aleksandra Milanova",
+            "url_profile": "/en/vnl/women/teams/bul-bulgaria/players/aleksandra-milanova?id=70852",
+            "date_of_birth": "04/07/2001",
+            "age": "18",
+            "height": "180",
+            "weight": "72",
+            "spike": "295",
+            "block": "284"
+        },
+        {
+            "name": "Zhana Todorova",
+            "url_profile": "/en/vnl/women/teams/bul-bulgaria/players/zhana-todorova?id=70858",
+            "date_of_birth": "06/01/1997",
+            "age": "22",
+            "height": "170",
+            "weight": "56",
+            "spike": "271",
+            "block": "255"
+        },
+        {
+            "name": "Elitsa Vasileva",
+            "url_profile": "/en/vnl/women/teams/bul-bulgaria/players/elitsa-vasileva?id=70859",
+            "date_of_birth": "13/05/1990",
+            "age": "29",
+            "height": "190",
+            "weight": "73",
+            "spike": "302",
+            "block": "290"
+        },
+        {
+            "name": "Elena Becheva",
+            "url_profile": "/en/vnl/women/teams/bul-bulgaria/players/elena-becheva?id=70840",
+            "date_of_birth": "30/05/1998",
+            "age": "21",
+            "height": "185",
+            "weight": "70",
+            "spike": "296",
+            "block": "288"
+        },
+        {
+            "name": "Silvana Chausheva",
+            "url_profile": "/en/vnl/women/teams/bul-bulgaria/players/silvana-chausheva?id=70841",
+            "date_of_birth": "19/05/1995",
+            "age": "24",
+            "height": "188",
+            "weight": "75",
+            "spike": "305",
+            "block": "290"
+        },
+        {
+            "name": "Radostina Marinova",
+            "url_profile": "/en/vnl/women/teams/bul-bulgaria/players/radostina-marinova?id=70851",
+            "date_of_birth": "02/10/1998",
+            "age": "21",
+            "height": "186",
+            "weight": "65",
+            "spike": "299",
+            "block": "288"
+        },
+        {
+            "name": "Mariya Krivoshiyska",
+            "url_profile": "/en/vnl/women/teams/bul-bulgaria/players/mariya-krivoshiyska?id=70850",
+            "date_of_birth": "06/09/2001",
+            "age": "18",
+            "height": "186",
+            "weight": "58",
+            "spike": "293",
+            "block": "285"
+        },
+        {
+            "name": "Denitsa Dimitrova",
+            "url_profile": "/en/vnl/women/teams/bul-bulgaria/players/denitsa-dimitrova?id=70843",
+            "date_of_birth": "26/03/1999",
+            "age": "20",
+            "height": "189",
+            "weight": "70",
+            "spike": "299",
+            "block": "280"
+        },
+        {
+            "name": "Dima Usheva",
+            "url_profile": "/en/vnl/women/teams/bul-bulgaria/players/dima-usheva?id=70864",
+            "date_of_birth": "16/12/2000",
+            "age": "19",
+            "height": "192",
+            "weight": "73",
+            "spike": "300",
+            "block": "280"
+        },
+        {
+            "name": "Vangeliya Rachkovska",
+            "url_profile": "/en/vnl/women/teams/bul-bulgaria/players/vangeliya-rachkovska?id=70855",
+            "date_of_birth": "19/07/1997",
+            "age": "22",
+            "height": "185",
+            "weight": "67",
+            "spike": "296",
+            "block": "281"
+        },
+        {
+            "name": "Silvia Andreeva",
+            "url_profile": "/en/vnl/women/teams/bul-bulgaria/players/silvia-andreeva?id=70838",
+            "date_of_birth": "18/08/1995",
+            "age": "24",
+            "height": "182",
+            "weight": "63",
+            "spike": "292",
+            "block": "284"
+        },
+        {
+            "name": "Polina Neykova",
+            "url_profile": "/en/vnl/women/teams/bul-bulgaria/players/polina-neykova?id=71285",
+            "date_of_birth": "07/10/1998",
+            "age": "21",
+            "height": "182",
+            "weight": "73",
+            "spike": "287",
+            "block": "280"
+        },
+        {
+            "name": "Xinyue Yuan",
+            "url_profile": "/en/vnl/women/teams/chn-china/players/xinyue-yuan?id=71483",
+            "date_of_birth": "21/12/1996",
+            "age": "23",
+            "height": "201",
+            "weight": "78",
+            "spike": "317",
+            "block": "311"
+        },
+        {
+            "name": "Ting Zhu",
+            "url_profile": "/en/vnl/women/teams/chn-china/players/ting-zhu?id=71487",
+            "date_of_birth": "29/11/1994",
+            "age": "25",
+            "height": "198",
+            "weight": "78",
+            "spike": "327",
+            "block": "300"
+        },
+        {
+            "name": "Linyu Diao",
+            "url_profile": "/en/vnl/women/teams/chn-china/players/linyu-diao?id=71470",
+            "date_of_birth": "07/04/1994",
+            "age": "25",
+            "height": "182",
+            "weight": "69",
+            "spike": "309",
+            "block": "303"
+        },
+        {
+            "name": "Hanyu Yang",
+            "url_profile": "/en/vnl/women/teams/chn-china/players/hanyu-yang?id=71490",
+            "date_of_birth": "12/10/1999",
+            "age": "20",
+            "height": "192",
+            "weight": "72",
+            "spike": "317",
+            "block": "311"
+        },
+        {
+            "name": "Mingyuan Hu",
+            "url_profile": "/en/vnl/women/teams/chn-china/players/mingyuan-hu?id=71499",
+            "date_of_birth": "17/05/1996",
+            "age": "23",
+            "height": "187",
+            "weight": "69",
+            "spike": "305",
+            "block": "297"
+        },
+        {
+            "name": "Xiangyu Gong",
+            "url_profile": "/en/vnl/women/teams/chn-china/players/xiangyu-gong?id=71498",
+            "date_of_birth": "21/04/1997",
+            "age": "22",
+            "height": "186",
+            "weight": "72",
+            "spike": "313",
+            "block": "302"
+        },
+        {
+            "name": "Yuanyuan Wang",
+            "url_profile": "/en/vnl/women/teams/chn-china/players/yuanyuan-wang?id=71478",
+            "date_of_birth": "14/07/1997",
+            "age": "22",
+            "height": "195",
+            "weight": "75",
+            "spike": "312",
+            "block": "300"
+        },
+        {
+            "name": "Chunlei Zeng",
+            "url_profile": "/en/vnl/women/teams/chn-china/players/chunlei-zeng?id=71484",
+            "date_of_birth": "03/11/1989",
+            "age": "30",
+            "height": "187",
+            "weight": "67",
+            "spike": "315",
+            "block": "315"
+        },
+        {
+            "name": "Changning Zhang",
+            "url_profile": "/en/vnl/women/teams/chn-china/players/changning-zhang?id=71485",
+            "date_of_birth": "06/11/1995",
+            "age": "24",
+            "height": "193",
+            "weight": "80",
+            "spike": "315",
+            "block": "303"
+        },
+        {
+            "name": "Xiaotong Liu",
+            "url_profile": "/en/vnl/women/teams/chn-china/players/xiaotong-liu?id=71501",
+            "date_of_birth": "16/02/1990",
+            "age": "29",
+            "height": "188",
+            "weight": "80",
+            "spike": "312",
+            "block": "300"
+        },
+        {
+            "name": "Di Yao",
+            "url_profile": "/en/vnl/women/teams/chn-china/players/di-yao?id=71482",
+            "date_of_birth": "15/08/1992",
+            "age": "27",
+            "height": "182",
+            "weight": "65",
+            "spike": "306",
+            "block": "298"
+        },
+        {
+            "name": "Yingying Li",
+            "url_profile": "/en/vnl/women/teams/chn-china/players/yingying-li?id=71500",
+            "date_of_birth": "19/02/2000",
+            "age": "19",
+            "height": "192",
+            "weight": "71",
+            "spike": "302",
+            "block": "294"
+        },
+        {
+            "name": "Yan Sun",
+            "url_profile": "/en/vnl/women/teams/chn-china/players/yan-sun?id=71475",
+            "date_of_birth": "06/07/2001",
+            "age": "18",
+            "height": "188",
+            "weight": "68",
+            "spike": "308",
+            "block": "295"
+        },
+        {
+            "name": "Yixin Zheng",
+            "url_profile": "/en/vnl/women/teams/chn-china/players/yixin-zheng?id=71492",
+            "date_of_birth": "06/05/1995",
+            "age": "24",
+            "height": "187",
+            "weight": "71",
+            "spike": "316",
+            "block": "307"
+        },
+        {
+            "name": "Li Lin",
+            "url_profile": "/en/vnl/women/teams/chn-china/players/li-lin?id=71488",
+            "date_of_birth": "05/07/1992",
+            "age": "27",
+            "height": "171",
+            "weight": "65",
+            "spike": "294",
+            "block": "294"
+        },
+        {
+            "name": "Xia Ding",
+            "url_profile": "/en/vnl/women/teams/chn-china/players/xia-ding?id=71471",
+            "date_of_birth": "13/01/1990",
+            "age": "29",
+            "height": "180",
+            "weight": "67",
+            "spike": "305",
+            "block": "300"
+        },
+        {
+            "name": "Ni Yan",
+            "url_profile": "/en/vnl/women/teams/chn-china/players/ni-yan?id=71480",
+            "date_of_birth": "02/03/1987",
+            "age": "32",
+            "height": "192",
+            "weight": "74",
+            "spike": "317",
+            "block": "306"
+        },
+        {
+            "name": "Mengjie Wang",
+            "url_profile": "/en/vnl/women/teams/chn-china/players/mengjie-wang?id=71476",
+            "date_of_birth": "14/11/1995",
+            "age": "24",
+            "height": "172",
+            "weight": "65",
+            "spike": "289",
+            "block": "280"
+        },
+        {
+            "name": "Yanhan Liu",
+            "url_profile": "/en/vnl/women/teams/chn-china/players/yanhan-liu?id=71473",
+            "date_of_birth": "19/01/1993",
+            "age": "26",
+            "height": "188",
+            "weight": "75",
+            "spike": "315",
+            "block": "305"
+        },
+        {
+            "name": "Fang Duan",
+            "url_profile": "/en/vnl/women/teams/chn-china/players/fang-duan?id=71497",
+            "date_of_birth": "26/12/1994",
+            "age": "25",
+            "height": "186",
+            "weight": "73",
+            "spike": "301",
+            "block": "296"
+        },
+        {
+            "name": "Feifan Ni",
+            "url_profile": "/en/vnl/women/teams/chn-china/players/feifan-ni?id=71474",
+            "date_of_birth": "14/02/2001",
+            "age": "18",
+            "height": "175",
+            "weight": "67",
+            "spike": "271",
+            "block": "265"
+        },
+        {
+            "name": "Qingqing Du",
+            "url_profile": "/en/vnl/women/teams/chn-china/players/qingqing-du?id=71494",
+            "date_of_birth": "18/12/1996",
+            "age": "23",
+            "height": "189",
+            "weight": "72",
+            "spike": "312",
+            "block": "300"
+        },
+        {
+            "name": "Yichan Zhang",
+            "url_profile": "/en/vnl/women/teams/chn-china/players/yichan-zhang?id=71491",
+            "date_of_birth": "11/02/1991",
+            "age": "28",
+            "height": "187",
+            "weight": "76",
+            "spike": "318",
+            "block": "307"
+        },
+        {
+            "name": "Ye Jin",
+            "url_profile": "/en/vnl/women/teams/chn-china/players/ye-jin?id=71472",
+            "date_of_birth": "01/03/1996",
+            "age": "23",
+            "height": "187",
+            "weight": "77",
+            "spike": "310",
+            "block": "302"
+        },
+        {
+            "name": "Wenhan Che",
+            "url_profile": "/en/vnl/women/teams/chn-china/players/wenhan-che?id=71493",
+            "date_of_birth": "11/04/2000",
+            "age": "19",
+            "height": "193",
+            "weight": "67",
+            "spike": "305",
+            "block": "297"
+        },
+        {
+            "name": "Annerys Victoria Vargas Valdez",
+            "url_profile": "/en/vnl/women/teams/dom-dominican%20republic/players/annerys-victoria-vargas-valdez?id=71273",
+            "date_of_birth": "07/08/1981",
+            "age": "38",
+            "height": "196",
+            "weight": "70",
+            "spike": "327",
+            "block": "320"
+        },
+        {
+            "name": "Yaneirys Rodriguez Duran",
+            "url_profile": "/en/vnl/women/teams/dom-dominican%20republic/players/yaneirys-rodriguez-duran?id=71272",
+            "date_of_birth": "26/06/2000",
+            "age": "19",
+            "height": "171",
+            "weight": "56",
+            "spike": "280",
+            "block": "251"
+        },
+        {
+            "name": "Lisvel Elisa Eve Mejia",
+            "url_profile": "/en/vnl/women/teams/dom-dominican%20republic/players/lisvel-elisa-eve-mejia?id=71256",
+            "date_of_birth": "10/09/1991",
+            "age": "28",
+            "height": "194",
+            "weight": "70",
+            "spike": "325",
+            "block": "315"
+        },
+        {
+            "name": "Vielka Michelle Peralta Luna",
+            "url_profile": "/en/vnl/women/teams/dom-dominican%20republic/players/vielka-michelle-peralta-luna?id=71269",
+            "date_of_birth": "13/04/1999",
+            "age": "20",
+            "height": "186",
+            "weight": "56",
+            "spike": "310",
+            "block": "305"
+        },
+        {
+            "name": "Brenda Castillo",
+            "url_profile": "/en/vnl/women/teams/dom-dominican%20republic/players/brenda-castillo?id=71253",
+            "date_of_birth": "05/06/1992",
+            "age": "27",
+            "height": "167",
+            "weight": "55",
+            "spike": "245",
+            "block": "230"
+        },
+        {
+            "name": "Camil Inmaculada Dominguez Martinez",
+            "url_profile": "/en/vnl/women/teams/dom-dominican%20republic/players/camil-inmaculada-dominguez-martinez?id=71255",
+            "date_of_birth": "07/12/1991",
+            "age": "28",
+            "height": "176",
+            "weight": "75",
+            "spike": "285",
+            "block": "270"
+        },
+        {
+            "name": "Niverka Dharlenis Marte Frica",
+            "url_profile": "/en/vnl/women/teams/dom-dominican%20republic/players/niverka-dharlenis-marte-frica?id=71262",
+            "date_of_birth": "19/10/1990",
+            "age": "29",
+            "height": "178",
+            "weight": "71",
+            "spike": "295",
+            "block": "283"
+        },
+        {
+            "name": "Candida Estefany Arias Perez",
+            "url_profile": "/en/vnl/women/teams/dom-dominican%20republic/players/candida-estefany-arias-perez?id=71251",
+            "date_of_birth": "11/03/1992",
+            "age": "27",
+            "height": "194",
+            "weight": "68",
+            "spike": "320",
+            "block": "315"
+        },
+        {
+            "name": "Angelica Maria Hinojosa Diaz",
+            "url_profile": "/en/vnl/women/teams/dom-dominican%20republic/players/angelica-maria-hinojosa-diaz?id=71259",
+            "date_of_birth": "10/01/1997",
+            "age": "22",
+            "height": "186",
+            "weight": "72",
+            "spike": "305",
+            "block": "279"
+        },
+        {
+            "name": "Natalia Martinez",
+            "url_profile": "/en/vnl/women/teams/dom-dominican%20republic/players/natalia-martinez?id=71265",
+            "date_of_birth": "25/11/2000",
+            "age": "19",
+            "height": "186",
+            "weight": "71",
+            "spike": "310",
+            "block": "300"
+        },
+        {
+            "name": "Marifranchi Rodriguez",
+            "url_profile": "/en/vnl/women/teams/dom-dominican%20republic/players/marifranchi-rodriguez?id=71274",
+            "date_of_birth": "29/08/1990",
+            "age": "29",
+            "height": "184",
+            "weight": "68",
+            "spike": "310",
+            "block": "300"
+        },
+        {
+            "name": "Yokaty Perez Flores",
+            "url_profile": "/en/vnl/women/teams/dom-dominican%20republic/players/yokaty-perez-flores?id=71270",
+            "date_of_birth": "06/08/1998",
+            "age": "21",
+            "height": "178",
+            "weight": "79",
+            "spike": "291",
+            "block": "257"
+        },
+        {
+            "name": "Hennesys Nathaly Lalane Tejeda",
+            "url_profile": "/en/vnl/women/teams/dom-dominican%20republic/players/hennesys-nathaly-lalane-tejeda?id=71260",
+            "date_of_birth": "10/04/2000",
+            "age": "19",
+            "height": "185",
+            "weight": "74",
+            "spike": "275",
+            "block": "263"
+        },
+        {
+            "name": "Prisilla Rivera Brens",
+            "url_profile": "/en/vnl/women/teams/dom-dominican%20republic/players/prisilla-rivera-brens?id=71271",
+            "date_of_birth": "29/12/1984",
+            "age": "35",
+            "height": "183",
+            "weight": "67",
+            "spike": "309",
+            "block": "305"
+        },
+        {
+            "name": "Madeline Jazmin Guillen Paredes",
+            "url_profile": "/en/vnl/women/teams/dom-dominican%20republic/players/madeline-jazmin-guillen-paredes?id=71258",
+            "date_of_birth": "04/06/2001",
+            "age": "18",
+            "height": "186",
+            "weight": "74",
+            "spike": "273",
+            "block": "242"
+        },
+        {
+            "name": "Yonkaira Paola Pe\u00f1a Isabel",
+            "url_profile": "/en/vnl/women/teams/dom-dominican%20republic/players/yonkaira-paola-pe%c3%b1a-isabel?id=71268",
+            "date_of_birth": "10/05/1993",
+            "age": "26",
+            "height": "190",
+            "weight": "70",
+            "spike": "320",
+            "block": "310"
+        },
+        {
+            "name": "Gina Altagracia Mambru Casilla",
+            "url_profile": "/en/vnl/women/teams/dom-dominican%20republic/players/gina-altagracia-mambru-casilla?id=71261",
+            "date_of_birth": "21/01/1986",
+            "age": "33",
+            "height": "182",
+            "weight": "65",
+            "spike": "330",
+            "block": "315"
+        },
+        {
+            "name": "Bethania De La Cruz De Pe\u00f1a",
+            "url_profile": "/en/vnl/women/teams/dom-dominican%20republic/players/bethania-de-la-cruz-de-pe%c3%b1a?id=71254",
+            "date_of_birth": "13/05/1987",
+            "age": "32",
+            "height": "188",
+            "weight": "70",
+            "spike": "330",
+            "block": "320"
+        },
+        {
+            "name": "Ana Yorkira Binet Stephens",
+            "url_profile": "/en/vnl/women/teams/dom-dominican%20republic/players/ana-yorkira-binet-stephens?id=71252",
+            "date_of_birth": "09/02/1992",
+            "age": "27",
+            "height": "174",
+            "weight": "58",
+            "spike": "280",
+            "block": "260"
+        },
+        {
+            "name": "Brayelin Elizabeth Martinez",
+            "url_profile": "/en/vnl/women/teams/dom-dominican%20republic/players/brayelin-elizabeth-martinez?id=71263",
+            "date_of_birth": "11/09/1996",
+            "age": "23",
+            "height": "201",
+            "weight": "83",
+            "spike": "330",
+            "block": "320"
+        },
+        {
+            "name": "Jineiry Martinez",
+            "url_profile": "/en/vnl/women/teams/dom-dominican%20republic/players/jineiry-martinez?id=71264",
+            "date_of_birth": "03/12/1997",
+            "age": "22",
+            "height": "190",
+            "weight": "68",
+            "spike": "305",
+            "block": "280"
+        },
+        {
+            "name": "Erasma Moreno Martinez",
+            "url_profile": "/en/vnl/women/teams/dom-dominican%20republic/players/erasma-moreno-martinez?id=71267",
+            "date_of_birth": "25/11/1991",
+            "age": "28",
+            "height": "183",
+            "weight": "75",
+            "spike": "304",
+            "block": "289"
+        },
+        {
+            "name": "Gaila Ceneida Gonzalez Lopez",
+            "url_profile": "/en/vnl/women/teams/dom-dominican%20republic/players/gaila-ceneida-gonzalez-lopez?id=71275",
+            "date_of_birth": "25/06/1997",
+            "age": "22",
+            "height": "188",
+            "weight": "73",
+            "spike": "304",
+            "block": "276"
+        },
+        {
+            "name": "Marianne Fersola Norberto",
+            "url_profile": "/en/vnl/women/teams/dom-dominican%20republic/players/marianne-fersola-norberto?id=71257",
+            "date_of_birth": "16/01/1992",
+            "age": "27",
+            "height": "191",
+            "weight": "60",
+            "spike": "315",
+            "block": "310"
+        },
+        {
+            "name": "Larysmer Martinez Caro",
+            "url_profile": "/en/vnl/women/teams/dom-dominican%20republic/players/larysmer-martinez-caro?id=71266",
+            "date_of_birth": "18/10/1996",
+            "age": "23",
+            "height": "174",
+            "weight": "68",
+            "spike": "288",
+            "block": "258"
+        },
+        {
+            "name": "Lenka D\u00fcrr",
+            "url_profile": "/en/vnl/women/teams/ger-germany/players/lenka-d%c3%bcrr?id=71230",
+            "date_of_birth": "10/12/1990",
+            "age": "29",
+            "height": "171",
+            "weight": "59",
+            "spike": "280",
+            "block": "270"
+        },
+        {
+            "name": "Pia K\u00e4stner",
+            "url_profile": "/en/vnl/women/teams/ger-germany/players/pia-k%c3%a4stner?id=71238",
+            "date_of_birth": "29/06/1998",
+            "age": "21",
+            "height": "182",
+            "weight": "68",
+            "spike": "297",
+            "block": "286"
+        },
+        {
+            "name": "Denise Hanke",
+            "url_profile": "/en/vnl/women/teams/ger-germany/players/denise-hanke?id=71234",
+            "date_of_birth": "31/08/1989",
+            "age": "30",
+            "height": "179",
+            "weight": "58",
+            "spike": "284",
+            "block": "272"
+        },
+        {
+            "name": "Selma Hetmann",
+            "url_profile": "/en/vnl/women/teams/ger-germany/players/selma-hetmann?id=71235",
+            "date_of_birth": "27/10/1995",
+            "age": "24",
+            "height": "188",
+            "weight": "70",
+            "spike": "325",
+            "block": "315"
+        },
+        {
+            "name": "Jana Franziska Poll",
+            "url_profile": "/en/vnl/women/teams/ger-germany/players/jana-franziska-poll?id=71243",
+            "date_of_birth": "07/05/1988",
+            "age": "31",
+            "height": "185",
+            "weight": "69",
+            "spike": "310",
+            "block": "290"
+        },
+        {
+            "name": "Jennifer Geerties",
+            "url_profile": "/en/vnl/women/teams/ger-germany/players/jennifer-geerties?id=71231",
+            "date_of_birth": "05/04/1994",
+            "age": "25",
+            "height": "184",
+            "weight": "58",
+            "spike": "298",
+            "block": "288"
+        },
+        {
+            "name": "Nele Barber",
+            "url_profile": "/en/vnl/women/teams/ger-germany/players/nele-barber?id=71226",
+            "date_of_birth": "27/10/1994",
+            "age": "25",
+            "height": "183",
+            "weight": "55",
+            "spike": "290",
+            "block": "280"
+        },
+        {
+            "name": "Kimberly Drewniok",
+            "url_profile": "/en/vnl/women/teams/ger-germany/players/kimberly-drewniok?id=71229",
+            "date_of_birth": "11/08/1997",
+            "age": "22",
+            "height": "188",
+            "weight": "73",
+            "spike": "311",
+            "block": "298"
+        },
+        {
+            "name": "Lina Alsmeier",
+            "url_profile": "/en/vnl/women/teams/ger-germany/players/lina-alsmeier?id=71225",
+            "date_of_birth": "29/06/2000",
+            "age": "19",
+            "height": "189",
+            "weight": "70",
+            "spike": "305",
+            "block": "290"
+        },
+        {
+            "name": "Lena Stigrot",
+            "url_profile": "/en/vnl/women/teams/ger-germany/players/lena-stigrot?id=71246",
+            "date_of_birth": "20/12/1994",
+            "age": "25",
+            "height": "184",
+            "weight": "68",
+            "spike": "303",
+            "block": "295"
+        },
+        {
+            "name": "Louisa Lippmann",
+            "url_profile": "/en/vnl/women/teams/ger-germany/players/louisa-lippmann?id=71240",
+            "date_of_birth": "23/09/1994",
+            "age": "25",
+            "height": "191",
+            "weight": "78",
+            "spike": "319",
+            "block": "312"
+        },
+        {
+            "name": "Hanna Orthmann",
+            "url_profile": "/en/vnl/women/teams/ger-germany/players/hanna-orthmann?id=71241",
+            "date_of_birth": "03/10/1998",
+            "age": "21",
+            "height": "188",
+            "weight": "74",
+            "spike": "302",
+            "block": "291"
+        },
+        {
+            "name": "Denise Imoudu",
+            "url_profile": "/en/vnl/women/teams/ger-germany/players/denise-imoudu?id=71237",
+            "date_of_birth": "14/12/1995",
+            "age": "24",
+            "height": "180",
+            "weight": "67",
+            "spike": "290",
+            "block": "280"
+        },
+        {
+            "name": "Marie Sch\u00f6lzel",
+            "url_profile": "/en/vnl/women/teams/ger-germany/players/marie-sch%c3%b6lzel?id=71244",
+            "date_of_birth": "01/08/1997",
+            "age": "22",
+            "height": "188",
+            "weight": "66",
+            "spike": "307",
+            "block": "299"
+        },
+        {
+            "name": "Corina Glaab",
+            "url_profile": "/en/vnl/women/teams/ger-germany/players/corina-glaab?id=71232",
+            "date_of_birth": "25/05/2000",
+            "age": "19",
+            "height": "180",
+            "weight": "65",
+            "spike": "291",
+            "block": "281"
+        },
+        {
+            "name": "Linda Bock",
+            "url_profile": "/en/vnl/women/teams/ger-germany/players/linda-bock?id=71228",
+            "date_of_birth": "27/05/2000",
+            "age": "19",
+            "height": "172",
+            "weight": "60",
+            "spike": "278",
+            "block": "270"
+        },
+        {
+            "name": "Anna Pogany",
+            "url_profile": "/en/vnl/women/teams/ger-germany/players/anna-pogany?id=71242",
+            "date_of_birth": "21/07/1994",
+            "age": "25",
+            "height": "170",
+            "weight": "60",
+            "spike": "280",
+            "block": "270"
+        },
+        {
+            "name": "Leonie Schwertmann",
+            "url_profile": "/en/vnl/women/teams/ger-germany/players/leonie-schwertmann?id=71245",
+            "date_of_birth": "12/01/1994",
+            "age": "25",
+            "height": "190",
+            "weight": "80",
+            "spike": "300",
+            "block": "290"
+        },
+        {
+            "name": "Luisa Theresa Keller",
+            "url_profile": "/en/vnl/women/teams/ger-germany/players/luisa-theresa-keller?id=71239",
+            "date_of_birth": "25/08/2001",
+            "age": "18",
+            "height": "184",
+            "weight": "65",
+            "spike": "301",
+            "block": "285"
+        },
+        {
+            "name": "Celin St\u00f6hr",
+            "url_profile": "/en/vnl/women/teams/ger-germany/players/celin-st%c3%b6hr?id=71247",
+            "date_of_birth": "22/11/1993",
+            "age": "26",
+            "height": "193",
+            "weight": "68",
+            "spike": "299",
+            "block": "290"
+        },
+        {
+            "name": "Camilla Weitzel",
+            "url_profile": "/en/vnl/women/teams/ger-germany/players/camilla-weitzel?id=71248",
+            "date_of_birth": "11/06/2000",
+            "age": "19",
+            "height": "195",
+            "weight": "75",
+            "spike": "302",
+            "block": "296"
+        },
+        {
+            "name": "Lisa Gr\u00fcnding",
+            "url_profile": "/en/vnl/women/teams/ger-germany/players/lisa-gr%c3%bcnding?id=71233",
+            "date_of_birth": "02/12/1991",
+            "age": "28",
+            "height": "186",
+            "weight": "68",
+            "spike": "303",
+            "block": "291"
+        },
+        {
+            "name": "Natalie Wilczek",
+            "url_profile": "/en/vnl/women/teams/ger-germany/players/natalie-wilczek?id=71250",
+            "date_of_birth": "09/03/2000",
+            "age": "19",
+            "height": "185",
+            "weight": "70",
+            "spike": "322",
+            "block": "312"
+        },
+        {
+            "name": "Lea Ambrosius",
+            "url_profile": "/en/vnl/women/teams/ger-germany/players/lea-ambrosius?id=71280",
+            "date_of_birth": "22/05/2000",
+            "age": "19",
+            "height": "189",
+            "weight": "79",
+            "spike": "305",
+            "block": "298"
+        },
+        {
+            "name": "Elisa Lohmann",
+            "url_profile": "/en/vnl/women/teams/ger-germany/players/elisa-lohmann?id=71281",
+            "date_of_birth": "22/07/1998",
+            "age": "21",
+            "height": "174",
+            "weight": "60",
+            "spike": "290",
+            "block": "278"
+        },
+        {
+            "name": "Indre Sorokaite",
+            "url_profile": "/en/vnl/women/teams/ita-italy/players/indre-sorokaite?id=71317",
+            "date_of_birth": "02/07/1988",
+            "age": "31",
+            "height": "188",
+            "weight": "80",
+            "spike": "303",
+            "block": "280"
+        },
+        {
+            "name": "Sara Alberti",
+            "url_profile": "/en/vnl/women/teams/ita-italy/players/sara-alberti?id=71289",
+            "date_of_birth": "03/01/1993",
+            "age": "26",
+            "height": "185",
+            "weight": "72",
+            "spike": "310",
+            "block": "300"
+        },
+        {
+            "name": "Carlotta Cambi",
+            "url_profile": "/en/vnl/women/teams/ita-italy/players/carlotta-cambi?id=71295",
+            "date_of_birth": "28/05/1996",
+            "age": "23",
+            "height": "177",
+            "weight": "66",
+            "spike": "302",
+            "block": "292"
+        },
+        {
+            "name": "Francesca Bosio",
+            "url_profile": "/en/vnl/women/teams/ita-italy/players/francesca-bosio?id=71293",
+            "date_of_birth": "07/08/1997",
+            "age": "22",
+            "height": "180",
+            "weight": "69",
+            "spike": "294",
+            "block": "284"
+        },
+        {
+            "name": "Ofelia Malinov",
+            "url_profile": "/en/vnl/women/teams/ita-italy/players/ofelia-malinov?id=71306",
+            "date_of_birth": "29/02/1996",
+            "age": "23",
+            "height": "185",
+            "weight": "70",
+            "spike": "304",
+            "block": "285"
+        },
+        {
+            "name": "Monica De Gennaro",
+            "url_profile": "/en/vnl/women/teams/ita-italy/players/monica-de-gennaro?id=71300",
+            "date_of_birth": "08/01/1987",
+            "age": "32",
+            "height": "174",
+            "weight": "67",
+            "spike": "292",
+            "block": "217"
+        },
+        {
+            "name": "Raphaela Folie",
+            "url_profile": "/en/vnl/women/teams/ita-italy/players/raphaela-folie?id=71304",
+            "date_of_birth": "07/03/1991",
+            "age": "28",
+            "height": "187",
+            "weight": "73",
+            "spike": "324",
+            "block": "300"
+        },
+        {
+            "name": "Alessia Orro",
+            "url_profile": "/en/vnl/women/teams/ita-italy/players/alessia-orro?id=71313",
+            "date_of_birth": "18/07/1998",
+            "age": "21",
+            "height": "180",
+            "weight": "74",
+            "spike": "308",
+            "block": "231"
+        },
+        {
+            "name": "Caterina Bosetti",
+            "url_profile": "/en/vnl/women/teams/ita-italy/players/caterina-bosetti?id=71291",
+            "date_of_birth": "02/02/1994",
+            "age": "25",
+            "height": "179",
+            "weight": "59",
+            "spike": "299",
+            "block": "281"
+        },
+        {
+            "name": "Cristina Chirichella",
+            "url_profile": "/en/vnl/women/teams/ita-italy/players/cristina-chirichella?id=71297",
+            "date_of_birth": "10/02/1994",
+            "age": "25",
+            "height": "194",
+            "weight": "79",
+            "spike": "322",
+            "block": "306"
+        },
+        {
+            "name": "Anna Danesi",
+            "url_profile": "/en/vnl/women/teams/ita-italy/players/anna-danesi?id=71298",
+            "date_of_birth": "20/04/1996",
+            "age": "23",
+            "height": "198",
+            "weight": "78",
+            "spike": "312",
+            "block": "294"
+        },
+        {
+            "name": "Anastasia Guerra",
+            "url_profile": "/en/vnl/women/teams/ita-italy/players/anastasia-guerra?id=71305",
+            "date_of_birth": "15/10/1996",
+            "age": "23",
+            "height": "187",
+            "weight": "69",
+            "spike": "312",
+            "block": "294"
+        },
+        {
+            "name": "Sarah Luisa Fahr",
+            "url_profile": "/en/vnl/women/teams/ita-italy/players/sarah-luisa-fahr?id=71302",
+            "date_of_birth": "12/09/2001",
+            "age": "18",
+            "height": "194",
+            "weight": "84",
+            "spike": "322",
+            "block": "306"
+        },
+        {
+            "name": "Elena Pietrini",
+            "url_profile": "/en/vnl/women/teams/ita-italy/players/elena-pietrini?id=71316",
+            "date_of_birth": "17/03/2000",
+            "age": "19",
+            "height": "190",
+            "weight": "73",
+            "spike": "330",
+            "block": "306"
+        },
+        {
+            "name": "Sylvia Chinelo Nwakalor",
+            "url_profile": "/en/vnl/women/teams/ita-italy/players/sylvia-chinelo-nwakalor?id=71310",
+            "date_of_birth": "12/08/1999",
+            "age": "20",
+            "height": "180",
+            "weight": "70",
+            "spike": "330",
+            "block": "312"
+        },
+        {
+            "name": "Lucia Bosetti",
+            "url_profile": "/en/vnl/women/teams/ita-italy/players/lucia-bosetti?id=71292",
+            "date_of_birth": "09/07/1989",
+            "age": "30",
+            "height": "178",
+            "weight": "63",
+            "spike": "310",
+            "block": "292"
+        },
+        {
+            "name": "Miryam Fatime Sylla",
+            "url_profile": "/en/vnl/women/teams/ita-italy/players/miryam-fatime-sylla?id=71303",
+            "date_of_birth": "08/01/1995",
+            "age": "24",
+            "height": "184",
+            "weight": "80",
+            "spike": "320",
+            "block": "240"
+        },
+        {
+            "name": "Paola Ogechi Egonu",
+            "url_profile": "/en/vnl/women/teams/ita-italy/players/paola-ogechi-egonu?id=71312",
+            "date_of_birth": "18/12/1998",
+            "age": "21",
+            "height": "193",
+            "weight": "80",
+            "spike": "344",
+            "block": "321"
+        },
+        {
+            "name": "Alexandra Botezat",
+            "url_profile": "/en/vnl/women/teams/ita-italy/players/alexandra-botezat?id=71294",
+            "date_of_birth": "03/08/1998",
+            "age": "21",
+            "height": "197",
+            "weight": "75",
+            "spike": "316",
+            "block": "304"
+        },
+        {
+            "name": "Beatrice Parrocchiale",
+            "url_profile": "/en/vnl/women/teams/ita-italy/players/beatrice-parrocchiale?id=71314",
+            "date_of_birth": "26/12/1995",
+            "age": "24",
+            "height": "168",
+            "weight": "59",
+            "spike": "286",
+            "block": "258"
+        },
+        {
+            "name": "Chiara De Bortoli",
+            "url_profile": "/en/vnl/women/teams/ita-italy/players/chiara-de-bortoli?id=71299",
+            "date_of_birth": "28/07/1997",
+            "age": "22",
+            "height": "177",
+            "weight": "61",
+            "spike": "308",
+            "block": "286"
+        },
+        {
+            "name": "Anna Nicoletti",
+            "url_profile": "/en/vnl/women/teams/ita-italy/players/anna-nicoletti?id=71309",
+            "date_of_birth": "03/01/1996",
+            "age": "23",
+            "height": "193",
+            "weight": "86",
+            "spike": "306",
+            "block": "290"
+        },
+        {
+            "name": "Francesca Villani",
+            "url_profile": "/en/vnl/women/teams/ita-italy/players/francesca-villani?id=71318",
+            "date_of_birth": "30/05/1995",
+            "age": "24",
+            "height": "186",
+            "weight": "85",
+            "spike": "305",
+            "block": "280"
+        },
+        {
+            "name": "Elena Perinelli",
+            "url_profile": "/en/vnl/women/teams/ita-italy/players/elena-perinelli?id=71315",
+            "date_of_birth": "27/06/1995",
+            "age": "24",
+            "height": "182",
+            "weight": "66",
+            "spike": "299",
+            "block": "277"
+        },
+        {
+            "name": "Beatrice Berti",
+            "url_profile": "/en/vnl/women/teams/ita-italy/players/beatrice-berti?id=71290",
+            "date_of_birth": "12/01/1996",
+            "age": "23",
+            "height": "193",
+            "weight": "87",
+            "spike": "304",
+            "block": "288"
+        },
+        {
+            "name": "Sarina Koga",
+            "url_profile": "/en/vnl/women/teams/jpn-japan/players/sarina-koga?id=71138",
+            "date_of_birth": "21/05/1996",
+            "age": "23",
+            "height": "180",
+            "weight": "67",
+            "spike": "302",
+            "block": "290"
+        },
+        {
+            "name": "Nana Iwasaka",
+            "url_profile": "/en/vnl/women/teams/jpn-japan/players/nana-iwasaka?id=71136",
+            "date_of_birth": "03/07/1990",
+            "age": "29",
+            "height": "187",
+            "weight": "75",
+            "spike": "297",
+            "block": "293"
+        },
+        {
+            "name": "Risa Shinnabe",
+            "url_profile": "/en/vnl/women/teams/jpn-japan/players/risa-shinnabe?id=71152",
+            "date_of_birth": "11/07/1990",
+            "age": "29",
+            "height": "173",
+            "weight": "64",
+            "spike": "292",
+            "block": "285"
+        },
+        {
+            "name": "Erika Shinomiya",
+            "url_profile": "/en/vnl/women/teams/jpn-japan/players/erika-shinomiya?id=71131",
+            "date_of_birth": "03/08/1984",
+            "age": "35",
+            "height": "186",
+            "weight": "81",
+            "spike": "302",
+            "block": "297"
+        },
+        {
+            "name": "Haruka Miyashita",
+            "url_profile": "/en/vnl/women/teams/jpn-japan/players/haruka-miyashita?id=71141",
+            "date_of_birth": "01/09/1994",
+            "age": "25",
+            "height": "177",
+            "weight": "61",
+            "spike": "291",
+            "block": "272"
+        },
+        {
+            "name": "Yuki Ishii",
+            "url_profile": "/en/vnl/women/teams/jpn-japan/players/yuki-ishii?id=71134",
+            "date_of_birth": "08/05/1991",
+            "age": "28",
+            "height": "180",
+            "weight": "68",
+            "spike": "305",
+            "block": "287"
+        },
+        {
+            "name": "Mami Uchiseto",
+            "url_profile": "/en/vnl/women/teams/jpn-japan/players/mami-uchiseto?id=71157",
+            "date_of_birth": "25/10/1991",
+            "age": "28",
+            "height": "170",
+            "weight": "74",
+            "spike": "295",
+            "block": "285"
+        },
+        {
+            "name": "Haruyo Shimamura",
+            "url_profile": "/en/vnl/women/teams/jpn-japan/players/haruyo-shimamura?id=71151",
+            "date_of_birth": "04/03/1992",
+            "age": "27",
+            "height": "182",
+            "weight": "78",
+            "spike": "297",
+            "block": "290"
+        },
+        {
+            "name": "Koyomi Iwasaki",
+            "url_profile": "/en/vnl/women/teams/jpn-japan/players/koyomi-iwasaki?id=71155",
+            "date_of_birth": "01/05/1989",
+            "age": "30",
+            "height": "175",
+            "weight": "68",
+            "spike": "295",
+            "block": "280"
+        },
+        {
+            "name": "Yurie Nabeya",
+            "url_profile": "/en/vnl/women/teams/jpn-japan/players/yurie-nabeya?id=71142",
+            "date_of_birth": "15/12/1993",
+            "age": "26",
+            "height": "176",
+            "weight": "55",
+            "spike": "305",
+            "block": "292"
+        },
+        {
+            "name": "Miya Sato",
+            "url_profile": "/en/vnl/women/teams/jpn-japan/players/miya-sato?id=71148",
+            "date_of_birth": "07/03/1990",
+            "age": "29",
+            "height": "175",
+            "weight": "62",
+            "spike": "278",
+            "block": "275"
+        },
+        {
+            "name": "Mai Okumura",
+            "url_profile": "/en/vnl/women/teams/jpn-japan/players/mai-okumura?id=71144",
+            "date_of_birth": "31/10/1990",
+            "age": "29",
+            "height": "177",
+            "weight": "69",
+            "spike": "295",
+            "block": "285"
+        },
+        {
+            "name": "Mako Kobata",
+            "url_profile": "/en/vnl/women/teams/jpn-japan/players/mako-kobata?id=71145",
+            "date_of_birth": "15/08/1992",
+            "age": "27",
+            "height": "164",
+            "weight": "56",
+            "spike": "285",
+            "block": "274"
+        },
+        {
+            "name": "Kotoe Inoue",
+            "url_profile": "/en/vnl/women/teams/jpn-japan/players/kotoe-inoue?id=71158",
+            "date_of_birth": "15/02/1990",
+            "age": "29",
+            "height": "162",
+            "weight": "55",
+            "spike": "286",
+            "block": "275"
+        },
+        {
+            "name": "Ai Kurogo",
+            "url_profile": "/en/vnl/women/teams/jpn-japan/players/ai-kurogo?id=71139",
+            "date_of_birth": "14/06/1998",
+            "age": "21",
+            "height": "180",
+            "weight": "69",
+            "spike": "306",
+            "block": "295"
+        },
+        {
+            "name": "Kanami Tashiro",
+            "url_profile": "/en/vnl/women/teams/jpn-japan/players/kanami-tashiro?id=71159",
+            "date_of_birth": "25/03/1991",
+            "age": "28",
+            "height": "173",
+            "weight": "66",
+            "spike": "284",
+            "block": "273"
+        },
+        {
+            "name": "Akane Moriya",
+            "url_profile": "/en/vnl/women/teams/jpn-japan/players/akane-moriya?id=71156",
+            "date_of_birth": "08/01/1991",
+            "age": "28",
+            "height": "165",
+            "weight": "55",
+            "spike": "280",
+            "block": "260"
+        },
+        {
+            "name": "Yuka Imamura",
+            "url_profile": "/en/vnl/women/teams/jpn-japan/players/yuka-imamura?id=71132",
+            "date_of_birth": "02/09/1993",
+            "age": "26",
+            "height": "176",
+            "weight": "69",
+            "spike": "295",
+            "block": "291"
+        },
+        {
+            "name": "Aya Watanabe",
+            "url_profile": "/en/vnl/women/teams/jpn-japan/players/aya-watanabe?id=71153",
+            "date_of_birth": "23/04/1991",
+            "age": "28",
+            "height": "176",
+            "weight": "68",
+            "spike": "301",
+            "block": "0"
+        },
+        {
+            "name": "Miwako Osanai",
+            "url_profile": "/en/vnl/women/teams/jpn-japan/players/miwako-osanai?id=71147",
+            "date_of_birth": "19/07/1997",
+            "age": "22",
+            "height": "175",
+            "weight": "67",
+            "spike": "293",
+            "block": "270"
+        },
+        {
+            "name": "Yuri Yoshino",
+            "url_profile": "/en/vnl/women/teams/jpn-japan/players/yuri-yoshino?id=71154",
+            "date_of_birth": "16/12/1999",
+            "age": "20",
+            "height": "173",
+            "weight": "67",
+            "spike": "290",
+            "block": "280"
+        },
+        {
+            "name": "Mai Irisawa",
+            "url_profile": "/en/vnl/women/teams/jpn-japan/players/mai-irisawa?id=71133",
+            "date_of_birth": "02/06/1999",
+            "age": "20",
+            "height": "188",
+            "weight": "72",
+            "spike": "309",
+            "block": "293"
+        },
+        {
+            "name": "Aika Akutagawa",
+            "url_profile": "/en/vnl/women/teams/jpn-japan/players/aika-akutagawa?id=71137",
+            "date_of_birth": "03/04/1991",
+            "age": "28",
+            "height": "180",
+            "weight": "62",
+            "spike": "300",
+            "block": "280"
+        },
+        {
+            "name": "Nanami Seki",
+            "url_profile": "/en/vnl/women/teams/jpn-japan/players/nanami-seki?id=71149",
+            "date_of_birth": "12/06/1999",
+            "age": "20",
+            "height": "170",
+            "weight": "58",
+            "spike": "282",
+            "block": "0"
+        },
+        {
+            "name": "Miyu Nakagawa",
+            "url_profile": "/en/vnl/women/teams/jpn-japan/players/miyu-nakagawa?id=71143",
+            "date_of_birth": "08/01/2000",
+            "age": "19",
+            "height": "180",
+            "weight": "65",
+            "spike": "307",
+            "block": "300"
+        },
+        {
+            "name": "Soyoung Lee",
+            "url_profile": "/en/vnl/women/teams/kor-korea/players/soyoung-lee?id=71394",
+            "date_of_birth": "17/10/1994",
+            "age": "25",
+            "height": "176",
+            "weight": "68",
+            "spike": "279",
+            "block": "269"
+        },
+        {
+            "name": "Seungju Pyo",
+            "url_profile": "/en/vnl/women/teams/kor-korea/players/seungju-pyo?id=71392",
+            "date_of_birth": "07/08/1992",
+            "age": "27",
+            "height": "182",
+            "weight": "76",
+            "spike": "275",
+            "block": "265"
+        },
+        {
+            "name": "Hae Ran Kim",
+            "url_profile": "/en/vnl/women/teams/kor-korea/players/hae-ran-kim?id=71376",
+            "date_of_birth": "16/03/1984",
+            "age": "35",
+            "height": "168",
+            "weight": "60",
+            "spike": "270",
+            "block": "250"
+        },
+        {
+            "name": "Heejin Kim",
+            "url_profile": "/en/vnl/women/teams/kor-korea/players/heejin-kim?id=71377",
+            "date_of_birth": "29/04/1991",
+            "age": "28",
+            "height": "185",
+            "weight": "75",
+            "spike": "305",
+            "block": "295"
+        },
+        {
+            "name": "Hyo Hee Lee",
+            "url_profile": "/en/vnl/women/teams/kor-korea/players/hyo-hee-lee?id=71384",
+            "date_of_birth": "09/09/1980",
+            "age": "39",
+            "height": "173",
+            "weight": "58",
+            "spike": "272",
+            "block": "252"
+        },
+        {
+            "name": "Hyejin An",
+            "url_profile": "/en/vnl/women/teams/kor-korea/players/hyejin-an?id=71365",
+            "date_of_birth": "16/02/1998",
+            "age": "21",
+            "height": "175",
+            "weight": "63",
+            "spike": "270",
+            "block": "250"
+        },
+        {
+            "name": "Myungok Yim",
+            "url_profile": "/en/vnl/women/teams/kor-korea/players/myungok-yim?id=71393",
+            "date_of_birth": "05/05/1986",
+            "age": "33",
+            "height": "175",
+            "weight": "62",
+            "spike": "273",
+            "block": "253"
+        },
+        {
+            "name": "Juah Lee",
+            "url_profile": "/en/vnl/women/teams/kor-korea/players/juah-lee?id=71386",
+            "date_of_birth": "21/08/2000",
+            "age": "19",
+            "height": "185",
+            "weight": "69",
+            "spike": "282",
+            "block": "272"
+        },
+        {
+            "name": "Yeon Koung Kim",
+            "url_profile": "/en/vnl/women/teams/kor-korea/players/yeon-koung-kim?id=71381",
+            "date_of_birth": "26/02/1988",
+            "age": "31",
+            "height": "192",
+            "weight": "73",
+            "spike": "330",
+            "block": "320"
+        },
+        {
+            "name": "Su Ji Kim",
+            "url_profile": "/en/vnl/women/teams/kor-korea/players/su-ji-kim?id=71380",
+            "date_of_birth": "11/07/1987",
+            "age": "32",
+            "height": "187",
+            "weight": "68",
+            "spike": "283",
+            "block": "273"
+        },
+        {
+            "name": "Dae-Young Jung",
+            "url_profile": "/en/vnl/women/teams/kor-korea/players/dae-young-jung?id=71373",
+            "date_of_birth": "12/08/1981",
+            "age": "38",
+            "height": "185",
+            "weight": "73",
+            "spike": "279",
+            "block": "269"
+        },
+        {
+            "name": "Eunjin Park",
+            "url_profile": "/en/vnl/women/teams/kor-korea/players/eunjin-park?id=71391",
+            "date_of_birth": "15/12/1999",
+            "age": "20",
+            "height": "187",
+            "weight": "74",
+            "spike": "293",
+            "block": "283"
+        },
+        {
+            "name": "Sohwi Kang",
+            "url_profile": "/en/vnl/women/teams/kor-korea/players/sohwi-kang?id=71375",
+            "date_of_birth": "18/07/1997",
+            "age": "22",
+            "height": "180",
+            "weight": "65",
+            "spike": "286",
+            "block": "276"
+        },
+        {
+            "name": "Yeongyeon Kim",
+            "url_profile": "/en/vnl/women/teams/kor-korea/players/yeongyeon-kim?id=71395",
+            "date_of_birth": "01/12/1993",
+            "age": "26",
+            "height": "163",
+            "weight": "54",
+            "spike": "267",
+            "block": "247"
+        },
+        {
+            "name": "Jaeyeong Lee",
+            "url_profile": "/en/vnl/women/teams/kor-korea/players/jaeyeong-lee?id=71385",
+            "date_of_birth": "15/10/1996",
+            "age": "23",
+            "height": "178",
+            "weight": "65",
+            "spike": "289",
+            "block": "279"
+        },
+        {
+            "name": "Jung-Won Moon",
+            "url_profile": "/en/vnl/women/teams/kor-korea/players/jung-won-moon?id=71389",
+            "date_of_birth": "24/03/1992",
+            "age": "27",
+            "height": "174",
+            "weight": "61",
+            "spike": "271",
+            "block": "261"
+        },
+        {
+            "name": "Dayeong Lee",
+            "url_profile": "/en/vnl/women/teams/kor-korea/players/dayeong-lee?id=71383",
+            "date_of_birth": "15/10/1996",
+            "age": "23",
+            "height": "180",
+            "weight": "63",
+            "spike": "291",
+            "block": "271"
+        },
+        {
+            "name": "Jiyoung Oh",
+            "url_profile": "/en/vnl/women/teams/kor-korea/players/jiyoung-oh?id=71390",
+            "date_of_birth": "11/07/1988",
+            "age": "31",
+            "height": "170",
+            "weight": "63",
+            "spike": "267",
+            "block": "247"
+        },
+        {
+            "name": "Wonjeong Lee",
+            "url_profile": "/en/vnl/women/teams/kor-korea/players/wonjeong-lee?id=71388",
+            "date_of_birth": "12/01/2000",
+            "age": "19",
+            "height": "176",
+            "weight": "68",
+            "spike": "269",
+            "block": "249"
+        },
+        {
+            "name": "Jiyun Jeong",
+            "url_profile": "/en/vnl/women/teams/kor-korea/players/jiyun-jeong?id=71371",
+            "date_of_birth": "01/01/2001",
+            "age": "18",
+            "height": "180",
+            "weight": "68",
+            "spike": "283",
+            "block": "273"
+        },
+        {
+            "name": "Nayeon Lee",
+            "url_profile": "/en/vnl/women/teams/kor-korea/players/nayeon-lee?id=71387",
+            "date_of_birth": "25/03/1992",
+            "age": "27",
+            "height": "173",
+            "weight": "62",
+            "spike": "261",
+            "block": "241"
+        },
+        {
+            "name": "Sooji Han",
+            "url_profile": "/en/vnl/women/teams/kor-korea/players/sooji-han?id=71370",
+            "date_of_birth": "01/02/1989",
+            "age": "30",
+            "height": "182",
+            "weight": "72",
+            "spike": "285",
+            "block": "275"
+        },
+        {
+            "name": "Hyejin Ha",
+            "url_profile": "/en/vnl/women/teams/kor-korea/players/hyejin-ha?id=71369",
+            "date_of_birth": "07/09/1996",
+            "age": "23",
+            "height": "181",
+            "weight": "60",
+            "spike": "285",
+            "block": "275"
+        },
+        {
+            "name": "Hyunjeong Kim",
+            "url_profile": "/en/vnl/women/teams/kor-korea/players/hyunjeong-kim?id=71378",
+            "date_of_birth": "28/08/1998",
+            "age": "21",
+            "height": "180",
+            "weight": "70",
+            "spike": "272",
+            "block": "262"
+        },
+        {
+            "name": "Eun-Ji Choi",
+            "url_profile": "/en/vnl/women/teams/kor-korea/players/eun-ji-choi?id=71367",
+            "date_of_birth": "07/06/1992",
+            "age": "27",
+            "height": "183",
+            "weight": "72",
+            "spike": "277",
+            "block": "267"
+        },
+        {
+            "name": "Kirsten Knip",
+            "url_profile": "/en/vnl/women/teams/ned-netherlands/players/kirsten-knip?id=70821",
+            "date_of_birth": "14/09/1992",
+            "age": "27",
+            "height": "175",
+            "weight": "70",
+            "spike": "281",
+            "block": "275"
+        },
+        {
+            "name": "Femke Stoltenborg",
+            "url_profile": "/en/vnl/women/teams/ned-netherlands/players/femke-stoltenborg?id=70834",
+            "date_of_birth": "30/07/1991",
+            "age": "28",
+            "height": "189",
+            "weight": "81",
+            "spike": "303",
+            "block": "299"
+        },
+        {
+            "name": "Yvon Belien",
+            "url_profile": "/en/vnl/women/teams/ned-netherlands/players/yvon-belien?id=70810",
+            "date_of_birth": "28/12/1993",
+            "age": "26",
+            "height": "188",
+            "weight": "73",
+            "spike": "307",
+            "block": "303"
+        },
+        {
+            "name": "Celeste Plak",
+            "url_profile": "/en/vnl/women/teams/ned-netherlands/players/celeste-plak?id=70827",
+            "date_of_birth": "26/10/1995",
+            "age": "24",
+            "height": "190",
+            "weight": "87",
+            "spike": "314",
+            "block": "302"
+        },
+        {
+            "name": "Robin De Kruijf",
+            "url_profile": "/en/vnl/women/teams/ned-netherlands/players/robin-de-kruijf?id=70816",
+            "date_of_birth": "05/05/1991",
+            "age": "28",
+            "height": "192",
+            "weight": "81",
+            "spike": "313",
+            "block": "300"
+        },
+        {
+            "name": "Maret Balkestein-Grothues",
+            "url_profile": "/en/vnl/women/teams/ned-netherlands/players/maret-balkestein-grothues?id=70809",
+            "date_of_birth": "16/09/1988",
+            "age": "31",
+            "height": "180",
+            "weight": "68",
+            "spike": "304",
+            "block": "285"
+        },
+        {
+            "name": "Juliet Lohuis",
+            "url_profile": "/en/vnl/women/teams/ned-netherlands/players/juliet-lohuis?id=70824",
+            "date_of_birth": "10/09/1996",
+            "age": "23",
+            "height": "190",
+            "weight": "77",
+            "spike": "305",
+            "block": "295"
+        },
+        {
+            "name": "Demi Korevaar",
+            "url_profile": "/en/vnl/women/teams/ned-netherlands/players/demi-korevaar?id=70823",
+            "date_of_birth": "09/08/2000",
+            "age": "19",
+            "height": "187",
+            "weight": "71",
+            "spike": "311",
+            "block": "303"
+        },
+        {
+            "name": "Myrthe Schoot",
+            "url_profile": "/en/vnl/women/teams/ned-netherlands/players/myrthe-schoot?id=70830",
+            "date_of_birth": "29/08/1988",
+            "age": "31",
+            "height": "182",
+            "weight": "70",
+            "spike": "298",
+            "block": "286"
+        },
+        {
+            "name": "Lonneke Sl\u00f6etjes",
+            "url_profile": "/en/vnl/women/teams/ned-netherlands/players/lonneke-sl%c3%b6etjes?id=70832",
+            "date_of_birth": "15/11/1990",
+            "age": "29",
+            "height": "191",
+            "weight": "76",
+            "spike": "322",
+            "block": "315"
+        },
+        {
+            "name": "Anne Buijs",
+            "url_profile": "/en/vnl/women/teams/ned-netherlands/players/anne-buijs?id=70814",
+            "date_of_birth": "02/12/1991",
+            "age": "28",
+            "height": "191",
+            "weight": "73",
+            "spike": "317",
+            "block": "299"
+        },
+        {
+            "name": "Britt Bongaerts",
+            "url_profile": "/en/vnl/women/teams/ned-netherlands/players/britt-bongaerts?id=70812",
+            "date_of_birth": "03/11/1996",
+            "age": "23",
+            "height": "185",
+            "weight": "68",
+            "spike": "296",
+            "block": "284"
+        },
+        {
+            "name": "Hester Jasper",
+            "url_profile": "/en/vnl/women/teams/ned-netherlands/players/hester-jasper?id=70819",
+            "date_of_birth": "07/05/2001",
+            "age": "18",
+            "height": "175",
+            "weight": "63",
+            "spike": "295",
+            "block": "287"
+        },
+        {
+            "name": "Laura Dijkema",
+            "url_profile": "/en/vnl/women/teams/ned-netherlands/players/laura-dijkema?id=70818",
+            "date_of_birth": "18/02/1990",
+            "age": "29",
+            "height": "184",
+            "weight": "70",
+            "spike": "293",
+            "block": "279"
+        },
+        {
+            "name": "Indy Baijens",
+            "url_profile": "/en/vnl/women/teams/ned-netherlands/players/indy-baijens?id=70808",
+            "date_of_birth": "04/02/2001",
+            "age": "18",
+            "height": "190",
+            "weight": "67",
+            "spike": "317",
+            "block": "312"
+        },
+        {
+            "name": "Nicole Oude Luttikhuis",
+            "url_profile": "/en/vnl/women/teams/ned-netherlands/players/nicole-oude-luttikhuis?id=70826",
+            "date_of_birth": "26/12/1997",
+            "age": "22",
+            "height": "191",
+            "weight": "82",
+            "spike": "312",
+            "block": "305"
+        },
+        {
+            "name": "Marrit Jasper",
+            "url_profile": "/en/vnl/women/teams/ned-netherlands/players/marrit-jasper?id=70820",
+            "date_of_birth": "28/02/1996",
+            "age": "23",
+            "height": "180",
+            "weight": "75",
+            "spike": "300",
+            "block": "285"
+        },
+        {
+            "name": "Nika Daalderop",
+            "url_profile": "/en/vnl/women/teams/ned-netherlands/players/nika-daalderop?id=70815",
+            "date_of_birth": "29/11/1998",
+            "age": "21",
+            "height": "189",
+            "weight": "72",
+            "spike": "317",
+            "block": "308"
+        },
+        {
+            "name": "Tessa Polder",
+            "url_profile": "/en/vnl/women/teams/ned-netherlands/players/tessa-polder?id=70828",
+            "date_of_birth": "10/10/1997",
+            "age": "22",
+            "height": "189",
+            "weight": "76",
+            "spike": "301",
+            "block": "293"
+        },
+        {
+            "name": "Annick Meijers",
+            "url_profile": "/en/vnl/women/teams/ned-netherlands/players/annick-meijers?id=70825",
+            "date_of_birth": "23/03/2000",
+            "age": "19",
+            "height": "188",
+            "weight": "70",
+            "spike": "310",
+            "block": "301"
+        },
+        {
+            "name": "Nicole Koolhaas",
+            "url_profile": "/en/vnl/women/teams/ned-netherlands/players/nicole-koolhaas?id=70822",
+            "date_of_birth": "31/01/1991",
+            "age": "28",
+            "height": "198",
+            "weight": "77",
+            "spike": "310",
+            "block": "300"
+        },
+        {
+            "name": "Florien Reesink",
+            "url_profile": "/en/vnl/women/teams/ned-netherlands/players/florien-reesink?id=70829",
+            "date_of_birth": "09/06/1998",
+            "age": "21",
+            "height": "174",
+            "weight": "61",
+            "spike": "279",
+            "block": "273"
+        },
+        {
+            "name": "Sarah Van Aalen",
+            "url_profile": "/en/vnl/women/teams/ned-netherlands/players/sarah-van-aalen?id=70835",
+            "date_of_birth": "21/01/2000",
+            "age": "19",
+            "height": "183",
+            "weight": "68",
+            "spike": "300",
+            "block": "293"
+        },
+        {
+            "name": "Anniek Siebring",
+            "url_profile": "/en/vnl/women/teams/ned-netherlands/players/anniek-siebring?id=70831",
+            "date_of_birth": "13/05/1997",
+            "age": "22",
+            "height": "180",
+            "weight": "68",
+            "spike": "302",
+            "block": "287"
+        },
+        {
+            "name": "Eline Timmerman",
+            "url_profile": "/en/vnl/women/teams/ned-netherlands/players/eline-timmerman?id=70837",
+            "date_of_birth": "30/12/1998",
+            "age": "21",
+            "height": "192",
+            "weight": "78",
+            "spike": "303",
+            "block": "295"
+        },
+        {
+            "name": "Julia Nowicka",
+            "url_profile": "/en/vnl/women/teams/pol-poland/players/julia-nowicka?id=71045",
+            "date_of_birth": "21/10/1998",
+            "age": "21",
+            "height": "174",
+            "weight": "58",
+            "spike": "295",
+            "block": "278"
+        },
+        {
+            "name": "Marta Joanna Wojcik",
+            "url_profile": "/en/vnl/women/teams/pol-poland/players/marta-joanna-wojcik?id=71055",
+            "date_of_birth": "17/02/1982",
+            "age": "37",
+            "height": "183",
+            "weight": "70",
+            "spike": "295",
+            "block": "280"
+        },
+        {
+            "name": "Klaudia Alagierska",
+            "url_profile": "/en/vnl/women/teams/pol-poland/players/klaudia-alagierska?id=71029",
+            "date_of_birth": "02/01/1996",
+            "age": "23",
+            "height": "190",
+            "weight": "76",
+            "spike": "297",
+            "block": "290"
+        },
+        {
+            "name": "Kamila Witkowska",
+            "url_profile": "/en/vnl/women/teams/pol-poland/players/kamila-witkowska?id=71053",
+            "date_of_birth": "02/12/1991",
+            "age": "28",
+            "height": "191",
+            "weight": "76",
+            "spike": "310",
+            "block": "301"
+        },
+        {
+            "name": "Agnieszka Kakolewska",
+            "url_profile": "/en/vnl/women/teams/pol-poland/players/agnieszka-kakolewska?id=71038",
+            "date_of_birth": "17/10/1994",
+            "age": "25",
+            "height": "197",
+            "weight": "75",
+            "spike": "309",
+            "block": "295"
+        },
+        {
+            "name": "Martyna Lukasik",
+            "url_profile": "/en/vnl/women/teams/pol-poland/players/martyna-lukasik?id=71040",
+            "date_of_birth": "26/11/1999",
+            "age": "20",
+            "height": "189",
+            "weight": "75",
+            "spike": "315",
+            "block": "288"
+        },
+        {
+            "name": "Julia Twardowska",
+            "url_profile": "/en/vnl/women/teams/pol-poland/players/julia-twardowska?id=71052",
+            "date_of_birth": "04/05/1995",
+            "age": "24",
+            "height": "185",
+            "weight": "66",
+            "spike": "297",
+            "block": "283"
+        },
+        {
+            "name": "Maria Stenzel",
+            "url_profile": "/en/vnl/women/teams/pol-poland/players/maria-stenzel?id=71050",
+            "date_of_birth": "25/11/1998",
+            "age": "21",
+            "height": "168",
+            "weight": "53",
+            "spike": "278",
+            "block": "262"
+        },
+        {
+            "name": "Magdalena Stysiak",
+            "url_profile": "/en/vnl/women/teams/pol-poland/players/magdalena-stysiak?id=71051",
+            "date_of_birth": "03/12/2000",
+            "age": "19",
+            "height": "198",
+            "weight": "85",
+            "spike": "312",
+            "block": "295"
+        },
+        {
+            "name": "Zuzanna Efimienko-Mlotkowska",
+            "url_profile": "/en/vnl/women/teams/pol-poland/players/zuzanna-efimienko-mlotkowska?id=71032",
+            "date_of_birth": "08/08/1989",
+            "age": "30",
+            "height": "197",
+            "weight": "72",
+            "spike": "318",
+            "block": "303"
+        },
+        {
+            "name": "Monika Bociek",
+            "url_profile": "/en/vnl/women/teams/pol-poland/players/monika-bociek?id=71030",
+            "date_of_birth": "06/04/1996",
+            "age": "23",
+            "height": "185",
+            "weight": "70",
+            "spike": "302",
+            "block": "287"
+        },
+        {
+            "name": "Malgorzata Jasek",
+            "url_profile": "/en/vnl/women/teams/pol-poland/players/malgorzata-jasek?id=71037",
+            "date_of_birth": "14/03/1995",
+            "age": "24",
+            "height": "191",
+            "weight": "78",
+            "spike": "300",
+            "block": "240"
+        },
+        {
+            "name": "Paulina Maj-Erwardt",
+            "url_profile": "/en/vnl/women/teams/pol-poland/players/paulina-maj-erwardt?id=71041",
+            "date_of_birth": "22/03/1987",
+            "age": "32",
+            "height": "166",
+            "weight": "58",
+            "spike": "277",
+            "block": "255"
+        },
+        {
+            "name": "Joanna Wolosz",
+            "url_profile": "/en/vnl/women/teams/pol-poland/players/joanna-wolosz?id=71056",
+            "date_of_birth": "07/04/1990",
+            "age": "29",
+            "height": "181",
+            "weight": "71",
+            "spike": "303",
+            "block": "281"
+        },
+        {
+            "name": "Martyna Grajber",
+            "url_profile": "/en/vnl/women/teams/pol-poland/players/martyna-grajber?id=71035",
+            "date_of_birth": "28/03/1995",
+            "age": "24",
+            "height": "180",
+            "weight": "67",
+            "spike": "293",
+            "block": "276"
+        },
+        {
+            "name": "Natalia Medrzyk",
+            "url_profile": "/en/vnl/women/teams/pol-poland/players/natalia-medrzyk?id=71042",
+            "date_of_birth": "13/01/1992",
+            "age": "27",
+            "height": "183",
+            "weight": "73",
+            "spike": "305",
+            "block": "287"
+        },
+        {
+            "name": "Malwina Smarzek",
+            "url_profile": "/en/vnl/women/teams/pol-poland/players/malwina-smarzek?id=71049",
+            "date_of_birth": "03/06/1996",
+            "age": "23",
+            "height": "191",
+            "weight": "80",
+            "spike": "318",
+            "block": "292"
+        },
+        {
+            "name": "Emilia Mucha",
+            "url_profile": "/en/vnl/women/teams/pol-poland/players/emilia-mucha?id=71043",
+            "date_of_birth": "07/12/1993",
+            "age": "26",
+            "height": "186",
+            "weight": "78",
+            "spike": "300",
+            "block": "283"
+        },
+        {
+            "name": "Olivia Rozanski",
+            "url_profile": "/en/vnl/women/teams/pol-poland/players/olivia-rozanski?id=71048",
+            "date_of_birth": "05/06/1997",
+            "age": "22",
+            "height": "185",
+            "weight": "74",
+            "spike": "315",
+            "block": "300"
+        },
+        {
+            "name": "Marlena Plesnierowicz",
+            "url_profile": "/en/vnl/women/teams/pol-poland/players/marlena-plesnierowicz?id=71046",
+            "date_of_birth": "09/01/1992",
+            "age": "27",
+            "height": "176",
+            "weight": "61",
+            "spike": "295",
+            "block": "281"
+        },
+        {
+            "name": "Weronika Centka",
+            "url_profile": "/en/vnl/women/teams/pol-poland/players/weronika-centka?id=71031",
+            "date_of_birth": "06/09/2000",
+            "age": "19",
+            "height": "191",
+            "weight": "63",
+            "spike": "312",
+            "block": "297"
+        },
+        {
+            "name": "Natalia Murek",
+            "url_profile": "/en/vnl/women/teams/pol-poland/players/natalia-murek?id=71044",
+            "date_of_birth": "08/09/1999",
+            "age": "20",
+            "height": "180",
+            "weight": "70",
+            "spike": "302",
+            "block": "283"
+        },
+        {
+            "name": "Zuzanna Gorecka",
+            "url_profile": "/en/vnl/women/teams/pol-poland/players/zuzanna-gorecka?id=71033",
+            "date_of_birth": "10/04/2000",
+            "age": "19",
+            "height": "181",
+            "weight": "63",
+            "spike": "301",
+            "block": "284"
+        },
+        {
+            "name": "Monika Jag\u0142a",
+            "url_profile": "/en/vnl/women/teams/pol-poland/players/monika-jag%c5%82a?id=71036",
+            "date_of_birth": "04/01/2000",
+            "age": "19",
+            "height": "177",
+            "weight": "69",
+            "spike": "298",
+            "block": "285"
+        },
+        {
+            "name": "Alicja Grabka",
+            "url_profile": "/en/vnl/women/teams/pol-poland/players/alicja-grabka?id=71034",
+            "date_of_birth": "09/05/1998",
+            "age": "21",
+            "height": "178",
+            "weight": "62",
+            "spike": "290",
+            "block": "280"
+        },
+        {
+            "name": "Angelina Lazarenko",
+            "url_profile": "/en/vnl/women/teams/rus-russia/players/angelina-lazarenko?id=71063",
+            "date_of_birth": "13/04/1998",
+            "age": "21",
+            "height": "193",
+            "weight": "80",
+            "spike": "320",
+            "block": "305"
+        },
+        {
+            "name": "Ekaterina Efimova",
+            "url_profile": "/en/vnl/women/teams/rus-russia/players/ekaterina-efimova?id=71060",
+            "date_of_birth": "03/07/1993",
+            "age": "26",
+            "height": "192",
+            "weight": "70",
+            "spike": "305",
+            "block": "295"
+        },
+        {
+            "name": "Daria Chikrizova",
+            "url_profile": "/en/vnl/women/teams/rus-russia/players/daria-chikrizova?id=71073",
+            "date_of_birth": "09/06/1990",
+            "age": "29",
+            "height": "177",
+            "weight": "69",
+            "spike": "185",
+            "block": "180"
+        },
+        {
+            "name": "Ekaterina Orlova",
+            "url_profile": "/en/vnl/women/teams/rus-russia/players/ekaterina-orlova?id=71066",
+            "date_of_birth": "21/10/1987",
+            "age": "32",
+            "height": "193",
+            "weight": "77",
+            "spike": "307",
+            "block": "301"
+        },
+        {
+            "name": "Irina Koroleva",
+            "url_profile": "/en/vnl/women/teams/rus-russia/players/irina-koroleva?id=71079",
+            "date_of_birth": "04/10/1991",
+            "age": "28",
+            "height": "196",
+            "weight": "78",
+            "spike": "305",
+            "block": "290"
+        },
+        {
+            "name": "Tatiana Romanova",
+            "url_profile": "/en/vnl/women/teams/rus-russia/players/tatiana-romanova?id=71067",
+            "date_of_birth": "09/09/1994",
+            "age": "25",
+            "height": "178",
+            "weight": "64",
+            "spike": "292",
+            "block": "285"
+        },
+        {
+            "name": "Nataliya Goncharova",
+            "url_profile": "/en/vnl/women/teams/rus-russia/players/nataliya-goncharova?id=71077",
+            "date_of_birth": "01/06/1989",
+            "age": "30",
+            "height": "194",
+            "weight": "75",
+            "spike": "315",
+            "block": "306"
+        },
+        {
+            "name": "Alla Galkina",
+            "url_profile": "/en/vnl/women/teams/rus-russia/players/alla-galkina?id=71076",
+            "date_of_birth": "15/04/1992",
+            "age": "27",
+            "height": "178",
+            "weight": "65",
+            "spike": "295",
+            "block": "290"
+        },
+        {
+            "name": "Ekaterina Evdokimova",
+            "url_profile": "/en/vnl/women/teams/rus-russia/players/ekaterina-evdokimova?id=71074",
+            "date_of_birth": "10/09/1994",
+            "age": "25",
+            "height": "190",
+            "weight": "73",
+            "spike": "306",
+            "block": "285"
+        },
+        {
+            "name": "Margarita Kurilo",
+            "url_profile": "/en/vnl/women/teams/rus-russia/players/margarita-kurilo?id=71467",
+            "date_of_birth": "21/06/1993",
+            "age": "26",
+            "height": "185",
+            "weight": "73",
+            "spike": "304",
+            "block": "290"
+        },
+        {
+            "name": "Daria Ryseva",
+            "url_profile": "/en/vnl/women/teams/rus-russia/players/daria-ryseva?id=71069",
+            "date_of_birth": "05/03/1998",
+            "age": "21",
+            "height": "175",
+            "weight": "69",
+            "spike": "282",
+            "block": "266"
+        },
+        {
+            "name": "Evgeniya Startseva",
+            "url_profile": "/en/vnl/women/teams/rus-russia/players/evgeniya-startseva?id=71084",
+            "date_of_birth": "12/02/1989",
+            "age": "30",
+            "height": "185",
+            "weight": "68",
+            "spike": "294",
+            "block": "290"
+        },
+        {
+            "name": "Irina Voronkova",
+            "url_profile": "/en/vnl/women/teams/rus-russia/players/irina-voronkova?id=71085",
+            "date_of_birth": "20/10/1995",
+            "age": "24",
+            "height": "190",
+            "weight": "84",
+            "spike": "305",
+            "block": "290"
+        },
+        {
+            "name": "Valeriya Zaytseva",
+            "url_profile": "/en/vnl/women/teams/rus-russia/players/valeriya-zaytseva?id=71469",
+            "date_of_birth": "24/03/1995",
+            "age": "24",
+            "height": "187",
+            "weight": "71",
+            "spike": "307",
+            "block": "297"
+        },
+        {
+            "name": "Kseniia Parubets",
+            "url_profile": "/en/vnl/women/teams/rus-russia/players/kseniia-parubets?id=71082",
+            "date_of_birth": "31/10/1994",
+            "age": "25",
+            "height": "183",
+            "weight": "64",
+            "spike": "300",
+            "block": "286"
+        },
+        {
+            "name": "Mariia Khaletskaia",
+            "url_profile": "/en/vnl/women/teams/rus-russia/players/mariia-khaletskaia?id=71422",
+            "date_of_birth": "31/07/1994",
+            "age": "25",
+            "height": "195",
+            "weight": "80",
+            "spike": "311",
+            "block": "302"
+        },
+        {
+            "name": "Maria Vorobyeva",
+            "url_profile": "/en/vnl/women/teams/rus-russia/players/maria-vorobyeva?id=71071",
+            "date_of_birth": "24/02/1998",
+            "age": "21",
+            "height": "184",
+            "weight": "77",
+            "spike": "306",
+            "block": "288"
+        },
+        {
+            "name": "Anna Kotikova",
+            "url_profile": "/en/vnl/women/teams/rus-russia/players/anna-kotikova?id=71062",
+            "date_of_birth": "13/10/1999",
+            "age": "20",
+            "height": "185",
+            "weight": "71",
+            "spike": "306",
+            "block": "300"
+        },
+        {
+            "name": "Tatiana Iurinskaia",
+            "url_profile": "/en/vnl/women/teams/rus-russia/players/tatiana-iurinskaia?id=71061",
+            "date_of_birth": "25/01/1996",
+            "age": "23",
+            "height": "195",
+            "weight": "69",
+            "spike": "305",
+            "block": "275"
+        },
+        {
+            "name": "Olga Zubareva",
+            "url_profile": "/en/vnl/women/teams/rus-russia/players/olga-zubareva?id=71072",
+            "date_of_birth": "08/11/1998",
+            "age": "21",
+            "height": "189",
+            "weight": "74",
+            "spike": "305",
+            "block": "297"
+        },
+        {
+            "name": "Kristina Kurnosova",
+            "url_profile": "/en/vnl/women/teams/rus-russia/players/kristina-kurnosova?id=71081",
+            "date_of_birth": "17/06/1997",
+            "age": "22",
+            "height": "176",
+            "weight": "62",
+            "spike": "288",
+            "block": "278"
+        },
+        {
+            "name": "Sofya Kuznetsova",
+            "url_profile": "/en/vnl/women/teams/rus-russia/players/sofya-kuznetsova?id=71468",
+            "date_of_birth": "31/10/1999",
+            "age": "20",
+            "height": "182",
+            "weight": "65",
+            "spike": "300",
+            "block": "295"
+        },
+        {
+            "name": "Tatiana Kadochkina",
+            "url_profile": "/en/vnl/women/teams/rus-russia/players/tatiana-kadochkina?id=71078",
+            "date_of_birth": "21/03/2003",
+            "age": "16",
+            "height": "192",
+            "weight": "77",
+            "spike": "310",
+            "block": "292"
+        },
+        {
+            "name": "Polina Matveeva",
+            "url_profile": "/en/vnl/women/teams/rus-russia/players/polina-matveeva?id=71065",
+            "date_of_birth": "08/08/2002",
+            "age": "17",
+            "height": "188",
+            "weight": "69",
+            "spike": "300",
+            "block": "281"
+        },
+        {
+            "name": "Victoriia Russu",
+            "url_profile": "/en/vnl/women/teams/rus-russia/players/victoriia-russu?id=71068",
+            "date_of_birth": "16/02/1999",
+            "age": "20",
+            "height": "193",
+            "weight": "70",
+            "spike": "311",
+            "block": "305"
+        },
+        {
+            "name": "Bianka Busa",
+            "url_profile": "/en/vnl/women/teams/srb-serbia/players/bianka-busa?id=71813",
+            "date_of_birth": "25/07/1994",
+            "age": "25",
+            "height": "187",
+            "weight": "74",
+            "spike": "312",
+            "block": "298"
+        },
+        {
+            "name": "Katarina Lazovic",
+            "url_profile": "/en/vnl/women/teams/srb-serbia/players/katarina-lazovic?id=71862",
+            "date_of_birth": "12/09/1999",
+            "age": "20",
+            "height": "182",
+            "weight": "65",
+            "spike": "290",
+            "block": "277"
+        },
+        {
+            "name": "Emilija Antanasijevic",
+            "url_profile": "/en/vnl/women/teams/srb-serbia/players/emilija-antanasijevic?id=71861",
+            "date_of_birth": "10/08/1994",
+            "age": "25",
+            "height": "180",
+            "weight": "72",
+            "spike": "290",
+            "block": "275"
+        },
+        {
+            "name": "Mina Popovic",
+            "url_profile": "/en/vnl/women/teams/srb-serbia/players/mina-popovic?id=71808",
+            "date_of_birth": "16/09/1994",
+            "age": "25",
+            "height": "187",
+            "weight": "73",
+            "spike": "315",
+            "block": "305"
+        },
+        {
+            "name": "Maja Savic",
+            "url_profile": "/en/vnl/women/teams/srb-serbia/players/maja-savic?id=71809",
+            "date_of_birth": "14/08/1993",
+            "age": "26",
+            "height": "189",
+            "weight": "70",
+            "spike": "305",
+            "block": "295"
+        },
+        {
+            "name": "Katarina Jovic",
+            "url_profile": "/en/vnl/women/teams/srb-serbia/players/katarina-jovic?id=71814",
+            "date_of_birth": "01/10/1999",
+            "age": "20",
+            "height": "191",
+            "weight": "76",
+            "spike": "292",
+            "block": "284"
+        },
+        {
+            "name": "Sladjana Mirkovic",
+            "url_profile": "/en/vnl/women/teams/srb-serbia/players/sladjana-mirkovic?id=71806",
+            "date_of_birth": "07/10/1995",
+            "age": "24",
+            "height": "185",
+            "weight": "78",
+            "spike": "293",
+            "block": "283"
+        },
+        {
+            "name": "Brankica Mihajlovic",
+            "url_profile": "/en/vnl/women/teams/srb-serbia/players/brankica-mihajlovic?id=71817",
+            "date_of_birth": "13/04/1991",
+            "age": "28",
+            "height": "190",
+            "weight": "83",
+            "spike": "302",
+            "block": "290"
+        },
+        {
+            "name": "Stefana Veljkovic",
+            "url_profile": "/en/vnl/women/teams/srb-serbia/players/stefana-veljkovic?id=71811",
+            "date_of_birth": "09/01/1990",
+            "age": "29",
+            "height": "190",
+            "weight": "76",
+            "spike": "325",
+            "block": "310"
+        },
+        {
+            "name": "Teodora Pusic",
+            "url_profile": "/en/vnl/women/teams/srb-serbia/players/teodora-pusic?id=71829",
+            "date_of_birth": "12/03/1993",
+            "age": "26",
+            "height": "170",
+            "weight": "58",
+            "spike": "270",
+            "block": "260"
+        },
+        {
+            "name": "Ana Bjelica",
+            "url_profile": "/en/vnl/women/teams/srb-serbia/players/ana-bjelica?id=71821",
+            "date_of_birth": "03/04/1992",
+            "age": "27",
+            "height": "190",
+            "weight": "78",
+            "spike": "310",
+            "block": "305"
+        },
+        {
+            "name": "Maja Aleksic",
+            "url_profile": "/en/vnl/women/teams/srb-serbia/players/maja-aleksic?id=71801",
+            "date_of_birth": "06/06/1997",
+            "age": "22",
+            "height": "188",
+            "weight": "72",
+            "spike": "302",
+            "block": "289"
+        },
+        {
+            "name": "Tijana Bo\u0161kovic",
+            "url_profile": "/en/vnl/women/teams/srb-serbia/players/tijana-bo%c5%a1kovic?id=71822",
+            "date_of_birth": "08/03/1997",
+            "age": "22",
+            "height": "193",
+            "weight": "82",
+            "spike": "315",
+            "block": "300"
+        },
+        {
+            "name": "Bojana Milenkovic",
+            "url_profile": "/en/vnl/women/teams/srb-serbia/players/bojana-milenkovic?id=71919",
+            "date_of_birth": "06/03/1997",
+            "age": "22",
+            "height": "185",
+            "weight": "70",
+            "spike": "294",
+            "block": "288"
+        },
+        {
+            "name": "Jelena Blagojevic",
+            "url_profile": "/en/vnl/women/teams/srb-serbia/players/jelena-blagojevic?id=71812",
+            "date_of_birth": "01/12/1988",
+            "age": "31",
+            "height": "181",
+            "weight": "67",
+            "spike": "302",
+            "block": "284"
+        },
+        {
+            "name": "Jovana Kocic",
+            "url_profile": "/en/vnl/women/teams/srb-serbia/players/jovana-kocic?id=71805",
+            "date_of_birth": "24/02/1998",
+            "age": "21",
+            "height": "190",
+            "weight": "85",
+            "spike": "290",
+            "block": "285"
+        },
+        {
+            "name": "Sara Lozo",
+            "url_profile": "/en/vnl/women/teams/srb-serbia/players/sara-lozo?id=71816",
+            "date_of_birth": "29/04/1997",
+            "age": "22",
+            "height": "186",
+            "weight": "61",
+            "spike": "295",
+            "block": "290"
+        },
+        {
+            "name": "Mila Djordjevic",
+            "url_profile": "/en/vnl/women/teams/srb-serbia/players/mila-djordjevic?id=71804",
+            "date_of_birth": "20/04/1998",
+            "age": "21",
+            "height": "180",
+            "weight": "58",
+            "spike": "290",
+            "block": "280"
+        },
+        {
+            "name": "Aleksandra Cirovic",
+            "url_profile": "/en/vnl/women/teams/srb-serbia/players/aleksandra-cirovic?id=71803",
+            "date_of_birth": "30/09/1997",
+            "age": "22",
+            "height": "175",
+            "weight": "57",
+            "spike": "285",
+            "block": "275"
+        },
+        {
+            "name": "Sara Vucicevic",
+            "url_profile": "/en/vnl/women/teams/srb-serbia/players/sara-vucicevic?id=71820",
+            "date_of_birth": "29/04/1997",
+            "age": "22",
+            "height": "186",
+            "weight": "66",
+            "spike": "287",
+            "block": "282"
+        },
+        {
+            "name": "Ana Pejicic",
+            "url_profile": "/en/vnl/women/teams/srb-serbia/players/ana-pejicic?id=71827",
+            "date_of_birth": "05/11/2000",
+            "age": "19",
+            "height": "190",
+            "weight": "69",
+            "spike": "299",
+            "block": "288"
+        },
+        {
+            "name": "Milica Kubura",
+            "url_profile": "/en/vnl/women/teams/srb-serbia/players/milica-kubura?id=71825",
+            "date_of_birth": "20/03/1995",
+            "age": "24",
+            "height": "192",
+            "weight": "77",
+            "spike": "297",
+            "block": "280"
+        },
+        {
+            "name": "Aleksandra Tadic",
+            "url_profile": "/en/vnl/women/teams/srb-serbia/players/aleksandra-tadic?id=71830",
+            "date_of_birth": "24/12/1997",
+            "age": "22",
+            "height": "174",
+            "weight": "60",
+            "spike": "270",
+            "block": "265"
+        },
+        {
+            "name": "Marija Popovic",
+            "url_profile": "/en/vnl/women/teams/srb-serbia/players/marija-popovic?id=71863",
+            "date_of_birth": "20/08/1996",
+            "age": "23",
+            "height": "162",
+            "weight": "60",
+            "spike": "230",
+            "block": "225"
+        },
+        {
+            "name": "Bojana Gocanin",
+            "url_profile": "/en/vnl/women/teams/srb-serbia/players/bojana-gocanin?id=71824",
+            "date_of_birth": "25/09/2002",
+            "age": "17",
+            "height": "179",
+            "weight": "66",
+            "spike": "286",
+            "block": "276"
+        },
+        {
+            "name": "Wipawee Srithong",
+            "url_profile": "/en/vnl/women/teams/tha-thailand/players/wipawee-srithong?id=71795",
+            "date_of_birth": "28/01/1999",
+            "age": "20",
+            "height": "174",
+            "weight": "65",
+            "spike": "288",
+            "block": "266"
+        },
+        {
+            "name": "Piyanut Pannoy",
+            "url_profile": "/en/vnl/women/teams/tha-thailand/players/piyanut-pannoy?id=71790",
+            "date_of_birth": "10/11/1989",
+            "age": "30",
+            "height": "171",
+            "weight": "62",
+            "spike": "280",
+            "block": "275"
+        },
+        {
+            "name": "Pornpun Guedpard",
+            "url_profile": "/en/vnl/women/teams/tha-thailand/players/pornpun-guedpard?id=71778",
+            "date_of_birth": "05/05/1993",
+            "age": "26",
+            "height": "170",
+            "weight": "63",
+            "spike": "288",
+            "block": "279"
+        },
+        {
+            "name": "Thatdao Nuekjang",
+            "url_profile": "/en/vnl/women/teams/tha-thailand/players/thatdao-nuekjang?id=71788",
+            "date_of_birth": "03/02/1994",
+            "age": "25",
+            "height": "184",
+            "weight": "72",
+            "spike": "308",
+            "block": "296"
+        },
+        {
+            "name": "Pleumjit Thinkaow",
+            "url_profile": "/en/vnl/women/teams/tha-thailand/players/pleumjit-thinkaow?id=71796",
+            "date_of_birth": "09/11/1983",
+            "age": "36",
+            "height": "180",
+            "weight": "67",
+            "spike": "303",
+            "block": "283"
+        },
+        {
+            "name": "Onuma Sittirak",
+            "url_profile": "/en/vnl/women/teams/tha-thailand/players/onuma-sittirak?id=71793",
+            "date_of_birth": "13/06/1986",
+            "age": "33",
+            "height": "175",
+            "weight": "72",
+            "spike": "304",
+            "block": "285"
+        },
+        {
+            "name": "Watchareeya Nuanjam",
+            "url_profile": "/en/vnl/women/teams/tha-thailand/players/watchareeya-nuanjam?id=71787",
+            "date_of_birth": "22/07/1996",
+            "age": "23",
+            "height": "177",
+            "weight": "64",
+            "spike": "292",
+            "block": "279"
+        },
+        {
+            "name": "Wanitchaya Luangtonglang",
+            "url_profile": "/en/vnl/women/teams/tha-thailand/players/wanitchaya-luangtonglang?id=71784",
+            "date_of_birth": "08/10/1992",
+            "age": "27",
+            "height": "177",
+            "weight": "60",
+            "spike": "300",
+            "block": "275"
+        },
+        {
+            "name": "Wilavan Apinyapong",
+            "url_profile": "/en/vnl/women/teams/tha-thailand/players/wilavan-apinyapong?id=71773",
+            "date_of_birth": "06/06/1984",
+            "age": "35",
+            "height": "174",
+            "weight": "70",
+            "spike": "294",
+            "block": "282"
+        },
+        {
+            "name": "Amporn Hyapha",
+            "url_profile": "/en/vnl/women/teams/tha-thailand/players/amporn-hyapha?id=71779",
+            "date_of_birth": "19/05/1985",
+            "age": "34",
+            "height": "180",
+            "weight": "70",
+            "spike": "301",
+            "block": "290"
+        },
+        {
+            "name": "Tapaphaipun Chaisri",
+            "url_profile": "/en/vnl/women/teams/tha-thailand/players/tapaphaipun-chaisri?id=71776",
+            "date_of_birth": "29/11/1989",
+            "age": "30",
+            "height": "168",
+            "weight": "70",
+            "spike": "295",
+            "block": "276"
+        },
+        {
+            "name": "Nootsara Tomkom",
+            "url_profile": "/en/vnl/women/teams/tha-thailand/players/nootsara-tomkom?id=71797",
+            "date_of_birth": "07/07/1985",
+            "age": "34",
+            "height": "169",
+            "weight": "57",
+            "spike": "289",
+            "block": "278"
+        },
+        {
+            "name": "Chitaporn Kamlangmak",
+            "url_profile": "/en/vnl/women/teams/tha-thailand/players/chitaporn-kamlangmak?id=71780",
+            "date_of_birth": "17/03/1996",
+            "age": "23",
+            "height": "184",
+            "weight": "74",
+            "spike": "290",
+            "block": "282"
+        },
+        {
+            "name": "Malika Kanthong",
+            "url_profile": "/en/vnl/women/teams/tha-thailand/players/malika-kanthong?id=71782",
+            "date_of_birth": "08/01/1987",
+            "age": "32",
+            "height": "178",
+            "weight": "65",
+            "spike": "292",
+            "block": "278"
+        },
+        {
+            "name": "Tichaya Boonlert",
+            "url_profile": "/en/vnl/women/teams/tha-thailand/players/tichaya-boonlert?id=71775",
+            "date_of_birth": "14/02/1997",
+            "age": "22",
+            "height": "179",
+            "weight": "64",
+            "spike": "293",
+            "block": "284"
+        },
+        {
+            "name": "Ajcharaporn Kongyot",
+            "url_profile": "/en/vnl/women/teams/tha-thailand/players/ajcharaporn-kongyot?id=71783",
+            "date_of_birth": "18/06/1995",
+            "age": "24",
+            "height": "178",
+            "weight": "65",
+            "spike": "298",
+            "block": "287"
+        },
+        {
+            "name": "Chatchu-On Moksri",
+            "url_profile": "/en/vnl/women/teams/tha-thailand/players/chatchu-on-moksri?id=71785",
+            "date_of_birth": "06/11/1999",
+            "age": "20",
+            "height": "178",
+            "weight": "58",
+            "spike": "298",
+            "block": "290"
+        },
+        {
+            "name": "Supattra Pairoj",
+            "url_profile": "/en/vnl/women/teams/tha-thailand/players/supattra-pairoj?id=71789",
+            "date_of_birth": "27/06/1990",
+            "age": "29",
+            "height": "160",
+            "weight": "58",
+            "spike": "275",
+            "block": "265"
+        },
+        {
+            "name": "Gullapa Piampongsan",
+            "url_profile": "/en/vnl/women/teams/tha-thailand/players/gullapa-piampongsan?id=71791",
+            "date_of_birth": "17/03/1991",
+            "age": "28",
+            "height": "178",
+            "weight": "60",
+            "spike": "280",
+            "block": "274"
+        },
+        {
+            "name": "Yupa Sanitklang",
+            "url_profile": "/en/vnl/women/teams/tha-thailand/players/yupa-sanitklang?id=71792",
+            "date_of_birth": "14/08/1991",
+            "age": "28",
+            "height": "166",
+            "weight": "55",
+            "spike": "275",
+            "block": "260"
+        },
+        {
+            "name": "Jutarat Montripila",
+            "url_profile": "/en/vnl/women/teams/tha-thailand/players/jutarat-montripila?id=71786",
+            "date_of_birth": "02/10/1986",
+            "age": "33",
+            "height": "175",
+            "weight": "60",
+            "spike": "290",
+            "block": "280"
+        },
+        {
+            "name": "Tichakorn Boonlert",
+            "url_profile": "/en/vnl/women/teams/tha-thailand/players/tichakorn-boonlert?id=71774",
+            "date_of_birth": "22/03/2001",
+            "age": "18",
+            "height": "180",
+            "weight": "78",
+            "spike": "294",
+            "block": "283"
+        },
+        {
+            "name": "Thanacha Sooksod",
+            "url_profile": "/en/vnl/women/teams/tha-thailand/players/thanacha-sooksod?id=71794",
+            "date_of_birth": "26/05/2000",
+            "age": "19",
+            "height": "180",
+            "weight": "70",
+            "spike": "283",
+            "block": "275"
+        },
+        {
+            "name": "Kaewkalaya Kamulthala",
+            "url_profile": "/en/vnl/women/teams/tha-thailand/players/kaewkalaya-kamulthala?id=71781",
+            "date_of_birth": "07/08/1994",
+            "age": "25",
+            "height": "178",
+            "weight": "66",
+            "spike": "298",
+            "block": "281"
+        },
+        {
+            "name": "Tikamporn Changkeaw",
+            "url_profile": "/en/vnl/women/teams/tha-thailand/players/tikamporn-changkeaw?id=71777",
+            "date_of_birth": "12/12/1984",
+            "age": "35",
+            "height": "168",
+            "weight": "62",
+            "spike": "260",
+            "block": "252"
+        },
+        {
+            "name": "Gizem \u00d6rge G\u00fcner",
+            "url_profile": "/en/vnl/women/teams/tur-turkey/players/gizem-%c3%b6rge-g%c3%bcner?id=71214",
+            "date_of_birth": "26/04/1993",
+            "age": "26",
+            "height": "172",
+            "weight": "59",
+            "spike": "270",
+            "block": "260"
+        },
+        {
+            "name": "Simge Sebnem Akoz",
+            "url_profile": "/en/vnl/women/teams/tur-turkey/players/simge-sebnem-akoz?id=71199",
+            "date_of_birth": "23/04/1991",
+            "age": "28",
+            "height": "168",
+            "weight": "56",
+            "spike": "250",
+            "block": "245"
+        },
+        {
+            "name": "Cansu Ozbay",
+            "url_profile": "/en/vnl/women/teams/tur-turkey/players/cansu-ozbay?id=71215",
+            "date_of_birth": "17/10/1996",
+            "age": "23",
+            "height": "182",
+            "weight": "78",
+            "spike": "298",
+            "block": "290"
+        },
+        {
+            "name": "Seyma Ercan",
+            "url_profile": "/en/vnl/women/teams/tur-turkey/players/seyma-ercan?id=71208",
+            "date_of_birth": "05/07/1994",
+            "age": "25",
+            "height": "187",
+            "weight": "73",
+            "spike": "305",
+            "block": "294"
+        },
+        {
+            "name": "Kubra Caliskan",
+            "url_profile": "/en/vnl/women/teams/tur-turkey/players/kubra-caliskan?id=71204",
+            "date_of_birth": "13/10/1994",
+            "age": "25",
+            "height": "198",
+            "weight": "86",
+            "spike": "310",
+            "block": "310"
+        },
+        {
+            "name": "Hande Baladin",
+            "url_profile": "/en/vnl/women/teams/tur-turkey/players/hande-baladin?id=71202",
+            "date_of_birth": "01/09/1997",
+            "age": "22",
+            "height": "190",
+            "weight": "81",
+            "spike": "309",
+            "block": "300"
+        },
+        {
+            "name": "Buse Unal",
+            "url_profile": "/en/vnl/women/teams/tur-turkey/players/buse-unal?id=71221",
+            "date_of_birth": "29/07/1997",
+            "age": "22",
+            "height": "188",
+            "weight": "74",
+            "spike": "299",
+            "block": "290"
+        },
+        {
+            "name": "Meliha Ismailoglu",
+            "url_profile": "/en/vnl/women/teams/tur-turkey/players/meliha-ismailoglu?id=71211",
+            "date_of_birth": "17/09/1993",
+            "age": "26",
+            "height": "188",
+            "weight": "73",
+            "spike": "303",
+            "block": "291"
+        },
+        {
+            "name": "Melis Durul",
+            "url_profile": "/en/vnl/women/teams/tur-turkey/players/melis-durul?id=71207",
+            "date_of_birth": "21/10/1993",
+            "age": "26",
+            "height": "185",
+            "weight": "74",
+            "spike": "303",
+            "block": "291"
+        },
+        {
+            "name": "Ezgi Dilik",
+            "url_profile": "/en/vnl/women/teams/tur-turkey/players/ezgi-dilik?id=71224",
+            "date_of_birth": "12/06/1995",
+            "age": "24",
+            "height": "177",
+            "weight": "72",
+            "spike": "288",
+            "block": "280"
+        },
+        {
+            "name": "G\u00f6zde Yilmaz",
+            "url_profile": "/en/vnl/women/teams/tur-turkey/players/g%c3%b6zde-yilmaz?id=71223",
+            "date_of_birth": "09/09/1991",
+            "age": "28",
+            "height": "194",
+            "weight": "79",
+            "spike": "316",
+            "block": "306"
+        },
+        {
+            "name": "Meryem Boz",
+            "url_profile": "/en/vnl/women/teams/tur-turkey/players/meryem-boz?id=71203",
+            "date_of_birth": "03/02/1988",
+            "age": "31",
+            "height": "190",
+            "weight": "68",
+            "spike": "323",
+            "block": "313"
+        },
+        {
+            "name": "Eda Erdem D\u00fcndar",
+            "url_profile": "/en/vnl/women/teams/tur-turkey/players/eda-erdem-d%c3%bcndar?id=71209",
+            "date_of_birth": "22/06/1987",
+            "age": "32",
+            "height": "188",
+            "weight": "74",
+            "spike": "307",
+            "block": "297"
+        },
+        {
+            "name": "Ay\u00e7in Akyol",
+            "url_profile": "/en/vnl/women/teams/tur-turkey/players/ay%c3%a7in-akyol?id=71200",
+            "date_of_birth": "15/06/1999",
+            "age": "20",
+            "height": "188",
+            "weight": "72",
+            "spike": "305",
+            "block": "298"
+        },
+        {
+            "name": "Yasemin Guveli",
+            "url_profile": "/en/vnl/women/teams/tur-turkey/players/yasemin-guveli?id=71276",
+            "date_of_birth": "05/01/1999",
+            "age": "20",
+            "height": "188",
+            "weight": "72",
+            "spike": "306",
+            "block": "298"
+        },
+        {
+            "name": "Zehra Gunes",
+            "url_profile": "/en/vnl/women/teams/tur-turkey/players/zehra-gunes?id=71210",
+            "date_of_birth": "07/07/1999",
+            "age": "20",
+            "height": "197",
+            "weight": "88",
+            "spike": "319",
+            "block": "310"
+        },
+        {
+            "name": "Asli Kalac",
+            "url_profile": "/en/vnl/women/teams/tur-turkey/players/asli-kalac?id=71212",
+            "date_of_birth": "13/12/1995",
+            "age": "24",
+            "height": "185",
+            "weight": "73",
+            "spike": "306",
+            "block": "297"
+        },
+        {
+            "name": "Aylin Sario\u011flu",
+            "url_profile": "/en/vnl/women/teams/tur-turkey/players/aylin-sario%c4%9flu?id=71219",
+            "date_of_birth": "21/07/1995",
+            "age": "24",
+            "height": "169",
+            "weight": "68",
+            "spike": "300",
+            "block": "290"
+        },
+        {
+            "name": "Fatma Yildirim",
+            "url_profile": "/en/vnl/women/teams/tur-turkey/players/fatma-yildirim?id=71222",
+            "date_of_birth": "03/01/1990",
+            "age": "29",
+            "height": "180",
+            "weight": "64",
+            "spike": "304",
+            "block": "292"
+        },
+        {
+            "name": "Elif \u015eahin",
+            "url_profile": "/en/vnl/women/teams/tur-turkey/players/elif-%c5%9fahin?id=71218",
+            "date_of_birth": "19/01/2001",
+            "age": "18",
+            "height": "190",
+            "weight": "73",
+            "spike": "300",
+            "block": "291"
+        },
+        {
+            "name": "Humay Topaloglu",
+            "url_profile": "/en/vnl/women/teams/tur-turkey/players/humay-topaloglu?id=71220",
+            "date_of_birth": "03/08/1996",
+            "age": "23",
+            "height": "180",
+            "weight": "64",
+            "spike": "300",
+            "block": "290"
+        },
+        {
+            "name": "Neriman Ozsoy",
+            "url_profile": "/en/vnl/women/teams/tur-turkey/players/neriman-ozsoy?id=71288",
+            "date_of_birth": "13/07/1988",
+            "age": "31",
+            "height": "188",
+            "weight": "76",
+            "spike": "312",
+            "block": "300"
+        },
+        {
+            "name": "Cansu Cetin",
+            "url_profile": "/en/vnl/women/teams/tur-turkey/players/cansu-cetin?id=71205",
+            "date_of_birth": "26/05/1993",
+            "age": "26",
+            "height": "181",
+            "weight": "69",
+            "spike": "298",
+            "block": "290"
+        },
+        {
+            "name": "Naz Aydemir Akyol",
+            "url_profile": "/en/vnl/women/teams/tur-turkey/players/naz-aydemir-akyol?id=71197",
+            "date_of_birth": "14/08/1990",
+            "age": "29",
+            "height": "186",
+            "weight": "68",
+            "spike": "304",
+            "block": "294"
+        },
+        {
+            "name": "Ebrar Karakurt",
+            "url_profile": "/en/vnl/women/teams/tur-turkey/players/ebrar-karakurt?id=71213",
+            "date_of_birth": "17/01/2000",
+            "age": "19",
+            "height": "196",
+            "weight": "73",
+            "spike": "315",
+            "block": "304"
+        },
+        {
+            "name": "Micha Hancock",
+            "url_profile": "/en/vnl/women/teams/usa-usa/players/micha-hancock?id=70959",
+            "date_of_birth": "10/11/1992",
+            "age": "27",
+            "height": "180",
+            "weight": "76",
+            "spike": "305",
+            "block": "297"
+        },
+        {
+            "name": "Jordyn Poulter",
+            "url_profile": "/en/vnl/women/teams/usa-usa/players/jordyn-poulter?id=70966",
+            "date_of_birth": "31/07/1997",
+            "age": "22",
+            "height": "188",
+            "weight": "77",
+            "spike": "306",
+            "block": "295"
+        },
+        {
+            "name": "Carli Lloyd",
+            "url_profile": "/en/vnl/women/teams/usa-usa/players/carli-lloyd?id=70963",
+            "date_of_birth": "06/08/1989",
+            "age": "30",
+            "height": "180",
+            "weight": "75",
+            "spike": "313",
+            "block": "295"
+        },
+        {
+            "name": "Rachael Adams",
+            "url_profile": "/en/vnl/women/teams/usa-usa/players/rachael-adams?id=70950",
+            "date_of_birth": "03/06/1990",
+            "age": "29",
+            "height": "188",
+            "weight": "81",
+            "spike": "318",
+            "block": "307"
+        },
+        {
+            "name": "Tetori Dixon",
+            "url_profile": "/en/vnl/women/teams/usa-usa/players/tetori-dixon?id=70955",
+            "date_of_birth": "04/08/1992",
+            "age": "27",
+            "height": "191",
+            "weight": "83",
+            "spike": "306",
+            "block": "295"
+        },
+        {
+            "name": "Lauren Carlini",
+            "url_profile": "/en/vnl/women/teams/usa-usa/players/lauren-carlini?id=70953",
+            "date_of_birth": "28/02/1995",
+            "age": "24",
+            "height": "185",
+            "weight": "77",
+            "spike": "302",
+            "block": "295"
+        },
+        {
+            "name": "Lauren Gibbemeyer",
+            "url_profile": "/en/vnl/women/teams/usa-usa/players/lauren-gibbemeyer?id=70958",
+            "date_of_birth": "08/09/1988",
+            "age": "31",
+            "height": "187",
+            "weight": "71",
+            "spike": "307",
+            "block": "293"
+        },
+        {
+            "name": "Madison Kingdon Rishel",
+            "url_profile": "/en/vnl/women/teams/usa-usa/players/madison-kingdon-rishel?id=70967",
+            "date_of_birth": "20/04/1993",
+            "age": "26",
+            "height": "183",
+            "weight": "78",
+            "spike": "307",
+            "block": "298"
+        },
+        {
+            "name": "Jordan Larson",
+            "url_profile": "/en/vnl/women/teams/usa-usa/players/jordan-larson?id=70961",
+            "date_of_birth": "16/10/1986",
+            "age": "33",
+            "height": "188",
+            "weight": "75",
+            "spike": "302",
+            "block": "295"
+        },
+        {
+            "name": "Andrea Drews",
+            "url_profile": "/en/vnl/women/teams/usa-usa/players/andrea-drews?id=70956",
+            "date_of_birth": "25/12/1993",
+            "age": "26",
+            "height": "191",
+            "weight": "77",
+            "spike": "316",
+            "block": "312"
+        },
+        {
+            "name": "Jordan Thompson",
+            "url_profile": "/en/vnl/women/teams/usa-usa/players/jordan-thompson?id=70975",
+            "date_of_birth": "05/05/1997",
+            "age": "22",
+            "height": "193",
+            "weight": "70",
+            "spike": "320",
+            "block": "314"
+        },
+        {
+            "name": "Sarah Wilhite",
+            "url_profile": "/en/vnl/women/teams/usa-usa/players/sarah-wilhite?id=70972",
+            "date_of_birth": "30/07/1995",
+            "age": "24",
+            "height": "185",
+            "weight": "75",
+            "spike": "305",
+            "block": "300"
+        },
+        {
+            "name": "Michelle Bartsch-Hackley",
+            "url_profile": "/en/vnl/women/teams/usa-usa/players/michelle-bartsch-hackley?id=70952",
+            "date_of_birth": "12/02/1990",
+            "age": "29",
+            "height": "190",
+            "weight": "78",
+            "spike": "305",
+            "block": "296"
+        },
+        {
+            "name": "Kimberly Hill",
+            "url_profile": "/en/vnl/women/teams/usa-usa/players/kimberly-hill?id=70960",
+            "date_of_birth": "30/11/1989",
+            "age": "30",
+            "height": "193",
+            "weight": "72",
+            "spike": "320",
+            "block": "310"
+        },
+        {
+            "name": "Megan Courtney",
+            "url_profile": "/en/vnl/women/teams/usa-usa/players/megan-courtney?id=70954",
+            "date_of_birth": "27/10/1993",
+            "age": "26",
+            "height": "185",
+            "weight": "61",
+            "spike": "314",
+            "block": "300"
+        },
+        {
+            "name": "Mikaela Foecke",
+            "url_profile": "/en/vnl/women/teams/usa-usa/players/mikaela-foecke?id=70957",
+            "date_of_birth": "22/02/1997",
+            "age": "22",
+            "height": "191",
+            "weight": "79",
+            "spike": "302",
+            "block": "295"
+        },
+        {
+            "name": "Hannah Tapp",
+            "url_profile": "/en/vnl/women/teams/usa-usa/players/hannah-tapp?id=71398",
+            "date_of_birth": "21/06/1995",
+            "age": "24",
+            "height": "191",
+            "weight": "77",
+            "spike": "297",
+            "block": "290"
+        },
+        {
+            "name": "Dana Rettke",
+            "url_profile": "/en/vnl/women/teams/usa-usa/players/dana-rettke?id=70974",
+            "date_of_birth": "21/01/1999",
+            "age": "20",
+            "height": "203",
+            "weight": "80",
+            "spike": "315",
+            "block": "308"
+        },
+        {
+            "name": "Simone Lee",
+            "url_profile": "/en/vnl/women/teams/usa-usa/players/simone-lee?id=70962",
+            "date_of_birth": "07/10/1996",
+            "age": "23",
+            "height": "186",
+            "weight": "70",
+            "spike": "310",
+            "block": "305"
+        },
+        {
+            "name": "Haleigh Washington",
+            "url_profile": "/en/vnl/women/teams/usa-usa/players/haleigh-washington?id=70971",
+            "date_of_birth": "22/09/1995",
+            "age": "24",
+            "height": "190",
+            "weight": "82",
+            "spike": "307",
+            "block": "295"
+        },
+        {
+            "name": "Kelsey Robinson",
+            "url_profile": "/en/vnl/women/teams/usa-usa/players/kelsey-robinson?id=70968",
+            "date_of_birth": "25/06/1992",
+            "age": "27",
+            "height": "188",
+            "weight": "73",
+            "spike": "307",
+            "block": "298"
+        },
+        {
+            "name": "Chiaka Ogbogu",
+            "url_profile": "/en/vnl/women/teams/usa-usa/players/chiaka-ogbogu?id=70965",
+            "date_of_birth": "15/04/1995",
+            "age": "24",
+            "height": "188",
+            "weight": "73",
+            "spike": "318",
+            "block": "307"
+        },
+        {
+            "name": "Karsta Lowe",
+            "url_profile": "/en/vnl/women/teams/usa-usa/players/karsta-lowe?id=70964",
+            "date_of_birth": "02/02/1993",
+            "age": "26",
+            "height": "193",
+            "weight": "75",
+            "spike": "315",
+            "block": "305"
+        },
+        {
+            "name": "Mary Lake",
+            "url_profile": "/en/vnl/women/teams/usa-usa/players/mary-lake?id=71400",
+            "date_of_birth": "16/09/1998",
+            "age": "21",
+            "height": "170",
+            "weight": "63",
+            "spike": "263",
+            "block": "257"
+        },
+        {
+            "name": "Danielle Cuttino",
+            "url_profile": "/en/vnl/women/teams/usa-usa/players/danielle-cuttino?id=71396",
+            "date_of_birth": "22/06/1996",
+            "age": "23",
+            "height": "193",
+            "weight": "75",
+            "spike": "324",
+            "block": "316"
+        }
+    ]
+}
