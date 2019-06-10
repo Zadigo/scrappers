@@ -1,0 +1,3845 @@
+{
+    "tournament": "U20 World Championship",
+    "records": [
+        {
+            "name": "Ani Bozdeva",
+            "url_profile": "/en/teams/bul-bulgaria/players/ani-bozdeva?id=59903",
+            "date_of_birth": "30/01/1999",
+            "age": "20",
+            "height": "186",
+            "weight": "61",
+            "spike": "300",
+            "block": "290"
+        },
+        {
+            "name": "Borislava Saykova",
+            "url_profile": "/en/teams/bul-bulgaria/players/borislava-saykova?id=60127",
+            "date_of_birth": "14/07/2000",
+            "age": "19",
+            "height": "187",
+            "weight": "80",
+            "spike": "294",
+            "block": "274"
+        },
+        {
+            "name": "Kathryn Dimitrova",
+            "url_profile": "/en/teams/bul-bulgaria/players/kathryn-dimitrova?id=59905",
+            "date_of_birth": "27/11/1999",
+            "age": "20",
+            "height": "190",
+            "weight": "73",
+            "spike": "303",
+            "block": "296"
+        },
+        {
+            "name": "Aleksandra Milanova",
+            "url_profile": "/en/teams/bul-bulgaria/players/aleksandra-milanova?id=59911",
+            "date_of_birth": "04/07/2001",
+            "age": "18",
+            "height": "180",
+            "weight": "72",
+            "spike": "295",
+            "block": "284"
+        },
+        {
+            "name": "Monika Krasteva",
+            "url_profile": "/en/teams/bul-bulgaria/players/monika-krasteva?id=60119",
+            "date_of_birth": "09/05/1999",
+            "age": "20",
+            "height": "183",
+            "weight": "64",
+            "spike": "292",
+            "block": "285"
+        },
+        {
+            "name": "Elena Becheva",
+            "url_profile": "/en/teams/bul-bulgaria/players/elena-becheva?id=60114",
+            "date_of_birth": "30/05/1998",
+            "age": "21",
+            "height": "185",
+            "weight": "70",
+            "spike": "296",
+            "block": "288"
+        },
+        {
+            "name": "Polina Neykova",
+            "url_profile": "/en/teams/bul-bulgaria/players/polina-neykova?id=59906",
+            "date_of_birth": "07/10/1998",
+            "age": "21",
+            "height": "182",
+            "weight": "73",
+            "spike": "287",
+            "block": "280"
+        },
+        {
+            "name": "Vasilena Papanova",
+            "url_profile": "/en/teams/bul-bulgaria/players/vasilena-papanova?id=60121",
+            "date_of_birth": "02/02/1999",
+            "age": "20",
+            "height": "179",
+            "weight": "62",
+            "spike": "295",
+            "block": "289"
+        },
+        {
+            "name": "Velina Minkova",
+            "url_profile": "/en/teams/bul-bulgaria/players/velina-minkova?id=60120",
+            "date_of_birth": "02/03/1998",
+            "age": "21",
+            "height": "173",
+            "weight": "63",
+            "spike": "270",
+            "block": "260"
+        },
+        {
+            "name": "Djanis Saraivanova",
+            "url_profile": "/en/teams/bul-bulgaria/players/djanis-saraivanova?id=60122",
+            "date_of_birth": "20/08/1999",
+            "age": "20",
+            "height": "186",
+            "weight": "71",
+            "spike": "293",
+            "block": "280"
+        },
+        {
+            "name": "Emileta Racheva",
+            "url_profile": "/en/teams/bul-bulgaria/players/emileta-racheva?id=59907",
+            "date_of_birth": "26/11/1998",
+            "age": "21",
+            "height": "183",
+            "weight": "75",
+            "spike": "288",
+            "block": "275"
+        },
+        {
+            "name": "Mihaela Mihaylova",
+            "url_profile": "/en/teams/bul-bulgaria/players/mihaela-mihaylova?id=60126",
+            "date_of_birth": "22/05/1999",
+            "age": "20",
+            "height": "169",
+            "weight": "57",
+            "spike": "270",
+            "block": "260"
+        },
+        {
+            "name": "Nadin Zaatar",
+            "url_profile": "/en/teams/egy-egypt/players/nadin-zaatar?id=60094",
+            "date_of_birth": "25/08/1999",
+            "age": "20",
+            "height": "179",
+            "weight": "69",
+            "spike": "282",
+            "block": "274"
+        },
+        {
+            "name": "Nada Meawad",
+            "url_profile": "/en/teams/egy-egypt/players/nada-meawad?id=60270",
+            "date_of_birth": "12/04/1998",
+            "age": "21",
+            "height": "180",
+            "weight": "71",
+            "spike": "277",
+            "block": "267"
+        },
+        {
+            "name": "Youmna Sabik",
+            "url_profile": "/en/teams/egy-egypt/players/youmna-sabik?id=60279",
+            "date_of_birth": "21/08/1998",
+            "age": "21",
+            "height": "163",
+            "weight": "51",
+            "spike": "262",
+            "block": "251"
+        },
+        {
+            "name": "Mayar Mohamed",
+            "url_profile": "/en/teams/egy-egypt/players/mayar-mohamed?id=60272",
+            "date_of_birth": "05/02/2000",
+            "age": "19",
+            "height": "184",
+            "weight": "75",
+            "spike": "288",
+            "block": "276"
+        },
+        {
+            "name": "Noura Moawad",
+            "url_profile": "/en/teams/egy-egypt/players/noura-moawad?id=60106",
+            "date_of_birth": "12/04/1998",
+            "age": "21",
+            "height": "182",
+            "weight": "80",
+            "spike": "280",
+            "block": "271"
+        },
+        {
+            "name": "Aliaa Helal",
+            "url_profile": "/en/teams/egy-egypt/players/aliaa-helal?id=60112",
+            "date_of_birth": "01/01/2000",
+            "age": "19",
+            "height": "181",
+            "weight": "71",
+            "spike": "279",
+            "block": "270"
+        },
+        {
+            "name": "Hanya Elshebeny",
+            "url_profile": "/en/teams/egy-egypt/players/hanya-elshebeny?id=60111",
+            "date_of_birth": "06/06/1999",
+            "age": "20",
+            "height": "170",
+            "weight": "60",
+            "spike": "273",
+            "block": "261"
+        },
+        {
+            "name": "Nourallah Amin",
+            "url_profile": "/en/teams/egy-egypt/players/nourallah-amin?id=60282",
+            "date_of_birth": "25/11/2000",
+            "age": "19",
+            "height": "184",
+            "weight": "70",
+            "spike": "285",
+            "block": "276"
+        },
+        {
+            "name": "Habiba Khairy",
+            "url_profile": "/en/teams/egy-egypt/players/habiba-khairy?id=60109",
+            "date_of_birth": "16/12/1999",
+            "age": "20",
+            "height": "177",
+            "weight": "73",
+            "spike": "280",
+            "block": "271"
+        },
+        {
+            "name": "Hana Elmasry",
+            "url_profile": "/en/teams/egy-egypt/players/hana-elmasry?id=60099",
+            "date_of_birth": "20/07/2001",
+            "age": "18",
+            "height": "173",
+            "weight": "64",
+            "spike": "276",
+            "block": "267"
+        },
+        {
+            "name": "Salma Mahmoud",
+            "url_profile": "/en/teams/egy-egypt/players/salma-mahmoud?id=60113",
+            "date_of_birth": "04/02/1999",
+            "age": "20",
+            "height": "175",
+            "weight": "56",
+            "spike": "278",
+            "block": "266"
+        },
+        {
+            "name": "Dana Emam",
+            "url_profile": "/en/teams/egy-egypt/players/dana-emam?id=60110",
+            "date_of_birth": "04/10/2000",
+            "age": "19",
+            "height": "181",
+            "weight": "73",
+            "spike": "280",
+            "block": "271"
+        },
+        {
+            "name": "Uxue Amaya Guereca Parra",
+            "url_profile": "/en/teams/mex-mexico/players/uxue-amaya-guereca-parra?id=60471",
+            "date_of_birth": "12/02/2001",
+            "age": "18",
+            "height": "176",
+            "weight": "64",
+            "spike": "270",
+            "block": "259"
+        },
+        {
+            "name": "Alejandra Tapia Martinez",
+            "url_profile": "/en/teams/mex-mexico/players/alejandra-tapia-martinez?id=60465",
+            "date_of_birth": "08/03/1998",
+            "age": "21",
+            "height": "158",
+            "weight": "57",
+            "spike": "0",
+            "block": "0"
+        },
+        {
+            "name": "Alejandra Salinas Gonzalez",
+            "url_profile": "/en/teams/mex-mexico/players/alejandra-salinas-gonzalez?id=60463",
+            "date_of_birth": "04/04/1998",
+            "age": "21",
+            "height": "169",
+            "weight": "63",
+            "spike": "245",
+            "block": "240"
+        },
+        {
+            "name": "Yerania Paloma Gutierrez Sandoval",
+            "url_profile": "/en/teams/mex-mexico/players/yerania-paloma-gutierrez-sandoval?id=60478",
+            "date_of_birth": "13/01/1998",
+            "age": "21",
+            "height": "182",
+            "weight": "75",
+            "spike": "275",
+            "block": "260"
+        },
+        {
+            "name": "Karla Daniela Mireles Valdez",
+            "url_profile": "/en/teams/mex-mexico/players/karla-daniela-mireles-valdez?id=60472",
+            "date_of_birth": "25/01/2000",
+            "age": "19",
+            "height": "176",
+            "weight": "73",
+            "spike": "270",
+            "block": "250"
+        },
+        {
+            "name": "Kathya Paulina Garcia Chavez",
+            "url_profile": "/en/teams/mex-mexico/players/kathya-paulina-garcia-chavez?id=60469",
+            "date_of_birth": "06/03/1998",
+            "age": "21",
+            "height": "178",
+            "weight": "69",
+            "spike": "285",
+            "block": "250"
+        },
+        {
+            "name": "Francia Sanchez",
+            "url_profile": "/en/teams/mex-mexico/players/francia-sanchez?id=60464",
+            "date_of_birth": "28/08/1998",
+            "age": "21",
+            "height": "182",
+            "weight": "78",
+            "spike": "310",
+            "block": "300"
+        },
+        {
+            "name": "Joseline Landeros Palacios",
+            "url_profile": "/en/teams/mex-mexico/players/joseline-landeros-palacios?id=60461",
+            "date_of_birth": "20/12/2000",
+            "age": "19",
+            "height": "169",
+            "weight": "60",
+            "spike": "265",
+            "block": "249"
+        },
+        {
+            "name": "Samantha Paola Villegas Betancourt",
+            "url_profile": "/en/teams/mex-mexico/players/samantha-paola-villegas-betancourt?id=60481",
+            "date_of_birth": "08/09/1998",
+            "age": "21",
+            "height": "178",
+            "weight": "69",
+            "spike": "285",
+            "block": "280"
+        },
+        {
+            "name": "Karen Paola Rivera Herrera",
+            "url_profile": "/en/teams/mex-mexico/players/karen-paola-rivera-herrera?id=60473",
+            "date_of_birth": "22/05/1999",
+            "age": "20",
+            "height": "174",
+            "weight": "62",
+            "spike": "265",
+            "block": "260"
+        },
+        {
+            "name": "Karina Angelica Flores Gamez",
+            "url_profile": "/en/teams/mex-mexico/players/karina-angelica-flores-gamez?id=60468",
+            "date_of_birth": "16/08/1998",
+            "age": "21",
+            "height": "192",
+            "weight": "80",
+            "spike": "299",
+            "block": "285"
+        },
+        {
+            "name": "Alondra Amaro Rodriguez",
+            "url_profile": "/en/teams/mex-mexico/players/alondra-amaro-rodriguez?id=60467",
+            "date_of_birth": "09/06/1998",
+            "age": "21",
+            "height": "188",
+            "weight": "69",
+            "spike": "275",
+            "block": "250"
+        },
+        {
+            "name": "Angelina Lazarenko",
+            "url_profile": "/en/teams/rus-russia/players/angelina-lazarenko?id=58790",
+            "date_of_birth": "13/04/1998",
+            "age": "21",
+            "height": "193",
+            "weight": "80",
+            "spike": "320",
+            "block": "305"
+        },
+        {
+            "name": "Kseniia Smirnova",
+            "url_profile": "/en/teams/rus-russia/players/kseniia-smirnova?id=58796",
+            "date_of_birth": "24/04/1998",
+            "age": "21",
+            "height": "187",
+            "weight": "76",
+            "spike": "305",
+            "block": "300"
+        },
+        {
+            "name": "Anna Kotikova",
+            "url_profile": "/en/teams/rus-russia/players/anna-kotikova?id=59044",
+            "date_of_birth": "13/10/1999",
+            "age": "20",
+            "height": "185",
+            "weight": "71",
+            "spike": "306",
+            "block": "300"
+        },
+        {
+            "name": "Anastasia Stalnaya",
+            "url_profile": "/en/teams/rus-russia/players/anastasia-stalnaya?id=58797",
+            "date_of_birth": "06/01/1998",
+            "age": "21",
+            "height": "190",
+            "weight": "75",
+            "spike": "306",
+            "block": "298"
+        },
+        {
+            "name": "Olga Zubareva",
+            "url_profile": "/en/teams/rus-russia/players/olga-zubareva?id=59049",
+            "date_of_birth": "08/11/1998",
+            "age": "21",
+            "height": "189",
+            "weight": "74",
+            "spike": "305",
+            "block": "297"
+        },
+        {
+            "name": "Alina Podskalnaia",
+            "url_profile": "/en/teams/rus-russia/players/alina-podskalnaia?id=58793",
+            "date_of_birth": "09/06/1998",
+            "age": "21",
+            "height": "179",
+            "weight": "65",
+            "spike": "282",
+            "block": "272"
+        },
+        {
+            "name": "Aleksandra Oganezova",
+            "url_profile": "/en/teams/rus-russia/players/aleksandra-oganezova?id=58791",
+            "date_of_birth": "12/05/1998",
+            "age": "21",
+            "height": "173",
+            "weight": "65",
+            "spike": "287",
+            "block": "266"
+        },
+        {
+            "name": "Anastasiia Stankevichute",
+            "url_profile": "/en/teams/rus-russia/players/anastasiia-stankevichute?id=59045",
+            "date_of_birth": "02/05/1998",
+            "age": "21",
+            "height": "166",
+            "weight": "63",
+            "spike": "275",
+            "block": "235"
+        },
+        {
+            "name": "Victoriia Russu",
+            "url_profile": "/en/teams/rus-russia/players/victoriia-russu?id=58794",
+            "date_of_birth": "16/02/1999",
+            "age": "20",
+            "height": "193",
+            "weight": "70",
+            "spike": "311",
+            "block": "305"
+        },
+        {
+            "name": "Daria Ryseva",
+            "url_profile": "/en/teams/rus-russia/players/daria-ryseva?id=58795",
+            "date_of_birth": "05/03/1998",
+            "age": "21",
+            "height": "175",
+            "weight": "69",
+            "spike": "282",
+            "block": "266"
+        },
+        {
+            "name": "Elizaveta Kotova",
+            "url_profile": "/en/teams/rus-russia/players/elizaveta-kotova?id=58789",
+            "date_of_birth": "31/05/1998",
+            "age": "21",
+            "height": "186",
+            "weight": "81",
+            "spike": "303",
+            "block": "289"
+        },
+        {
+            "name": "Maria Vorobyeva",
+            "url_profile": "/en/teams/rus-russia/players/maria-vorobyeva?id=58798",
+            "date_of_birth": "24/02/1998",
+            "age": "21",
+            "height": "184",
+            "weight": "77",
+            "spike": "306",
+            "block": "288"
+        },
+        {
+            "name": "Hanyu Yang",
+            "url_profile": "/en/teams/chn-china/players/hanyu-yang?id=59516",
+            "date_of_birth": "12/10/1999",
+            "age": "20",
+            "height": "192",
+            "weight": "72",
+            "spike": "317",
+            "block": "311"
+        },
+        {
+            "name": "Peiyan Chen",
+            "url_profile": "/en/teams/chn-china/players/peiyan-chen?id=59518",
+            "date_of_birth": "16/09/1999",
+            "age": "20",
+            "height": "193",
+            "weight": "79",
+            "spike": "318",
+            "block": "309"
+        },
+        {
+            "name": "Yaqian Cai",
+            "url_profile": "/en/teams/chn-china/players/yaqian-cai?id=59506",
+            "date_of_birth": "29/06/1998",
+            "age": "21",
+            "height": "179",
+            "weight": "69",
+            "spike": "315",
+            "block": "308"
+        },
+        {
+            "name": "Yuqian Zhang",
+            "url_profile": "/en/teams/chn-china/players/yuqian-zhang?id=59505",
+            "date_of_birth": "18/08/1998",
+            "age": "21",
+            "height": "185",
+            "weight": "72",
+            "spike": "302",
+            "block": "294"
+        },
+        {
+            "name": "Xing Xie",
+            "url_profile": "/en/teams/chn-china/players/xing-xie?id=59515",
+            "date_of_birth": "28/11/1998",
+            "age": "21",
+            "height": "184",
+            "weight": "68",
+            "spike": "271",
+            "block": "265"
+        },
+        {
+            "name": "Ruige Guan",
+            "url_profile": "/en/teams/chn-china/players/ruige-guan?id=59502",
+            "date_of_birth": "25/10/1998",
+            "age": "21",
+            "height": "188",
+            "weight": "71",
+            "spike": "311",
+            "block": "303"
+        },
+        {
+            "name": "Qianqian Zang",
+            "url_profile": "/en/teams/chn-china/players/qianqian-zang?id=59504",
+            "date_of_birth": "14/08/1998",
+            "age": "21",
+            "height": "174",
+            "weight": "60",
+            "spike": "271",
+            "block": "265"
+        },
+        {
+            "name": "Xiaoqing Cai",
+            "url_profile": "/en/teams/chn-china/players/xiaoqing-cai?id=59517",
+            "date_of_birth": "05/04/1998",
+            "age": "21",
+            "height": "179",
+            "weight": "71",
+            "spike": "305",
+            "block": "295"
+        },
+        {
+            "name": "Han Wu",
+            "url_profile": "/en/teams/chn-china/players/han-wu?id=59514",
+            "date_of_birth": "23/04/1998",
+            "age": "21",
+            "height": "183",
+            "weight": "64",
+            "spike": "294",
+            "block": "284"
+        },
+        {
+            "name": "Jing Fang",
+            "url_profile": "/en/teams/chn-china/players/jing-fang?id=59507",
+            "date_of_birth": "27/07/1999",
+            "age": "20",
+            "height": "177",
+            "weight": "67",
+            "spike": "297",
+            "block": "291"
+        },
+        {
+            "name": "Xiaoting Xu",
+            "url_profile": "/en/teams/chn-china/players/xiaoting-xu?id=59520",
+            "date_of_birth": "21/01/1998",
+            "age": "21",
+            "height": "183",
+            "weight": "72",
+            "spike": "308",
+            "block": "300"
+        },
+        {
+            "name": "Jiayuan Liu",
+            "url_profile": "/en/teams/chn-china/players/jiayuan-liu?id=59510",
+            "date_of_birth": "09/05/1998",
+            "age": "21",
+            "height": "181",
+            "weight": "80",
+            "spike": "281",
+            "block": "276"
+        },
+        {
+            "name": "Yanlis Liliannis Feliz Sena",
+            "url_profile": "/en/teams/dom-dominican%20republic/players/yanlis-liliannis-feliz-sena?id=58806",
+            "date_of_birth": "03/06/2000",
+            "age": "19",
+            "height": "181",
+            "weight": "69",
+            "spike": "282",
+            "block": "263"
+        },
+        {
+            "name": "Pamela Maria Jorge Ubiera",
+            "url_profile": "/en/teams/dom-dominican%20republic/players/pamela-maria-jorge-ubiera?id=58811",
+            "date_of_birth": "26/11/1998",
+            "age": "21",
+            "height": "168",
+            "weight": "65",
+            "spike": "296",
+            "block": "240"
+        },
+        {
+            "name": "Hennesys Nathaly Lalane Tejeda",
+            "url_profile": "/en/teams/dom-dominican%20republic/players/hennesys-nathaly-lalane-tejeda?id=58812",
+            "date_of_birth": "10/04/2000",
+            "age": "19",
+            "height": "185",
+            "weight": "74",
+            "spike": "275",
+            "block": "263"
+        },
+        {
+            "name": "Vielka Michelle Peralta Luna",
+            "url_profile": "/en/teams/dom-dominican%20republic/players/vielka-michelle-peralta-luna?id=58815",
+            "date_of_birth": "13/04/1999",
+            "age": "20",
+            "height": "186",
+            "weight": "56",
+            "spike": "310",
+            "block": "305"
+        },
+        {
+            "name": "Yaneirys Rodriguez Duran",
+            "url_profile": "/en/teams/dom-dominican%20republic/players/yaneirys-rodriguez-duran?id=58818",
+            "date_of_birth": "26/06/2000",
+            "age": "19",
+            "height": "171",
+            "weight": "56",
+            "spike": "280",
+            "block": "251"
+        },
+        {
+            "name": "Mesalina Luz Del Sol Yosil Severino",
+            "url_profile": "/en/teams/dom-dominican%20republic/players/mesalina-luz-del-sol-yosil-severino?id=58820",
+            "date_of_birth": "18/07/2000",
+            "age": "19",
+            "height": "185",
+            "weight": "63",
+            "spike": "283",
+            "block": "272"
+        },
+        {
+            "name": "Natalia Martinez",
+            "url_profile": "/en/teams/dom-dominican%20republic/players/natalia-martinez?id=58813",
+            "date_of_birth": "25/11/2000",
+            "age": "19",
+            "height": "186",
+            "weight": "71",
+            "spike": "310",
+            "block": "300"
+        },
+        {
+            "name": "Geraldine Sthefany Gonzalez",
+            "url_profile": "/en/teams/dom-dominican%20republic/players/geraldine-sthefany-gonzalez?id=58807",
+            "date_of_birth": "18/04/2002",
+            "age": "17",
+            "height": "196",
+            "weight": "77",
+            "spike": "295",
+            "block": "290"
+        },
+        {
+            "name": "Madeline Jazmin Guillen Paredes",
+            "url_profile": "/en/teams/dom-dominican%20republic/players/madeline-jazmin-guillen-paredes?id=58808",
+            "date_of_birth": "04/06/2001",
+            "age": "18",
+            "height": "186",
+            "weight": "74",
+            "spike": "273",
+            "block": "242"
+        },
+        {
+            "name": "Yokaty Perez Flores",
+            "url_profile": "/en/teams/dom-dominican%20republic/players/yokaty-perez-flores?id=58816",
+            "date_of_birth": "06/08/1998",
+            "age": "21",
+            "height": "178",
+            "weight": "79",
+            "spike": "291",
+            "block": "257"
+        },
+        {
+            "name": "Lisbeth Lucia Rosario Martinez",
+            "url_profile": "/en/teams/dom-dominican%20republic/players/lisbeth-lucia-rosario-martinez?id=58819",
+            "date_of_birth": "26/05/1999",
+            "age": "20",
+            "height": "180",
+            "weight": "73",
+            "spike": "273",
+            "block": "265"
+        },
+        {
+            "name": "Erika Isabel Asencio Soriano",
+            "url_profile": "/en/teams/dom-dominican%20republic/players/erika-isabel-asencio-soriano?id=58801",
+            "date_of_birth": "02/04/2000",
+            "age": "19",
+            "height": "175",
+            "weight": "65",
+            "spike": "279",
+            "block": "267"
+        },
+        {
+            "name": "Flavia Montes",
+            "url_profile": "/en/teams/per-peru/players/flavia-montes?id=59983",
+            "date_of_birth": "22/11/2000",
+            "age": "19",
+            "height": "187",
+            "weight": "60",
+            "spike": "295",
+            "block": "290"
+        },
+        {
+            "name": "Nayeli Vilchez",
+            "url_profile": "/en/teams/per-peru/players/nayeli-vilchez?id=59990",
+            "date_of_birth": "27/06/2000",
+            "age": "19",
+            "height": "179",
+            "weight": "65",
+            "spike": "290",
+            "block": "287"
+        },
+        {
+            "name": "Maricarmen Guerrero",
+            "url_profile": "/en/teams/per-peru/players/maricarmen-guerrero?id=59976",
+            "date_of_birth": "17/01/1999",
+            "age": "20",
+            "height": "181",
+            "weight": "70",
+            "spike": "290",
+            "block": "280"
+        },
+        {
+            "name": "Nicole Abreu Erquinigo",
+            "url_profile": "/en/teams/per-peru/players/nicole-abreu-erquinigo?id=59971",
+            "date_of_birth": "27/03/1999",
+            "age": "20",
+            "height": "180",
+            "weight": "63",
+            "spike": "285",
+            "block": "270"
+        },
+        {
+            "name": "Ysabella Sanchez",
+            "url_profile": "/en/teams/per-peru/players/ysabella-sanchez?id=59987",
+            "date_of_birth": "02/07/1999",
+            "age": "20",
+            "height": "177",
+            "weight": "59",
+            "spike": "279",
+            "block": "296"
+        },
+        {
+            "name": "Katherine Regalado",
+            "url_profile": "/en/teams/per-peru/players/katherine-regalado?id=59986",
+            "date_of_birth": "11/03/1998",
+            "age": "21",
+            "height": "190",
+            "weight": "66",
+            "spike": "296",
+            "block": "287"
+        },
+        {
+            "name": "Thaisa Mc Leod",
+            "url_profile": "/en/teams/per-peru/players/thaisa-mc-leod?id=59982",
+            "date_of_birth": "01/01/2002",
+            "age": "17",
+            "height": "189",
+            "weight": "75",
+            "spike": "301",
+            "block": "305"
+        },
+        {
+            "name": "Kiara Montes",
+            "url_profile": "/en/teams/per-peru/players/kiara-montes?id=59984",
+            "date_of_birth": "13/01/2001",
+            "age": "18",
+            "height": "176",
+            "weight": "68",
+            "spike": "282",
+            "block": "293"
+        },
+        {
+            "name": "Leslie Leyva",
+            "url_profile": "/en/teams/per-peru/players/leslie-leyva?id=59979",
+            "date_of_birth": "06/12/1998",
+            "age": "21",
+            "height": "175",
+            "weight": "72",
+            "spike": "280",
+            "block": "300"
+        },
+        {
+            "name": "Besna Villegas",
+            "url_profile": "/en/teams/per-peru/players/besna-villegas?id=59991",
+            "date_of_birth": "30/10/1999",
+            "age": "20",
+            "height": "170",
+            "weight": "68",
+            "spike": "270",
+            "block": "275"
+        },
+        {
+            "name": "Aixa Vigil",
+            "url_profile": "/en/teams/per-peru/players/aixa-vigil?id=59989",
+            "date_of_birth": "23/09/2001",
+            "age": "18",
+            "height": "180",
+            "weight": "65",
+            "spike": "284",
+            "block": "295"
+        },
+        {
+            "name": "Yadhira Anchante",
+            "url_profile": "/en/teams/per-peru/players/yadhira-anchante?id=59972",
+            "date_of_birth": "19/11/2002",
+            "age": "17",
+            "height": "178",
+            "weight": "59",
+            "spike": "286",
+            "block": "290"
+        },
+        {
+            "name": "Zuzanna Gorecka",
+            "url_profile": "/en/teams/pol-poland/players/zuzanna-gorecka?id=59776",
+            "date_of_birth": "10/04/2000",
+            "age": "19",
+            "height": "181",
+            "weight": "63",
+            "spike": "301",
+            "block": "284"
+        },
+        {
+            "name": "Oliwia Baluk",
+            "url_profile": "/en/teams/pol-poland/players/oliwia-baluk?id=59774",
+            "date_of_birth": "17/05/2000",
+            "age": "19",
+            "height": "175",
+            "weight": "62",
+            "spike": "288",
+            "block": "279"
+        },
+        {
+            "name": "Aleksandra Lipska",
+            "url_profile": "/en/teams/pol-poland/players/aleksandra-lipska?id=59779",
+            "date_of_birth": "25/02/1998",
+            "age": "21",
+            "height": "185",
+            "weight": "80",
+            "spike": "304",
+            "block": "285"
+        },
+        {
+            "name": "Natalia Murek",
+            "url_profile": "/en/teams/pol-poland/players/natalia-murek?id=59782",
+            "date_of_birth": "08/09/1999",
+            "age": "20",
+            "height": "180",
+            "weight": "70",
+            "spike": "302",
+            "block": "283"
+        },
+        {
+            "name": "Alicja Grabka",
+            "url_profile": "/en/teams/pol-poland/players/alicja-grabka?id=59777",
+            "date_of_birth": "09/05/1998",
+            "age": "21",
+            "height": "178",
+            "weight": "62",
+            "spike": "290",
+            "block": "280"
+        },
+        {
+            "name": "Martyna Lukasik",
+            "url_profile": "/en/teams/pol-poland/players/martyna-lukasik?id=59780",
+            "date_of_birth": "26/11/1999",
+            "age": "20",
+            "height": "189",
+            "weight": "75",
+            "spike": "315",
+            "block": "288"
+        },
+        {
+            "name": "Julia Nowicka",
+            "url_profile": "/en/teams/pol-poland/players/julia-nowicka?id=59785",
+            "date_of_birth": "21/10/1998",
+            "age": "21",
+            "height": "174",
+            "weight": "58",
+            "spike": "295",
+            "block": "278"
+        },
+        {
+            "name": "Martyna Swirad",
+            "url_profile": "/en/teams/pol-poland/players/martyna-swirad?id=59790",
+            "date_of_birth": "05/01/1998",
+            "age": "21",
+            "height": "184",
+            "weight": "74",
+            "spike": "301",
+            "block": "287"
+        },
+        {
+            "name": "Kinga Rozynska",
+            "url_profile": "/en/teams/pol-poland/players/kinga-rozynska?id=59787",
+            "date_of_birth": "12/07/1998",
+            "age": "21",
+            "height": "190",
+            "weight": "70",
+            "spike": "308",
+            "block": "289"
+        },
+        {
+            "name": "Maria Stenzel",
+            "url_profile": "/en/teams/pol-poland/players/maria-stenzel?id=59789",
+            "date_of_birth": "25/11/1998",
+            "age": "21",
+            "height": "168",
+            "weight": "53",
+            "spike": "278",
+            "block": "262"
+        },
+        {
+            "name": "Aleksandra Gryka",
+            "url_profile": "/en/teams/pol-poland/players/aleksandra-gryka?id=59794",
+            "date_of_birth": "06/02/2000",
+            "age": "19",
+            "height": "190",
+            "weight": "71",
+            "spike": "302",
+            "block": "278"
+        },
+        {
+            "name": "Justyna Lysiak",
+            "url_profile": "/en/teams/pol-poland/players/justyna-lysiak?id=59781",
+            "date_of_birth": "20/01/1999",
+            "age": "20",
+            "height": "173",
+            "weight": "58",
+            "spike": "275",
+            "block": "264"
+        },
+        {
+            "name": "Diana Duarte Alecrim",
+            "url_profile": "/en/teams/bra-brazil/players/diana-duarte-alecrim?id=59554",
+            "date_of_birth": "22/02/1999",
+            "age": "20",
+            "height": "194",
+            "weight": "69",
+            "spike": "297",
+            "block": "287"
+        },
+        {
+            "name": "Lorena Giovana Viezel",
+            "url_profile": "/en/teams/bra-brazil/players/lorena-giovana-viezel?id=59555",
+            "date_of_birth": "21/07/1999",
+            "age": "20",
+            "height": "190",
+            "weight": "76",
+            "spike": "309",
+            "block": "290"
+        },
+        {
+            "name": "Glayce Kelly Tobias Vasconcelos",
+            "url_profile": "/en/teams/bra-brazil/players/glayce-kelly-tobias-vasconcelos?id=59576",
+            "date_of_birth": "28/01/1998",
+            "age": "21",
+            "height": "189",
+            "weight": "73",
+            "spike": "296",
+            "block": "281"
+        },
+        {
+            "name": "Nyeme Vict\u00f3ria Alexandre Costa",
+            "url_profile": "/en/teams/bra-brazil/players/nyeme-vict%c3%b3ria-alexandre-costa?id=59553",
+            "date_of_birth": "11/10/1998",
+            "age": "21",
+            "height": "175",
+            "weight": "79",
+            "spike": "297",
+            "block": "280"
+        },
+        {
+            "name": "Amanda Rodrigues Sehn",
+            "url_profile": "/en/teams/bra-brazil/players/amanda-rodrigues-sehn?id=59567",
+            "date_of_birth": "16/07/1998",
+            "age": "21",
+            "height": "180",
+            "weight": "64",
+            "spike": "280",
+            "block": "270"
+        },
+        {
+            "name": "Karyna Malachias",
+            "url_profile": "/en/teams/bra-brazil/players/karyna-malachias?id=59564",
+            "date_of_birth": "26/10/1999",
+            "age": "20",
+            "height": "194",
+            "weight": "84",
+            "spike": "305",
+            "block": "294"
+        },
+        {
+            "name": "Karina Barbosa De Souza",
+            "url_profile": "/en/teams/bra-brazil/players/karina-barbosa-de-souza?id=59561",
+            "date_of_birth": "30/11/1998",
+            "age": "21",
+            "height": "182",
+            "weight": "65",
+            "spike": "294",
+            "block": "276"
+        },
+        {
+            "name": "Jackeline Moreno Figueiredo Dos Santos",
+            "url_profile": "/en/teams/bra-brazil/players/jackeline-moreno-figueiredo-dos-santos?id=59565",
+            "date_of_birth": "30/12/1999",
+            "age": "20",
+            "height": "174",
+            "weight": "67",
+            "spike": "286",
+            "block": "271"
+        },
+        {
+            "name": "Julia Isabelle Bergmann",
+            "url_profile": "/en/teams/bra-brazil/players/julia-isabelle-bergmann?id=59571",
+            "date_of_birth": "21/02/2001",
+            "age": "18",
+            "height": "196",
+            "weight": "78",
+            "spike": "301",
+            "block": "289"
+        },
+        {
+            "name": "Tainara Lemes Santos",
+            "url_profile": "/en/teams/bra-brazil/players/tainara-lemes-santos?id=59573",
+            "date_of_birth": "09/03/2000",
+            "age": "19",
+            "height": "190",
+            "weight": "81",
+            "spike": "306",
+            "block": "289"
+        },
+        {
+            "name": "Lorrayna Da Silva",
+            "url_profile": "/en/teams/bra-brazil/players/lorrayna-da-silva?id=59568",
+            "date_of_birth": "19/06/1999",
+            "age": "20",
+            "height": "185",
+            "weight": "62",
+            "spike": "306",
+            "block": "286"
+        },
+        {
+            "name": "Julia Araujo Almeida Holanda Moura",
+            "url_profile": "/en/teams/bra-brazil/players/julia-araujo-almeida-holanda-moura?id=59570",
+            "date_of_birth": "21/01/1998",
+            "age": "21",
+            "height": "181",
+            "weight": "68",
+            "spike": "286",
+            "block": "276"
+        },
+        {
+            "name": "Lianny Tamayo Canton",
+            "url_profile": "/en/teams/cub-cuba/players/lianny-tamayo-canton?id=59966",
+            "date_of_birth": "30/04/1999",
+            "age": "20",
+            "height": "178",
+            "weight": "58",
+            "spike": "295",
+            "block": "290"
+        },
+        {
+            "name": "Elizabeth Vicet Campos",
+            "url_profile": "/en/teams/cub-cuba/players/elizabeth-vicet-campos?id=59967",
+            "date_of_birth": "09/08/2000",
+            "age": "19",
+            "height": "173",
+            "weight": "63",
+            "spike": "293",
+            "block": "284"
+        },
+        {
+            "name": "Laura Beatriz Suarez Hernandez",
+            "url_profile": "/en/teams/cub-cuba/players/laura-beatriz-suarez-hernandez?id=59965",
+            "date_of_birth": "13/12/1998",
+            "age": "21",
+            "height": "185",
+            "weight": "75",
+            "spike": "304",
+            "block": "292"
+        },
+        {
+            "name": "Dalila Palma Rodriguez",
+            "url_profile": "/en/teams/cub-cuba/players/dalila-palma-rodriguez?id=59963",
+            "date_of_birth": "18/11/1999",
+            "age": "20",
+            "height": "182",
+            "weight": "62",
+            "spike": "301",
+            "block": "285"
+        },
+        {
+            "name": "Diaris Perez Ramos",
+            "url_profile": "/en/teams/cub-cuba/players/diaris-perez-ramos?id=59964",
+            "date_of_birth": "16/11/1998",
+            "age": "21",
+            "height": "182",
+            "weight": "75",
+            "spike": "304",
+            "block": "295"
+        },
+        {
+            "name": "Gretell Elena Moreno Borrero",
+            "url_profile": "/en/teams/cub-cuba/players/gretell-elena-moreno-borrero?id=59959",
+            "date_of_birth": "30/01/1998",
+            "age": "21",
+            "height": "183",
+            "weight": "68",
+            "spike": "287",
+            "block": "280"
+        },
+        {
+            "name": "Ailama Cese Montalvo",
+            "url_profile": "/en/teams/cub-cuba/players/ailama-cese-montalvo?id=59954",
+            "date_of_birth": "29/10/2000",
+            "age": "19",
+            "height": "188",
+            "weight": "58",
+            "spike": "322",
+            "block": "308"
+        },
+        {
+            "name": "Yamisleydis Viltres Pacheco",
+            "url_profile": "/en/teams/cub-cuba/players/yamisleydis-viltres-pacheco?id=59969",
+            "date_of_birth": "26/07/2001",
+            "age": "18",
+            "height": "189",
+            "weight": "73",
+            "spike": "247",
+            "block": "244"
+        },
+        {
+            "name": "Carmela Massip Mursuli",
+            "url_profile": "/en/teams/cub-cuba/players/carmela-massip-mursuli?id=59957",
+            "date_of_birth": "17/01/1998",
+            "age": "21",
+            "height": "181",
+            "weight": "65",
+            "spike": "304",
+            "block": "295"
+        },
+        {
+            "name": "Jessica Aguilera Carbajal",
+            "url_profile": "/en/teams/cub-cuba/players/jessica-aguilera-carbajal?id=59951",
+            "date_of_birth": "25/05/1999",
+            "age": "20",
+            "height": "184",
+            "weight": "68",
+            "spike": "311",
+            "block": "302"
+        },
+        {
+            "name": "Heidy Casanova Alvarez",
+            "url_profile": "/en/teams/cub-cuba/players/heidy-casanova-alvarez?id=59952",
+            "date_of_birth": "06/11/1998",
+            "age": "21",
+            "height": "184",
+            "weight": "78",
+            "spike": "244",
+            "block": "240"
+        },
+        {
+            "name": "Ivy May Vila Wittingham",
+            "url_profile": "/en/teams/cub-cuba/players/ivy-may-vila-wittingham?id=59968",
+            "date_of_birth": "22/07/2001",
+            "age": "18",
+            "height": "181",
+            "weight": "78",
+            "spike": "235",
+            "block": "232"
+        },
+        {
+            "name": "Katarina Lazovic",
+            "url_profile": "/en/teams/srb-serbia/players/katarina-lazovic?id=59714",
+            "date_of_birth": "12/09/1999",
+            "age": "20",
+            "height": "182",
+            "weight": "65",
+            "spike": "290",
+            "block": "277"
+        },
+        {
+            "name": "Ana Jaksic",
+            "url_profile": "/en/teams/srb-serbia/players/ana-jaksic?id=59712",
+            "date_of_birth": "10/03/1998",
+            "age": "21",
+            "height": "178",
+            "weight": "64",
+            "spike": "285",
+            "block": "280"
+        },
+        {
+            "name": "Ljubica Milojevic",
+            "url_profile": "/en/teams/srb-serbia/players/ljubica-milojevic?id=59717",
+            "date_of_birth": "13/02/1999",
+            "age": "20",
+            "height": "193",
+            "weight": "70",
+            "spike": "300",
+            "block": "290"
+        },
+        {
+            "name": "Jovana Kocic",
+            "url_profile": "/en/teams/srb-serbia/players/jovana-kocic?id=59713",
+            "date_of_birth": "24/02/1998",
+            "age": "21",
+            "height": "190",
+            "weight": "85",
+            "spike": "290",
+            "block": "285"
+        },
+        {
+            "name": "Anastasija Sekulic",
+            "url_profile": "/en/teams/srb-serbia/players/anastasija-sekulic?id=59719",
+            "date_of_birth": "31/07/1998",
+            "age": "21",
+            "height": "180",
+            "weight": "58",
+            "spike": "280",
+            "block": "275"
+        },
+        {
+            "name": "Tamara Radmilovic",
+            "url_profile": "/en/teams/srb-serbia/players/tamara-radmilovic?id=59718",
+            "date_of_birth": "09/06/1999",
+            "age": "20",
+            "height": "184",
+            "weight": "64",
+            "spike": "280",
+            "block": "275"
+        },
+        {
+            "name": "Andjela Veselinovic",
+            "url_profile": "/en/teams/srb-serbia/players/andjela-veselinovic?id=59721",
+            "date_of_birth": "05/02/1999",
+            "age": "20",
+            "height": "173",
+            "weight": "55",
+            "spike": "270",
+            "block": "265"
+        },
+        {
+            "name": "Vanja Bukilic",
+            "url_profile": "/en/teams/srb-serbia/players/vanja-bukilic?id=59711",
+            "date_of_birth": "13/06/1999",
+            "age": "20",
+            "height": "191",
+            "weight": "68",
+            "spike": "300",
+            "block": "285"
+        },
+        {
+            "name": "Sara Caric",
+            "url_profile": "/en/teams/srb-serbia/players/sara-caric?id=59856",
+            "date_of_birth": "01/02/2001",
+            "age": "18",
+            "height": "193",
+            "weight": "73",
+            "spike": "300",
+            "block": "290"
+        },
+        {
+            "name": "Katarina Jovic",
+            "url_profile": "/en/teams/srb-serbia/players/katarina-jovic?id=59887",
+            "date_of_birth": "01/10/1999",
+            "age": "20",
+            "height": "191",
+            "weight": "76",
+            "spike": "292",
+            "block": "284"
+        },
+        {
+            "name": "Sanja Djurdjevic",
+            "url_profile": "/en/teams/srb-serbia/players/sanja-djurdjevic?id=59857",
+            "date_of_birth": "25/03/1998",
+            "age": "21",
+            "height": "177",
+            "weight": "63",
+            "spike": "274",
+            "block": "270"
+        },
+        {
+            "name": "Jovana Mirosavljevic",
+            "url_profile": "/en/teams/srb-serbia/players/jovana-mirosavljevic?id=59858",
+            "date_of_birth": "16/01/2000",
+            "age": "19",
+            "height": "182",
+            "weight": "63",
+            "spike": "288",
+            "block": "280"
+        },
+        {
+            "name": "Brionne Butler",
+            "url_profile": "/en/teams/usa-usa/players/brionne-butler?id=59930",
+            "date_of_birth": "29/01/1999",
+            "age": "20",
+            "height": "195",
+            "weight": "77",
+            "spike": "329",
+            "block": "324"
+        },
+        {
+            "name": "Tiffany Clark",
+            "url_profile": "/en/teams/usa-usa/players/tiffany-clark?id=59932",
+            "date_of_birth": "18/02/1998",
+            "age": "21",
+            "height": "180",
+            "weight": "66",
+            "spike": "292",
+            "block": "286"
+        },
+        {
+            "name": "Elizabeth Thayer Hall",
+            "url_profile": "/en/teams/usa-usa/players/elizabeth-thayer-hall?id=59935",
+            "date_of_birth": "28/12/1999",
+            "age": "20",
+            "height": "191",
+            "weight": "77",
+            "spike": "312",
+            "block": "300"
+        },
+        {
+            "name": "Paige Hammons",
+            "url_profile": "/en/teams/usa-usa/players/paige-hammons?id=59936",
+            "date_of_birth": "21/10/1998",
+            "age": "21",
+            "height": "190",
+            "weight": "61",
+            "spike": "310",
+            "block": "298"
+        },
+        {
+            "name": "Regan Pittman",
+            "url_profile": "/en/teams/usa-usa/players/regan-pittman?id=59941",
+            "date_of_birth": "18/03/1998",
+            "age": "21",
+            "height": "195",
+            "weight": "85",
+            "spike": "315",
+            "block": "308"
+        },
+        {
+            "name": "Holly Carlton",
+            "url_profile": "/en/teams/usa-usa/players/holly-carlton?id=59931",
+            "date_of_birth": "14/05/1998",
+            "age": "21",
+            "height": "203",
+            "weight": "80",
+            "spike": "311",
+            "block": "301"
+        },
+        {
+            "name": "Ronika Stone",
+            "url_profile": "/en/teams/usa-usa/players/ronika-stone?id=59946",
+            "date_of_birth": "07/06/1998",
+            "age": "21",
+            "height": "193",
+            "weight": "78",
+            "spike": "315",
+            "block": "300"
+        },
+        {
+            "name": "Norene Iosia",
+            "url_profile": "/en/teams/usa-usa/players/norene-iosia?id=59948",
+            "date_of_birth": "27/05/1998",
+            "age": "21",
+            "height": "182",
+            "weight": "77",
+            "spike": "304",
+            "block": "292"
+        },
+        {
+            "name": "Mackenzi Welsh",
+            "url_profile": "/en/teams/usa-usa/players/mackenzi-welsh?id=59947",
+            "date_of_birth": "19/02/1998",
+            "age": "21",
+            "height": "185",
+            "weight": "70",
+            "spike": "316",
+            "block": "314"
+        },
+        {
+            "name": "Gabrielle Curry",
+            "url_profile": "/en/teams/usa-usa/players/gabrielle-curry?id=59949",
+            "date_of_birth": "12/09/1998",
+            "age": "21",
+            "height": "175",
+            "weight": "70",
+            "spike": "271",
+            "block": "270"
+        },
+        {
+            "name": "Rachael Kramer",
+            "url_profile": "/en/teams/usa-usa/players/rachael-kramer?id=59937",
+            "date_of_birth": "15/03/1998",
+            "age": "21",
+            "height": "208",
+            "weight": "78",
+            "spike": "325",
+            "block": "313"
+        },
+        {
+            "name": "Leah Edmond",
+            "url_profile": "/en/teams/usa-usa/players/leah-edmond?id=59934",
+            "date_of_birth": "13/02/1998",
+            "age": "21",
+            "height": "193",
+            "weight": "75",
+            "spike": "320",
+            "block": "305"
+        },
+        {
+            "name": "Valentina Andrea Gonzalez",
+            "url_profile": "/en/teams/arg-argentina/players/valentina-andrea-gonzalez?id=59865",
+            "date_of_birth": "23/02/1998",
+            "age": "21",
+            "height": "163",
+            "weight": "56",
+            "spike": "271",
+            "block": "260"
+        },
+        {
+            "name": "Greta Martinelli",
+            "url_profile": "/en/teams/arg-argentina/players/greta-martinelli?id=59868",
+            "date_of_birth": "29/04/1998",
+            "age": "21",
+            "height": "179",
+            "weight": "67",
+            "spike": "280",
+            "block": "269"
+        },
+        {
+            "name": "Agustina Oliva",
+            "url_profile": "/en/teams/arg-argentina/players/agustina-oliva?id=59875",
+            "date_of_birth": "24/09/1998",
+            "age": "21",
+            "height": "184",
+            "weight": "72",
+            "spike": "295",
+            "block": "284"
+        },
+        {
+            "name": "Azul Benitez",
+            "url_profile": "/en/teams/arg-argentina/players/azul-benitez?id=59862",
+            "date_of_birth": "05/02/1998",
+            "age": "21",
+            "height": "165",
+            "weight": "60",
+            "spike": "260",
+            "block": "245"
+        },
+        {
+            "name": "Daniela Veronica Nielson Ramella",
+            "url_profile": "/en/teams/arg-argentina/players/daniela-veronica-nielson-ramella?id=59873",
+            "date_of_birth": "19/02/1998",
+            "age": "21",
+            "height": "169",
+            "weight": "57",
+            "spike": "278",
+            "block": "266"
+        },
+        {
+            "name": "Anahi Florencia Tosi",
+            "url_profile": "/en/teams/arg-argentina/players/anahi-florencia-tosi?id=59881",
+            "date_of_birth": "10/07/1998",
+            "age": "21",
+            "height": "181",
+            "weight": "60",
+            "spike": "290",
+            "block": "272"
+        },
+        {
+            "name": "Candela Nota",
+            "url_profile": "/en/teams/arg-argentina/players/candela-nota?id=59874",
+            "date_of_birth": "01/03/1999",
+            "age": "20",
+            "height": "182",
+            "weight": "60",
+            "spike": "280",
+            "block": "271"
+        },
+        {
+            "name": "Agostina Denisse Soria",
+            "url_profile": "/en/teams/arg-argentina/players/agostina-denisse-soria?id=59879",
+            "date_of_birth": "09/10/1998",
+            "age": "21",
+            "height": "179",
+            "weight": "65",
+            "spike": "279",
+            "block": "271"
+        },
+        {
+            "name": "Julieta Cervini",
+            "url_profile": "/en/teams/arg-argentina/players/julieta-cervini?id=59864",
+            "date_of_birth": "13/03/1999",
+            "age": "20",
+            "height": "182",
+            "weight": "69",
+            "spike": "283",
+            "block": "273"
+        },
+        {
+            "name": "Agostina Sol Beltramino",
+            "url_profile": "/en/teams/arg-argentina/players/agostina-sol-beltramino?id=59861",
+            "date_of_birth": "25/04/1999",
+            "age": "20",
+            "height": "180",
+            "weight": "65",
+            "spike": "283",
+            "block": "283"
+        },
+        {
+            "name": "Maria Agostina Pelozo",
+            "url_profile": "/en/teams/arg-argentina/players/maria-agostina-pelozo?id=59876",
+            "date_of_birth": "19/11/1999",
+            "age": "20",
+            "height": "180",
+            "weight": "56",
+            "spike": "277",
+            "block": "263"
+        },
+        {
+            "name": "Fiamma Arabela Biain",
+            "url_profile": "/en/teams/arg-argentina/players/fiamma-arabela-biain?id=59863",
+            "date_of_birth": "30/01/1998",
+            "age": "21",
+            "height": "171",
+            "weight": "67",
+            "spike": "279",
+            "block": "266"
+        },
+        {
+            "name": "Nkemdilim Ruth Terry Enweonwu",
+            "url_profile": "/en/teams/ita-italy/players/nkemdilim-ruth-terry-enweonwu?id=59730",
+            "date_of_birth": "12/05/2000",
+            "age": "19",
+            "height": "187",
+            "weight": "86",
+            "spike": "339",
+            "block": "309"
+        },
+        {
+            "name": "Jenninfer Boldini",
+            "url_profile": "/en/teams/ita-italy/players/jenninfer-boldini?id=59728",
+            "date_of_birth": "06/04/1999",
+            "age": "20",
+            "height": "187",
+            "weight": "68",
+            "spike": "297",
+            "block": "277"
+        },
+        {
+            "name": "Martina Ferrara",
+            "url_profile": "/en/teams/ita-italy/players/martina-ferrara?id=59731",
+            "date_of_birth": "28/01/1999",
+            "age": "20",
+            "height": "168",
+            "weight": "70",
+            "spike": "276",
+            "block": "260"
+        },
+        {
+            "name": "Rachele Morello",
+            "url_profile": "/en/teams/ita-italy/players/rachele-morello?id=59729",
+            "date_of_birth": "07/11/2000",
+            "age": "19",
+            "height": "182",
+            "weight": "77",
+            "spike": "302",
+            "block": "296"
+        },
+        {
+            "name": "Marina Lubian",
+            "url_profile": "/en/teams/ita-italy/players/marina-lubian?id=59603",
+            "date_of_birth": "11/04/2000",
+            "age": "19",
+            "height": "195",
+            "weight": "73",
+            "spike": "318",
+            "block": "300"
+        },
+        {
+            "name": "Giorgia Zannoni",
+            "url_profile": "/en/teams/ita-italy/players/giorgia-zannoni?id=59614",
+            "date_of_birth": "11/02/1998",
+            "age": "21",
+            "height": "175",
+            "weight": "68",
+            "spike": "284",
+            "block": "270"
+        },
+        {
+            "name": "Elena Pietrini",
+            "url_profile": "/en/teams/ita-italy/players/elena-pietrini?id=59612",
+            "date_of_birth": "17/03/2000",
+            "age": "19",
+            "height": "190",
+            "weight": "73",
+            "spike": "330",
+            "block": "306"
+        },
+        {
+            "name": "Vittoria Alice Piani",
+            "url_profile": "/en/teams/ita-italy/players/vittoria-alice-piani?id=59611",
+            "date_of_birth": "12/02/1998",
+            "age": "21",
+            "height": "187",
+            "weight": "78",
+            "spike": "316",
+            "block": "296"
+        },
+        {
+            "name": "Alice Pamio",
+            "url_profile": "/en/teams/ita-italy/players/alice-pamio?id=59610",
+            "date_of_birth": "15/01/1998",
+            "age": "21",
+            "height": "179",
+            "weight": "66",
+            "spike": "302",
+            "block": "278"
+        },
+        {
+            "name": "Giulia Maria Mancini",
+            "url_profile": "/en/teams/ita-italy/players/giulia-maria-mancini?id=59604",
+            "date_of_birth": "23/05/1998",
+            "age": "21",
+            "height": "183",
+            "weight": "68",
+            "spike": "302",
+            "block": "284"
+        },
+        {
+            "name": "Giulia Melli",
+            "url_profile": "/en/teams/ita-italy/players/giulia-melli?id=59607",
+            "date_of_birth": "08/01/1998",
+            "age": "21",
+            "height": "184",
+            "weight": "70",
+            "spike": "304",
+            "block": "282"
+        },
+        {
+            "name": "Alexandra Botezat",
+            "url_profile": "/en/teams/ita-italy/players/alexandra-botezat?id=59602",
+            "date_of_birth": "03/08/1998",
+            "age": "21",
+            "height": "197",
+            "weight": "75",
+            "spike": "316",
+            "block": "304"
+        },
+        {
+            "name": "Ai Kurogo",
+            "url_profile": "/en/teams/jpn-japan/players/ai-kurogo?id=59094",
+            "date_of_birth": "14/06/1998",
+            "age": "21",
+            "height": "180",
+            "weight": "69",
+            "spike": "306",
+            "block": "295"
+        },
+        {
+            "name": "Shiori Aratani",
+            "url_profile": "/en/teams/jpn-japan/players/shiori-aratani?id=59093",
+            "date_of_birth": "22/09/1998",
+            "age": "21",
+            "height": "173",
+            "weight": "61",
+            "spike": "298",
+            "block": "275"
+        },
+        {
+            "name": "Tamaki Matsui",
+            "url_profile": "/en/teams/jpn-japan/players/tamaki-matsui?id=59102",
+            "date_of_birth": "10/01/1998",
+            "age": "21",
+            "height": "171",
+            "weight": "63",
+            "spike": "280",
+            "block": "265"
+        },
+        {
+            "name": "Erina Ogawa",
+            "url_profile": "/en/teams/jpn-japan/players/erina-ogawa?id=59708",
+            "date_of_birth": "03/06/1998",
+            "age": "21",
+            "height": "178",
+            "weight": "61",
+            "spike": "295",
+            "block": "280"
+        },
+        {
+            "name": "Yuki Hyodo",
+            "url_profile": "/en/teams/jpn-japan/players/yuki-hyodo?id=59707",
+            "date_of_birth": "19/10/1998",
+            "age": "21",
+            "height": "174",
+            "weight": "63",
+            "spike": "292",
+            "block": "283"
+        },
+        {
+            "name": "Shuri Yamaguchi",
+            "url_profile": "/en/teams/jpn-japan/players/shuri-yamaguchi?id=59098",
+            "date_of_birth": "02/09/1998",
+            "age": "21",
+            "height": "175",
+            "weight": "69",
+            "spike": "292",
+            "block": "280"
+        },
+        {
+            "name": "Miku Shimada",
+            "url_profile": "/en/teams/jpn-japan/players/miku-shimada?id=59097",
+            "date_of_birth": "11/10/1998",
+            "age": "21",
+            "height": "174",
+            "weight": "62",
+            "spike": "290",
+            "block": "285"
+        },
+        {
+            "name": "Miyuki Horie",
+            "url_profile": "/en/teams/jpn-japan/players/miyuki-horie?id=59099",
+            "date_of_birth": "12/10/1998",
+            "age": "21",
+            "height": "173",
+            "weight": "62",
+            "spike": "295",
+            "block": "280"
+        },
+        {
+            "name": "Saki Kamata",
+            "url_profile": "/en/teams/jpn-japan/players/saki-kamata?id=59705",
+            "date_of_birth": "06/01/1999",
+            "age": "20",
+            "height": "165",
+            "weight": "59",
+            "spike": "275",
+            "block": "250"
+        },
+        {
+            "name": "Reina Tokoku",
+            "url_profile": "/en/teams/jpn-japan/players/reina-tokoku?id=59092",
+            "date_of_birth": "28/04/1999",
+            "age": "20",
+            "height": "177",
+            "weight": "77",
+            "spike": "297",
+            "block": "285"
+        },
+        {
+            "name": "Miiku Iwasawa",
+            "url_profile": "/en/teams/jpn-japan/players/miiku-iwasawa?id=59702",
+            "date_of_birth": "13/10/1999",
+            "age": "20",
+            "height": "162",
+            "weight": "52",
+            "spike": "270",
+            "block": "260"
+        },
+        {
+            "name": "Miyu Nakagawa",
+            "url_profile": "/en/teams/jpn-japan/players/miyu-nakagawa?id=59100",
+            "date_of_birth": "08/01/2000",
+            "age": "19",
+            "height": "180",
+            "weight": "65",
+            "spike": "307",
+            "block": "300"
+        },
+        {
+            "name": "Tugba Senoglu",
+            "url_profile": "/en/teams/tur-turkey/players/tugba-senoglu?id=59591",
+            "date_of_birth": "02/02/1998",
+            "age": "21",
+            "height": "184",
+            "weight": "64",
+            "spike": "275",
+            "block": "270"
+        },
+        {
+            "name": "Sinem Bayazit",
+            "url_profile": "/en/teams/tur-turkey/players/sinem-bayazit?id=59581",
+            "date_of_birth": "14/01/1999",
+            "age": "20",
+            "height": "164",
+            "weight": "54",
+            "spike": "270",
+            "block": "250"
+        },
+        {
+            "name": "Ceren Nur Domac",
+            "url_profile": "/en/teams/tur-turkey/players/ceren-nur-domac?id=59582",
+            "date_of_birth": "16/07/1999",
+            "age": "20",
+            "height": "184",
+            "weight": "64",
+            "spike": "296",
+            "block": "286"
+        },
+        {
+            "name": "Saliha Sahin",
+            "url_profile": "/en/teams/tur-turkey/players/saliha-sahin?id=59590",
+            "date_of_birth": "05/11/1998",
+            "age": "21",
+            "height": "185",
+            "weight": "62",
+            "spike": "282",
+            "block": "275"
+        },
+        {
+            "name": "Yasemin Guveli",
+            "url_profile": "/en/teams/tur-turkey/players/yasemin-guveli?id=59586",
+            "date_of_birth": "05/01/1999",
+            "age": "20",
+            "height": "188",
+            "weight": "72",
+            "spike": "306",
+            "block": "298"
+        },
+        {
+            "name": "Asl?Han Kilic",
+            "url_profile": "/en/teams/tur-turkey/players/asl%3fhan-kilic?id=59588",
+            "date_of_birth": "21/04/1998",
+            "age": "21",
+            "height": "178",
+            "weight": "71",
+            "spike": "278",
+            "block": "277"
+        },
+        {
+            "name": "Buket Gulubay",
+            "url_profile": "/en/teams/tur-turkey/players/buket-gulubay?id=59584",
+            "date_of_birth": "28/02/1999",
+            "age": "20",
+            "height": "183",
+            "weight": "68",
+            "spike": "298",
+            "block": "281"
+        },
+        {
+            "name": "Cagla Erdem",
+            "url_profile": "/en/teams/tur-turkey/players/cagla-erdem?id=59583",
+            "date_of_birth": "18/06/1998",
+            "age": "21",
+            "height": "186",
+            "weight": "74",
+            "spike": "298",
+            "block": "285"
+        },
+        {
+            "name": "Tutku Burcu Yuzgenc",
+            "url_profile": "/en/teams/tur-turkey/players/tutku-burcu-yuzgenc?id=59592",
+            "date_of_birth": "15/01/1999",
+            "age": "20",
+            "height": "188",
+            "weight": "61",
+            "spike": "298",
+            "block": "295"
+        },
+        {
+            "name": "Zehra Gunes",
+            "url_profile": "/en/teams/tur-turkey/players/zehra-gunes?id=59585",
+            "date_of_birth": "07/07/1999",
+            "age": "20",
+            "height": "197",
+            "weight": "88",
+            "spike": "319",
+            "block": "310"
+        },
+        {
+            "name": "Eyl\u00fcl Akarcesme",
+            "url_profile": "/en/teams/tur-turkey/players/eyl%c3%bcl-akarcesme?id=59855",
+            "date_of_birth": "01/10/1999",
+            "age": "20",
+            "height": "170",
+            "weight": "53",
+            "spike": "285",
+            "block": "270"
+        },
+        {
+            "name": "Derya Cebecio\u011flu",
+            "url_profile": "/en/teams/tur-turkey/players/derya-cebecio%c4%9flu?id=59772",
+            "date_of_birth": "24/10/2000",
+            "age": "19",
+            "height": "185",
+            "weight": "65",
+            "spike": "290",
+            "block": "280"
+        },
+        {
+            "name": "Diana Duarte Alecrim",
+            "url_profile": "/en/teams/bra-brazil/players/diana-duarte-alecrim?id=59554",
+            "date_of_birth": "22/02/1999",
+            "age": "20",
+            "height": "194",
+            "weight": "69",
+            "spike": "297",
+            "block": "287"
+        },
+        {
+            "name": "Lorena Giovana Viezel",
+            "url_profile": "/en/teams/bra-brazil/players/lorena-giovana-viezel?id=59555",
+            "date_of_birth": "21/07/1999",
+            "age": "20",
+            "height": "190",
+            "weight": "76",
+            "spike": "309",
+            "block": "290"
+        },
+        {
+            "name": "Glayce Kelly Tobias Vasconcelos",
+            "url_profile": "/en/teams/bra-brazil/players/glayce-kelly-tobias-vasconcelos?id=59576",
+            "date_of_birth": "28/01/1998",
+            "age": "21",
+            "height": "189",
+            "weight": "73",
+            "spike": "296",
+            "block": "281"
+        },
+        {
+            "name": "Nyeme Vict\u00f3ria Alexandre Costa",
+            "url_profile": "/en/teams/bra-brazil/players/nyeme-vict%c3%b3ria-alexandre-costa?id=59553",
+            "date_of_birth": "11/10/1998",
+            "age": "21",
+            "height": "175",
+            "weight": "79",
+            "spike": "297",
+            "block": "280"
+        },
+        {
+            "name": "Amanda Rodrigues Sehn",
+            "url_profile": "/en/teams/bra-brazil/players/amanda-rodrigues-sehn?id=59567",
+            "date_of_birth": "16/07/1998",
+            "age": "21",
+            "height": "180",
+            "weight": "64",
+            "spike": "280",
+            "block": "270"
+        },
+        {
+            "name": "Karyna Malachias",
+            "url_profile": "/en/teams/bra-brazil/players/karyna-malachias?id=59564",
+            "date_of_birth": "26/10/1999",
+            "age": "20",
+            "height": "194",
+            "weight": "84",
+            "spike": "305",
+            "block": "294"
+        },
+        {
+            "name": "Karina Barbosa De Souza",
+            "url_profile": "/en/teams/bra-brazil/players/karina-barbosa-de-souza?id=59561",
+            "date_of_birth": "30/11/1998",
+            "age": "21",
+            "height": "182",
+            "weight": "65",
+            "spike": "294",
+            "block": "276"
+        },
+        {
+            "name": "Jackeline Moreno Figueiredo Dos Santos",
+            "url_profile": "/en/teams/bra-brazil/players/jackeline-moreno-figueiredo-dos-santos?id=59565",
+            "date_of_birth": "30/12/1999",
+            "age": "20",
+            "height": "174",
+            "weight": "67",
+            "spike": "286",
+            "block": "271"
+        },
+        {
+            "name": "Julia Isabelle Bergmann",
+            "url_profile": "/en/teams/bra-brazil/players/julia-isabelle-bergmann?id=59571",
+            "date_of_birth": "21/02/2001",
+            "age": "18",
+            "height": "196",
+            "weight": "78",
+            "spike": "301",
+            "block": "289"
+        },
+        {
+            "name": "Tainara Lemes Santos",
+            "url_profile": "/en/teams/bra-brazil/players/tainara-lemes-santos?id=59573",
+            "date_of_birth": "09/03/2000",
+            "age": "19",
+            "height": "190",
+            "weight": "81",
+            "spike": "306",
+            "block": "289"
+        },
+        {
+            "name": "Lorrayna Da Silva",
+            "url_profile": "/en/teams/bra-brazil/players/lorrayna-da-silva?id=59568",
+            "date_of_birth": "19/06/1999",
+            "age": "20",
+            "height": "185",
+            "weight": "62",
+            "spike": "306",
+            "block": "286"
+        },
+        {
+            "name": "Julia Araujo Almeida Holanda Moura",
+            "url_profile": "/en/teams/bra-brazil/players/julia-araujo-almeida-holanda-moura?id=59570",
+            "date_of_birth": "21/01/1998",
+            "age": "21",
+            "height": "181",
+            "weight": "68",
+            "spike": "286",
+            "block": "276"
+        },
+        {
+            "name": "Zuzanna Gorecka",
+            "url_profile": "/en/teams/pol-poland/players/zuzanna-gorecka?id=59776",
+            "date_of_birth": "10/04/2000",
+            "age": "19",
+            "height": "181",
+            "weight": "63",
+            "spike": "301",
+            "block": "284"
+        },
+        {
+            "name": "Oliwia Baluk",
+            "url_profile": "/en/teams/pol-poland/players/oliwia-baluk?id=59774",
+            "date_of_birth": "17/05/2000",
+            "age": "19",
+            "height": "175",
+            "weight": "62",
+            "spike": "288",
+            "block": "279"
+        },
+        {
+            "name": "Aleksandra Lipska",
+            "url_profile": "/en/teams/pol-poland/players/aleksandra-lipska?id=59779",
+            "date_of_birth": "25/02/1998",
+            "age": "21",
+            "height": "185",
+            "weight": "80",
+            "spike": "304",
+            "block": "285"
+        },
+        {
+            "name": "Natalia Murek",
+            "url_profile": "/en/teams/pol-poland/players/natalia-murek?id=59782",
+            "date_of_birth": "08/09/1999",
+            "age": "20",
+            "height": "180",
+            "weight": "70",
+            "spike": "302",
+            "block": "283"
+        },
+        {
+            "name": "Alicja Grabka",
+            "url_profile": "/en/teams/pol-poland/players/alicja-grabka?id=59777",
+            "date_of_birth": "09/05/1998",
+            "age": "21",
+            "height": "178",
+            "weight": "62",
+            "spike": "290",
+            "block": "280"
+        },
+        {
+            "name": "Martyna Lukasik",
+            "url_profile": "/en/teams/pol-poland/players/martyna-lukasik?id=59780",
+            "date_of_birth": "26/11/1999",
+            "age": "20",
+            "height": "189",
+            "weight": "75",
+            "spike": "315",
+            "block": "288"
+        },
+        {
+            "name": "Julia Nowicka",
+            "url_profile": "/en/teams/pol-poland/players/julia-nowicka?id=59785",
+            "date_of_birth": "21/10/1998",
+            "age": "21",
+            "height": "174",
+            "weight": "58",
+            "spike": "295",
+            "block": "278"
+        },
+        {
+            "name": "Martyna Swirad",
+            "url_profile": "/en/teams/pol-poland/players/martyna-swirad?id=59790",
+            "date_of_birth": "05/01/1998",
+            "age": "21",
+            "height": "184",
+            "weight": "74",
+            "spike": "301",
+            "block": "287"
+        },
+        {
+            "name": "Kinga Rozynska",
+            "url_profile": "/en/teams/pol-poland/players/kinga-rozynska?id=59787",
+            "date_of_birth": "12/07/1998",
+            "age": "21",
+            "height": "190",
+            "weight": "70",
+            "spike": "308",
+            "block": "289"
+        },
+        {
+            "name": "Maria Stenzel",
+            "url_profile": "/en/teams/pol-poland/players/maria-stenzel?id=59789",
+            "date_of_birth": "25/11/1998",
+            "age": "21",
+            "height": "168",
+            "weight": "53",
+            "spike": "278",
+            "block": "262"
+        },
+        {
+            "name": "Aleksandra Gryka",
+            "url_profile": "/en/teams/pol-poland/players/aleksandra-gryka?id=59794",
+            "date_of_birth": "06/02/2000",
+            "age": "19",
+            "height": "190",
+            "weight": "71",
+            "spike": "302",
+            "block": "278"
+        },
+        {
+            "name": "Justyna Lysiak",
+            "url_profile": "/en/teams/pol-poland/players/justyna-lysiak?id=59781",
+            "date_of_birth": "20/01/1999",
+            "age": "20",
+            "height": "173",
+            "weight": "58",
+            "spike": "275",
+            "block": "264"
+        },
+        {
+            "name": "Angelina Lazarenko",
+            "url_profile": "/en/teams/rus-russia/players/angelina-lazarenko?id=58790",
+            "date_of_birth": "13/04/1998",
+            "age": "21",
+            "height": "193",
+            "weight": "80",
+            "spike": "320",
+            "block": "305"
+        },
+        {
+            "name": "Kseniia Smirnova",
+            "url_profile": "/en/teams/rus-russia/players/kseniia-smirnova?id=58796",
+            "date_of_birth": "24/04/1998",
+            "age": "21",
+            "height": "187",
+            "weight": "76",
+            "spike": "305",
+            "block": "300"
+        },
+        {
+            "name": "Anna Kotikova",
+            "url_profile": "/en/teams/rus-russia/players/anna-kotikova?id=59044",
+            "date_of_birth": "13/10/1999",
+            "age": "20",
+            "height": "185",
+            "weight": "71",
+            "spike": "306",
+            "block": "300"
+        },
+        {
+            "name": "Anastasia Stalnaya",
+            "url_profile": "/en/teams/rus-russia/players/anastasia-stalnaya?id=58797",
+            "date_of_birth": "06/01/1998",
+            "age": "21",
+            "height": "190",
+            "weight": "75",
+            "spike": "306",
+            "block": "298"
+        },
+        {
+            "name": "Olga Zubareva",
+            "url_profile": "/en/teams/rus-russia/players/olga-zubareva?id=59049",
+            "date_of_birth": "08/11/1998",
+            "age": "21",
+            "height": "189",
+            "weight": "74",
+            "spike": "305",
+            "block": "297"
+        },
+        {
+            "name": "Alina Podskalnaia",
+            "url_profile": "/en/teams/rus-russia/players/alina-podskalnaia?id=58793",
+            "date_of_birth": "09/06/1998",
+            "age": "21",
+            "height": "179",
+            "weight": "65",
+            "spike": "282",
+            "block": "272"
+        },
+        {
+            "name": "Aleksandra Oganezova",
+            "url_profile": "/en/teams/rus-russia/players/aleksandra-oganezova?id=58791",
+            "date_of_birth": "12/05/1998",
+            "age": "21",
+            "height": "173",
+            "weight": "65",
+            "spike": "287",
+            "block": "266"
+        },
+        {
+            "name": "Anastasiia Stankevichute",
+            "url_profile": "/en/teams/rus-russia/players/anastasiia-stankevichute?id=59045",
+            "date_of_birth": "02/05/1998",
+            "age": "21",
+            "height": "166",
+            "weight": "63",
+            "spike": "275",
+            "block": "235"
+        },
+        {
+            "name": "Victoriia Russu",
+            "url_profile": "/en/teams/rus-russia/players/victoriia-russu?id=58794",
+            "date_of_birth": "16/02/1999",
+            "age": "20",
+            "height": "193",
+            "weight": "70",
+            "spike": "311",
+            "block": "305"
+        },
+        {
+            "name": "Daria Ryseva",
+            "url_profile": "/en/teams/rus-russia/players/daria-ryseva?id=58795",
+            "date_of_birth": "05/03/1998",
+            "age": "21",
+            "height": "175",
+            "weight": "69",
+            "spike": "282",
+            "block": "266"
+        },
+        {
+            "name": "Elizaveta Kotova",
+            "url_profile": "/en/teams/rus-russia/players/elizaveta-kotova?id=58789",
+            "date_of_birth": "31/05/1998",
+            "age": "21",
+            "height": "186",
+            "weight": "81",
+            "spike": "303",
+            "block": "289"
+        },
+        {
+            "name": "Maria Vorobyeva",
+            "url_profile": "/en/teams/rus-russia/players/maria-vorobyeva?id=58798",
+            "date_of_birth": "24/02/1998",
+            "age": "21",
+            "height": "184",
+            "weight": "77",
+            "spike": "306",
+            "block": "288"
+        },
+        {
+            "name": "Tugba Senoglu",
+            "url_profile": "/en/teams/tur-turkey/players/tugba-senoglu?id=59591",
+            "date_of_birth": "02/02/1998",
+            "age": "21",
+            "height": "184",
+            "weight": "64",
+            "spike": "275",
+            "block": "270"
+        },
+        {
+            "name": "Sinem Bayazit",
+            "url_profile": "/en/teams/tur-turkey/players/sinem-bayazit?id=59581",
+            "date_of_birth": "14/01/1999",
+            "age": "20",
+            "height": "164",
+            "weight": "54",
+            "spike": "270",
+            "block": "250"
+        },
+        {
+            "name": "Ceren Nur Domac",
+            "url_profile": "/en/teams/tur-turkey/players/ceren-nur-domac?id=59582",
+            "date_of_birth": "16/07/1999",
+            "age": "20",
+            "height": "184",
+            "weight": "64",
+            "spike": "296",
+            "block": "286"
+        },
+        {
+            "name": "Saliha Sahin",
+            "url_profile": "/en/teams/tur-turkey/players/saliha-sahin?id=59590",
+            "date_of_birth": "05/11/1998",
+            "age": "21",
+            "height": "185",
+            "weight": "62",
+            "spike": "282",
+            "block": "275"
+        },
+        {
+            "name": "Yasemin Guveli",
+            "url_profile": "/en/teams/tur-turkey/players/yasemin-guveli?id=59586",
+            "date_of_birth": "05/01/1999",
+            "age": "20",
+            "height": "188",
+            "weight": "72",
+            "spike": "306",
+            "block": "298"
+        },
+        {
+            "name": "Asl?Han Kilic",
+            "url_profile": "/en/teams/tur-turkey/players/asl%3fhan-kilic?id=59588",
+            "date_of_birth": "21/04/1998",
+            "age": "21",
+            "height": "178",
+            "weight": "71",
+            "spike": "278",
+            "block": "277"
+        },
+        {
+            "name": "Buket Gulubay",
+            "url_profile": "/en/teams/tur-turkey/players/buket-gulubay?id=59584",
+            "date_of_birth": "28/02/1999",
+            "age": "20",
+            "height": "183",
+            "weight": "68",
+            "spike": "298",
+            "block": "281"
+        },
+        {
+            "name": "Cagla Erdem",
+            "url_profile": "/en/teams/tur-turkey/players/cagla-erdem?id=59583",
+            "date_of_birth": "18/06/1998",
+            "age": "21",
+            "height": "186",
+            "weight": "74",
+            "spike": "298",
+            "block": "285"
+        },
+        {
+            "name": "Tutku Burcu Yuzgenc",
+            "url_profile": "/en/teams/tur-turkey/players/tutku-burcu-yuzgenc?id=59592",
+            "date_of_birth": "15/01/1999",
+            "age": "20",
+            "height": "188",
+            "weight": "61",
+            "spike": "298",
+            "block": "295"
+        },
+        {
+            "name": "Zehra Gunes",
+            "url_profile": "/en/teams/tur-turkey/players/zehra-gunes?id=59585",
+            "date_of_birth": "07/07/1999",
+            "age": "20",
+            "height": "197",
+            "weight": "88",
+            "spike": "319",
+            "block": "310"
+        },
+        {
+            "name": "Eyl\u00fcl Akarcesme",
+            "url_profile": "/en/teams/tur-turkey/players/eyl%c3%bcl-akarcesme?id=59855",
+            "date_of_birth": "01/10/1999",
+            "age": "20",
+            "height": "170",
+            "weight": "53",
+            "spike": "285",
+            "block": "270"
+        },
+        {
+            "name": "Derya Cebecio\u011flu",
+            "url_profile": "/en/teams/tur-turkey/players/derya-cebecio%c4%9flu?id=59772",
+            "date_of_birth": "24/10/2000",
+            "age": "19",
+            "height": "185",
+            "weight": "65",
+            "spike": "290",
+            "block": "280"
+        },
+        {
+            "name": "Ani Bozdeva",
+            "url_profile": "/en/teams/bul-bulgaria/players/ani-bozdeva?id=59903",
+            "date_of_birth": "30/01/1999",
+            "age": "20",
+            "height": "186",
+            "weight": "61",
+            "spike": "300",
+            "block": "290"
+        },
+        {
+            "name": "Borislava Saykova",
+            "url_profile": "/en/teams/bul-bulgaria/players/borislava-saykova?id=60127",
+            "date_of_birth": "14/07/2000",
+            "age": "19",
+            "height": "187",
+            "weight": "80",
+            "spike": "294",
+            "block": "274"
+        },
+        {
+            "name": "Kathryn Dimitrova",
+            "url_profile": "/en/teams/bul-bulgaria/players/kathryn-dimitrova?id=59905",
+            "date_of_birth": "27/11/1999",
+            "age": "20",
+            "height": "190",
+            "weight": "73",
+            "spike": "303",
+            "block": "296"
+        },
+        {
+            "name": "Aleksandra Milanova",
+            "url_profile": "/en/teams/bul-bulgaria/players/aleksandra-milanova?id=59911",
+            "date_of_birth": "04/07/2001",
+            "age": "18",
+            "height": "180",
+            "weight": "72",
+            "spike": "295",
+            "block": "284"
+        },
+        {
+            "name": "Monika Krasteva",
+            "url_profile": "/en/teams/bul-bulgaria/players/monika-krasteva?id=60119",
+            "date_of_birth": "09/05/1999",
+            "age": "20",
+            "height": "183",
+            "weight": "64",
+            "spike": "292",
+            "block": "285"
+        },
+        {
+            "name": "Elena Becheva",
+            "url_profile": "/en/teams/bul-bulgaria/players/elena-becheva?id=60114",
+            "date_of_birth": "30/05/1998",
+            "age": "21",
+            "height": "185",
+            "weight": "70",
+            "spike": "296",
+            "block": "288"
+        },
+        {
+            "name": "Polina Neykova",
+            "url_profile": "/en/teams/bul-bulgaria/players/polina-neykova?id=59906",
+            "date_of_birth": "07/10/1998",
+            "age": "21",
+            "height": "182",
+            "weight": "73",
+            "spike": "287",
+            "block": "280"
+        },
+        {
+            "name": "Vasilena Papanova",
+            "url_profile": "/en/teams/bul-bulgaria/players/vasilena-papanova?id=60121",
+            "date_of_birth": "02/02/1999",
+            "age": "20",
+            "height": "179",
+            "weight": "62",
+            "spike": "295",
+            "block": "289"
+        },
+        {
+            "name": "Velina Minkova",
+            "url_profile": "/en/teams/bul-bulgaria/players/velina-minkova?id=60120",
+            "date_of_birth": "02/03/1998",
+            "age": "21",
+            "height": "173",
+            "weight": "63",
+            "spike": "270",
+            "block": "260"
+        },
+        {
+            "name": "Djanis Saraivanova",
+            "url_profile": "/en/teams/bul-bulgaria/players/djanis-saraivanova?id=60122",
+            "date_of_birth": "20/08/1999",
+            "age": "20",
+            "height": "186",
+            "weight": "71",
+            "spike": "293",
+            "block": "280"
+        },
+        {
+            "name": "Emileta Racheva",
+            "url_profile": "/en/teams/bul-bulgaria/players/emileta-racheva?id=59907",
+            "date_of_birth": "26/11/1998",
+            "age": "21",
+            "height": "183",
+            "weight": "75",
+            "spike": "288",
+            "block": "275"
+        },
+        {
+            "name": "Mihaela Mihaylova",
+            "url_profile": "/en/teams/bul-bulgaria/players/mihaela-mihaylova?id=60126",
+            "date_of_birth": "22/05/1999",
+            "age": "20",
+            "height": "169",
+            "weight": "57",
+            "spike": "270",
+            "block": "260"
+        },
+        {
+            "name": "Hanyu Yang",
+            "url_profile": "/en/teams/chn-china/players/hanyu-yang?id=59516",
+            "date_of_birth": "12/10/1999",
+            "age": "20",
+            "height": "192",
+            "weight": "72",
+            "spike": "317",
+            "block": "311"
+        },
+        {
+            "name": "Peiyan Chen",
+            "url_profile": "/en/teams/chn-china/players/peiyan-chen?id=59518",
+            "date_of_birth": "16/09/1999",
+            "age": "20",
+            "height": "193",
+            "weight": "79",
+            "spike": "318",
+            "block": "309"
+        },
+        {
+            "name": "Yaqian Cai",
+            "url_profile": "/en/teams/chn-china/players/yaqian-cai?id=59506",
+            "date_of_birth": "29/06/1998",
+            "age": "21",
+            "height": "179",
+            "weight": "69",
+            "spike": "315",
+            "block": "308"
+        },
+        {
+            "name": "Yuqian Zhang",
+            "url_profile": "/en/teams/chn-china/players/yuqian-zhang?id=59505",
+            "date_of_birth": "18/08/1998",
+            "age": "21",
+            "height": "185",
+            "weight": "72",
+            "spike": "302",
+            "block": "294"
+        },
+        {
+            "name": "Xing Xie",
+            "url_profile": "/en/teams/chn-china/players/xing-xie?id=59515",
+            "date_of_birth": "28/11/1998",
+            "age": "21",
+            "height": "184",
+            "weight": "68",
+            "spike": "271",
+            "block": "265"
+        },
+        {
+            "name": "Ruige Guan",
+            "url_profile": "/en/teams/chn-china/players/ruige-guan?id=59502",
+            "date_of_birth": "25/10/1998",
+            "age": "21",
+            "height": "188",
+            "weight": "71",
+            "spike": "311",
+            "block": "303"
+        },
+        {
+            "name": "Qianqian Zang",
+            "url_profile": "/en/teams/chn-china/players/qianqian-zang?id=59504",
+            "date_of_birth": "14/08/1998",
+            "age": "21",
+            "height": "174",
+            "weight": "60",
+            "spike": "271",
+            "block": "265"
+        },
+        {
+            "name": "Xiaoqing Cai",
+            "url_profile": "/en/teams/chn-china/players/xiaoqing-cai?id=59517",
+            "date_of_birth": "05/04/1998",
+            "age": "21",
+            "height": "179",
+            "weight": "71",
+            "spike": "305",
+            "block": "295"
+        },
+        {
+            "name": "Han Wu",
+            "url_profile": "/en/teams/chn-china/players/han-wu?id=59514",
+            "date_of_birth": "23/04/1998",
+            "age": "21",
+            "height": "183",
+            "weight": "64",
+            "spike": "294",
+            "block": "284"
+        },
+        {
+            "name": "Jing Fang",
+            "url_profile": "/en/teams/chn-china/players/jing-fang?id=59507",
+            "date_of_birth": "27/07/1999",
+            "age": "20",
+            "height": "177",
+            "weight": "67",
+            "spike": "297",
+            "block": "291"
+        },
+        {
+            "name": "Xiaoting Xu",
+            "url_profile": "/en/teams/chn-china/players/xiaoting-xu?id=59520",
+            "date_of_birth": "21/01/1998",
+            "age": "21",
+            "height": "183",
+            "weight": "72",
+            "spike": "308",
+            "block": "300"
+        },
+        {
+            "name": "Jiayuan Liu",
+            "url_profile": "/en/teams/chn-china/players/jiayuan-liu?id=59510",
+            "date_of_birth": "09/05/1998",
+            "age": "21",
+            "height": "181",
+            "weight": "80",
+            "spike": "281",
+            "block": "276"
+        },
+        {
+            "name": "Ai Kurogo",
+            "url_profile": "/en/teams/jpn-japan/players/ai-kurogo?id=59094",
+            "date_of_birth": "14/06/1998",
+            "age": "21",
+            "height": "180",
+            "weight": "69",
+            "spike": "306",
+            "block": "295"
+        },
+        {
+            "name": "Shiori Aratani",
+            "url_profile": "/en/teams/jpn-japan/players/shiori-aratani?id=59093",
+            "date_of_birth": "22/09/1998",
+            "age": "21",
+            "height": "173",
+            "weight": "61",
+            "spike": "298",
+            "block": "275"
+        },
+        {
+            "name": "Tamaki Matsui",
+            "url_profile": "/en/teams/jpn-japan/players/tamaki-matsui?id=59102",
+            "date_of_birth": "10/01/1998",
+            "age": "21",
+            "height": "171",
+            "weight": "63",
+            "spike": "280",
+            "block": "265"
+        },
+        {
+            "name": "Erina Ogawa",
+            "url_profile": "/en/teams/jpn-japan/players/erina-ogawa?id=59708",
+            "date_of_birth": "03/06/1998",
+            "age": "21",
+            "height": "178",
+            "weight": "61",
+            "spike": "295",
+            "block": "280"
+        },
+        {
+            "name": "Yuki Hyodo",
+            "url_profile": "/en/teams/jpn-japan/players/yuki-hyodo?id=59707",
+            "date_of_birth": "19/10/1998",
+            "age": "21",
+            "height": "174",
+            "weight": "63",
+            "spike": "292",
+            "block": "283"
+        },
+        {
+            "name": "Shuri Yamaguchi",
+            "url_profile": "/en/teams/jpn-japan/players/shuri-yamaguchi?id=59098",
+            "date_of_birth": "02/09/1998",
+            "age": "21",
+            "height": "175",
+            "weight": "69",
+            "spike": "292",
+            "block": "280"
+        },
+        {
+            "name": "Miku Shimada",
+            "url_profile": "/en/teams/jpn-japan/players/miku-shimada?id=59097",
+            "date_of_birth": "11/10/1998",
+            "age": "21",
+            "height": "174",
+            "weight": "62",
+            "spike": "290",
+            "block": "285"
+        },
+        {
+            "name": "Miyuki Horie",
+            "url_profile": "/en/teams/jpn-japan/players/miyuki-horie?id=59099",
+            "date_of_birth": "12/10/1998",
+            "age": "21",
+            "height": "173",
+            "weight": "62",
+            "spike": "295",
+            "block": "280"
+        },
+        {
+            "name": "Saki Kamata",
+            "url_profile": "/en/teams/jpn-japan/players/saki-kamata?id=59705",
+            "date_of_birth": "06/01/1999",
+            "age": "20",
+            "height": "165",
+            "weight": "59",
+            "spike": "275",
+            "block": "250"
+        },
+        {
+            "name": "Reina Tokoku",
+            "url_profile": "/en/teams/jpn-japan/players/reina-tokoku?id=59092",
+            "date_of_birth": "28/04/1999",
+            "age": "20",
+            "height": "177",
+            "weight": "77",
+            "spike": "297",
+            "block": "285"
+        },
+        {
+            "name": "Miiku Iwasawa",
+            "url_profile": "/en/teams/jpn-japan/players/miiku-iwasawa?id=59702",
+            "date_of_birth": "13/10/1999",
+            "age": "20",
+            "height": "162",
+            "weight": "52",
+            "spike": "270",
+            "block": "260"
+        },
+        {
+            "name": "Miyu Nakagawa",
+            "url_profile": "/en/teams/jpn-japan/players/miyu-nakagawa?id=59100",
+            "date_of_birth": "08/01/2000",
+            "age": "19",
+            "height": "180",
+            "weight": "65",
+            "spike": "307",
+            "block": "300"
+        },
+        {
+            "name": "Brionne Butler",
+            "url_profile": "/en/teams/usa-usa/players/brionne-butler?id=59930",
+            "date_of_birth": "29/01/1999",
+            "age": "20",
+            "height": "195",
+            "weight": "77",
+            "spike": "329",
+            "block": "324"
+        },
+        {
+            "name": "Tiffany Clark",
+            "url_profile": "/en/teams/usa-usa/players/tiffany-clark?id=59932",
+            "date_of_birth": "18/02/1998",
+            "age": "21",
+            "height": "180",
+            "weight": "66",
+            "spike": "292",
+            "block": "286"
+        },
+        {
+            "name": "Elizabeth Thayer Hall",
+            "url_profile": "/en/teams/usa-usa/players/elizabeth-thayer-hall?id=59935",
+            "date_of_birth": "28/12/1999",
+            "age": "20",
+            "height": "191",
+            "weight": "77",
+            "spike": "312",
+            "block": "300"
+        },
+        {
+            "name": "Paige Hammons",
+            "url_profile": "/en/teams/usa-usa/players/paige-hammons?id=59936",
+            "date_of_birth": "21/10/1998",
+            "age": "21",
+            "height": "190",
+            "weight": "61",
+            "spike": "310",
+            "block": "298"
+        },
+        {
+            "name": "Regan Pittman",
+            "url_profile": "/en/teams/usa-usa/players/regan-pittman?id=59941",
+            "date_of_birth": "18/03/1998",
+            "age": "21",
+            "height": "195",
+            "weight": "85",
+            "spike": "315",
+            "block": "308"
+        },
+        {
+            "name": "Holly Carlton",
+            "url_profile": "/en/teams/usa-usa/players/holly-carlton?id=59931",
+            "date_of_birth": "14/05/1998",
+            "age": "21",
+            "height": "203",
+            "weight": "80",
+            "spike": "311",
+            "block": "301"
+        },
+        {
+            "name": "Ronika Stone",
+            "url_profile": "/en/teams/usa-usa/players/ronika-stone?id=59946",
+            "date_of_birth": "07/06/1998",
+            "age": "21",
+            "height": "193",
+            "weight": "78",
+            "spike": "315",
+            "block": "300"
+        },
+        {
+            "name": "Norene Iosia",
+            "url_profile": "/en/teams/usa-usa/players/norene-iosia?id=59948",
+            "date_of_birth": "27/05/1998",
+            "age": "21",
+            "height": "182",
+            "weight": "77",
+            "spike": "304",
+            "block": "292"
+        },
+        {
+            "name": "Mackenzi Welsh",
+            "url_profile": "/en/teams/usa-usa/players/mackenzi-welsh?id=59947",
+            "date_of_birth": "19/02/1998",
+            "age": "21",
+            "height": "185",
+            "weight": "70",
+            "spike": "316",
+            "block": "314"
+        },
+        {
+            "name": "Gabrielle Curry",
+            "url_profile": "/en/teams/usa-usa/players/gabrielle-curry?id=59949",
+            "date_of_birth": "12/09/1998",
+            "age": "21",
+            "height": "175",
+            "weight": "70",
+            "spike": "271",
+            "block": "270"
+        },
+        {
+            "name": "Rachael Kramer",
+            "url_profile": "/en/teams/usa-usa/players/rachael-kramer?id=59937",
+            "date_of_birth": "15/03/1998",
+            "age": "21",
+            "height": "208",
+            "weight": "78",
+            "spike": "325",
+            "block": "313"
+        },
+        {
+            "name": "Leah Edmond",
+            "url_profile": "/en/teams/usa-usa/players/leah-edmond?id=59934",
+            "date_of_birth": "13/02/1998",
+            "age": "21",
+            "height": "193",
+            "weight": "75",
+            "spike": "320",
+            "block": "305"
+        },
+        {
+            "name": "Valentina Andrea Gonzalez",
+            "url_profile": "/en/teams/arg-argentina/players/valentina-andrea-gonzalez?id=59865",
+            "date_of_birth": "23/02/1998",
+            "age": "21",
+            "height": "163",
+            "weight": "56",
+            "spike": "271",
+            "block": "260"
+        },
+        {
+            "name": "Greta Martinelli",
+            "url_profile": "/en/teams/arg-argentina/players/greta-martinelli?id=59868",
+            "date_of_birth": "29/04/1998",
+            "age": "21",
+            "height": "179",
+            "weight": "67",
+            "spike": "280",
+            "block": "269"
+        },
+        {
+            "name": "Agustina Oliva",
+            "url_profile": "/en/teams/arg-argentina/players/agustina-oliva?id=59875",
+            "date_of_birth": "24/09/1998",
+            "age": "21",
+            "height": "184",
+            "weight": "72",
+            "spike": "295",
+            "block": "284"
+        },
+        {
+            "name": "Azul Benitez",
+            "url_profile": "/en/teams/arg-argentina/players/azul-benitez?id=59862",
+            "date_of_birth": "05/02/1998",
+            "age": "21",
+            "height": "165",
+            "weight": "60",
+            "spike": "260",
+            "block": "245"
+        },
+        {
+            "name": "Daniela Veronica Nielson Ramella",
+            "url_profile": "/en/teams/arg-argentina/players/daniela-veronica-nielson-ramella?id=59873",
+            "date_of_birth": "19/02/1998",
+            "age": "21",
+            "height": "169",
+            "weight": "57",
+            "spike": "278",
+            "block": "266"
+        },
+        {
+            "name": "Anahi Florencia Tosi",
+            "url_profile": "/en/teams/arg-argentina/players/anahi-florencia-tosi?id=59881",
+            "date_of_birth": "10/07/1998",
+            "age": "21",
+            "height": "181",
+            "weight": "60",
+            "spike": "290",
+            "block": "272"
+        },
+        {
+            "name": "Candela Nota",
+            "url_profile": "/en/teams/arg-argentina/players/candela-nota?id=59874",
+            "date_of_birth": "01/03/1999",
+            "age": "20",
+            "height": "182",
+            "weight": "60",
+            "spike": "280",
+            "block": "271"
+        },
+        {
+            "name": "Agostina Denisse Soria",
+            "url_profile": "/en/teams/arg-argentina/players/agostina-denisse-soria?id=59879",
+            "date_of_birth": "09/10/1998",
+            "age": "21",
+            "height": "179",
+            "weight": "65",
+            "spike": "279",
+            "block": "271"
+        },
+        {
+            "name": "Julieta Cervini",
+            "url_profile": "/en/teams/arg-argentina/players/julieta-cervini?id=59864",
+            "date_of_birth": "13/03/1999",
+            "age": "20",
+            "height": "182",
+            "weight": "69",
+            "spike": "283",
+            "block": "273"
+        },
+        {
+            "name": "Agostina Sol Beltramino",
+            "url_profile": "/en/teams/arg-argentina/players/agostina-sol-beltramino?id=59861",
+            "date_of_birth": "25/04/1999",
+            "age": "20",
+            "height": "180",
+            "weight": "65",
+            "spike": "283",
+            "block": "283"
+        },
+        {
+            "name": "Maria Agostina Pelozo",
+            "url_profile": "/en/teams/arg-argentina/players/maria-agostina-pelozo?id=59876",
+            "date_of_birth": "19/11/1999",
+            "age": "20",
+            "height": "180",
+            "weight": "56",
+            "spike": "277",
+            "block": "263"
+        },
+        {
+            "name": "Fiamma Arabela Biain",
+            "url_profile": "/en/teams/arg-argentina/players/fiamma-arabela-biain?id=59863",
+            "date_of_birth": "30/01/1998",
+            "age": "21",
+            "height": "171",
+            "weight": "67",
+            "spike": "279",
+            "block": "266"
+        },
+        {
+            "name": "Uxue Amaya Guereca Parra",
+            "url_profile": "/en/teams/mex-mexico/players/uxue-amaya-guereca-parra?id=60471",
+            "date_of_birth": "12/02/2001",
+            "age": "18",
+            "height": "176",
+            "weight": "64",
+            "spike": "270",
+            "block": "259"
+        },
+        {
+            "name": "Alejandra Tapia Martinez",
+            "url_profile": "/en/teams/mex-mexico/players/alejandra-tapia-martinez?id=60465",
+            "date_of_birth": "08/03/1998",
+            "age": "21",
+            "height": "158",
+            "weight": "57",
+            "spike": "0",
+            "block": "0"
+        },
+        {
+            "name": "Alejandra Salinas Gonzalez",
+            "url_profile": "/en/teams/mex-mexico/players/alejandra-salinas-gonzalez?id=60463",
+            "date_of_birth": "04/04/1998",
+            "age": "21",
+            "height": "169",
+            "weight": "63",
+            "spike": "245",
+            "block": "240"
+        },
+        {
+            "name": "Yerania Paloma Gutierrez Sandoval",
+            "url_profile": "/en/teams/mex-mexico/players/yerania-paloma-gutierrez-sandoval?id=60478",
+            "date_of_birth": "13/01/1998",
+            "age": "21",
+            "height": "182",
+            "weight": "75",
+            "spike": "275",
+            "block": "260"
+        },
+        {
+            "name": "Karla Daniela Mireles Valdez",
+            "url_profile": "/en/teams/mex-mexico/players/karla-daniela-mireles-valdez?id=60472",
+            "date_of_birth": "25/01/2000",
+            "age": "19",
+            "height": "176",
+            "weight": "73",
+            "spike": "270",
+            "block": "250"
+        },
+        {
+            "name": "Kathya Paulina Garcia Chavez",
+            "url_profile": "/en/teams/mex-mexico/players/kathya-paulina-garcia-chavez?id=60469",
+            "date_of_birth": "06/03/1998",
+            "age": "21",
+            "height": "178",
+            "weight": "69",
+            "spike": "285",
+            "block": "250"
+        },
+        {
+            "name": "Francia Sanchez",
+            "url_profile": "/en/teams/mex-mexico/players/francia-sanchez?id=60464",
+            "date_of_birth": "28/08/1998",
+            "age": "21",
+            "height": "182",
+            "weight": "78",
+            "spike": "310",
+            "block": "300"
+        },
+        {
+            "name": "Joseline Landeros Palacios",
+            "url_profile": "/en/teams/mex-mexico/players/joseline-landeros-palacios?id=60461",
+            "date_of_birth": "20/12/2000",
+            "age": "19",
+            "height": "169",
+            "weight": "60",
+            "spike": "265",
+            "block": "249"
+        },
+        {
+            "name": "Samantha Paola Villegas Betancourt",
+            "url_profile": "/en/teams/mex-mexico/players/samantha-paola-villegas-betancourt?id=60481",
+            "date_of_birth": "08/09/1998",
+            "age": "21",
+            "height": "178",
+            "weight": "69",
+            "spike": "285",
+            "block": "280"
+        },
+        {
+            "name": "Karen Paola Rivera Herrera",
+            "url_profile": "/en/teams/mex-mexico/players/karen-paola-rivera-herrera?id=60473",
+            "date_of_birth": "22/05/1999",
+            "age": "20",
+            "height": "174",
+            "weight": "62",
+            "spike": "265",
+            "block": "260"
+        },
+        {
+            "name": "Karina Angelica Flores Gamez",
+            "url_profile": "/en/teams/mex-mexico/players/karina-angelica-flores-gamez?id=60468",
+            "date_of_birth": "16/08/1998",
+            "age": "21",
+            "height": "192",
+            "weight": "80",
+            "spike": "299",
+            "block": "285"
+        },
+        {
+            "name": "Alondra Amaro Rodriguez",
+            "url_profile": "/en/teams/mex-mexico/players/alondra-amaro-rodriguez?id=60467",
+            "date_of_birth": "09/06/1998",
+            "age": "21",
+            "height": "188",
+            "weight": "69",
+            "spike": "275",
+            "block": "250"
+        },
+        {
+            "name": "Flavia Montes",
+            "url_profile": "/en/teams/per-peru/players/flavia-montes?id=59983",
+            "date_of_birth": "22/11/2000",
+            "age": "19",
+            "height": "187",
+            "weight": "60",
+            "spike": "295",
+            "block": "290"
+        },
+        {
+            "name": "Nayeli Vilchez",
+            "url_profile": "/en/teams/per-peru/players/nayeli-vilchez?id=59990",
+            "date_of_birth": "27/06/2000",
+            "age": "19",
+            "height": "179",
+            "weight": "65",
+            "spike": "290",
+            "block": "287"
+        },
+        {
+            "name": "Maricarmen Guerrero",
+            "url_profile": "/en/teams/per-peru/players/maricarmen-guerrero?id=59976",
+            "date_of_birth": "17/01/1999",
+            "age": "20",
+            "height": "181",
+            "weight": "70",
+            "spike": "290",
+            "block": "280"
+        },
+        {
+            "name": "Nicole Abreu Erquinigo",
+            "url_profile": "/en/teams/per-peru/players/nicole-abreu-erquinigo?id=59971",
+            "date_of_birth": "27/03/1999",
+            "age": "20",
+            "height": "180",
+            "weight": "63",
+            "spike": "285",
+            "block": "270"
+        },
+        {
+            "name": "Ysabella Sanchez",
+            "url_profile": "/en/teams/per-peru/players/ysabella-sanchez?id=59987",
+            "date_of_birth": "02/07/1999",
+            "age": "20",
+            "height": "177",
+            "weight": "59",
+            "spike": "279",
+            "block": "296"
+        },
+        {
+            "name": "Katherine Regalado",
+            "url_profile": "/en/teams/per-peru/players/katherine-regalado?id=59986",
+            "date_of_birth": "11/03/1998",
+            "age": "21",
+            "height": "190",
+            "weight": "66",
+            "spike": "296",
+            "block": "287"
+        },
+        {
+            "name": "Thaisa Mc Leod",
+            "url_profile": "/en/teams/per-peru/players/thaisa-mc-leod?id=59982",
+            "date_of_birth": "01/01/2002",
+            "age": "17",
+            "height": "189",
+            "weight": "75",
+            "spike": "301",
+            "block": "305"
+        },
+        {
+            "name": "Kiara Montes",
+            "url_profile": "/en/teams/per-peru/players/kiara-montes?id=59984",
+            "date_of_birth": "13/01/2001",
+            "age": "18",
+            "height": "176",
+            "weight": "68",
+            "spike": "282",
+            "block": "293"
+        },
+        {
+            "name": "Leslie Leyva",
+            "url_profile": "/en/teams/per-peru/players/leslie-leyva?id=59979",
+            "date_of_birth": "06/12/1998",
+            "age": "21",
+            "height": "175",
+            "weight": "72",
+            "spike": "280",
+            "block": "300"
+        },
+        {
+            "name": "Besna Villegas",
+            "url_profile": "/en/teams/per-peru/players/besna-villegas?id=59991",
+            "date_of_birth": "30/10/1999",
+            "age": "20",
+            "height": "170",
+            "weight": "68",
+            "spike": "270",
+            "block": "275"
+        },
+        {
+            "name": "Aixa Vigil",
+            "url_profile": "/en/teams/per-peru/players/aixa-vigil?id=59989",
+            "date_of_birth": "23/09/2001",
+            "age": "18",
+            "height": "180",
+            "weight": "65",
+            "spike": "284",
+            "block": "295"
+        },
+        {
+            "name": "Yadhira Anchante",
+            "url_profile": "/en/teams/per-peru/players/yadhira-anchante?id=59972",
+            "date_of_birth": "19/11/2002",
+            "age": "17",
+            "height": "178",
+            "weight": "59",
+            "spike": "286",
+            "block": "290"
+        },
+        {
+            "name": "Katarina Lazovic",
+            "url_profile": "/en/teams/srb-serbia/players/katarina-lazovic?id=59714",
+            "date_of_birth": "12/09/1999",
+            "age": "20",
+            "height": "182",
+            "weight": "65",
+            "spike": "290",
+            "block": "277"
+        },
+        {
+            "name": "Ana Jaksic",
+            "url_profile": "/en/teams/srb-serbia/players/ana-jaksic?id=59712",
+            "date_of_birth": "10/03/1998",
+            "age": "21",
+            "height": "178",
+            "weight": "64",
+            "spike": "285",
+            "block": "280"
+        },
+        {
+            "name": "Ljubica Milojevic",
+            "url_profile": "/en/teams/srb-serbia/players/ljubica-milojevic?id=59717",
+            "date_of_birth": "13/02/1999",
+            "age": "20",
+            "height": "193",
+            "weight": "70",
+            "spike": "300",
+            "block": "290"
+        },
+        {
+            "name": "Jovana Kocic",
+            "url_profile": "/en/teams/srb-serbia/players/jovana-kocic?id=59713",
+            "date_of_birth": "24/02/1998",
+            "age": "21",
+            "height": "190",
+            "weight": "85",
+            "spike": "290",
+            "block": "285"
+        },
+        {
+            "name": "Anastasija Sekulic",
+            "url_profile": "/en/teams/srb-serbia/players/anastasija-sekulic?id=59719",
+            "date_of_birth": "31/07/1998",
+            "age": "21",
+            "height": "180",
+            "weight": "58",
+            "spike": "280",
+            "block": "275"
+        },
+        {
+            "name": "Tamara Radmilovic",
+            "url_profile": "/en/teams/srb-serbia/players/tamara-radmilovic?id=59718",
+            "date_of_birth": "09/06/1999",
+            "age": "20",
+            "height": "184",
+            "weight": "64",
+            "spike": "280",
+            "block": "275"
+        },
+        {
+            "name": "Andjela Veselinovic",
+            "url_profile": "/en/teams/srb-serbia/players/andjela-veselinovic?id=59721",
+            "date_of_birth": "05/02/1999",
+            "age": "20",
+            "height": "173",
+            "weight": "55",
+            "spike": "270",
+            "block": "265"
+        },
+        {
+            "name": "Vanja Bukilic",
+            "url_profile": "/en/teams/srb-serbia/players/vanja-bukilic?id=59711",
+            "date_of_birth": "13/06/1999",
+            "age": "20",
+            "height": "191",
+            "weight": "68",
+            "spike": "300",
+            "block": "285"
+        },
+        {
+            "name": "Sara Caric",
+            "url_profile": "/en/teams/srb-serbia/players/sara-caric?id=59856",
+            "date_of_birth": "01/02/2001",
+            "age": "18",
+            "height": "193",
+            "weight": "73",
+            "spike": "300",
+            "block": "290"
+        },
+        {
+            "name": "Katarina Jovic",
+            "url_profile": "/en/teams/srb-serbia/players/katarina-jovic?id=59887",
+            "date_of_birth": "01/10/1999",
+            "age": "20",
+            "height": "191",
+            "weight": "76",
+            "spike": "292",
+            "block": "284"
+        },
+        {
+            "name": "Sanja Djurdjevic",
+            "url_profile": "/en/teams/srb-serbia/players/sanja-djurdjevic?id=59857",
+            "date_of_birth": "25/03/1998",
+            "age": "21",
+            "height": "177",
+            "weight": "63",
+            "spike": "274",
+            "block": "270"
+        },
+        {
+            "name": "Jovana Mirosavljevic",
+            "url_profile": "/en/teams/srb-serbia/players/jovana-mirosavljevic?id=59858",
+            "date_of_birth": "16/01/2000",
+            "age": "19",
+            "height": "182",
+            "weight": "63",
+            "spike": "288",
+            "block": "280"
+        },
+        {
+            "name": "Lianny Tamayo Canton",
+            "url_profile": "/en/teams/cub-cuba/players/lianny-tamayo-canton?id=59966",
+            "date_of_birth": "30/04/1999",
+            "age": "20",
+            "height": "178",
+            "weight": "58",
+            "spike": "295",
+            "block": "290"
+        },
+        {
+            "name": "Elizabeth Vicet Campos",
+            "url_profile": "/en/teams/cub-cuba/players/elizabeth-vicet-campos?id=59967",
+            "date_of_birth": "09/08/2000",
+            "age": "19",
+            "height": "173",
+            "weight": "63",
+            "spike": "293",
+            "block": "284"
+        },
+        {
+            "name": "Laura Beatriz Suarez Hernandez",
+            "url_profile": "/en/teams/cub-cuba/players/laura-beatriz-suarez-hernandez?id=59965",
+            "date_of_birth": "13/12/1998",
+            "age": "21",
+            "height": "185",
+            "weight": "75",
+            "spike": "304",
+            "block": "292"
+        },
+        {
+            "name": "Dalila Palma Rodriguez",
+            "url_profile": "/en/teams/cub-cuba/players/dalila-palma-rodriguez?id=59963",
+            "date_of_birth": "18/11/1999",
+            "age": "20",
+            "height": "182",
+            "weight": "62",
+            "spike": "301",
+            "block": "285"
+        },
+        {
+            "name": "Diaris Perez Ramos",
+            "url_profile": "/en/teams/cub-cuba/players/diaris-perez-ramos?id=59964",
+            "date_of_birth": "16/11/1998",
+            "age": "21",
+            "height": "182",
+            "weight": "75",
+            "spike": "304",
+            "block": "295"
+        },
+        {
+            "name": "Gretell Elena Moreno Borrero",
+            "url_profile": "/en/teams/cub-cuba/players/gretell-elena-moreno-borrero?id=59959",
+            "date_of_birth": "30/01/1998",
+            "age": "21",
+            "height": "183",
+            "weight": "68",
+            "spike": "287",
+            "block": "280"
+        },
+        {
+            "name": "Ailama Cese Montalvo",
+            "url_profile": "/en/teams/cub-cuba/players/ailama-cese-montalvo?id=59954",
+            "date_of_birth": "29/10/2000",
+            "age": "19",
+            "height": "188",
+            "weight": "58",
+            "spike": "322",
+            "block": "308"
+        },
+        {
+            "name": "Yamisleydis Viltres Pacheco",
+            "url_profile": "/en/teams/cub-cuba/players/yamisleydis-viltres-pacheco?id=59969",
+            "date_of_birth": "26/07/2001",
+            "age": "18",
+            "height": "189",
+            "weight": "73",
+            "spike": "247",
+            "block": "244"
+        },
+        {
+            "name": "Carmela Massip Mursuli",
+            "url_profile": "/en/teams/cub-cuba/players/carmela-massip-mursuli?id=59957",
+            "date_of_birth": "17/01/1998",
+            "age": "21",
+            "height": "181",
+            "weight": "65",
+            "spike": "304",
+            "block": "295"
+        },
+        {
+            "name": "Jessica Aguilera Carbajal",
+            "url_profile": "/en/teams/cub-cuba/players/jessica-aguilera-carbajal?id=59951",
+            "date_of_birth": "25/05/1999",
+            "age": "20",
+            "height": "184",
+            "weight": "68",
+            "spike": "311",
+            "block": "302"
+        },
+        {
+            "name": "Heidy Casanova Alvarez",
+            "url_profile": "/en/teams/cub-cuba/players/heidy-casanova-alvarez?id=59952",
+            "date_of_birth": "06/11/1998",
+            "age": "21",
+            "height": "184",
+            "weight": "78",
+            "spike": "244",
+            "block": "240"
+        },
+        {
+            "name": "Ivy May Vila Wittingham",
+            "url_profile": "/en/teams/cub-cuba/players/ivy-may-vila-wittingham?id=59968",
+            "date_of_birth": "22/07/2001",
+            "age": "18",
+            "height": "181",
+            "weight": "78",
+            "spike": "235",
+            "block": "232"
+        },
+        {
+            "name": "Yanlis Liliannis Feliz Sena",
+            "url_profile": "/en/teams/dom-dominican%20republic/players/yanlis-liliannis-feliz-sena?id=58806",
+            "date_of_birth": "03/06/2000",
+            "age": "19",
+            "height": "181",
+            "weight": "69",
+            "spike": "282",
+            "block": "263"
+        },
+        {
+            "name": "Pamela Maria Jorge Ubiera",
+            "url_profile": "/en/teams/dom-dominican%20republic/players/pamela-maria-jorge-ubiera?id=58811",
+            "date_of_birth": "26/11/1998",
+            "age": "21",
+            "height": "168",
+            "weight": "65",
+            "spike": "296",
+            "block": "240"
+        },
+        {
+            "name": "Hennesys Nathaly Lalane Tejeda",
+            "url_profile": "/en/teams/dom-dominican%20republic/players/hennesys-nathaly-lalane-tejeda?id=58812",
+            "date_of_birth": "10/04/2000",
+            "age": "19",
+            "height": "185",
+            "weight": "74",
+            "spike": "275",
+            "block": "263"
+        },
+        {
+            "name": "Vielka Michelle Peralta Luna",
+            "url_profile": "/en/teams/dom-dominican%20republic/players/vielka-michelle-peralta-luna?id=58815",
+            "date_of_birth": "13/04/1999",
+            "age": "20",
+            "height": "186",
+            "weight": "56",
+            "spike": "310",
+            "block": "305"
+        },
+        {
+            "name": "Yaneirys Rodriguez Duran",
+            "url_profile": "/en/teams/dom-dominican%20republic/players/yaneirys-rodriguez-duran?id=58818",
+            "date_of_birth": "26/06/2000",
+            "age": "19",
+            "height": "171",
+            "weight": "56",
+            "spike": "280",
+            "block": "251"
+        },
+        {
+            "name": "Mesalina Luz Del Sol Yosil Severino",
+            "url_profile": "/en/teams/dom-dominican%20republic/players/mesalina-luz-del-sol-yosil-severino?id=58820",
+            "date_of_birth": "18/07/2000",
+            "age": "19",
+            "height": "185",
+            "weight": "63",
+            "spike": "283",
+            "block": "272"
+        },
+        {
+            "name": "Natalia Martinez",
+            "url_profile": "/en/teams/dom-dominican%20republic/players/natalia-martinez?id=58813",
+            "date_of_birth": "25/11/2000",
+            "age": "19",
+            "height": "186",
+            "weight": "71",
+            "spike": "310",
+            "block": "300"
+        },
+        {
+            "name": "Geraldine Sthefany Gonzalez",
+            "url_profile": "/en/teams/dom-dominican%20republic/players/geraldine-sthefany-gonzalez?id=58807",
+            "date_of_birth": "18/04/2002",
+            "age": "17",
+            "height": "196",
+            "weight": "77",
+            "spike": "295",
+            "block": "290"
+        },
+        {
+            "name": "Madeline Jazmin Guillen Paredes",
+            "url_profile": "/en/teams/dom-dominican%20republic/players/madeline-jazmin-guillen-paredes?id=58808",
+            "date_of_birth": "04/06/2001",
+            "age": "18",
+            "height": "186",
+            "weight": "74",
+            "spike": "273",
+            "block": "242"
+        },
+        {
+            "name": "Yokaty Perez Flores",
+            "url_profile": "/en/teams/dom-dominican%20republic/players/yokaty-perez-flores?id=58816",
+            "date_of_birth": "06/08/1998",
+            "age": "21",
+            "height": "178",
+            "weight": "79",
+            "spike": "291",
+            "block": "257"
+        },
+        {
+            "name": "Lisbeth Lucia Rosario Martinez",
+            "url_profile": "/en/teams/dom-dominican%20republic/players/lisbeth-lucia-rosario-martinez?id=58819",
+            "date_of_birth": "26/05/1999",
+            "age": "20",
+            "height": "180",
+            "weight": "73",
+            "spike": "273",
+            "block": "265"
+        },
+        {
+            "name": "Erika Isabel Asencio Soriano",
+            "url_profile": "/en/teams/dom-dominican%20republic/players/erika-isabel-asencio-soriano?id=58801",
+            "date_of_birth": "02/04/2000",
+            "age": "19",
+            "height": "175",
+            "weight": "65",
+            "spike": "279",
+            "block": "267"
+        },
+        {
+            "name": "Nadin Zaatar",
+            "url_profile": "/en/teams/egy-egypt/players/nadin-zaatar?id=60094",
+            "date_of_birth": "25/08/1999",
+            "age": "20",
+            "height": "179",
+            "weight": "69",
+            "spike": "282",
+            "block": "274"
+        },
+        {
+            "name": "Nada Meawad",
+            "url_profile": "/en/teams/egy-egypt/players/nada-meawad?id=60270",
+            "date_of_birth": "12/04/1998",
+            "age": "21",
+            "height": "180",
+            "weight": "71",
+            "spike": "277",
+            "block": "267"
+        },
+        {
+            "name": "Youmna Sabik",
+            "url_profile": "/en/teams/egy-egypt/players/youmna-sabik?id=60279",
+            "date_of_birth": "21/08/1998",
+            "age": "21",
+            "height": "163",
+            "weight": "51",
+            "spike": "262",
+            "block": "251"
+        },
+        {
+            "name": "Mayar Mohamed",
+            "url_profile": "/en/teams/egy-egypt/players/mayar-mohamed?id=60272",
+            "date_of_birth": "05/02/2000",
+            "age": "19",
+            "height": "184",
+            "weight": "75",
+            "spike": "288",
+            "block": "276"
+        },
+        {
+            "name": "Noura Moawad",
+            "url_profile": "/en/teams/egy-egypt/players/noura-moawad?id=60106",
+            "date_of_birth": "12/04/1998",
+            "age": "21",
+            "height": "182",
+            "weight": "80",
+            "spike": "280",
+            "block": "271"
+        },
+        {
+            "name": "Aliaa Helal",
+            "url_profile": "/en/teams/egy-egypt/players/aliaa-helal?id=60112",
+            "date_of_birth": "01/01/2000",
+            "age": "19",
+            "height": "181",
+            "weight": "71",
+            "spike": "279",
+            "block": "270"
+        },
+        {
+            "name": "Hanya Elshebeny",
+            "url_profile": "/en/teams/egy-egypt/players/hanya-elshebeny?id=60111",
+            "date_of_birth": "06/06/1999",
+            "age": "20",
+            "height": "170",
+            "weight": "60",
+            "spike": "273",
+            "block": "261"
+        },
+        {
+            "name": "Nourallah Amin",
+            "url_profile": "/en/teams/egy-egypt/players/nourallah-amin?id=60282",
+            "date_of_birth": "25/11/2000",
+            "age": "19",
+            "height": "184",
+            "weight": "70",
+            "spike": "285",
+            "block": "276"
+        },
+        {
+            "name": "Habiba Khairy",
+            "url_profile": "/en/teams/egy-egypt/players/habiba-khairy?id=60109",
+            "date_of_birth": "16/12/1999",
+            "age": "20",
+            "height": "177",
+            "weight": "73",
+            "spike": "280",
+            "block": "271"
+        },
+        {
+            "name": "Hana Elmasry",
+            "url_profile": "/en/teams/egy-egypt/players/hana-elmasry?id=60099",
+            "date_of_birth": "20/07/2001",
+            "age": "18",
+            "height": "173",
+            "weight": "64",
+            "spike": "276",
+            "block": "267"
+        },
+        {
+            "name": "Salma Mahmoud",
+            "url_profile": "/en/teams/egy-egypt/players/salma-mahmoud?id=60113",
+            "date_of_birth": "04/02/1999",
+            "age": "20",
+            "height": "175",
+            "weight": "56",
+            "spike": "278",
+            "block": "266"
+        },
+        {
+            "name": "Dana Emam",
+            "url_profile": "/en/teams/egy-egypt/players/dana-emam?id=60110",
+            "date_of_birth": "04/10/2000",
+            "age": "19",
+            "height": "181",
+            "weight": "73",
+            "spike": "280",
+            "block": "271"
+        },
+        {
+            "name": "Nkemdilim Ruth Terry Enweonwu",
+            "url_profile": "/en/teams/ita-italy/players/nkemdilim-ruth-terry-enweonwu?id=59730",
+            "date_of_birth": "12/05/2000",
+            "age": "19",
+            "height": "187",
+            "weight": "86",
+            "spike": "339",
+            "block": "309"
+        },
+        {
+            "name": "Jenninfer Boldini",
+            "url_profile": "/en/teams/ita-italy/players/jenninfer-boldini?id=59728",
+            "date_of_birth": "06/04/1999",
+            "age": "20",
+            "height": "187",
+            "weight": "68",
+            "spike": "297",
+            "block": "277"
+        },
+        {
+            "name": "Martina Ferrara",
+            "url_profile": "/en/teams/ita-italy/players/martina-ferrara?id=59731",
+            "date_of_birth": "28/01/1999",
+            "age": "20",
+            "height": "168",
+            "weight": "70",
+            "spike": "276",
+            "block": "260"
+        },
+        {
+            "name": "Rachele Morello",
+            "url_profile": "/en/teams/ita-italy/players/rachele-morello?id=59729",
+            "date_of_birth": "07/11/2000",
+            "age": "19",
+            "height": "182",
+            "weight": "77",
+            "spike": "302",
+            "block": "296"
+        },
+        {
+            "name": "Marina Lubian",
+            "url_profile": "/en/teams/ita-italy/players/marina-lubian?id=59603",
+            "date_of_birth": "11/04/2000",
+            "age": "19",
+            "height": "195",
+            "weight": "73",
+            "spike": "318",
+            "block": "300"
+        },
+        {
+            "name": "Giorgia Zannoni",
+            "url_profile": "/en/teams/ita-italy/players/giorgia-zannoni?id=59614",
+            "date_of_birth": "11/02/1998",
+            "age": "21",
+            "height": "175",
+            "weight": "68",
+            "spike": "284",
+            "block": "270"
+        },
+        {
+            "name": "Elena Pietrini",
+            "url_profile": "/en/teams/ita-italy/players/elena-pietrini?id=59612",
+            "date_of_birth": "17/03/2000",
+            "age": "19",
+            "height": "190",
+            "weight": "73",
+            "spike": "330",
+            "block": "306"
+        },
+        {
+            "name": "Vittoria Alice Piani",
+            "url_profile": "/en/teams/ita-italy/players/vittoria-alice-piani?id=59611",
+            "date_of_birth": "12/02/1998",
+            "age": "21",
+            "height": "187",
+            "weight": "78",
+            "spike": "316",
+            "block": "296"
+        },
+        {
+            "name": "Alice Pamio",
+            "url_profile": "/en/teams/ita-italy/players/alice-pamio?id=59610",
+            "date_of_birth": "15/01/1998",
+            "age": "21",
+            "height": "179",
+            "weight": "66",
+            "spike": "302",
+            "block": "278"
+        },
+        {
+            "name": "Giulia Maria Mancini",
+            "url_profile": "/en/teams/ita-italy/players/giulia-maria-mancini?id=59604",
+            "date_of_birth": "23/05/1998",
+            "age": "21",
+            "height": "183",
+            "weight": "68",
+            "spike": "302",
+            "block": "284"
+        },
+        {
+            "name": "Giulia Melli",
+            "url_profile": "/en/teams/ita-italy/players/giulia-melli?id=59607",
+            "date_of_birth": "08/01/1998",
+            "age": "21",
+            "height": "184",
+            "weight": "70",
+            "spike": "304",
+            "block": "282"
+        },
+        {
+            "name": "Alexandra Botezat",
+            "url_profile": "/en/teams/ita-italy/players/alexandra-botezat?id=59602",
+            "date_of_birth": "03/08/1998",
+            "age": "21",
+            "height": "197",
+            "weight": "75",
+            "spike": "316",
+            "block": "304"
+        }
+    ]
+}

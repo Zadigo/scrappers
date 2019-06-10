@@ -77,14 +77,14 @@ class CreateJson:
         
         # Create path to write JSON file
         path = os.path.join(os.path.dirname(os.path.dirname(__file__)),
-                    filename)
+                    'data', filename)
 
         # Now create the json file with the new object
         # 'C:\\Users\\Zadigo\\Documents\\Koding\\scrappers\\volleyball\\data\\6_2019_56a988209e.json'
         with open(path, 'w', encoding='utf-8') as f:
             json.dump(klass, f, indent=4)
 
-CreateJson('https://raw.githubusercontent.com/Zadigo/open-data-party/master/volleyball/6_2019_56a988209e.csv','test.json')
+# CreateJson('https://raw.githubusercontent.com/Zadigo/open-data-party/master/volleyball/6_2019_b98aa9abb8.csv','test.json')
 
 # url = 'https://raw.githubusercontent.com/Zadigo/open-data-party/master/volleyball/6_2019_56a988209e.csv'
 # response = requests.get(url)
@@ -113,10 +113,10 @@ CreateJson('https://raw.githubusercontent.com/Zadigo/open-data-party/master/voll
 # with open('C:\\Users\\Zadigo\\Documents\\Koding\\scrappers\\volleyball\\data\\6_2019_56a988209e.json', 'w', encoding='utf-8') as f:
 #     json.dump(players, f, indent=4)
 
-# if __name__ == "__main__":
-#     args = argparse.ArgumentParser(description='Create JSON player file')
-#     args.add_argument('--url')
-#     args.add_argument('--filename')
-#     parsed_args = args.parse_args()
+if __name__ == "__main__":
+    args = argparse.ArgumentParser(description='Create JSON player file')
+    args.add_argument('--url')
+    args.add_argument('--filename')
+    parsed_args = args.parse_args()
 
-#     CreateJson(parsed_args.url, parsed_args.filename)
+    CreateJson(parsed_args.url, parsed_args.filename)
