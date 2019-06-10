@@ -127,9 +127,9 @@ class TeamsPage(Requestor, WriteCSV):
         if file_name:
             self.current_file = file_name
 
-        # TODO: Put user provided URL
+        # ENHANCEMENT: Test that the url follows the
+        # pattern /??/teams
         response = self.create_request(url)
-        # response = self.create_request('https://www.volleyball.world/en/vnl/women/teams')
         soup = response[1]
 
         # section#pools
@@ -232,7 +232,7 @@ class TeamPage(TeamsPage):
                 player = Player(player_name, player_profile_link, date_of_birth,
                             age, height, weight, spike, block)
 
-                # TODO: Append player object to an
+                # Append player object to an
                 # array that will then be passed to
                 # the WriteCSV class
                 players.append(player)
