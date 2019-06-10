@@ -1,14 +1,14 @@
 import argparse
 import csv
 import datetime
-import secrets
-import pickle
 import os
+import pickle
 import re
+import secrets
 import threading
 import time
 from collections import deque, namedtuple
-from urllib.parse import unquote, urlencode, urljoin, urlparse, splitquery
+from urllib.parse import splitquery, unquote, urlencode, urljoin, urlparse
 
 import requests
 from bs4 import BeautifulSoup
@@ -126,7 +126,9 @@ class TeamsPage(Requestor, WriteCSV):
         if file_name:
             self.current_file = file_name
 
-        response = self.create_request('https://www.volleyball.world/en/vnl/women/teams')
+        # TODO: Put user provided URL
+        response = self.create_request(url)
+        # response = self.create_request('https://www.volleyball.world/en/vnl/women/teams')
         soup = response[1]
 
         # section#pools
