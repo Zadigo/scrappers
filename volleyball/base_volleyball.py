@@ -307,14 +307,17 @@ if __name__ == "__main__":
     parsed_args = args.parse_args()
 
     # if parsed_args.output_filename:
-    data = TeamPage(url=parsed_args.url)
-    data.get_team_page()
+    # data = TeamPage(url=parsed_args.url)
+    # data.get_team_page()
+
+    data = TeamsPage(url=parsed_args.url)
+    data.get_teams
 
 
-# ENHANCEMENT: Create threading
-# first_thread = threading.Thread(target=Requestor.create_request, args=(Requestor, 'https://www.volleyball.world/en/vnl/women/teams'))
-# second_thread = threading.Thread(target=TeamPage.__init__, args=(TeamPage,))
-# first_thread.start()
-# second_thread.start()
+    # ENHANCEMENT: Create threading
+    # first_thread = threading.Thread(target=Requestor.create_request, args=(Requestor, 'https://www.volleyball.world/en/vnl/women/teams'))
+    # second_thread = threading.Thread(target=TeamPage.__init__, args=(TeamPage,))
+    # first_thread.start()
+    # second_thread.start()
 
-# PlayerPage('https://www.volleyball.world/en/vnl/women/teams/ita-italy/players/cristina-chirichella?id=71297')
+    # PlayerPage('https://www.volleyball.world/en/vnl/women/teams/ita-italy/players/cristina-chirichella?id=71297')
