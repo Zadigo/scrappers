@@ -60,9 +60,10 @@ class WriteCSV:
                 pass
 
         with open(self.current_file, mode='a', encoding='utf-8', newline='') as f:
+            print('Writing players...')
             csv_file = csv.writer(f, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
             for player in players:
-                csv_file.writerow(player)            
+                csv_file.writerow(player)       
 
     @property
     def create_new_file(self):
@@ -175,7 +176,9 @@ class TeamsPage(Requestor, WriteCSV):
 
 class TeamPage(TeamsPage):
     def get_team_page(self):
-        """Parse a specific volleyball team's page.
+        """Parse a specific volleyball team's page. By doing so,
+        we are trying to gather all the statistics of given players
+        in a volleyball team.
         """
         print('-'*15)
         responses = []
@@ -238,7 +241,7 @@ class TeamPage(TeamsPage):
         self._write(players)
 
     @staticmethod
-    def get_age(date_of_birth):
+    def get_age(date_of_birth, adjusted=False):
         current_year = datetime.datetime.now().year
         date = datetime.datetime.strptime(date_of_birth, '%d/%m/%Y')
         return current_year - date.year
@@ -248,6 +251,9 @@ class TeamPage(TeamsPage):
         pass
 
 class PlayerPage(Requestor):
+    """Parse a player's profile page. Use this class to add
+    extra information on an existing player profile.
+    """
     def __init__(self, url):
         response = self.create_request(url)
         self.soup = soup = response[1]
@@ -304,7 +310,8 @@ class PlayerPage(Requestor):
 
 if __name__ == "__main__":
     args = argparse.ArgumentParser(description='FiVB page parser')
-    args.add_argument('-u', '--url', help='URL page')
+    args.add_argument('-u', '--url', help='URL to query')
+    args.add_argument('-a', '--adjust-age', type=int, help='Adjust age to the year the tournament was played')
     args.add_argument('-o', '--output_filename', help='Name to associate with the CSV file')
     parsed_args = args.parse_args()
 
@@ -312,8 +319,8 @@ if __name__ == "__main__":
     # data = TeamPage(url=parsed_args.url)
     # data.get_team_page()
 
-    data = TeamsPage(url=parsed_args.url)
-    data.get_teams
+    data = TeamPage(url=parsed_args.url)
+    data.get_team_page()
 
 
     # ENHANCEMENT: Create threading
