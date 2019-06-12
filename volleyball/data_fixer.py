@@ -1,17 +1,18 @@
+#%%
 import pandas
 import os
-from base_volleyball import DATA_DIR
+# from scrappers.volleyball import base_volleyball
 import datetime
 import re
 from urllib.parse import unquote
 import csv
 
 #%%
-file_path = os.path.join(DATA_DIR, '5_2019_921f85ac85.csv')
+file_path = os.path.join('C:\\Users\\Zadigo\\Documents\\Koding\\scrappers\\volleyball\\data', '6_2019_b98aa9abb8.csv')
 data = pandas.read_csv(file_path, sep=',', date_parser=True)
 
 #%%
-columns = ['name', 'link', 'date_of_birth', 'age', 'height', 'weight', 'spike', 'block']
+columns = ['name', 'profile_page', 'date_of_birth', 'age', 'height', 'weight', 'spike', 'block']
 df = pandas.DataFrame(data, columns=columns)
 
 #%%
@@ -45,8 +46,20 @@ def collect_player_id(link):
     fivb_id = re.search(r'(?<=\?)id\=(\d+)$', link)
     return fivb_id.group(1)
 
-df['country_code'] = df['link'].apply(collect_country)
-df['fivb_id'] = df['link'].apply(collect_player_id)
+df['country_code'] = df['profile_page'].apply(collect_country)
+df['fivb_id'] = df['profile_page'].apply(collect_player_id)
+
+#%%
+def recalculate_age(date_of_birth):
+    """Recalculate age to the year when the tournament
+    was actually played.
+    """
+    formatted_date = datetime.datetime.strptime(date_of_birth, '%d-%m-%Y')
+    true_age = 2017 - formatted_date.year
+    return true_age
+
+df['age_at_time'] = df['date_of_birth'].apply(recalculate_age)
+df[:5]
 
 #%%
 # df.to_csv(os.path.join(DATA_DIR, 'test.csv'), sep=',')

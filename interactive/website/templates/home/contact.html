@@ -1,0 +1,22 @@
+<section class="section scrollspy" id="scrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m8 l8">
+                <input type="url" name="scrapper" id="scrapper">
+                <div class="csrf">{% csrf_token %}</div>
+            </div>
+            <div class="col s12 m4 l4">
+                <button type="submit" class="btn-large light-blue darken-3" id="get_site">Scrapper</button>
+                <a href="{%  url 'download' token %}" class="btn-large light-blue darken-3" id="download">Download</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="cards">
+    <div class="container">
+        <div class="row">
+            
+        </div>
+    </div>
+</section>
