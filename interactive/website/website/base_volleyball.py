@@ -199,7 +199,7 @@ class TeamPage(TeamsPage):
         """
         print('-'*15)
         responses = []
-        t = 0
+        # t = 0
         for team in self.get_teams:
             team_roster_url = urljoin(team[0], 'team_roster')
             current_date = datetime.datetime.now()
@@ -210,10 +210,10 @@ class TeamPage(TeamsPage):
             response[1] = response[1].find('section', id='roster')
             responses.append(response)
 
-            if t == 1:
-                break
+            # if t == 1:
+            #     break
 
-            t += 1
+            # t += 1
 
         players = []
 

@@ -2,6 +2,7 @@ $(document).ready(function() {
     var create_scrap = $('#get_site');
 
     create_scrap.on('click', function(e) {
+        $('section#scrapper #progress').addClass('active')
         $.ajax({
             type: "POST",
             url: "http://127.0.0.1:8000/",
@@ -17,6 +18,8 @@ $(document).ready(function() {
                 cards.forEach(card => {
                     cards_section.append(card);
                 })
+
+                $('section#scrapper #progress').removeClass('active')
             },
             error: function(response) {
                 console.log(response)

@@ -2,6 +2,19 @@
     <div class="container">
         <div class="row">
             <div class="col s12 m8 l8">
+                <!-- PROGRESS -->
+                <div class="preloader-wrapper" id="progress">
+                    <div class="spinner-layer spinner-red-only">
+                        <div class="circle-clipper left">
+                        <div class="circle"></div>
+                        </div><div class="gap-patch">
+                        <div class="circle"></div>
+                        </div><div class="circle-clipper right">
+                        <div class="circle"></div>
+                        </div>
+                    </div>
+                </div>
+
                 <input type="url" name="scrapper" id="scrapper">
                 <div class="csrf">{% csrf_token %}</div>
             </div>
