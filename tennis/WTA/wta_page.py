@@ -14,13 +14,13 @@ class Tournament(dict):
     def __init__(self, tournament, date, level, surface, rank, seed):
         self.update(
             {
-                'tournament': self.parse_tour_name(tournament),
-                'country': self.parse_tour_name(tournament, tour_or_country=True),
+                'tournament': self.parse_tour_name(tournament, tour_or_country=True),
+                'country': self.parse_tour_name(tournament),
                 'date': self.normalize_date(date),
                 'level': self.normalize(level),
                 'surface': self.normalize(surface),
-                'rank': rank,
-                'seed': seed
+                'rank': self.parse_integer_regex(rank),
+                'seed': self.parse_integer_regex(seed)
             }
         )
     
@@ -56,18 +56,108 @@ class Tournament(dict):
             return None
         return int(value)
 
+    @staticmethod
+    def parse_integer_regex(value):
+        if not value:
+            return None
+        # ex. \n              18
+        # ex. \nSeed Entry: \n  18
+        is_match = re.match(r'\s+(\[?\d+\]?)', str(value))
+        if is_match:
+            return int(str(is_match.group(1)).strip())
+        else:
+            # Case where the number is [4]
+            try_pattern = re.match(r'\[?(\d+)\]?', str(value))
+            if try_pattern:
+                return int(str(try_pattern.group(1)).strip())
+        return None
+
 class TournamentMatch(Tournament):
     """Object representing the details of a WTA tournament
     tennis match.
     """
-    def __init__(self, match_round, result, score, rank, opponent_seed):
+    def __init__(self, match_round, result, score, rank, seed):
+        score = self.normalize(score)
+        match_round = self.normalize(match_round)
+        rank = self.parse_integer_regex(rank)
+        seed = self.parse_integer_regex(seed)
+
         self.update(
             {
                 'match_round': match_round,
                 'result': result,
-                'score': self.normalize(score),
-                'rank': self.normalize(rank),
-                'opponent_seed': self.normalize(opponent_seed)
+                'score': score,
+                'sets_played': self.sets_played(score),
+                'first_set': self.first_set(score, result),
+                'rank': rank,
+                'seed': seed,
+                'opponent_details': []
+            }
+        )
+    
+    @staticmethod
+    def first_set(score, result):
+        """Determine if the first set was won or lost
+        """
+        if result == 'L':
+            # 6-2 6-3
+            # 7-5 6-3
+            # 7-6(6) 6-4
+            is_match = re.search(r'^((?:6|7)\-?\d+)', score)
+            if is_match:
+                return 'lost'
+            else:
+                # 2-6 6-3
+                # 5-7 6-3
+                # 6-7(6) 6-4
+                is_match = re.search(r'^(\d+\-(?:6|7))', score)
+                if is_match:
+                    return 'win'
+        elif result == 'W':
+            is_match = re.search(r'^((?:6|7)\-?\d+)', score)
+            if is_match:
+                return 'won'
+            else:
+                is_match = re.search(r'^(\d+\-(?:6|7))', score)
+                if is_match:
+                    return 'lost'
+
+    @staticmethod
+    def sets_played(score):
+        patterns = [
+            # 6-2 6-3
+            # 7-5 6-3
+            # 7-6(4) 7-6(4)
+            r'^\d+\-\d+\(?\d?\)?\s+\d+\-\d+\(?\d?\)?$',
+            # 6-7(6) 6-4 6-4
+            # 6-4 3-6 7-5
+            # 6-4 3-6 7-5
+            # 7-6(4) 6-7(4) 7-6(4)
+            r'^\d+\-\d+\(?\d?\)?\s+\d+\-\d+\(?\d?\)?\s+\d+\-\d+\(?\d?\)?$'
+            
+        ]
+        for pattern in patterns:
+            is_match = re.match(pattern, score)
+            if is_match:
+                pattern_index = patterns.index(pattern)
+                if pattern_index == 0:
+                    number_of_sets = 'two'
+                else:
+                    number_of_sets = 'three'
+                break
+            else:
+                number_of_sets = 'two'
+        
+        return number_of_sets
+
+
+class Player(TournamentMatch):
+    def __init__(self, name, country, url_path):
+        self.update(
+            {
+                'name': self.normalize(name),
+                'country': country,
+                'url_path': url_path,
             }
         )
 
@@ -82,7 +172,7 @@ class ParsePage:
         path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'html.html')
         with open(path, 'r', encoding='utf-8') as f:
             soup = BeautifulSoup(f, 'html.parser')
-
+            
             # div.data-player-matches
             sections = soup.find_all('div', attrs={'class': 'data-player-matches'})
 
@@ -102,8 +192,13 @@ class ParsePage:
                 # ex. Clay
                 surface = tour_details[2].text
 
-                # tour_infos = section.find_all('span', attrs={'class': 'tour-info'})
-                # print(tour_infos)
+                # div.row-item
+                tour_infos = section.find('div', attrs={'class': 'last-row'}) \
+                                        .find_all('div', attrs={'class': 'row-item'})
+                # ex. 15
+                rank = tour_infos[2].text
+                # ex. 6
+                seed = tour_infos[3].text
 
                 # tbody
                 matches_table_row = section.find('tbody').find_all('tr')
@@ -125,11 +220,44 @@ class ParsePage:
                         rank = None
                     # ex. 6-1 6-1
                     score = row.find('td', attrs={'class': 'score'}).text
+
+                    # td.opponent
+                    opponent_row = row.find('td', attrs={'class': 'opponent'})
+
+                    # <a href="">...</a>
+                    opponent_details = opponent_row.findChild('a')
+                    # Use REGEX to parse that row since
+                    # there are lots of \s and \n e.g
+                    # \n
+                    # [Q] Carmen\n
+                    #                  Klaschka (GER)
+                    # Get a group such as ('Carmen', 'Klaschka', 'GER')
+                    parsed_text = re.search(r'^\n?(?:\[(\d+|\w+)\]\s+)?(\w+)\n?\s+(\w+)\s+(?:\((\w+)\))', opponent_row.text)
+                    try:
+                        # If no match, protect
+                        # ex. Carmen Klaschka
+                        opponent_name = ' '.join([parsed_text.group(2), parsed_text.group(3)])
+                        # ex. CAN
+                        opponent_country = parsed_text.group(4)
+                    except AttributeError:
+                        opponent_name = None
+                        opponent_country = None
+                    
+                    try:
+                        # ex. /players/player/311649/title/carmen-klaschka
+                        profile_url_path = opponent_details['href']
+                    except TypeError:
+                        profile_url_path = None
+
+                    opponent = Player(opponent_name, opponent_country, profile_url_path)
+
                     # [{match A}, {...}]
-                    matches.append(TournamentMatch(match_round, result, score, rank, opponent_seed))
+                    tournament_match = TournamentMatch(match_round, result, score, rank, opponent_seed)
+                    tournament_match.update({'opponent_details': opponent})
+                    matches.append(tournament_match)
 
                 # [{tournament A}, ...]
-                tournament = Tournament(tournament, tour_date, level, surface, 14, 14)
+                tournament = Tournament(tournament, tour_date, level, surface, rank, seed)
                 # [{tournament A, matches: []}, ...]
                 tournament.update({'matches': matches})
                 tournaments.append(tournament)
@@ -151,7 +279,5 @@ class ParsePage:
             with open(path, 'w', encoding='utf-8') as f:
                 json.dump(refactored_stats, f, indent=4)
 
-# if __name__ == "__main__":
-#     WtaPage()
-
-ParsePage()
+if __name__ == "__main__":
+    ParsePage()

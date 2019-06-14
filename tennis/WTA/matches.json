@@ -1,128 +1,1444 @@
 {
     "records": [
         {
-            "tournament": "canada",
-            "country": "saguenay",
-            "date": "2008-10-20",
-            "level": "itf",
+            "tournament": "wta finals",
+            "country": "singapore",
+            "date": "2014-10-20",
+            "level": "championship",
             "surface": "hard",
-            "rank": 14,
-            "seed": 14,
+            "rank": 1,
+            "seed": null,
             "matches": [
                 {
-                    "match_round": " Round 32",
+                    "match_round": "r1",
                     "result": "L",
-                    "score": "6-1 6-0",
-                    "rank": null,
-                    "opponent_seed": null
-                }
-            ]
-        },
-        {
-            "tournament": "usa, tx",
-            "country": "southlake",
-            "date": "2008-10-6",
-            "level": "itf",
-            "surface": "hard",
-            "rank": 14,
-            "seed": 14,
-            "matches": [
+                    "score": "6-2 6-3",
+                    "sets_played": "two",
+                    "first_set": "lost",
+                    "rank": 4,
+                    "seed": 4,
+                    "opponent_details": {
+                        "name": "simona halep",
+                        "country": "ROU",
+                        "url_path": "/players/player/314320/title/simona-halep"
+                    }
+                },
                 {
-                    "match_round": " Round 32",
+                    "match_round": "r1",
                     "result": "L",
-                    "score": "6-3 6-0",
-                    "rank": "-",
-                    "opponent_seed": "[q]"
-                }
-            ]
-        },
-        {
-            "tournament": "canada",
-            "country": "montreal",
-            "date": "2008-7-28",
-            "level": "tier i",
-            "surface": "hard",
-            "rank": 14,
-            "seed": 14,
-            "matches": [
+                    "score": "6-1 6-3",
+                    "sets_played": "two",
+                    "first_set": "lost",
+                    "rank": 7,
+                    "seed": 7,
+                    "opponent_details": {
+                        "name": "ana ivanovic",
+                        "country": "SRB",
+                        "url_path": "/players/player/311710/title/Ana-Ivanovic"
+                    }
+                },
                 {
-                    "match_round": " Round 64 - Q",
-                    "result": "L",
-                    "score": "6-3 6-4",
-                    "rank": "166",
-                    "opponent_seed": "[17]"
-                }
-            ]
-        },
-        {
-            "tournament": "canada",
-            "country": "waterloo",
-            "date": "2008-6-30",
-            "level": "itf",
-            "surface": "clay",
-            "rank": 14,
-            "seed": 14,
-            "matches": [
-                {
-                    "match_round": " Round 32",
-                    "result": "L",
-                    "score": "7-6(2) 6-0",
-                    "rank": "-",
-                    "opponent_seed": "[w]"
-                }
-            ]
-        },
-        {
-            "tournament": "usa, sc",
-            "country": "sumter",
-            "date": "2008-5-26",
-            "level": "itf",
-            "surface": "hard",
-            "rank": 14,
-            "seed": 14,
-            "matches": [
-                {
-                    "match_round": " Round 32",
-                    "result": "L",
-                    "score": "6-0 6-3",
-                    "rank": "-",
-                    "opponent_seed": "[q]"
-                }
-            ]
-        },
-        {
-            "tournament": "canada",
-            "country": "saguenay",
-            "date": "2008-10-20",
-            "level": "itf",
-            "surface": "hard",
-            "rank": 14,
-            "seed": 14,
-            "matches": [
-                {
-                    "match_round": " Round 16",
-                    "result": "L",
-                    "score": "4-6 6-4 10-4",
-                    "rank": null,
-                    "opponent_seed": null
-                }
-            ]
-        },
-        {
-            "tournament": "canada",
-            "country": "waterloo",
-            "date": "2008-6-30",
-            "level": "itf",
-            "surface": "clay",
-            "rank": 14,
-            "seed": 14,
-            "matches": [
-                {
-                    "match_round": " Round 16",
+                    "match_round": "r1",
                     "result": "L",
                     "score": "6-1 6-1",
-                    "rank": "- / -",
-                    "opponent_seed": "[3]"
+                    "sets_played": "two",
+                    "first_set": "lost",
+                    "rank": 1,
+                    "seed": 1,
+                    "opponent_details": {
+                        "name": "serena williams",
+                        "country": "USA",
+                        "url_path": "/players/player/230234/TITLE/SERENA-WILLIAMs"
+                    }
+                }
+            ]
+        },
+        {
+            "tournament": "linz",
+            "country": "austria",
+            "date": "2014-10-6",
+            "level": "international",
+            "surface": "hard",
+            "rank": null,
+            "seed": null,
+            "matches": [
+                {
+                    "match_round": "round 32",
+                    "result": "W",
+                    "score": "6-4 6-1",
+                    "sets_played": "two",
+                    "first_set": "won",
+                    "rank": 100,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": null,
+                        "country": null,
+                        "url_path": "/players/player/311044/title/Patricia-Mayr-Achleitner"
+                    }
+                },
+                {
+                    "match_round": "round 16",
+                    "result": "L",
+                    "score": "-",
+                    "sets_played": "two",
+                    "first_set": null,
+                    "rank": null,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": "tsvetana pironkova",
+                        "country": "BUL",
+                        "url_path": "/players/player/311041/title/Tsvetana-PIRONKOVA"
+                    }
+                }
+            ]
+        },
+        {
+            "tournament": "beijing - beijing",
+            "country": "china",
+            "date": "2014-9-27",
+            "level": "premier mandatory",
+            "surface": "hard",
+            "rank": null,
+            "seed": null,
+            "matches": [
+                {
+                    "match_round": "round 64",
+                    "result": "W",
+                    "score": "-",
+                    "sets_played": "two",
+                    "first_set": null,
+                    "rank": null,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": null,
+                        "country": null,
+                        "url_path": null
+                    }
+                },
+                {
+                    "match_round": "round 32",
+                    "result": "L",
+                    "score": "6-2 6-4",
+                    "sets_played": "two",
+                    "first_set": "lost",
+                    "rank": null,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": "sabine lisicki",
+                        "country": "GER",
+                        "url_path": "/players/player/312520/title/Sabine-Lisicki"
+                    }
+                }
+            ]
+        },
+        {
+            "tournament": "wuhan - wuhan",
+            "country": "china",
+            "date": "2014-9-21",
+            "level": "premier 5",
+            "surface": "hard",
+            "rank": 3,
+            "seed": null,
+            "matches": [
+                {
+                    "match_round": "round 64",
+                    "result": "W",
+                    "score": "-",
+                    "sets_played": "two",
+                    "first_set": null,
+                    "rank": null,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": null,
+                        "country": null,
+                        "url_path": null
+                    }
+                },
+                {
+                    "match_round": "round 32",
+                    "result": "W",
+                    "score": "4-6 6-3 6-4",
+                    "sets_played": "three",
+                    "first_set": "lost",
+                    "rank": null,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": "mona barthel",
+                        "country": "GER",
+                        "url_path": "/players/player/315365/title/mona-barthel-0"
+                    }
+                },
+                {
+                    "match_round": "round 16",
+                    "result": "W",
+                    "score": "6-2 6-3",
+                    "sets_played": "two",
+                    "first_set": "won",
+                    "rank": null,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": "alison riske",
+                        "country": "USA",
+                        "url_path": "/players/player/312850/title/alison-riske-0"
+                    }
+                },
+                {
+                    "match_round": "quarterfinals",
+                    "result": "W",
+                    "score": "6-3 7-5",
+                    "sets_played": "two",
+                    "first_set": "won",
+                    "rank": null,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": "aliz\u00e9 cornet",
+                        "country": "FRA",
+                        "url_path": "/players/player/312121/title/aliz%C3%A9-cornet-0"
+                    }
+                },
+                {
+                    "match_round": "semifinals",
+                    "result": "W",
+                    "score": "6-2 6-3",
+                    "sets_played": "two",
+                    "first_set": "won",
+                    "rank": 7,
+                    "seed": 8,
+                    "opponent_details": {
+                        "name": "caroline wozniacki",
+                        "country": "DEN",
+                        "url_path": "/players/player/313402/title/Caroline-Wozniacki"
+                    }
+                },
+                {
+                    "match_round": "final",
+                    "result": "L",
+                    "score": "6-3 6-4",
+                    "sets_played": "two",
+                    "first_set": "lost",
+                    "rank": 3,
+                    "seed": 3,
+                    "opponent_details": {
+                        "name": "petra kvitova",
+                        "country": "CZE",
+                        "url_path": "/players/player/314206/title/petra-kvitova-0"
+                    }
+                }
+            ]
+        },
+        {
+            "tournament": "us open",
+            "country": "usa, ny",
+            "date": "2014-8-25",
+            "level": "grand slam",
+            "surface": "hard",
+            "rank": 18,
+            "seed": null,
+            "matches": [
+                {
+                    "match_round": "round 128",
+                    "result": "W",
+                    "score": "6-2 6-1",
+                    "sets_played": "two",
+                    "first_set": "won",
+                    "rank": null,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": "olga govortsova",
+                        "country": "BLR",
+                        "url_path": "/players/player/311243/title/Olga-Govortsova"
+                    }
+                },
+                {
+                    "match_round": "round 64",
+                    "result": "W",
+                    "score": "6-2 6-7(4) 6-4",
+                    "sets_played": "three",
+                    "first_set": "won",
+                    "rank": null,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": "sorana cirstea",
+                        "country": "ROU",
+                        "url_path": "/players/player/312469/title/sorana-cirstea-0"
+                    }
+                },
+                {
+                    "match_round": "round 32",
+                    "result": "W",
+                    "score": "6-2 6-7(2) 6-4",
+                    "sets_played": "three",
+                    "first_set": "won",
+                    "rank": 29,
+                    "seed": 30,
+                    "opponent_details": {
+                        "name": "barbora strycova",
+                        "country": "CZE",
+                        "url_path": "/players/player/190879/title/barbora-strycova-0"
+                    }
+                },
+                {
+                    "match_round": "round 16",
+                    "result": "L",
+                    "score": "7-6(2) 6-4",
+                    "sets_played": "two",
+                    "first_set": "lost",
+                    "rank": 18,
+                    "seed": 17,
+                    "opponent_details": {
+                        "name": "ekaterina makarova",
+                        "country": "RUS",
+                        "url_path": "/players/player/311604/title/Ekaterina-Makarova-0"
+                    }
+                }
+            ]
+        },
+        {
+            "tournament": "new haven",
+            "country": "usa, ct",
+            "date": "2014-8-17",
+            "level": "premier",
+            "surface": "hard",
+            "rank": 25,
+            "seed": null,
+            "matches": [
+                {
+                    "match_round": "round 32",
+                    "result": "W",
+                    "score": "6-1 6-1",
+                    "sets_played": "two",
+                    "first_set": "won",
+                    "rank": null,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": null,
+                        "country": null,
+                        "url_path": "/players/player/314369/title/Bojana-Jovanovski-Petrovic"
+                    }
+                },
+                {
+                    "match_round": "round 16",
+                    "result": "L",
+                    "score": "6-2 6-2",
+                    "sets_played": "two",
+                    "first_set": "lost",
+                    "rank": 25,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": "samantha stosur",
+                        "country": "AUS",
+                        "url_path": "/players/player/190787/title/samantha-stosur-0"
+                    }
+                }
+            ]
+        },
+        {
+            "tournament": "cincinnati - cincinnati",
+            "country": "usa, oh",
+            "date": "2014-8-11",
+            "level": "premier 5",
+            "surface": "hard",
+            "rank": null,
+            "seed": null,
+            "matches": [
+                {
+                    "match_round": "round 64",
+                    "result": "W",
+                    "score": "-",
+                    "sets_played": "two",
+                    "first_set": null,
+                    "rank": null,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": null,
+                        "country": null,
+                        "url_path": null
+                    }
+                },
+                {
+                    "match_round": "round 32",
+                    "result": "L",
+                    "score": "6-4 3-6 6-2",
+                    "sets_played": "three",
+                    "first_set": "lost",
+                    "rank": null,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": "svetlana kuznetsova",
+                        "country": "RUS",
+                        "url_path": "/players/player/110552/title/svetlana-kuznetsova-0"
+                    }
+                }
+            ]
+        },
+        {
+            "tournament": "montreal",
+            "country": "canada",
+            "date": "2014-8-4",
+            "level": "premier 5",
+            "surface": "hard",
+            "rank": 113,
+            "seed": null,
+            "matches": [
+                {
+                    "match_round": "round 64",
+                    "result": "W",
+                    "score": "-",
+                    "sets_played": "two",
+                    "first_set": null,
+                    "rank": null,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": null,
+                        "country": null,
+                        "url_path": null
+                    }
+                },
+                {
+                    "match_round": "round 32",
+                    "result": "L",
+                    "score": "6-0 2-6 6-0",
+                    "sets_played": "three",
+                    "first_set": "lost",
+                    "rank": 113,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": "shelby rogers",
+                        "country": "USA",
+                        "url_path": "/players/player/317421/title/Shelby-Rogers"
+                    }
+                }
+            ]
+        },
+        {
+            "tournament": "wimbledon",
+            "country": "great britain",
+            "date": "2014-6-23",
+            "level": "grand slam",
+            "surface": "grass",
+            "rank": 6,
+            "seed": null,
+            "matches": [
+                {
+                    "match_round": "round 128",
+                    "result": "W",
+                    "score": "7-5 7-5",
+                    "sets_played": "two",
+                    "first_set": "won",
+                    "rank": null,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": "daniela hantuchova",
+                        "country": "SVK",
+                        "url_path": "/players/player/80394/title/Daniela-Hantuchova"
+                    }
+                },
+                {
+                    "match_round": "round 64",
+                    "result": "W",
+                    "score": "7-5 6-1",
+                    "sets_played": "two",
+                    "first_set": "won",
+                    "rank": 75,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": null,
+                        "country": null,
+                        "url_path": "/players/player/311493/title/silvia-soler-espinosa"
+                    }
+                },
+                {
+                    "match_round": "round 32",
+                    "result": "W",
+                    "score": "6-3 6-4",
+                    "sets_played": "two",
+                    "first_set": "won",
+                    "rank": 20,
+                    "seed": 20,
+                    "opponent_details": {
+                        "name": "andrea petkovic",
+                        "country": "GER",
+                        "url_path": "/players/player/310770/title/andrea-petkovic-0"
+                    }
+                },
+                {
+                    "match_round": "round 16",
+                    "result": "W",
+                    "score": "7-6(5) 7-5",
+                    "sets_played": "two",
+                    "first_set": "won",
+                    "rank": 24,
+                    "seed": 25,
+                    "opponent_details": {
+                        "name": "aliz\u00e9 cornet",
+                        "country": "FRA",
+                        "url_path": "/players/player/312121/title/aliz%C3%A9-cornet-0"
+                    }
+                },
+                {
+                    "match_round": "quarterfinals",
+                    "result": "W",
+                    "score": "6-3 6-4",
+                    "sets_played": "two",
+                    "first_set": "won",
+                    "rank": 7,
+                    "seed": 9,
+                    "opponent_details": {
+                        "name": "angelique kerber",
+                        "country": "GER",
+                        "url_path": "/players/player/311470/title/angelique-kerber"
+                    }
+                },
+                {
+                    "match_round": "semifinals",
+                    "result": "W",
+                    "score": "7-6(5) 6-2",
+                    "sets_played": "two",
+                    "first_set": "won",
+                    "rank": 3,
+                    "seed": 3,
+                    "opponent_details": {
+                        "name": "simona halep",
+                        "country": "ROU",
+                        "url_path": "/players/player/314320/title/simona-halep"
+                    }
+                },
+                {
+                    "match_round": "final",
+                    "result": "L",
+                    "score": "6-3 6-0",
+                    "sets_played": "two",
+                    "first_set": "lost",
+                    "rank": 6,
+                    "seed": 6,
+                    "opponent_details": {
+                        "name": "petra kvitova",
+                        "country": "CZE",
+                        "url_path": "/players/player/314206/title/petra-kvitova-0"
+                    }
+                }
+            ]
+        },
+        {
+            "tournament": "'s-hertogenbosch",
+            "country": "netherlands",
+            "date": "2014-6-15",
+            "level": "international",
+            "surface": "grass",
+            "rank": null,
+            "seed": null,
+            "matches": [
+                {
+                    "match_round": "round 32",
+                    "result": "L",
+                    "score": "2-6 6-3 6-3",
+                    "sets_played": "three",
+                    "first_set": "win",
+                    "rank": null,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": "vania king",
+                        "country": "USA",
+                        "url_path": "/players/player/311550/title/Vania-King"
+                    }
+                }
+            ]
+        },
+        {
+            "tournament": "french open",
+            "country": "france",
+            "date": "2014-5-25",
+            "level": "grand slam",
+            "surface": "clay",
+            "rank": 8,
+            "seed": null,
+            "matches": [
+                {
+                    "match_round": "round 128",
+                    "result": "W",
+                    "score": "6-0 6-2",
+                    "sets_played": "two",
+                    "first_set": "won",
+                    "rank": null,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": "shahar peer",
+                        "country": "ISR",
+                        "url_path": "/players/player/311168/title/Shahar-Peer"
+                    }
+                },
+                {
+                    "match_round": "round 64",
+                    "result": "W",
+                    "score": "2-6 6-2 6-1",
+                    "sets_played": "three",
+                    "first_set": "lost",
+                    "rank": null,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": "julia goerges",
+                        "country": "GER",
+                        "url_path": "/players/player/313381/title/julia-goerges-0"
+                    }
+                },
+                {
+                    "match_round": "round 32",
+                    "result": "W",
+                    "score": "7-5 6-4",
+                    "sets_played": "two",
+                    "first_set": "won",
+                    "rank": null,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": "johanna larsson",
+                        "country": "SWE",
+                        "url_path": "/players/player/311593/title/johanna-larsson-0"
+                    }
+                },
+                {
+                    "match_round": "round 16",
+                    "result": "W",
+                    "score": "6-1 6-2",
+                    "sets_played": "two",
+                    "first_set": "won",
+                    "rank": 9,
+                    "seed": 8,
+                    "opponent_details": {
+                        "name": "angelique kerber",
+                        "country": "GER",
+                        "url_path": "/players/player/311470/title/angelique-kerber"
+                    }
+                },
+                {
+                    "match_round": "quarterfinals",
+                    "result": "W",
+                    "score": "7-6(4) 2-6 7-5",
+                    "sets_played": "three",
+                    "first_set": "won",
+                    "rank": 15,
+                    "seed": 14,
+                    "opponent_details": {
+                        "name": null,
+                        "country": null,
+                        "url_path": "/players/player/311338/title/carla-su%C3%A1rez-navarro-0"
+                    }
+                },
+                {
+                    "match_round": "semifinals",
+                    "result": "L",
+                    "score": "4-6 7-5 6-2",
+                    "sets_played": "three",
+                    "first_set": "win",
+                    "rank": 8,
+                    "seed": 7,
+                    "opponent_details": {
+                        "name": "maria sharapova",
+                        "country": "RUS",
+                        "url_path": "/players/player/310137/title/Maria-Sharapova"
+                    }
+                }
+            ]
+        },
+        {
+            "tournament": "n\u00fcrnberg - n\u00fcrnberg",
+            "country": "germany",
+            "date": "2014-5-18",
+            "level": "international",
+            "surface": "clay",
+            "rank": null,
+            "seed": null,
+            "matches": [
+                {
+                    "match_round": "round 32",
+                    "result": "W",
+                    "score": "6-0 6-3",
+                    "sets_played": "two",
+                    "first_set": "won",
+                    "rank": null,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": "barbora strycova",
+                        "country": "CZE",
+                        "url_path": "/players/player/190879/title/barbora-strycova-0"
+                    }
+                },
+                {
+                    "match_round": "round 16",
+                    "result": "W",
+                    "score": "6-0 6-1",
+                    "sets_played": "two",
+                    "first_set": "won",
+                    "rank": 217,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": "anastasia rodionova",
+                        "country": "AUS",
+                        "url_path": "/players/player/180356/title/Anastasia-Rodionova"
+                    }
+                },
+                {
+                    "match_round": "quarterfinals",
+                    "result": "W",
+                    "score": "7-6(3) 7-6(6)",
+                    "sets_played": "two",
+                    "first_set": "won",
+                    "rank": null,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": "yaroslava shvedova",
+                        "country": "KAZ",
+                        "url_path": "/players/player/311137/title/Yaroslava-Shvedova"
+                    }
+                },
+                {
+                    "match_round": "semifinals",
+                    "result": "W",
+                    "score": "6-4 6-3",
+                    "sets_played": "two",
+                    "first_set": "won",
+                    "rank": null,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": "karin knapp",
+                        "country": "ITA",
+                        "url_path": "/players/player/311299/title/karin-knapp"
+                    }
+                },
+                {
+                    "match_round": "final",
+                    "result": "W",
+                    "score": "6-2 4-6 6-3",
+                    "sets_played": "three",
+                    "first_set": "won",
+                    "rank": null,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": "karolina pliskova",
+                        "country": "CZE",
+                        "url_path": "/players/player/313974/title/karolina-pliskova-0"
+                    }
+                }
+            ]
+        },
+        {
+            "tournament": "rome",
+            "country": "italy",
+            "date": "2014-5-12",
+            "level": "premier 5",
+            "surface": "clay",
+            "rank": null,
+            "seed": null,
+            "matches": [
+                {
+                    "match_round": "round 64",
+                    "result": "L",
+                    "score": "6-4 6-2",
+                    "sets_played": "two",
+                    "first_set": "lost",
+                    "rank": null,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": "francesca schiavone",
+                        "country": "ITA",
+                        "url_path": "/players/player/190666/title/Francesca-SCHIAVONE"
+                    }
+                }
+            ]
+        },
+        {
+            "tournament": "madrid - madird",
+            "country": "spain",
+            "date": "2014-5-3",
+            "level": "premier mandatory",
+            "surface": "clay",
+            "rank": 3,
+            "seed": null,
+            "matches": [
+                {
+                    "match_round": "round 64",
+                    "result": "L",
+                    "score": "7-6(3) 6-2",
+                    "sets_played": "two",
+                    "first_set": "lost",
+                    "rank": 3,
+                    "seed": 3,
+                    "opponent_details": {
+                        "name": "agnieszka radwanska",
+                        "country": "POL",
+                        "url_path": "/players/player/312251/title/Agnieszka-RADWANSKA-0"
+                    }
+                }
+            ]
+        },
+        {
+            "tournament": "oeiras (estoril)",
+            "country": "portugal",
+            "date": "2014-4-28",
+            "level": "international",
+            "surface": "clay",
+            "rank": 29,
+            "seed": null,
+            "matches": [
+                {
+                    "match_round": "round 32",
+                    "result": "W",
+                    "score": "6-4 6-1",
+                    "sets_played": "two",
+                    "first_set": "won",
+                    "rank": null,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": "alisa kleybanova",
+                        "country": "RUS",
+                        "url_path": "/players/player/311777/title/Alisa-Kleybanova"
+                    }
+                },
+                {
+                    "match_round": "round 16",
+                    "result": "W",
+                    "score": "6-4 6-2",
+                    "sets_played": "two",
+                    "first_set": "won",
+                    "rank": null,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": "yaroslava shvedova",
+                        "country": "KAZ",
+                        "url_path": "/players/player/311137/title/Yaroslava-Shvedova"
+                    }
+                },
+                {
+                    "match_round": "quarterfinals",
+                    "result": "L",
+                    "score": "6-4 6-1",
+                    "sets_played": "two",
+                    "first_set": "lost",
+                    "rank": 29,
+                    "seed": 7,
+                    "opponent_details": {
+                        "name": "svetlana kuznetsova",
+                        "country": "RUS",
+                        "url_path": "/players/player/110552/title/svetlana-kuznetsova-0"
+                    }
+                }
+            ]
+        },
+        {
+            "tournament": "fed cup week 2 - playoffs",
+            "country": "canada",
+            "date": "2014-4-19",
+            "level": "r2",
+            "surface": "hard",
+            "rank": null,
+            "seed": null,
+            "matches": [
+                {
+                    "match_round": "r2",
+                    "result": "W",
+                    "score": "7-6(0) 2-6 6-1",
+                    "sets_played": "three",
+                    "first_set": "won",
+                    "rank": null,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": "kristina kucova",
+                        "country": "SVK",
+                        "url_path": "/players/player/312673/title/Kristina-Kucova"
+                    }
+                },
+                {
+                    "match_round": "r2",
+                    "result": "W",
+                    "score": "7-6(6) 6-3",
+                    "sets_played": "two",
+                    "first_set": "won",
+                    "rank": null,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": "jana cepelova",
+                        "country": "SVK",
+                        "url_path": "/players/player/316774/title/Jana-Cepelova-0"
+                    }
+                }
+            ]
+        },
+        {
+            "tournament": "charleston",
+            "country": "usa, sc",
+            "date": "2014-3-31",
+            "level": "premier",
+            "surface": "clay",
+            "rank": 40,
+            "seed": null,
+            "matches": [
+                {
+                    "match_round": "round 64",
+                    "result": "W",
+                    "score": "-",
+                    "sets_played": "two",
+                    "first_set": null,
+                    "rank": null,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": null,
+                        "country": null,
+                        "url_path": null
+                    }
+                },
+                {
+                    "match_round": "round 32",
+                    "result": "W",
+                    "score": "6-2 6-0",
+                    "sets_played": "two",
+                    "first_set": "won",
+                    "rank": 117,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": "alla kudryavtseva",
+                        "country": "RUS",
+                        "url_path": "/players/player/311362/title/Alla-Kudryavtseva"
+                    }
+                },
+                {
+                    "match_round": "round 16",
+                    "result": "W",
+                    "score": "7-6(6) 2-6 6-4",
+                    "sets_played": "three",
+                    "first_set": "won",
+                    "rank": 28,
+                    "seed": 11,
+                    "opponent_details": {
+                        "name": "venus williams",
+                        "country": "USA",
+                        "url_path": "/players/player/230220/title/Venus-Williams-0"
+                    }
+                },
+                {
+                    "match_round": "quarterfinals",
+                    "result": "W",
+                    "score": "6-3 4-6 6-3",
+                    "sets_played": "three",
+                    "first_set": "won",
+                    "rank": 8,
+                    "seed": 2,
+                    "opponent_details": {
+                        "name": "jelena jankovic",
+                        "country": "SRB",
+                        "url_path": "/players/player/100153/title/Jelena-jankovic"
+                    }
+                },
+                {
+                    "match_round": "semifinals",
+                    "result": "L",
+                    "score": "1-6 6-3 7-5",
+                    "sets_played": "three",
+                    "first_set": "win",
+                    "rank": 40,
+                    "seed": 14,
+                    "opponent_details": {
+                        "name": "andrea petkovic",
+                        "country": "GER",
+                        "url_path": "/players/player/310770/title/andrea-petkovic-0"
+                    }
+                }
+            ]
+        },
+        {
+            "tournament": "miami",
+            "country": "usa, fl",
+            "date": "2014-3-18",
+            "level": "premier mandatory",
+            "surface": "hard",
+            "rank": null,
+            "seed": null,
+            "matches": [
+                {
+                    "match_round": "round 128",
+                    "result": "W",
+                    "score": "-",
+                    "sets_played": "two",
+                    "first_set": null,
+                    "rank": null,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": null,
+                        "country": null,
+                        "url_path": null
+                    }
+                },
+                {
+                    "match_round": "round 64",
+                    "result": "L",
+                    "score": "1-6 6-1 6-2",
+                    "sets_played": "three",
+                    "first_set": "win",
+                    "rank": null,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": "elina svitolina",
+                        "country": "UKR",
+                        "url_path": "/players/player/316738/title/elina-svitolina-0"
+                    }
+                }
+            ]
+        },
+        {
+            "tournament": "indian wells",
+            "country": "usa, ca",
+            "date": "2014-3-5",
+            "level": "premier mandatory",
+            "surface": "hard",
+            "rank": 7,
+            "seed": null,
+            "matches": [
+                {
+                    "match_round": "round 128",
+                    "result": "W",
+                    "score": "-",
+                    "sets_played": "two",
+                    "first_set": null,
+                    "rank": null,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": null,
+                        "country": null,
+                        "url_path": null
+                    }
+                },
+                {
+                    "match_round": "round 64",
+                    "result": "W",
+                    "score": "6-2 6-2",
+                    "sets_played": "two",
+                    "first_set": "won",
+                    "rank": null,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": "shuai peng",
+                        "country": "CHN",
+                        "url_path": "/players/player/160471/title/Shuai-Peng-0"
+                    }
+                },
+                {
+                    "match_round": "round 32",
+                    "result": "W",
+                    "score": "6-3 6-3",
+                    "sets_played": "two",
+                    "first_set": "won",
+                    "rank": 10,
+                    "seed": 9,
+                    "opponent_details": {
+                        "name": "sara errani",
+                        "country": "ITA",
+                        "url_path": "/players/player/310761/title/Sara-Errani"
+                    }
+                },
+                {
+                    "match_round": "round 16",
+                    "result": "L",
+                    "score": "6-2 1-6 6-4",
+                    "sets_played": "three",
+                    "first_set": "lost",
+                    "rank": 7,
+                    "seed": 6,
+                    "opponent_details": {
+                        "name": "simona halep",
+                        "country": "ROU",
+                        "url_path": "/players/player/314320/title/simona-halep"
+                    }
+                }
+            ]
+        },
+        {
+            "tournament": "acapulco - acapulco",
+            "country": "mexico",
+            "date": "2014-2-24",
+            "level": "international",
+            "surface": "hard",
+            "rank": null,
+            "seed": null,
+            "matches": [
+                {
+                    "match_round": "round 32",
+                    "result": "W",
+                    "score": "6-2 6-2",
+                    "sets_played": "two",
+                    "first_set": "won",
+                    "rank": null,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": "shahar peer",
+                        "country": "ISR",
+                        "url_path": "/players/player/311168/title/Shahar-Peer"
+                    }
+                },
+                {
+                    "match_round": "round 16",
+                    "result": "W",
+                    "score": "7-5 6-2",
+                    "sets_played": "two",
+                    "first_set": "won",
+                    "rank": 147,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": "lara arruabarrena",
+                        "country": "ESP",
+                        "url_path": "/players/player/315296/title/lara-arruabarrena-0"
+                    }
+                },
+                {
+                    "match_round": "quarterfinals",
+                    "result": "L",
+                    "score": "3-6 6-4 6-1",
+                    "sets_played": "three",
+                    "first_set": "win",
+                    "rank": null,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": "caroline garcia",
+                        "country": "FRA",
+                        "url_path": "/players/player/315391/title/caroline-garcia-0"
+                    }
+                }
+            ]
+        },
+        {
+            "tournament": "dubai",
+            "country": "united arab emirates",
+            "date": "2014-2-17",
+            "level": "premier",
+            "surface": "hard",
+            "rank": null,
+            "seed": null,
+            "matches": [
+                {
+                    "match_round": "round 32 - q",
+                    "result": "W",
+                    "score": "5-7 6-3 6-3",
+                    "sets_played": "three",
+                    "first_set": "lost",
+                    "rank": null,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": "vera dushevina",
+                        "country": "RUS",
+                        "url_path": "/players/player/310625/title/vera-dushevina"
+                    }
+                },
+                {
+                    "match_round": "round 16 - q",
+                    "result": "W",
+                    "score": "6-2 6-4",
+                    "sets_played": "two",
+                    "first_set": "won",
+                    "rank": null,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": "tsvetana pironkova",
+                        "country": "BUL",
+                        "url_path": "/players/player/311041/title/Tsvetana-PIRONKOVA"
+                    }
+                },
+                {
+                    "match_round": "quarterfinals - q",
+                    "result": "L",
+                    "score": "6-1 6-4",
+                    "sets_played": "two",
+                    "first_set": "lost",
+                    "rank": null,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": "annika beck",
+                        "country": "GER",
+                        "url_path": "/players/player/316979/title/Annika-Beck"
+                    }
+                }
+            ]
+        },
+        {
+            "tournament": "doha - doha",
+            "country": "qatar",
+            "date": "2014-2-10",
+            "level": "premier 5",
+            "surface": "hard",
+            "rank": null,
+            "seed": null,
+            "matches": [
+                {
+                    "match_round": "round 64",
+                    "result": "L",
+                    "score": "7-5 6-1",
+                    "sets_played": "two",
+                    "first_set": "lost",
+                    "rank": null,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": null,
+                        "country": null,
+                        "url_path": "/players/player/130713/title/Bethanie-Mattek-Sands"
+                    }
+                }
+            ]
+        },
+        {
+            "tournament": "fed cup week 1",
+            "country": "canada",
+            "date": "2014-2-8",
+            "level": "r1",
+            "surface": "hard",
+            "rank": null,
+            "seed": null,
+            "matches": [
+                {
+                    "match_round": "r1",
+                    "result": "W",
+                    "score": "6-1 6-0",
+                    "sets_played": "two",
+                    "first_set": "won",
+                    "rank": null,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": "jovana jaksic",
+                        "country": "SRB",
+                        "url_path": "/players/player/317351/title/Jovana-Jaksic"
+                    }
+                },
+                {
+                    "match_round": "r1",
+                    "result": "W",
+                    "score": "6-0 6-3",
+                    "sets_played": "two",
+                    "first_set": "won",
+                    "rank": null,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": "vesna dolonc",
+                        "country": "SRB",
+                        "url_path": "/players/player/313653/title/Vesna-Dolonc"
+                    }
+                }
+            ]
+        },
+        {
+            "tournament": "australian open",
+            "country": "australia",
+            "date": "2014-1-13",
+            "level": "grand slam",
+            "surface": "hard",
+            "rank": 4,
+            "seed": null,
+            "matches": [
+                {
+                    "match_round": "round 128",
+                    "result": "W",
+                    "score": "7-5 6-1",
+                    "sets_played": "two",
+                    "first_set": "won",
+                    "rank": 487,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": null,
+                        "country": null,
+                        "url_path": "/players/player/317359/title/hao-chen-tang-0"
+                    }
+                },
+                {
+                    "match_round": "round 64",
+                    "result": "W",
+                    "score": "6-2 7-6(10)",
+                    "sets_played": "two",
+                    "first_set": "won",
+                    "rank": null,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": "virginie razzano",
+                        "country": "FRA",
+                        "url_path": "/players/player/180384/title/Virginie-Razzano"
+                    }
+                },
+                {
+                    "match_round": "round 32",
+                    "result": "W",
+                    "score": "6-2 6-2",
+                    "sets_played": "two",
+                    "first_set": "won",
+                    "rank": null,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": "lauren davis",
+                        "country": "USA",
+                        "url_path": "/players/player/317414/title/lauren-davis-0"
+                    }
+                },
+                {
+                    "match_round": "round 16",
+                    "result": "W",
+                    "score": "6-7(5) 6-2 6-0",
+                    "sets_played": "three",
+                    "first_set": "won",
+                    "rank": 120,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": "casey dellacqua",
+                        "country": "AUS",
+                        "url_path": "/players/player/310730/title/Casey-DELLACQUA"
+                    }
+                },
+                {
+                    "match_round": "quarterfinals",
+                    "result": "W",
+                    "score": "5-7 7-5 6-2",
+                    "sets_played": "three",
+                    "first_set": "lost",
+                    "rank": 14,
+                    "seed": 14,
+                    "opponent_details": {
+                        "name": "ana ivanovic",
+                        "country": "SRB",
+                        "url_path": "/players/player/311710/title/Ana-Ivanovic"
+                    }
+                },
+                {
+                    "match_round": "semifinals",
+                    "result": "L",
+                    "score": "6-2 6-4",
+                    "sets_played": "two",
+                    "first_set": "lost",
+                    "rank": 4,
+                    "seed": 4,
+                    "opponent_details": {
+                        "name": "na li",
+                        "country": "CHN",
+                        "url_path": "/players/player/120330/title/Na-Li"
+                    }
+                }
+            ]
+        },
+        {
+            "tournament": "sydney",
+            "country": "australia",
+            "date": "2014-1-5",
+            "level": "premier",
+            "surface": "hard",
+            "rank": 48,
+            "seed": null,
+            "matches": [
+                {
+                    "match_round": "round 32",
+                    "result": "L",
+                    "score": "6-4 6-3",
+                    "sets_played": "two",
+                    "first_set": "lost",
+                    "rank": 48,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": null,
+                        "country": null,
+                        "url_path": "/players/player/130713/title/Bethanie-Mattek-Sands"
+                    }
+                }
+            ]
+        },
+        {
+            "tournament": "wimbledon",
+            "country": "great britain",
+            "date": "2014-6-23",
+            "level": "grand slam",
+            "surface": "grass",
+            "rank": 7,
+            "seed": null,
+            "matches": [
+                {
+                    "match_round": "round 64",
+                    "result": "L",
+                    "score": "6-4 7-6(3)",
+                    "sets_played": "two",
+                    "first_set": "lost",
+                    "rank": 7,
+                    "seed": 6,
+                    "opponent_details": {
+                        "name": null,
+                        "country": null,
+                        "url_path": "/players/player/318033/title/ashleigh-barty-0"
+                    }
+                }
+            ]
+        },
+        {
+            "tournament": "charleston",
+            "country": "usa, sc",
+            "date": "2014-3-31",
+            "level": "premier",
+            "surface": "clay",
+            "rank": null,
+            "seed": null,
+            "matches": [
+                {
+                    "match_round": "round 16",
+                    "result": "L",
+                    "score": "6-7(0) 6-3 10-7",
+                    "sets_played": "three",
+                    "first_set": "lost",
+                    "rank": null,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": null,
+                        "country": null,
+                        "url_path": "/players/player/130611/title/Anabel-Medina-Garrigues"
+                    }
+                }
+            ]
+        },
+        {
+            "tournament": "australian open",
+            "country": "australia",
+            "date": "2014-1-13",
+            "level": "grand slam",
+            "surface": "hard",
+            "rank": null,
+            "seed": null,
+            "matches": [
+                {
+                    "match_round": "round 64",
+                    "result": "W",
+                    "score": "6-3 6-1",
+                    "sets_played": "two",
+                    "first_set": "won",
+                    "rank": null,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": null,
+                        "country": null,
+                        "url_path": "/players/player/317877/title/Valeriya-Solovyeva"
+                    }
+                },
+                {
+                    "match_round": "round 32",
+                    "result": "W",
+                    "score": "6-4 7-5",
+                    "sets_played": "two",
+                    "first_set": "won",
+                    "rank": 26,
+                    "seed": 11,
+                    "opponent_details": {
+                        "name": null,
+                        "country": null,
+                        "url_path": "/players/player/310318/title/anna-lena-groenefeld-0"
+                    }
+                },
+                {
+                    "match_round": "round 16",
+                    "result": "L",
+                    "score": "6-4 6-3",
+                    "sets_played": "two",
+                    "first_set": "lost",
+                    "rank": null,
+                    "seed": 6,
+                    "opponent_details": {
+                        "name": null,
+                        "country": null,
+                        "url_path": "/players/player/20351/title/cara-black"
+                    }
                 }
             ]
         }
