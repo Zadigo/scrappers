@@ -1,0 +1,130 @@
+{
+    "records": [
+        {
+            "tournament": "canada",
+            "country": "saguenay",
+            "date": "2008-10-20",
+            "level": "itf",
+            "surface": "hard",
+            "rank": 14,
+            "seed": 14,
+            "matches": [
+                {
+                    "match_round": " Round 32",
+                    "result": "L",
+                    "score": "6-1 6-0",
+                    "rank": null,
+                    "opponent_seed": null
+                }
+            ]
+        },
+        {
+            "tournament": "usa, tx",
+            "country": "southlake",
+            "date": "2008-10-6",
+            "level": "itf",
+            "surface": "hard",
+            "rank": 14,
+            "seed": 14,
+            "matches": [
+                {
+                    "match_round": " Round 32",
+                    "result": "L",
+                    "score": "6-3 6-0",
+                    "rank": "-",
+                    "opponent_seed": "[q]"
+                }
+            ]
+        },
+        {
+            "tournament": "canada",
+            "country": "montreal",
+            "date": "2008-7-28",
+            "level": "tier i",
+            "surface": "hard",
+            "rank": 14,
+            "seed": 14,
+            "matches": [
+                {
+                    "match_round": " Round 64 - Q",
+                    "result": "L",
+                    "score": "6-3 6-4",
+                    "rank": "166",
+                    "opponent_seed": "[17]"
+                }
+            ]
+        },
+        {
+            "tournament": "canada",
+            "country": "waterloo",
+            "date": "2008-6-30",
+            "level": "itf",
+            "surface": "clay",
+            "rank": 14,
+            "seed": 14,
+            "matches": [
+                {
+                    "match_round": " Round 32",
+                    "result": "L",
+                    "score": "7-6(2) 6-0",
+                    "rank": "-",
+                    "opponent_seed": "[w]"
+                }
+            ]
+        },
+        {
+            "tournament": "usa, sc",
+            "country": "sumter",
+            "date": "2008-5-26",
+            "level": "itf",
+            "surface": "hard",
+            "rank": 14,
+            "seed": 14,
+            "matches": [
+                {
+                    "match_round": " Round 32",
+                    "result": "L",
+                    "score": "6-0 6-3",
+                    "rank": "-",
+                    "opponent_seed": "[q]"
+                }
+            ]
+        },
+        {
+            "tournament": "canada",
+            "country": "saguenay",
+            "date": "2008-10-20",
+            "level": "itf",
+            "surface": "hard",
+            "rank": 14,
+            "seed": 14,
+            "matches": [
+                {
+                    "match_round": " Round 16",
+                    "result": "L",
+                    "score": "4-6 6-4 10-4",
+                    "rank": null,
+                    "opponent_seed": null
+                }
+            ]
+        },
+        {
+            "tournament": "canada",
+            "country": "waterloo",
+            "date": "2008-6-30",
+            "level": "itf",
+            "surface": "clay",
+            "rank": 14,
+            "seed": 14,
+            "matches": [
+                {
+                    "match_round": " Round 16",
+                    "result": "L",
+                    "score": "6-1 6-1",
+                    "rank": "- / -",
+                    "opponent_seed": "[3]"
+                }
+            ]
+        }
+    ]
+}

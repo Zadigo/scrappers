@@ -87,7 +87,7 @@ class Requestor:
 
         try:
             response = requests.get(url, user_agent)
-        except requests.HTTPError:
+        except requests.ConnectionError:
             raise
         else:
             if response.status_code == 200:
@@ -308,25 +308,37 @@ class PlayerPage(Requestor):
             pass
         return position_number
 
-if __name__ == "__main__":
-    args = argparse.ArgumentParser(description='FiVB page parser')
-    args.add_argument('-u', '--url', help='URL to query')
-    args.add_argument('-a', '--adjust-age', type=int, help='Adjust age to the year the tournament was played')
-    args.add_argument('-o', '--output_filename', help='Name to associate with the CSV file')
-    parsed_args = args.parse_args()
+class EnrichPlayer:
+    def __init__(self, player_name):
+        try:
+            from googlesearch import search, search_images
+        except ImportError:
+            raise
 
-    # if parsed_args.output_filename:
-    # data = TeamPage(url=parsed_args.url)
-    # data.get_team_page()
+        # response = search(player_name, stop=5, pause=2)
+        response = search_images(player_name, stop=5, pause=2, extra_params={'biw':1024,'bih':768})
+        print(list(response))
 
-    data = TeamPage(url=parsed_args.url)
-    data.get_team_page()
+# if __name__ == "__main__":
+#     args = argparse.ArgumentParser(description='FiVB page parser')
+#     args.add_argument('-u', '--url', help='URL to query')
+#     args.add_argument('-a', '--adjust-age', type=int, help='Adjust age to the year the tournament was played')
+#     args.add_argument('-o', '--output_filename', help='Name to associate with the CSV file')
+#     parsed_args = args.parse_args()
+
+#     # if parsed_args.output_filename:
+#     # data = TeamPage(url=parsed_args.url)
+#     # data.get_team_page()
+
+#     data = TeamPage(url=parsed_args.url)
+#     data.get_team_page()
 
 
-    # ENHANCEMENT: Create threading
-    # first_thread = threading.Thread(target=Requestor.create_request, args=(Requestor, 'https://www.volleyball.world/en/vnl/women/teams'))
-    # second_thread = threading.Thread(target=TeamPage.__init__, args=(TeamPage,))
-    # first_thread.start()
-    # second_thread.start()
+#     # ENHANCEMENT: Create threading
+#     # first_thread = threading.Thread(target=Requestor.create_request, args=(Requestor, 'https://www.volleyball.world/en/vnl/women/teams'))
+#     # second_thread = threading.Thread(target=TeamPage.__init__, args=(TeamPage,))
+#     # first_thread.start()
+#     # second_thread.start()
 
-    # PlayerPage('https://www.volleyball.world/en/vnl/women/teams/ita-italy/players/cristina-chirichella?id=71297')
+#     # PlayerPage('https://www.volleyball.world/en/vnl/women/teams/ita-italy/players/cristina-chirichella?id=71297')
+EnrichPlayer('Bieke Kindt')
