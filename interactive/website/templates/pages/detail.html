@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block body %}
+<section class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <h4>{{ tournament.tournament }}</h4>
+                <p>{{ tournament.surface }}</p>
+            </div>
+        </div>
+        <div class="row">
+            {% for match in tournament.matches %}
+                <div class="col s12 m4 l4">
+                    <div class="card-panel">
+                        <p>{{ match.result }}</p>
+                        <a href="{% url 'tennis_detail' tournament.id %}">Detail</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}

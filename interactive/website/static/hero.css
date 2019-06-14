@@ -1,0 +1,324 @@
+div.hero, section.hero {
+  background-color: #1565c0;
+  height: 100vh !important;
+  text-align: center;
+  color: white;
+}
+
+div.hero .hero-wrapper, section.hero .hero-wrapper {
+  margin: 0 auto;
+  max-width: 1280px;
+  width: 90%;
+}
+
+div.hero .hero-wrapper .call-to-action, section.hero .hero-wrapper .call-to-action {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  padding-top: 12.5%;
+}
+
+div.hero .hero-wrapper .call-to-action div.lead, section.hero .hero-wrapper .call-to-action div.lead, div.hero .hero-wrapper .call-to-action div.lead-stronger, section.hero .hero-wrapper .call-to-action div.lead-stronger {
+  display: block;
+  font-size: 4rem;
+  font-weight: 400;
+  margin-bottom: 1.250rem;
+}
+
+@media only screen and (min-width: 300px) {
+  div.hero .hero-wrapper .call-to-action, section.hero .hero-wrapper .call-to-action {
+    text-align: left;
+    padding-top: 25%;
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  div.hero .hero-wrapper .call-to-action, section.hero .hero-wrapper .call-to-action {
+    text-align: center;
+    padding-top: 12.5%;
+  }
+}
+
+@media only screen and (min-width: 300px) {
+  div.hero .hero-wrapper .call-to-action div.lead, section.hero .hero-wrapper .call-to-action div.lead {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  div.hero .hero-wrapper .call-to-action div.lead, section.hero .hero-wrapper .call-to-action div.lead {
+    font-size: 4rem;
+  }
+}
+
+div.hero .hero-wrapper .call-to-action div.lead.upper, section.hero .hero-wrapper .call-to-action div.lead.upper {
+  text-transform: uppercase;
+}
+
+div.hero .hero-wrapper .call-to-action div.lead-stronger, section.hero .hero-wrapper .call-to-action div.lead-stronger {
+  font-weight: 600;
+}
+
+@media only screen and (min-width: 300px) {
+  div.hero .hero-wrapper .call-to-action div.lead-stronger, section.hero .hero-wrapper .call-to-action div.lead-stronger {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  div.hero .hero-wrapper .call-to-action div.lead-stronger, section.hero .hero-wrapper .call-to-action div.lead-stronger {
+    font-size: 4rem;
+  }
+}
+
+div.hero .hero-wrapper .call-to-action div.lead-stronger.upper, section.hero .hero-wrapper .call-to-action div.lead-stronger.upper {
+  text-transform: uppercase;
+}
+
+div.hero .hero-wrapper .call-to-action div.lead-subtitle, section.hero .hero-wrapper .call-to-action div.lead-subtitle {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-top: 0.5rem;
+  margin-bottom: 2.75rem;
+}
+
+@media only screen and (min-width: 300px) {
+  div.hero .hero-wrapper .call-to-action div.lead-subtitle, section.hero .hero-wrapper .call-to-action div.lead-subtitle {
+    font-size: 1.305rem;
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  div.hero .hero-wrapper .call-to-action div.lead-subtitle, section.hero .hero-wrapper .call-to-action div.lead-subtitle {
+    font-size: 2rem;
+  }
+}
+
+div.hero .hero-wrapper .call-to-action div.lead-button, section.hero .hero-wrapper .call-to-action div.lead-button {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+}
+
+div.benefits, section.benefits {
+  width: 100%;
+}
+
+div.benefits .benefit, section.benefits .benefit {
+  padding: 65px 0 65px 0;
+  margin-bottom: 0;
+}
+
+div.benefits .benefit:first-child, section.benefits .benefit:first-child {
+  padding-top: 0;
+}
+
+div.benefits .benefit .row, section.benefits .benefit .row {
+  margin-top: 20px;
+}
+
+div.benefits .benefit h1, section.benefits .benefit h1 {
+  font-size: 2.28rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+div.benefits .benefit h1 > span.lighten, section.benefits .benefit h1 > span.lighten {
+  font-weight: 400;
+}
+
+div.benefits .benefit h2, section.benefits .benefit h2 {
+  font-size: 2.28rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+div.benefits .benefit h2 > span.lighten, section.benefits .benefit h2 > span.lighten {
+  font-weight: 400;
+}
+
+div.benefits .benefit h3, section.benefits .benefit h3 {
+  font-size: 2.28rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+div.benefits .benefit h3 > span.lighten, section.benefits .benefit h3 > span.lighten {
+  font-weight: 400;
+}
+
+div.benefits .benefit h4, section.benefits .benefit h4 {
+  font-size: 2.28rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+div.benefits .benefit h4 > span.lighten, section.benefits .benefit h4 > span.lighten {
+  font-weight: 400;
+}
+
+@media only screen and (min-width: 300px) {
+  div.benefits .benefit, section.benefits .benefit {
+    padding-top: 0;
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  div.benefits .benefit, section.benefits .benefit {
+    padding-top: 65px;
+  }
+}
+
+div.benefits .separator, section.benefits .separator {
+  padding: 65px 0 65px 0;
+  background-color: #eeeeee;
+}
+
+div.benefits .separator .row, section.benefits .separator .row {
+  margin-top: 0;
+}
+
+@media only screen and (min-width: 300px) {
+  div.benefits .separator, section.benefits .separator {
+    padding-top: 0px;
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  div.benefits .separator, section.benefits .separator {
+    padding-top: 65px;
+  }
+}
+
+div.benefits .separator-with-image, section.benefits .separator-with-image {
+  overflow: hidden;
+  height: 375px;
+  width: 100%;
+  background-color: grey;
+  text-align: center;
+  color: white;
+}
+
+div.benefits .separator-with-image .seperator-content, section.benefits .separator-with-image .seperator-content {
+  z-index: 999;
+  position: absolute;
+  width: inherit;
+}
+
+div.benefits .separator-with-image .seperator-content a, section.benefits .separator-with-image .seperator-content a {
+  color: white;
+}
+
+div.benefits .separator-with-image .seperator-img, section.benefits .separator-with-image .seperator-img {
+  position: relative;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-image: url("./images/fashion_1.jpeg");
+  background-position: center;
+  height: 100%;
+  width: auto;
+}
+
+div.benefits .call-to-action, section.benefits .call-to-action {
+  text-align: center;
+}
+
+div.benefits.image-tiles, section.benefits.image-tiles {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-gap: .275em;
+  grid-auto-rows: 300px;
+}
+
+@media only screen and (min-width: 300px) {
+  div.benefits.image-tiles, section.benefits.image-tiles {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  div.benefits.image-tiles, section.benefits.image-tiles {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+div.benefits.image-tiles .image-tile, section.benefits.image-tiles .image-tile {
+  position: relative;
+  background-color: #1565c0;
+  overflow: hidden;
+}
+
+div.benefits.image-tiles .image-tile .tile-cover, section.benefits.image-tiles .image-tile .tile-cover {
+  position: absolute;
+  background-color: black;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+div.benefits.image-tiles .image-tile .tile-cover:hover, section.benefits.image-tiles .image-tile .tile-cover:hover {
+  opacity: .3;
+}
+
+div.benefits.image-tiles .image-tile .tile-title, section.benefits.image-tiles .image-tile .tile-title {
+  position: absolute;
+  width: 100;
+  color: white;
+  bottom: 35px;
+  left: 45px;
+  text-align: center;
+  margin-top: 0px;
+}
+
+@media only screen and (min-width: 300px) {
+  div.benefits.image-tiles .image-tile .tile-title, section.benefits.image-tiles .image-tile .tile-title {
+    font-size: calc(2rem / 2);
+    left: calc(45px / 2);
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  div.benefits.image-tiles .image-tile .tile-title, section.benefits.image-tiles .image-tile .tile-title {
+    font-size: 2rem;
+  }
+}
+
+div.benefits .benefits .team, section.benefits .benefits .team {
+  text-align: center;
+}
+
+div.benefits .team, section.benefits .team {
+  text-align: center;
+}
+
+div.benefits .team .teammate-avatar, section.benefits .team .teammate-avatar {
+  vertical-align: middle;
+  width: 175px;
+  height: 175px;
+  border-radius: 50%;
+}
+
+div.benefits .team .teammate-name, section.benefits .team .teammate-name {
+  font-weight: 600;
+  margin-top: 2.5rem;
+}
+
+div.benefits .team .social, section.benefits .team .social {
+  margin-top: 2rem;
+}
+
+div.benefits .team .fab, section.benefits .team .fab {
+  font-size: 1.33333em;
+}
+/*# sourceMappingURL=hero.css.map */

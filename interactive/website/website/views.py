@@ -7,6 +7,7 @@ import os
 from django.views.generic import View
 import json
 import secrets
+import requests
 
 from website.base_volleyball import TeamPage
 
@@ -59,4 +60,38 @@ class DownloadView(View):
             response['Content-Disposition'] = 'attachment; filename=' + os.path.basename(path)
         return response
 
+url = 'https://raw.githubusercontent.com/Zadigo/scrappers/master/tennis/WTA/matches.json'
+response = requests.get(url).json()
+
+class TennisView(View):
+    def get(self, request, *args, **kwargs):
+        tournaments = []
+        for tournament in response['records']:
+            html = f"""
+            <div class="col s12 m4 l4">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://materializecss.com/images/sample-1.jpg">
+                        <span class="card-title">{tournament['tournament']}</span>
+                    </div>
+                    <div class="card-content">
+                        <p>{tournament['tournament']}</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="http://127.0.0.1:8000/tennis/{tournament['id']}" 
+                                data-id="{tournament['id']}">Detail</a>
+                    </div>
+                </div>
+            </div>
+            """
+            tournaments.append(html)
+        return render(request, 'pages/page.html', {'tournaments': tournaments})
+
+class TennisDetailView(View):
+    def get(self, request, *args, **kwargs):
+        tour_id = kwargs['pk']
+        for tournament in response['records']:
+            if int(tour_id) == tournament['id']:
+                break
+        return render(request, 'pages/detail.html', {'tournament': tournament})
 

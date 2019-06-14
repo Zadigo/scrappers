@@ -11,9 +11,10 @@ import argparse
 class Tournament(dict):
     """Object representing the details of a WTA tournament
     """
-    def __init__(self, tournament, date, level, surface, rank, seed):
+    def __init__(self, tour_id, tournament, date, level, surface, rank, seed):
         self.update(
             {
+                "id": tour_id,
                 'tournament': self.parse_tour_name(tournament, tour_or_country=True),
                 'country': self.parse_tour_name(tournament),
                 'date': self.normalize_date(date),
@@ -178,6 +179,7 @@ class ParsePage:
 
             tournaments=[]
             matches = []
+            tour_id = 1
 
             for section in sections:
                 # ex. WATERLOO , CANADA
@@ -257,7 +259,7 @@ class ParsePage:
                     matches.append(tournament_match)
 
                 # [{tournament A}, ...]
-                tournament = Tournament(tournament, tour_date, level, surface, rank, seed)
+                tournament = Tournament(tour_id, tournament, tour_date, level, surface, rank, seed)
                 # [{tournament A, matches: []}, ...]
                 tournament.update({'matches': matches})
                 tournaments.append(tournament)
@@ -266,6 +268,9 @@ class ParsePage:
                 # will append resulting in tournaments having all the
                 # same matches
                 matches = []
+
+                # Update ID
+                tour_id = tour_id + 1
 
             # Construct a dict wrapper
             # for convenience
@@ -279,5 +284,5 @@ class ParsePage:
             with open(path, 'w', encoding='utf-8') as f:
                 json.dump(refactored_stats, f, indent=4)
 
-if __name__ == "__main__":
-    ParsePage()
+# if __name__ == "__main__":
+#     ParsePage()
