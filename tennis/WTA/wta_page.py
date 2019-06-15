@@ -7,6 +7,7 @@ import time
 import collections
 import re
 import argparse
+import argparse
 
 class Tournament(dict):
     """Object representing the details of a WTA tournament
@@ -29,7 +30,7 @@ class Tournament(dict):
     def normalize(value):
         if not value:
             return None
-        return value.strip().lower()
+        return value.strip().lower().capitalize()
 
     @staticmethod
     def normalize_date(d):
@@ -135,7 +136,6 @@ class TournamentMatch(Tournament):
             # 6-4 3-6 7-5
             # 7-6(4) 6-7(4) 7-6(4)
             r'^\d+\-\d+\(?\d?\)?\s+\d+\-\d+\(?\d?\)?\s+\d+\-\d+\(?\d?\)?$'
-            
         ]
         for pattern in patterns:
             is_match = re.match(pattern, score)
@@ -150,7 +150,6 @@ class TournamentMatch(Tournament):
                 number_of_sets = 'two'
         
         return number_of_sets
-
 
 class Player(TournamentMatch):
     def __init__(self, name, country, url_path):
@@ -285,4 +284,7 @@ class ParsePage:
                 json.dump(refactored_stats, f, indent=4)
 
 # if __name__ == "__main__":
-#     ParsePage()
+#     args = argparse.ArgumentParser()
+#     args.add_argument('--path', help='Relative path to a file or file name')
+#     parsed_args = args.parse_args()
+ParsePage()
