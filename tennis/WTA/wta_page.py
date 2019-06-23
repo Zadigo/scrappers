@@ -1,13 +1,21 @@
-import os
-from bs4 import BeautifulSoup
-import requests
-import json
-import datetime
-import time
+"""Module created to parse the HTML of a WTA's player page
+and extract all the statistics related to their matches to
+a JSON file.
+"""
+
+import argparse
 import collections
+import datetime
+import json
+import os
 import re
-import argparse
-import argparse
+import time
+
+import requests
+from bs4 import BeautifulSoup
+
+OUTPUT_DIR = os.environ.get('')
+
 
 class Tournament(dict):
     """Object representing the details of a WTA tournament
