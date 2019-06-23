@@ -1,6 +1,8 @@
 """Module created to parse the HTML of a WTA's player page
 and extract all the statistics related to their matches to
 a JSON file.
+
+John PENDENQUE @ 2019
 """
 
 import argparse
@@ -28,11 +30,12 @@ def check_path(path):
     """
     path_exists = os.path.exists(path)
     if not path_exists:
-        user_input = input('The path (%s) does not exist. \
-                                Do you wish to create it?  (Y/N)')
+        user_input = input('The path (%s) does not exist. '
+                                'Do you wish to create it? (Y/N) ' % path)
 
         if user_input == 'Y':
             os.makedirs(path)
+            print('Created!')
         elif user_input == 'N':
             quit
         else:
@@ -89,15 +92,17 @@ class ParsePage:
                     result = row.find('td', attrs={'class': 'result'}).text
                     try:
                         # IMPORTANT: These values can be null or incorrect
-                        # and can then through attribute errors on normalization
+                        # and can then throw attribute errors on normalization
                         # so we have to protect against that
                         # ex. [3]
                         opponent_seed = row.find('div', attrs={'class': 'opponent-seed'}).text
+
                         # ex. 45
                         rank = row.find('td', attrs={'class': 'rank'}).text
                     except AttributeError:
                         opponent_seed = None
                         rank = None
+
                     # ex. 6-1 6-1
                     score = row.find('td', attrs={'class': 'score'}).text
 
@@ -114,9 +119,10 @@ class ParsePage:
                     # Get a group such as ('Carmen', 'Klaschka', 'GER')
                     parsed_text = re.search(r'^\n?(?:\[(\d+|\w+)\]\s+)?(\w+)\n?\s+(\w+)\s+(?:\((\w+)\))', opponent_row.text)
                     try:
-                        # If no match, protect
+                        # If no match, protect!
                         # ex. Carmen Klaschka
                         opponent_name = ' '.join([parsed_text.group(2), parsed_text.group(3)])
+
                         # ex. CAN
                         opponent_country = parsed_text.group(4)
                     except AttributeError:
@@ -129,8 +135,8 @@ class ParsePage:
                     except TypeError:
                         profile_url_path = None
 
+                    # Create the opponent
                     opponent = Player(opponent_name, opponent_country, profile_url_path)
-
                     # [{match A}, {...}]
                     tournament_match = TournamentMatch(match_round, result, score, rank, opponent_seed)
                     tournament_match.update({'opponent_details': opponent})
@@ -156,7 +162,7 @@ class ParsePage:
                 'records': tournaments
             }
 
-            # Path to output file
+            # TODO: Use OUTPUT_DIR instead
             path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'matches.json')
 
             with open(path, 'w', encoding='utf-8') as f:
