@@ -13,7 +13,7 @@ from urllib.parse import splitquery, unquote, urlencode, urljoin, urlparse
 import requests
 from bs4 import BeautifulSoup
 
-from user_agent import get_rand_agent
+from volleyball.user_agent import get_rand_agent
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 

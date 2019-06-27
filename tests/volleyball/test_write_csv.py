@@ -4,7 +4,7 @@ import unittest
 
 import requests
 
-from base_volleyball import WriteCSV
+from volleyball.base_volleyball import WriteCSV
 
 
 class TestWriteCSV(unittest.TestCase):

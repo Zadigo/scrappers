@@ -1,6 +1,9 @@
 """Module created to parse the HTML of a WTA's player page
 and extract all the statistics related to their matches to
-a JSON file.
+a given JSON file.
+
+This application was created as way to automate and speed up
+the process of gathering data from matches played by WTA players.
 
 John PENDENQUE @ 2019
 """
@@ -45,9 +48,19 @@ def check_path(path):
 
 class ParsePage:
     """Parse the WTA's player matches' page to extract
-    the statistics. The top level `div` should be
+    the statistics.
+    
+    The top level `div`, if extracted, should be
     `div.horizontal-tabs` containing all the sections for
-    the matches (or relevant statistics)
+    the matches (or relevant statistics). For example:
+
+        <html>
+            <body>
+                <div class="horizontal-tabs">
+                    ...
+                </div>
+            </body>
+        </html>
     """
     def __init__(self, html_page=None, output_path=OUTPUT_DIR):
         # Path to the file to parse

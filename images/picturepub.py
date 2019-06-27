@@ -1,32 +1,55 @@
-from bs4 import BeautifulSoup
-import re
-from urllib import parse
-import os
 import datetime
-import requests
+import os
+import re
 from pathlib import Path
+from urllib import parse
+
+import requests
+from bs4 import BeautifulSoup
+from collections import namedtuple
 
 BASE_PATH = os.path.dirname(os.path.abspath(__file__))
 
+def guess_celebrity(url):
+    celebrity = namedtuple('Celibrity', ['name'])
+    parsed_url = parse.urlparse(url)
+    unparsed_celebrity_name = re.search(r'\_?picturepub\-?([a-z\-]+)', parsed_url[2])
+    if unparsed_celebrity_name:
+        celebrity_name = unparsed_celebrity_name.group(1).split('-')
+        for i in range(len(celebrity_name)):
+            celebrity_name[i] = celebrity_name[i].lower().capitalize()
+    else:
+        return 'Anonymous'
+    return celebrity(' '.join(celebrity_name).strip())
+
 def prepare_values(func):
-    """Prepare a set of values for writting
+    """A decorator that prepares a set of values for writting
     in a CSV, TXT or JSON files
     """
-    def _prepare(self, celebrity=None):
+    def prepare(self, celebrity=None):
         current_date = datetime.datetime.now()
+        # Get values
         values = func(self)
-        wrapper = [
+        # Header [date, celibrity name]
+        values_wrapper = [
             [f'{current_date}', f'{celebrity}']
         ]
-        wrapper.append(values)
+        # [[date, celibrity name], values]
+        values_wrapper.append(values)
+
         with open(os.path.join(BASE_PATH, 'test.txt'), 'w', encoding='utf-8') as f:
-            f.writelines(wrapper[0])
+            # Write [date, celibrity name]
+            f.writelines(values_wrapper[0])
             f.writelines('\n')
-            for value in wrapper[1]:
+            
+            # Write [[...], values]
+            for value in values_wrapper[1]:
                 f.writelines(value)
                 f.writelines('\n')
-        return wrapper
-    return _prepare
+        # NOTE: Return values. 
+        # Not really necessary
+        return values_wrapper
+    return prepare
 
 class HTMLTemplate:
     """A class that holds the HTML file as an object
@@ -51,7 +74,7 @@ class HTMLTemplate:
 class Parser:
     html = HTMLTemplate()
     def __init__(self, tag=None, attrs=None):
-        message = self.html.soup.find('div', class_='messageInfo')
+        message = self.html.soup.find('div', attrs={'class': 'messageInfo'})
         links = message.find_all('a')
         image_urls = []
         for link in links:
@@ -70,16 +93,16 @@ class Parser:
 
 class GetImages(Parser):
     @prepare_values
-    def _save(self):
-        """Output values to a file
+    def save(self):
+        """Output values to a given file
         """
         return self.image_urls
 
-# print(GetImages()._save())
+GetImages().save()
 
 class Requestor:
-    def __init__(self):
-        path = Path('C:\\Users\\Zadigo\\Pictures')
+    def __init__(self, url=None):
+        path = Path('C:\\Users\\Zadigo\\Pictures\\Test')
         response = requests.get('https://pixhost.to/show/268/107855908_picturepub-kimberley-garner-006.jpg', stream=True)
         with open(path, 'wb') as f:
             for block in response.iter_content(1024):
@@ -90,7 +113,7 @@ class Requestor:
                     break
                 f.write(block)
 
-Requestor()
+# Requestor()
 
 
 # def cache_values(self):

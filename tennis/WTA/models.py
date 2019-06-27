@@ -23,13 +23,21 @@ class Tournament(dict):
     
     @staticmethod
     def normalize(value):
+        """ Normalizes `eugenie bouchard\\s` to `Eugenie Bouchard`
+        """
         if not value:
             return None
         return value.strip().lower().capitalize()
 
     @staticmethod
     def normalize_date(d):
-        """Transforms a date such as `October 3rd, 2019` to `2019-10-03`
+        """Transforms a date such as `October 3rd, 2019` to `2019-10-03`.
+
+        Parameters
+        ----------
+
+        `d` should be a date written as `October 3rd, 2019` for the converter
+        to work. If not, returns null
         """
         months = ['January', 'February', 'March', 'April', 'May', 'June',
                     'July', 'August', 'September', 'October', 'November', 'December']
@@ -43,9 +51,26 @@ class Tournament(dict):
         return formatted_date
 
     def parse_tour_name(self, tour_name, tour_or_country=False):
-        """Get the tournament's name
+        """Get the tournament's name.
+
+            1. The incoming tournament name should be formatted
+                as such: ""
+
+            2. In the case where the format might be different, an
+            additional REGEX can be passed to refine the extraction.
+
+            Subclass Tournament and overwrite this method.
         """
-        tournament, country = tour_name.split(',', 1)
+        try:
+            # If the format does not come as '', we have
+            # to protect the app from a ValueError because
+            # it would not be to split the unexpected format
+            tournament, country = tour_name.split(',', 1)
+        except ValueError:
+            print('[INFO:] The format is unexpected. Searching for %s but got %s'
+                    % ('test', tour_name))
+            return None
+
         if tour_or_country:
             return self.normalize(tournament)
         else:
@@ -77,7 +102,36 @@ class Tournament(dict):
 
 class TournamentMatch(Tournament):
     """Object representing the details of a WTA tournament
-    tennis match
+    tennis match.
+
+    Parameters
+    ----------
+
+        match_round: test
+
+        result: test
+
+        score: test
+
+        rank: test
+
+        seed: test
+
+    Structure
+    ---------
+
+        {
+            'match_round': match_round,
+            'result': result,
+            'score': score,
+            'sets_played': two,
+            'first_set': W,
+            'rank': 1,
+            'seed': 1,
+            'opponent_details': []
+        }
+
+    `opponent_details` is a dict
     """
     def __init__(self, match_round, result, score, rank, seed):
         score = self.normalize(score)
@@ -100,7 +154,15 @@ class TournamentMatch(Tournament):
     
     @staticmethod
     def first_set(score, result):
-        """Determine if the first set was won or lost
+        """A piece of logic that determines if the first set 
+        was won or lost.
+
+        Parameters
+        ----------
+
+        score : The final score e.g. 6-1 6-1
+
+        result : The result of the match. Either `W` or `L`
         """
         if result == 'L':
             # 6-2 6-3
@@ -127,6 +189,9 @@ class TournamentMatch(Tournament):
 
     @staticmethod
     def sets_played(score):
+        """A piece of logic that determines the number of sets
+        that were played
+        """
         patterns = [
             # 6-2 6-3
             # 7-5 6-3
