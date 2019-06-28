@@ -1,6 +1,6 @@
 import unittest
 import re
-from base_volleyball import TeamsPage
+from volleyball.base_volleyball import TeamsPage
 
 # python -m unittest tests/test_teams_page.py
 
