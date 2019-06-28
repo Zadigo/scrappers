@@ -14,8 +14,8 @@ import datetime
 import json
 import os
 import re
-import time
 import secrets
+import time
 
 import requests
 from bs4 import BeautifulSoup
@@ -24,34 +24,42 @@ from tennis.wta.models import Player, Tournament, TournamentMatch
 
 environment = os.environ
 
-OUTPUT_DIR = '%s\\Users\\%s\\Documents\\wta_data' % (
+HOME_DRIVE = '%s\\Users\\%s\\Documents' % (
     environment.get('HOMEDRIVE'),
     environment.get('USERNAME')
 )
 
-def check_path(path):
-    """Checks if the paths exists and creates the required files
+OUTPUT_DIR = 'WTA_Data'
+
+def check_path(folder_or_file):
+    """Checks if the path exists and creates the required files.
+    
+    The `folder_or_file` parameter should be a folder or file name that
+    is checked in the HOMEDRIVE user path.
     """
+    path = os.path.join(HOME_DRIVE, folder_or_file)
     path_exists = os.path.exists(path)
     if not path_exists:
         user_input = input('The path (%s) does not exist. '
-                                'Do you wish to create it? (Y/N) ' % path)
+                                'Do you wish to create it? (Y/N) ' % folder_or_file)
 
         if user_input == 'Y':
+            # Create
             os.makedirs(path)
             print('Created!')
+            return path
         elif user_input == 'N':
             quit
         else:
             quit
     else:
-        return
+        return path
 
 def new_filename(name):
     """Create a new file name: `name_2019_05_AVSOIV`
     """    
     current_date = datetime.datetime.now()
-    token = secrets.token_hex(5)
+    token = secrets.token_hex(3)
     return f'{name.lower()}_{current_date.year}_{current_date.month}_{token}.json'
 
 class ParsePage:
@@ -70,9 +78,11 @@ class ParsePage:
             </body>
         </html>
     """
-    def __init__(self, html_page=None, output_path=OUTPUT_DIR):
-        # Path to the file to parse
-        path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'html.html')
+    def __init__(self, page_name=None, output_dir=OUTPUT_DIR):
+        # Path to the file to parse -- Check the path
+        # and return it if it exists
+        # path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'html.html')
+        path = os.path.join(check_path(OUTPUT_DIR), page_name)
         with open(path, 'r', encoding='utf-8') as f:
             soup = BeautifulSoup(f, 'html.parser')
             
@@ -184,10 +194,12 @@ class ParsePage:
             }
 
             # TODO: Use OUTPUT_DIR instead
-            path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'matches.json')
+            # path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'matches.json')
+            output_path = os.path.join(HOME_DRIVE, OUTPUT_DIR, new_filename('eugenie_bouchard'))
 
-            with open(path, 'w', encoding='utf-8') as f:
+            with open(output_path, 'w', encoding='utf-8') as f:
                 json.dump(refactored_stats, f, indent=4)
+                print('Created file! (%s)' % output_path)
 
 # class GetPlayer:
 #     def __init__(self):
@@ -209,10 +221,3 @@ class ParsePage:
 #         # Playing hand
 #         playing_hand = soup.find('div', attrs={'class': 'field--name-field-playhand'})\
 #                             .find('div', attrs={'class': 'field__item'}).text
-
-
-# if __name__ == "__main__":
-#     args = argparse.ArgumentParser()
-#     args.add_argument('--path', help='Relative path to a file or file name')
-#     parsed_args = args.parse_args()
-# ParsePage()
