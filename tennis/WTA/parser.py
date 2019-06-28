@@ -49,22 +49,10 @@ def check_path(path):
 
 def new_filename(name):
     """Create a new file name: `name_2019_05_AVSOIV`
-    """
-    patterns = [
-        # eugenie bouchard
-        r'(?:\w+\s?\w+)+',
-        # eugenie-bouchard
-        # eugenie_bouchard
-        r'(?:\w+(\S?)\w+)+'
-    ]
-    for pattern in patterns:
-        is_match = re.match(pattern, name)
-        if is_match:
-            break
-    
-    current_date = datetime.datetime().now()
+    """    
+    current_date = datetime.datetime.now()
     token = secrets.token_hex(5)
-    return f'{name}_{current_date.year}_{current_date.month}_{token}.json'
+    return f'{name.lower()}_{current_date.year}_{current_date.month}_{token}.json'
 
 class ParsePage:
     """Parse the WTA's player matches' page to extract
