@@ -201,6 +201,28 @@ class ParsePage:
             with open(path, 'w', encoding='utf-8') as f:
                 json.dump(refactored_stats, f, indent=4)
 
+# class GetPlayer:
+#     def __init__(self):
+#         try:
+#             response = requests.get('https://www.wtatennis.com/players/player/314206/title/petra-kvitova-0', headers=headers)
+#         except requests.exceptions.HTTPError():
+#             raise
+#         else:
+#             if response.status_code == 200:
+#                 soup = BeautifulSoup(response.text, 'html.parser')
+
+#         # Height
+#         height = soup.find('div', attrs={'class': 'field--name-field-height'})\
+#                     .find('div', attrs={'class': 'field__item'}).text
+
+#         # Date of birth
+#         date_of_birth = soup.find('span', attrs={'class': 'date-display-single'}).text
+
+#         # Playing hand
+#         playing_hand = soup.find('div', attrs={'class': 'field--name-field-playhand'})\
+#                             .find('div', attrs={'class': 'field__item'}).text
+
+
 # if __name__ == "__main__":
 #     args = argparse.ArgumentParser()
 #     args.add_argument('--path', help='Relative path to a file or file name')
