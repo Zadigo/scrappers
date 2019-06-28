@@ -4,6 +4,7 @@
 * Created a _check\_path()_ function for the output folder
 * Created a _new\_filename()_ function helper for creating new files
 * Improved documentation
+* Corrected _OUTPUT\_DIR_ and input/output path parameters
 
 ### Version 1
 
