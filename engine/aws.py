@@ -77,6 +77,7 @@ def unique_path_creator(folder, filename, rename=False):
 
     object_path = '%s/%s/%s.%s' % (folder, unique_entry, name, extension)
     # Create the objet's URL to save to a database for example
+    # FIXME: Find a way to pass the bucket and the region
     object_url = create_object_url(object_path)
     
     return {'object_name': [name, guess_type(filename)], 'object_path': object_path, 
@@ -138,21 +139,21 @@ class TransferManager(AWS):
         is_local_file = os.path.isfile(file_to_upload.name)
         # No? It's a Django uploaded file
         if not is_local_file:
-            item = file_to_upload.name
+            item_name = file_to_upload.name
             contenttype = file_to_upload.content_type
         else:
-            item = os.path.basename(file_to_upload.name)
+            item_name = os.path.basename(file_to_upload.name)
             contenttype = guess_type(file_to_upload)
 
         # Create the paths
-        items = unique_path_creator('test', item)
+        items = unique_path_creator('test', item_name, rename=False)
 
         # Correct the file name if needed
         # and create the bucket path
         # Upload the file to AMAZON bucket
         try:
             self.bucket.put_object(Key=items['object_path'], Body=file_to_upload, ACL='public-read',
-                                        ContentType=file_to_upload.content_type, CacheControl='max-age=24000')
+                                        ContentType=contenttype, CacheControl='max-age=24000')
         except boto3.exceptions.S3TransferFailedError:
             print('[%s]: Upload failed. %s was not uploaded.' 
                     % (self.__class__.__name__, items['object_path']))

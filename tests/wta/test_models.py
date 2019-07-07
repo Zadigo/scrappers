@@ -1,23 +1,22 @@
 import unittest
-from tennis.wta.models import Player, Tournament, TournamentMatch
+from scrappers.tennis.wta.models import Player, Tournament, TournamentMatch
 
-# python -m unittest wta.test_models.TestModels.test_normalization
+# python -m unittest scrappers.tests.wta.test_models.TestTournament.test_normalization
 
-# class TestModels(unittest.TestCase):
-#     def setUp(self):
-#         self.tournament = Tournament(1, 'Australian Open', 'January 1, 2019', 'GS', 'Hard', 1, 1)
+class TestPlayer(unittest.TestCase):
+    def setUp(self):
+        self.player = Player('Eugénie Bouchard', 'CAN', '/')
     
-#     def test_player(self):
-#         self.assertDictEqual(Player('Eugénie Bouchard', 'CAN', '/'), 
-#                     {'name': 'Eugénie Bouchard', 'country': 'CAN', 'url_path': '/'})
+    def test_player_dict(self):
+        self.assertDictEqual(Player('Eugénie Bouchard', 'CAN', '/'), 
+                    {'name': 'Eugénie Bouchard', 'country': 'CAN', 'url_path': '/'})
 
 class TestTournament(unittest.TestCase):
     def setUp(self):
         self.tournament = Tournament
-    
-    # def test_tournament(self):
-    #     self.assertDictEqual(self.tournament, {'name': 'Eugénie Bouchard', 'country': 'CAN', 'url_path': '/'})
+        # self.dict_result = Tournament(1, 'Australian Open', 'January 1, 2019', 'GS', 'Hard', 1, 1)
 
+    
     def test_normalization(self):
         self.assertEqual(self.tournament.normalize('eugenie bouchard'), 'Eugenie Bouchard')
 

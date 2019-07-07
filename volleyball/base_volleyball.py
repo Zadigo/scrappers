@@ -325,17 +325,6 @@ class PlayerPage(Requestor):
             pass
         return position_number
 
-class EnrichPlayer:
-    def __init__(self, player_name):
-        try:
-            from googlesearch import search, search_images
-        except ImportError:
-            raise
-
-        # response = search(player_name, stop=5, pause=2)
-        response = search_images(player_name, stop=5, pause=2, extra_params={'biw':1024,'bih':768})
-        print(list(response))
-
 # if __name__ == "__main__":
 #     args = argparse.ArgumentParser(description='FiVB page parser')
 #     args.add_argument('-u', '--url', help='URL to query')

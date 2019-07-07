@@ -136,3 +136,17 @@ def new_filename(name):
     current_date = datetime.datetime.now()
     token = secrets.token_hex(3)
     return f'{name.lower()}_{current_date.year}_{current_date.month}_{token}.json'
+
+
+# class EnrichPlayer:
+#     """
+#     """
+#     def __init__(self, player_name):
+#         try:
+#             from googlesearch import search, search_images
+#         except ImportError:
+#             raise
+
+#         # response = search(player_name, stop=5, pause=2)
+#         response = search_images(player_name, stop=5, pause=2, extra_params={'biw':1024,'bih':768})
+#         print(list(response))
