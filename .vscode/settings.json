@@ -2,12 +2,12 @@
     "python.testing.unittestArgs": [
         "-v",
         "-s",
-        ".",
+        "./scrappers/tests",
         "-p",
         "test_*.py"
     ],
     "python.testing.pytestEnabled": false,
     "python.testing.nosetestsEnabled": false,
     "python.testing.unittestEnabled": true,
-    "restructuredtext.confPath": "",
+    // "restructuredtext.confPath": "",
 }

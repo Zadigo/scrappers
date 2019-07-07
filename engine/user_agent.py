@@ -32,3 +32,39 @@ def get_rand_agent():
     """Return a random user agent from `USER_AGENTS`
     """
     return choice(AGENTS_LIST)
+
+
+def cached_agents(func):
+    """A storage for user agents and that checks that an agent
+    has not been used twice.
+
+    Example
+    -------
+        @cached_agents
+        def test():
+            return choice(agent)
+    
+    The `agents_cache` stores the already used agents and returns
+    a incoming if it is not present in the cache.
+    """
+    agents_cache=[]
+    def cache():
+        agent = func()
+        if agent not in agents_cache:
+            agents_cache.append(agent)
+            return agent
+        return '[AGENT]'
+    return cache()
+
+@cached_agents
+def get_rand_unique_agent():
+    """Return a random unique user agent from `USER_AGENTS`
+    that has not been used. This ensures that you only use
+    one unique agent request in a request loop
+
+    Output
+    ------
+    Returns a user agent as string
+    """
+    return choice(AGENTS_LIST)
+ 
