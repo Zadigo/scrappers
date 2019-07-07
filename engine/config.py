@@ -1,24 +1,32 @@
 import os
 
-from scrappers.engine.aws import AWS
+from scrappers.engine.aws import AWS, TransferManager
 
+environment = os.environ
 
 class Configuration:
     def __init__(self):
-        # Base path
-        self.base_path = os.path.dirname(os.path.abspath(__file__))
+        # Base path of 
+        # the file being called
+        self.base_path = os.path.abspath(__file__)
+
+        # User homedrive
+        self.homedrive = '%s\\Users\\%s\\Documents' % (
+            environment.get('HOMEDRIVE'),
+            environment.get('USERNAME')
+        )
 
         # Output paths
         self.output_paths = [
             {
                 'default': {
-                    'path': os.path.join(self.base_path, 'scrapper_data')
+                    'path': os.path.join(self.homedrive, 'scrapper_data')
                 }
             }
         ]
 
         # Amazon S3
-        self.bucket = AWS
+        self.bucket = TransferManager
 
     def __unicode__(self):
         return str(self.__dict__)

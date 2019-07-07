@@ -9,6 +9,15 @@ from urllib import parse
 
 BASE_PATH = os.path.dirname(os.path.abspath(__file__))
 
+environment = os.environ
+
+HOME_DRIVE = '%s\\Users\\%s\\Documents' % (
+    environment.get('HOMEDRIVE'),
+    environment.get('USERNAME')
+)
+
+OUTPUT_DIR = 'WTA_Data'
+
 # def file_opener(func):
 #     def opener(values, path, mode='r'):
 #         f = open(path, mode, encoding='utf-8')
@@ -37,17 +46,21 @@ def guess_celebrity(url, pattern):
     """Get the celebrity's name from the url,
     using a regex pattern
     """
-    celebrity = namedtuple('Celibrity', ['name'])
+    celebrity = namedtuple('Celibrity', ['name', 'name_with_dash'])
     # ('', '/path/')
     parsed_url = parse.urlparse(url)
     unparsed_celebrity_name = re.search(pattern, parsed_url[2])
     if unparsed_celebrity_name:
-        celebrity_name = unparsed_celebrity_name.group(1).split('-')
+        celebrity_name = unparsed_celebrity_name.group(0).split('-')
         for i in range(len(celebrity_name)):
-            celebrity_name[i] = celebrity_name[i].lower().capitalize()
+            celebrity_name[i] = celebrity_name[i].lower()
     else:
         return 'Anonymous'
-    return celebrity(' '.join(celebrity_name).strip())
+
+    normal = ' '.join(celebrity_name).strip().capitalize()
+    dash = '-'.join(celebrity_name).strip()
+
+    return celebrity(normal, dash)
 
 
 def prepare_values(func):
@@ -92,3 +105,34 @@ def prepare_values(func):
 #     # json.dump(refactored_stats, f, indent=4)
 #     return json.dumps
 # write_to_json
+
+def check_path(folder_or_file):
+    """Checks if the path exists and creates the required files.
+    
+    The `folder_or_file` parameter should be a folder or file name that
+    is checked in the HOMEDRIVE user path.
+    """
+    path = os.path.join(HOME_DRIVE, folder_or_file)
+    path_exists = os.path.exists(path)
+    if not path_exists:
+        user_input = input('The path (%s) does not exist. '
+                                'Do you wish to create it? (Y/N) ' % folder_or_file)
+
+        if user_input == 'Y':
+            # Create
+            os.makedirs(path)
+            print('Created!')
+            return path
+        elif user_input == 'N':
+            quit
+        else:
+            quit
+    else:
+        return path
+
+def new_filename(name):
+    """Create a new file name: `name_2019_05_AVSOIV`
+    """    
+    current_date = datetime.datetime.now()
+    token = secrets.token_hex(3)
+    return f'{name.lower()}_{current_date.year}_{current_date.month}_{token}.json'

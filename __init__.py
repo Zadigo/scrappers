@@ -5,6 +5,8 @@ from scrappers.images.picturepub import PicturePub
 from scrappers.images.sawfirst import SawFirst
 from scrappers.tennis.matchstats.parser import MatchStats
 from scrappers.tennis.wta.parser import ParsePage
-from scrappers.volleyball.base_volleyball import PlayerPage, TeamPage, TeamsPage
+from scrappers.volleyball.base_volleyball import (PlayerPage, TeamPage,
+                                                  TeamsPage)
+from scrappers.engine.utilities import guess_celebrity
 
 config = Configuration()

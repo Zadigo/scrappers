@@ -93,7 +93,7 @@ class PicturePub:
                 pass
         self.image_urls = image_urls
 
-class GetImages(Parser):
+class GetImages(PicturePub):
     @prepare_values
     def save(self):
         """Output values to a given file

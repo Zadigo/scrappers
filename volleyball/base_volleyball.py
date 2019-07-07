@@ -14,6 +14,7 @@ import requests
 from bs4 import BeautifulSoup
 
 from volleyball.user_agent import get_rand_agent
+# from scrappers.engine.requestor import Requestor
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -74,6 +75,20 @@ class WriteCSV:
         filename = f'{current_date.month}_{current_date.year}_{token}.csv'
         return os.path.join(DATA_DIR, filename)
 
+# class VolleyballRequestor(Requestor):
+#     def __init__(self, url, **headers):
+#         super().__init__(url, **headers)
+
+#     def parse_links(self, links):
+#         parsed_links = []
+#         for link in links:
+#             parsed_links.append((link.href, link.text))
+#         return parsed_links
+
+#     def clean_text(self, text):
+#         return text.strip()
+
+
 class Requestor:
     def create_request(self, url, user_agent=get_rand_agent(), **kwargs):
         """Create a request and return a list
@@ -129,6 +144,8 @@ class TeamsPage(Requestor, WriteCSV):
 
         # ENHANCEMENT: Test that the url follows the
         # pattern /??/teams
+        # TODO: Refactor this section
+        # response = self.soup
         response = self.create_request(url)
         soup = response[1]
 
@@ -341,4 +358,3 @@ class EnrichPlayer:
 #     # second_thread.start()
 
 #     # PlayerPage('https://www.volleyball.world/en/vnl/women/teams/ita-italy/players/cristina-chirichella?id=71297')
-EnrichPlayer('Bieke Kindt')

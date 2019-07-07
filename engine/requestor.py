@@ -1,3 +1,7 @@
+"""This module regroups a series of classes used by scrappers
+in order to send requests to the web or dowload data or images.
+"""
+
 import requests
 from bs4 import BeautifulSoup
 from pathlib import Path
@@ -5,6 +9,16 @@ from pathlib import Path
 from scrappers.engine.user_agent import get_rand_agent
 
 class Requestor:
+    """Base class to send requests to the web.
+
+    Parameters
+    ----------
+
+    `url` to use in order to send the request
+
+    `headers` to include in the request. `User-Agent` is generated
+    by default.
+    """
     def __init__(self, url, **headers):
         base_headers = {
             'User-Agent': get_rand_agent()
@@ -35,6 +49,7 @@ class DownloadImage:
 
     Parameters
     ----------
+    
     The `url` should end with a .jpg/.jpeg/.png extension
     """
     # def __init__(self, url):

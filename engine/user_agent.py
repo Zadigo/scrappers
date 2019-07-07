@@ -56,6 +56,7 @@ def cached_agents(func):
         return '[AGENT]'
     return cache()
 
+
 @cached_agents
 def get_rand_unique_agent():
     """Return a random unique user agent from `USER_AGENTS`
