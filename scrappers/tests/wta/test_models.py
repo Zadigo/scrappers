@@ -1,5 +1,7 @@
 import unittest
-from scrappers.tennis.wta.models import Player, Tournament, TournamentMatch
+
+from scrappers.scrappers.tennis.wta.models import (Player, Tournament,
+                                                   TournamentMatch)
 
 # python -m unittest scrappers.tests.wta.test_models.TestTournament.test_normalization
 

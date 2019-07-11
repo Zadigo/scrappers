@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name = "scrappers",
-    version = '',
+    version = '1.2',
     author = "John Pendenque",
     author_email = "jhghank@gmail.com",
     description = "Wikipedia API for Python",

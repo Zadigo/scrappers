@@ -13,8 +13,10 @@ from urllib.parse import splitquery, unquote, urlencode, urljoin, urlparse
 import requests
 from bs4 import BeautifulSoup
 
-from volleyball.user_agent import get_rand_agent
-# from scrappers.engine.requestor import Requestor
+from scrappers.scrappers.config.http.engine import Requestor
+from scrappers.scrappers.config.config import configuration
+from scrappers.scrappers.config.http.user_agent import get_rand_agent
+# from scrappers.scrappers.volleyball.models import Player
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -75,79 +77,65 @@ class WriteCSV:
         filename = f'{current_date.month}_{current_date.year}_{token}.csv'
         return os.path.join(DATA_DIR, filename)
 
-# class VolleyballRequestor(Requestor):
-#     def __init__(self, url, **headers):
-#         super().__init__(url, **headers)
 
-#     def parse_links(self, links):
-#         parsed_links = []
-#         for link in links:
-#             parsed_links.append((link.href, link.text))
-#         return parsed_links
+# TODO: Delete
+# class Requestor:
+#     def create_request(self, url, user_agent=get_rand_agent(), **kwargs):
+#         """Create a request and return a list
+#         containing the response and it's BeautifulSoup
+#         object for further actions.
+#         """
+#         # Get URL's different parts
+#         # and construct the base url
+#         splitted_url = urlparse(url)
+#         self.base_url = f'{splitted_url[0]}://{splitted_url[1]}'
 
-#     def clean_text(self, text):
-#         return text.strip()
+#         try:
+#             response = requests.get(url, user_agent)
+#         except requests.ConnectionError:
+#             raise
+#         else:
+#             if response.status_code == 200:
+#                 return [response, self.create_soup(response)]
+#             return None
 
+#     @staticmethod
+#     def create_soup(response):
+#         return BeautifulSoup(response.text, 'html.parser')
 
-class Requestor:
-    def create_request(self, url, user_agent=get_rand_agent(), **kwargs):
-        """Create a request and return a list
-        containing the response and it's BeautifulSoup
-        object for further actions.
-        """
-        # Get URL's different parts
-        # and construct the base url
-        splitted_url = urlparse(url)
-        self.base_url = f'{splitted_url[0]}://{splitted_url[1]}'
-
-        try:
-            response = requests.get(url, user_agent)
-        except requests.ConnectionError:
-            raise
-        else:
-            if response.status_code == 200:
-                return [response, self.create_soup(response)]
-            return None
-
-    @staticmethod
-    def create_soup(response):
-        return BeautifulSoup(response.text, 'html.parser')
-
-    # TODO: Delete this method
-    # def get_countries(self, path):
-    #     """Return the countries with their paths
-    #     present on a team's page.
-    #     '/en/vnl/women/teams/dom-dominican%20republic'
-    #     """
-    #     relative_link = unquote(path)
-    #     country = re.search(r'\w+\-(\w+\s?\w+)', relative_link)
-    #     if country:
-    #         return (country.group(1).capitalize(), path)
-    #     return None
-
-    def parse_links(self, links):
-        parsed_links = []
-        for link in links:
-            parsed_links.append((link.href, link.text))
-        return parsed_links
-
-    def clean_text(self, text):
-        return text.strip()
+#     # TODO: Delete this method
+#     # def get_countries(self, path):
+#     #     """Return the countries with their paths
+#     #     present on a team's page.
+#     #     '/en/vnl/women/teams/dom-dominican%20republic'
+#     #     """
+#     #     relative_link = unquote(path)
+#     #     country = re.search(r'\w+\-(\w+\s?\w+)', relative_link)
+#     #     if country:
+#     #         return (country.group(1).capitalize(), path)
+#     #     return None
 
 class TeamsPage(Requestor, WriteCSV):
     """This analyzes the page referencing the teams and parses the
     different countries present on that page with their urls.
+
+    Result
+    ------
+
+        [
+            (https://path/to/team, Dominican Republic),
+            (...)
+        ]
     """
     def __init__(self, url=None, file_name=None):
         if file_name:
             self.current_file = file_name
 
-        # ENHANCEMENT: Test that the url follows the
-        # pattern /??/teams
-        # TODO: Refactor this section
-        # response = self.soup
-        response = self.create_request(url)
-        soup = response[1]
+        super().__init__(url)
+
+        soup = self.soup
+        # response = self.create_request(url)
+        # soup = response[1]
 
         # section#pools
         section = soup.find('section', id='pools')
@@ -158,8 +146,16 @@ class TeamsPage(Requestor, WriteCSV):
         # TODO: If we send relative path to requests,
         # there could be an issue
         parsed_links = self.parse_links(unparsed_links)
-        
         self.teams = parsed_links
+
+    def __repr__(self):
+        return self.__unicode__()
+
+    def __unicode__(self):
+        return str(self.teams)
+
+    def clean_text(self, text):
+        return text.strip()
 
     def parse_links(self, links, relative=False):
         """Parse the links on the teams page and returns a 
@@ -167,6 +163,13 @@ class TeamsPage(Requestor, WriteCSV):
 
         If `relative` is true, the definition returns the path
         of the link instead of the full url.
+
+        Result
+        ------
+
+            [
+                (http://path/to/..., USA)
+            ]
         """
         parsed_links = []
 
@@ -187,33 +190,41 @@ class TeamsPage(Requestor, WriteCSV):
 
         return parsed_links
 
-    @property
-    def get_teams(self):
-        return self.teams
-
 class TeamPage(TeamsPage):
     def get_team_page(self):
         """Parse a specific volleyball team's page. By doing so,
-        we are trying to gather all the statistics of given players
-        in a volleyball team.
+        we are trying to gather all the attributes of a given player.
+
+        Result
+        ------
+
+           [
+                Player(name=Bieke Kindt, ...),
+                ...
+           ] 
         """
         print('-'*15)
+
         responses = []
-        # t = 0
-        for team in self.get_teams:
+
+        t = 0
+        for team in self.teams:
             team_roster_url = urljoin(team[0], 'team_roster')
             current_date = datetime.datetime.now()
             print('GET HTTP/1.1', str(current_date), team_roster_url)
             response = self.create_request(team_roster_url)
 
+            # Soup
+            soup = self.create_soup(response)
+
             # section#roster
-            response[1] = response[1].find('section', id='roster')
-            responses.append(response)
+            section = soup.find('section', id='roster')
+            responses.append((response, section))
 
-            # if t == 2:
-            #     break
+            if t == 2:
+                break
 
-            # t += 1
+            t += 1
 
         players = []
 
@@ -253,9 +264,9 @@ class TeamPage(TeamsPage):
                 # array that will then be passed to
                 # the WriteCSV class
                 players.append(player)
-
+        
         # TODO: Delete
-        self._write(players)
+        # self._write(players)
 
     @staticmethod
     def get_age(date_of_birth, adjusted=False):
@@ -266,6 +277,9 @@ class TeamPage(TeamsPage):
     @staticmethod
     def convert_height(height):
         pass
+
+    def create_request(self, url):
+        return requests.get(url, get_rand_agent())
 
 class PlayerPage(Requestor):
     """Parse a player's profile page. Use this class to add
@@ -324,26 +338,3 @@ class PlayerPage(Requestor):
         except KeyError:
             pass
         return position_number
-
-# if __name__ == "__main__":
-#     args = argparse.ArgumentParser(description='FiVB page parser')
-#     args.add_argument('-u', '--url', help='URL to query')
-#     args.add_argument('-a', '--adjust-age', type=int, help='Adjust age to the year the tournament was played')
-#     args.add_argument('-o', '--output_filename', help='Name to associate with the CSV file')
-#     parsed_args = args.parse_args()
-
-#     # if parsed_args.output_filename:
-#     # data = TeamPage(url=parsed_args.url)
-#     # data.get_team_page()
-
-#     data = TeamPage(url=parsed_args.url)
-#     data.get_team_page()
-
-
-#     # ENHANCEMENT: Create threading
-#     # first_thread = threading.Thread(target=Requestor.create_request, args=(Requestor, 'https://www.volleyball.world/en/vnl/women/teams'))
-#     # second_thread = threading.Thread(target=TeamPage.__init__, args=(TeamPage,))
-#     # first_thread.start()
-#     # second_thread.start()
-
-#     # PlayerPage('https://www.volleyball.world/en/vnl/women/teams/ita-italy/players/cristina-chirichella?id=71297')

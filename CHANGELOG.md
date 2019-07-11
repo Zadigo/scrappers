@@ -4,6 +4,7 @@
 * New __engine.config()__ module
 * New __engine.requestor()__ module
 * Created __setup.py__
+* Folder restucturing
 
 ### Version 1.1
 

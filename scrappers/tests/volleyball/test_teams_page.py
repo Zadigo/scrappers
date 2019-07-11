@@ -1,13 +1,13 @@
-import unittest
 import re
-from volleyball.base_volleyball import TeamsPage
+import unittest
 
-# python -m unittest tests/test_teams_page.py
+from scrappers.scrappers.volleyball.parser import TeamsPage
+
 
 class TestTeamsPage(unittest.TestCase):
     def setUp(self):
         teams_page = TeamsPage(url='http://u20.women.2017.volleyball.fivb.com/en/teams')
-        self.teams = teams_page.get_teams
+        self.teams = teams_page.teams
 
     def test_is_array(self):
         self.assertIsInstance(self.teams, list, msg='Is not an array')
