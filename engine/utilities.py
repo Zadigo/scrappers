@@ -150,3 +150,23 @@ def new_filename(name):
 #         # response = search(player_name, stop=5, pause=2)
 #         response = search_images(player_name, stop=5, pause=2, extra_params={'biw':1024,'bih':768})
 #         print(list(response))
+
+def number_to_position(func):
+    def convert(self, position):
+        if not isinstance(position, int):
+            raise TypeError
+        
+        positions = ['S', 'OH', 'MB']
+
+        s=()
+
+        if position == 1:
+            s[0] == position
+            s[1] == positions[0]
+        return s
+    return convert
+
+class A:
+    @number_to_position
+    def position(self):
+        pass

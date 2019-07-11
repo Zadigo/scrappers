@@ -61,3 +61,5 @@ class Configuration:
         
     #     print('The bucket should be a callable object to use')
     #     raise TypeError()
+
+configuration = Configuration()

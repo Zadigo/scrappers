@@ -1,8 +1,10 @@
+import os
+import secrets
+from mimetypes import guess_extension, guess_type
+
 import boto3
 from boto3.s3.transfer import S3Transfer
-import os
-from mimetypes import guess_type, guess_extension
-import secrets
+
 
 def image_size_creator(image_or_path):
     """
@@ -33,7 +35,6 @@ def image_size_creator(image_or_path):
 
     return images_sizes
 
-
 def create_object_url(object_path, region=None, bucket=None):
     """
     Create a base url for an object that was previously
@@ -55,7 +56,6 @@ def create_object_url(object_path, region=None, bucket=None):
     # bucket = bucket or AWS_BUCKET
 
     return f'https://s3.{region}.amazonaws.com/{bucket}/{object_path}'
-
 
 def unique_path_creator(folder, filename, rename=False):
     """
@@ -82,7 +82,6 @@ def unique_path_creator(folder, filename, rename=False):
     
     return {'object_name': [name, guess_type(filename)], 'object_path': object_path, 
                 'object_url': object_url, 'unique_entry': unique_entry}
-
 
 class AWS:
     """This is the base used to connect to an AWS bucket.
@@ -157,9 +156,3 @@ class TransferManager(AWS):
         except boto3.exceptions.S3TransferFailedError:
             print('[%s]: Upload failed. %s was not uploaded.' 
                     % (self.__class__.__name__, items['object_path']))
-
-
-# with open('C:\\Users\\Zadigo\\Documents\\WTA_Data\\eugenie_bouchard_2019_6_17a9d5be3a.json', 'rb') as f:
-#     print(f.content_type)
-
-# print(unique_path_creator('test', 'test.png'))
