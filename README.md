@@ -46,8 +46,9 @@ Import the `USER_AGENTS` list from scrappers.config.http.user_agent : `USER_AGEN
 Scrappers implements and AWS class that allows you to upload files directly to a bucket.
 
 ```
-from scrappers import aws
+from scrappers import TransferManager
 
 path = 'C:\\...'
-aws.upload_from_loval(path, bucket_name)
+manager = TransferManager(access_key, secret_key, region, bucket)
+manager.upload_from_local(path, bucket_name)
 ```
