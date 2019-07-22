@@ -85,10 +85,10 @@ class CreateJson:
         with open(path, 'w', encoding='utf-8') as f:
             json.dump(klass, f, indent=4)
 
-if __name__ == "__main__":
-    args = argparse.ArgumentParser(description='Create JSON player file')
-    args.add_argument('--url')
-    args.add_argument('--filename')
-    parsed_args = args.parse_args()
+# if __name__ == "__main__":
+#     args = argparse.ArgumentParser(description='Create JSON player file')
+#     args.add_argument('--url')
+#     args.add_argument('--filename')
+#     parsed_args = args.parse_args()
 
-    CreateJson(parsed_args.url, parsed_args.filename)
+#     CreateJson(parsed_args.url, parsed_args.filename)

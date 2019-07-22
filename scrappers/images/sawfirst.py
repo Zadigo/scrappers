@@ -1,7 +1,7 @@
 import re
 
-from scrappers.engine.requestor import Requestor
-from scrappers.engine.utilities import writer
+from scrappers.scrappers.config.http.engine import Requestor
+from scrappers.scrappers.config.utilities import writer
 
 
 class SawFirst(Requestor):

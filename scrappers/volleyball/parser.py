@@ -13,10 +13,12 @@ from urllib.parse import splitquery, unquote, urlencode, urljoin, urlparse
 import requests
 from bs4 import BeautifulSoup
 
-from scrappers.scrappers.config.http.engine import Requestor
 from scrappers.scrappers.config.config import configuration
+from scrappers.scrappers.config.http.engine import Requestor
 from scrappers.scrappers.config.http.user_agent import get_rand_agent
-# from scrappers.scrappers.volleyball.models import Player
+from scrappers.scrappers.config.utilities import (position_to_number,
+                                                  prepare_values)
+from scrappers.scrappers.volleyball.models import Player
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -25,23 +27,6 @@ DATA_DIR = os.path.join(BASE_DIR, 'data')
 DATA_DIRS = {
     'player_csv': os.path.join(BASE_DIR, 'data')
 }
-
-# TODO: Erase countries -- unnecessary at this stage
-# COUNTRIES = ['arg-argentina', 'aze-azerbaijan', 'bra-brazil',
-#             'bul-bulgaria', 'cmr-cameroon', 'can-canada',
-#             'chn-china', 'cub-cuba', 'dom-dominican%20republic',
-#             'ger-germany', 'ita-italy', 'jpn-japan', 'kaz-kazakhstan',
-#             'ken-kenya', 'kor-korea', 'mex-mexico',
-#             'ned-netherlands', 'pur-puerto%20rico', 'rus-russia',
-#             'srb-serbia', 'tha-thailand', 'tto-trinidad%20%20tobago',
-#             'tur-turkey', 'usa-usa']
-
-# ENHANCEMENT: Subclass a list instead?
-class Player(namedtuple('Player', ['name', 'link', 'date_of_birth',
-                         'age', 'height', 'weight', 'spike', 'block'])):
-    """Player class used to create a volleyball player
-    """
-    __slots__ = ()
 
 class WriteCSV:
     """Use this class to write a CSV file containing
@@ -115,9 +100,21 @@ class WriteCSV:
 #     #         return (country.group(1).capitalize(), path)
 #     #     return None
 
-class TeamsPage(Requestor, WriteCSV):
+class ParticipatingTeamsPage(Requestor, WriteCSV):
     """This analyzes the page referencing the teams and parses the
     different countries present on that page with their urls.
+
+    This parser should not really be used individually unless you need
+    the raw values for doing something else. It is preferable to use the
+    `TeamPage()` class which will pull the teams and then get each individual
+    player's data.
+
+    You can also subclass this class if you wish to do something different.
+
+    Parameters
+    ----------
+
+    `url` is the page referencing all participating teams.
 
     Result
     ------
@@ -127,10 +124,8 @@ class TeamsPage(Requestor, WriteCSV):
             (...)
         ]
     """
-    def __init__(self, url=None, file_name=None):
-        if file_name:
-            self.current_file = file_name
-
+    def __init__(self, url):
+        # Create request
         super().__init__(url)
 
         soup = self.soup
@@ -190,7 +185,16 @@ class TeamsPage(Requestor, WriteCSV):
 
         return parsed_links
 
-class TeamPage(TeamsPage):
+class TeamPage(ParticipatingTeamsPage):
+    """Extract the data related to players on each team's page.
+
+    Parameters
+    ----------
+
+    `url` is the page referencing all participating teams to
+    be parsed afterwards
+    """
+
     def get_team_page(self):
         """Parse a specific volleyball team's page. By doing so,
         we are trying to gather all the attributes of a given player.
@@ -260,81 +264,108 @@ class TeamPage(TeamsPage):
                 player = Player(player_name, player_profile_link, date_of_birth,
                             age, height, weight, spike, block)
 
+                # IMPROVE: Refactor
                 # Append player object to an
                 # array that will then be passed to
                 # the WriteCSV class
                 players.append(player)
         
+        return players
+        
         # TODO: Delete
         # self._write(players)
 
+    @prepare_values
+    def to_file(self):
+        """Write the scrapped data to a given file
+        """
+        return self.get_team_page()
+
     @staticmethod
     def get_age(date_of_birth, adjusted=False):
+        """Returns the player's current age.
+
+        Parameters
+        ----------
+
+        `adjusted` allows to calculate an age based on the
+        year the tournament was played as opposed to using
+        the current year
+        """
         current_year = datetime.datetime.now().year
         date = datetime.datetime.strptime(date_of_birth, '%d/%m/%Y')
         return current_year - date.year
 
     @staticmethod
     def convert_height(height):
-        pass
+        """Return height written in centimeters to feet.
 
-    def create_request(self, url):
-        return requests.get(url, get_rand_agent())
+        Description
+        -----------
 
-class PlayerPage(Requestor):
-    """Parse a player's profile page. Use this class to add
-    extra information on an existing player profile.
-    """
-    def __init__(self, url):
-        response = self.create_request(url)
-        self.soup = soup = response[1]
-
-        # Construct image URL ...
-        # section#playerDetails > img
-        image_url = self.image_url()
-
-        # ... > ul.line-list > span.role + strong
-        position = soup.find('section', id='playerCareer').find('ul') \
-                        .findChild('li').find('strong').getText()
-        
-        update_values = [image_url, self.clean_text(position)]
-
-        print(update_values)
-
-    def image_url(self, height=1200, width=800):
-        """Takes the existing image url present on the player's
-        page and reconstructs it in order to generate a bigger one.
-
-        Size is `1200 x 800` by default. 
+        193 centimeters becomes 6.3 (6'3")
         """
-        # section#playerDetails > img
-        image = self.soup.find('section', id='playerDetails').find('img')
-        splitted_url = splitquery(image['src'])
+        return round(height / 30.48, 1)
 
-        # Parse number & type in query
-        number = re.search(r'No\=(\d+)', splitted_url[1]).group(1)
-        action_type = re.search(r'type\=(\w+)(?=\&)', splitted_url[1]).group(1)
+# class PlayerPage(Requestor):
+#     """Parse a player's profile page. Use this class to add
+#     extra information on an existing player profile.
+#     """
+#     def __init__(self, url):
+#         response = self.create_request(url)
+#         self.soup = soup = response[1]
+
+#         # Construct image URL ...
+#         # section#playerDetails > img
+#         image_url = self.image_url()
+
+#         # ... > ul.line-list > span.role + strong
+#         position = soup.find('section', id='playerCareer').find('ul') \
+#                         .findChild('li').find('strong').getText()
         
-        # Create new query
-        new_query = {
-            'No': number,
-            'type': action_type,
-            'height': '1200',
-            'width': '800'
-        }
-        params = urlencode(new_query)
-        return splitted_url[0] + '?' + params
+#         update_values = [image_url, self.clean_text(position)]
 
-    def transform_position(self, position):
-        """Transform position from string to number. For instance,
-        `middle blocker` becomes `3`.
-        """
-        positions = {
-            'Middle blocker': 3
-        }
+#         print(update_values)
 
-        try:
-            position_number = positions[position]
-        except KeyError:
-            pass
-        return position_number
+#     def image_url(self, height=1200, width=800):
+#         """Takes the existing image url present on the player's
+#         page and reconstructs it in order to generate a bigger one.
+
+#         Size is `1200 x 800` by default. 
+#         """
+#         # section#playerDetails > img
+#         image = self.soup.find('section', id='playerDetails').find('img')
+#         splitted_url = splitquery(image['src'])
+
+#         # Parse number & type in query
+#         number = re.search(r'No\=(\d+)', splitted_url[1]).group(1)
+#         action_type = re.search(r'type\=(\w+)(?=\&)', splitted_url[1]).group(1)
+        
+#         # Create new query
+#         new_query = {
+#             'No': number,
+#             'type': action_type,
+#             'height': '1200',
+#             'width': '800'
+#         }
+#         params = urlencode(new_query)
+#         return splitted_url[0] + '?' + params
+
+#     def transform_position(self, position):
+#         """Transform position from string to number. For instance,
+#         `middle blocker` becomes `3`.
+#         """
+#         positions = {
+#             'Middle blocker': 3,
+#             'Setter': 1,
+#             'Outside Hitter': 2,
+#             'Middle Blocker': 3,
+#             'Universal': 4,
+#             'Libero': 6
+#         }
+
+#         try:
+#             position_number = positions[position]
+#         except KeyError:
+#             pass
+#         return position_number

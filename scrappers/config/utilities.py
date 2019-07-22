@@ -6,6 +6,7 @@ import re
 import secrets
 from collections import namedtuple
 from urllib import parse
+from requests import Session, Request, Response
 
 BASE_PATH = os.path.dirname(os.path.abspath(__file__))
 
@@ -26,21 +27,18 @@ OUTPUT_DIR = 'WTA_Data'
 #     return opener
 
 def writer(values, filename='', extension='txt'):
-    """A utility that is used to output data to a file
+    """A utility used to output data to a file
     """
-    def values_iterator():
-        for value in values:
-            return value + '\n'
-
     filename = filename + '.%s' % extension
-    with open(filename, 'w') as f:
+    with open(filename, 'w', newline='') as f:
         if extension == 'txt':
             for value in values:
                 f.writelines(value)
                 f.writelines('\n')
         elif extension == 'csv':
             csv_file = csv.writer(f)
-            csv_file.writerow(values_iterator())
+            for value in values:
+                csv_file.writerow(value)
 
 def guess_celebrity(url, pattern):
     """Get the celebrity's name from the url,
@@ -62,7 +60,6 @@ def guess_celebrity(url, pattern):
 
     return celebrity(normal, dash)
 
-
 def prepare_values(func):
     """A decorator for a class function that prepares 
     a set of values for writting in a CSV, TXT or JSON file
@@ -75,7 +72,7 @@ def prepare_values(func):
             def save(self):
                 return values
     """
-    def prepare(self, celebrity=None):
+    def prepare(self, celebrity=None, *headers):
         current_date = datetime.datetime.now()
         # Get values
         values = func(self)
@@ -83,6 +80,9 @@ def prepare_values(func):
         values_wrapper = [
             [f'{current_date}', f'{celebrity}']
         ]
+        # values_wrapper = [
+        #     [header for header in headers]
+        # ]
         # [[date, celibrity name], values]
         values_wrapper.append(values)
 
@@ -142,7 +142,6 @@ def new_filename(name):
     token = secrets.token_hex(3)
     return f'{name.lower()}_{current_date.year}_{current_date.month}_{token}.json'
 
-
 # class EnrichPlayer:
 #     """
 #     """
@@ -156,22 +155,48 @@ def new_filename(name):
 #         response = search_images(player_name, stop=5, pause=2, extra_params={'biw':1024,'bih':768})
 #         print(list(response))
 
-def number_to_position(func):
+def position_to_number(func):
+    """Decorator that transforms volleyball positions
+    into numerical positions.
+
+    Description
+    -----------
+
+    The usal positions on a volleyball court are:
+
+        4    3    2
+        -----------
+        5    6    1
+
+        Setter -> 1
+        Outside Hitter -> 2
+        Middle Blocker -> 3
+        Universal -> 4
+        Libero -> 6
+    """
     def convert(self, position):
         if not isinstance(position, int):
             raise TypeError
         
-        positions = ['S', 'OH', 'MB']
+        positions = ['Setter', 'Outside Hitter', 'Middle Blocker']
 
-        s=()
-
-        if position == 1:
-            s[0] == position
-            s[1] == positions[0]
-        return s
+        if position == 'Universal':
+            return 4
+        
+        if position in positions:
+            return positions.index(position) + 1
+                
+        return None
     return convert
 
-class A:
-    @number_to_position
-    def position(self):
-        pass
+def create_request(url):
+    """A reusable method to create requests
+    """
+    session = Session()
+    headers = {
+        'User-Agent': ''
+    }
+    request = Request('GET', url, headers)
+    prepared_request = request.prepare()
+    response = session.send(prepared_request)
+    return '[%s]' % response.status_code

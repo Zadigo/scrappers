@@ -14,5 +14,5 @@ from scrappers.scrappers.tennis.matchstats.parser import MatchStats
 from scrappers.scrappers.tennis.wta.models import (Player, Tournament,
                                                    TournamentMatch)
 from scrappers.scrappers.tennis.wta.parser import ParsePage
-from scrappers.scrappers.volleyball.parser import (PlayerPage, TeamPage,
-                                                   TeamsPage)
+from scrappers.scrappers.volleyball.parser import (ParticipatingTeamsPage,
+                                                   TeamPage)
