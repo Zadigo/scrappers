@@ -30,6 +30,8 @@ To parse a page without outputing it to a file, simply just call the .team_page 
 ```
 team_page = IndividualTeamPage()
 team_page.team_page()
+
+    [(url, country), (...)]
 ```
 
 There are various other ways to output the data outside of the terminal: .to_csv, .to_json and .to_txt.
