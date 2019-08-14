@@ -128,6 +128,8 @@ class ParticipatingTeamsPage(Requestor, WriteCSV):
         # Create request
         super().__init__(url)
 
+    @property
+    def get_teams(self):
         soup = self.soup
         # response = self.create_request(url)
         # soup = response[1]
@@ -141,7 +143,8 @@ class ParticipatingTeamsPage(Requestor, WriteCSV):
         # TODO: If we send relative path to requests,
         # there could be an issue
         parsed_links = self.parse_links(unparsed_links)
-        self.teams = parsed_links
+        # self.teams = parsed_links
+        return parsed_links
 
     def __repr__(self):
         return self.__unicode__()
@@ -188,16 +191,34 @@ class ParticipatingTeamsPage(Requestor, WriteCSV):
 class TeamPage(ParticipatingTeamsPage):
     """Extract the data related to players on each team's page.
 
+    Description
+    -----------
+
+    You can use this class directly as an item over which can be iterated
+    for example to print to a file. You can also use its dedicated functions
+    in order to print to a file of type CSV or  JSON.
+
     Parameters
     ----------
 
     `url` is the page referencing all participating teams to
     be parsed afterwards
     """
+    def _engine(self, urls=None):
+        iterative_urls = []
+        if not isinstance(urls, (tuple, list)):
+            iterative_urls.append(urls)
+
+        iterative_urls = iterative_urls + urls
+
+        for url in iterative_urls:
+            super().__init__(url)
 
     def get_team_page(self):
-        """Parse a specific volleyball team's page. By doing so,
-        we are trying to gather all the attributes of a given player.
+        """Parse a specific volleyball team's page starting from a page
+        referencing all the participating teams of the competition.
+        By doing so, we are trying to gather all the attributes 
+        of a given player.
 
         Result
         ------
@@ -205,14 +226,17 @@ class TeamPage(ParticipatingTeamsPage):
            [
                 Player(name=Bieke Kindt, ...),
                 ...
-           ] 
+           ]
+
+           Each player is a namedtuple containing the attributes of the
+           given player.
         """
         print('-'*15)
 
         responses = []
 
         t = 0
-        for team in self.teams:
+        for team in self.get_teams:
             team_roster_url = urljoin(team[0], 'team_roster')
             current_date = datetime.datetime.now()
             print('GET HTTP/1.1', str(current_date), team_roster_url)
@@ -274,6 +298,19 @@ class TeamPage(ParticipatingTeamsPage):
         
         # TODO: Delete
         # self._write(players)
+
+    def get_unique_team_page(self):
+        """This definition can be used in order to parse a team's
+        page using that that team's specific URL.
+
+        Case usage
+        ----------
+
+        Suppose you want to parse only a specific team's page without
+        having to go through each other team. Then this definition is
+        specific for that.
+        """
+        pass
 
     @prepare_values
     def to_file(self):

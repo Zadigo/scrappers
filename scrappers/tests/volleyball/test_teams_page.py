@@ -1,13 +1,13 @@
 import re
 import unittest
 
-from scrappers.scrappers.volleyball.parser import TeamsPage
+from scrappers.scrappers.volleyball.volleyball import ParticipatingTeamsPage	
 
 
 class TestTeamsPage(unittest.TestCase):
     def setUp(self):
-        teams_page = TeamsPage(url='http://u20.women.2017.volleyball.fivb.com/en/teams')
-        self.teams = teams_page.teams
+        teams_page = ParticipatingTeamsPage()
+        self.teams = teams_page.get_teams('http://u20.women.2017.volleyball.fivb.com/en/teams')
 
     def test_is_array(self):
         self.assertIsInstance(self.teams, list, msg='Is not an array')
@@ -18,8 +18,8 @@ class TestTeamsPage(unittest.TestCase):
     def test_tuple_is_two(self):
         self.assertEqual(len(self.teams[0]), 2)
 
-    # def test_tuple_has_link(self):
-    #     re.match(r'http\:\/\/(\w+\.)+')
+    def test_tuple_has_valid_link(self):
+        self.assertRegex(self.teams[0][0], r'https?\:\/\/(?:\w+\.)+com(?:\/\w+\-?\w+)+\/?')
 
 if __name__ == "__main__":
     unittest.main()

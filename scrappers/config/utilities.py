@@ -7,6 +7,7 @@ import secrets
 from collections import namedtuple
 from urllib import parse
 from requests import Session, Request, Response
+from scrappers.scrappers.config.config import TransferManager
 
 BASE_PATH = os.path.dirname(os.path.abspath(__file__))
 
@@ -25,6 +26,18 @@ OUTPUT_DIR = 'WTA_Data'
 #         func(values, f, indent=4)
 #         return True
 #     return opener
+
+def image_cache(func):
+    """A simple cache decorator that saves the 
+    images locally in order to prevent having
+    get them back while running the application
+    """
+    def _cache(*args):
+        cache = []
+        for item in func():
+            cache.append(item)
+        return cache
+    return _cache()
 
 def writer(values, filename='', extension='txt'):
     """A utility used to output data to a file
@@ -199,4 +212,69 @@ def create_request(url):
     request = Request('GET', url, headers)
     prepared_request = request.prepare()
     response = session.send(prepared_request)
-    return '[%s]' % response.status_code
+    # return '[%s]' % response.status_code
+    return response
+
+def prepare_for_s3(func):
+    def read_and_transfer(self, manager=TransferManager, **kwargs):
+        """Use this function to read an image from and url in order
+        to upload it to an Amazon S3 bucket.
+
+        Parameters
+        ----------
+
+        The `manager` parameter accepts a class that structures a logic
+        that can be used to upload an image to a bucket of your choice.
+
+        The default bucket is the AWS S3.
+
+        The class should be structured such as an `upload` function could
+        be used to upload the content:
+
+            class YourClass:
+                def __init__(self):
+                    pass
+
+                def upload(self):
+                    pass
+
+        The `kwargs` are any additional pieces of information
+        (access key, secret key...) that can be used to successfully connect
+        to your bucket or cloud. Note that generally, these services often require
+        an access key and/or secret key and are checked by default.
+        """
+
+        @image_cache
+        def images():
+            return func(self)
+
+        if not callable(manager) and not isinstance(manager, type):
+            pass
+
+        Klass_dict = manager.__dict__
+
+        print(Klass_dict)
+
+        if 'upload' in Klass_dict:
+            try:
+                access_key = kwargs['access_key']
+                secret_key = kwargs['secret_key']
+                region = kwargs['region']
+                bucket = kwargs['bucket']
+            except KeyError:
+                pass
+            else:
+                # Create and instance of the class
+                Klass = manager(access_key, secret_key, region, bucket)
+        else:
+            pass            
+
+        for url in images:
+            print('[IMAGE]: uploading - %s' % url)
+            response = create_request(url)
+            image_content = response.iter_content(chunk_size=1024)
+
+            Klass.upload(image_content, bucket)
+        
+        return True
+    return read_and_transfer

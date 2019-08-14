@@ -22,7 +22,11 @@ class Requestor:
     `headers` to include in the request. `User-Agent` is generated
     by default.
     """
-    def __init__(self, url, **headers):
+    def create_request(self, url, **headers):
+        """Creates a request and returns the soup version
+        of the response. The returned object is the HTML
+        parse of the page.
+        """
         base_headers = {
             'User-Agent': user_agent.get_rand_agent()
         }
@@ -43,15 +47,13 @@ class Requestor:
         except requests.HTTPError:
             pass
         else:
-            # if response.status_code == 200:
             self.response = response
-            self.soup = self.create_soup(response)
+            return self.create_soup(response)
 
     def __repr__(self):
-        return '%s(%s, %s)' % (
+        return '%s(%s)' % (
             self.__class__.__name__,
-            self.response,
-            'soup'
+            self.response
         )
 
     @staticmethod
