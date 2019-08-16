@@ -1,8 +1,9 @@
 import re
 
 from scrappers.scrappers.config.http.engine import Requestor
-from scrappers.scrappers.config.utilities import writer
+from scrappers.scrappers.config.utilities import writer, create_request
 from scrappers.scrappers.config.utilities import prepare_values, prepare_for_s3
+from scrappers.scrappers.config.decorators import write_image
 
 
 class SawFirst(Requestor):
@@ -49,19 +50,21 @@ class SawFirst(Requestor):
 
         self.urls = urls
         
-    # @prepare_values
-    # def to_file(self):
-    #     if self.urls:
-    #         return self.urls
-    #     return []
+    @prepare_values
+    def urls_to_file(self):
+        if self.urls:
+            return self.urls
+        return []
 
     @prepare_for_s3
     def to_s3_folder(self):
         return self.urls
     
-    # def to_local(self):
-    #     pass
+    @write_image
+    def to_local(self):
+        for url in self.urls:
+            return create_request(url, data=True)
 
 url = 'https://www.sawfirst.com/adriana-lima-booty-in-bikini-on-the-beach-in-miami-2019-08-14.html/supermodel-adriana-lima-wears-a-tiny-string-bikini-as-she-hits-the-beach-in-miami-2'
 s = SawFirst(url)
-s.to_s3_folder(access_key='s', secret_key='s', region='s', bucket='s')
+s.to_local()

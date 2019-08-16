@@ -7,7 +7,9 @@ import secrets
 from collections import namedtuple
 from urllib import parse
 from requests import Session, Request, Response
-from scrappers.scrappers.config.config import TransferManager
+from scrappers.scrappers.config.http._aws import TransferManager
+from mimetypes import guess_type
+from scrappers.scrappers.config.http import user_agent
 
 BASE_PATH = os.path.dirname(os.path.abspath(__file__))
 
@@ -202,17 +204,32 @@ def position_to_number(func):
         return None
     return convert
 
-def create_request(url):
+def create_request(url, data=False):
     """A reusable method to create requests
+
+    Description
+    -----------
+
+    This definition was created in order to customize the
+    headers and various different elements of the requests
+    method
     """
     session = Session()
+
     headers = {
-        'User-Agent': ''
+        'User-Agent': user_agent.get_rand_agent()
     }
+
+    print('[REQUEST]: GET 1/1: %s' % url)
+
     request = Request('GET', url, headers)
     prepared_request = request.prepare()
     response = session.send(prepared_request)
     # return '[%s]' % response.status_code
+
+    if data:
+        return response.content
+        
     return response
 
 def prepare_for_s3(func):
@@ -272,9 +289,16 @@ def prepare_for_s3(func):
         for url in images:
             print('[IMAGE]: uploading - %s' % url)
             response = create_request(url)
-            image_content = response.iter_content(chunk_size=1024)
+            # image_content = response.iter_content(chunk_size=1024)
 
-            Klass.upload(image_content, bucket)
+            try:
+                name = re.match(r'(?:\/\d+\/\d+\/)((?:\w+\-?\w+\-?)+\.\w+)', url)
+            except:
+                pass
+            else:
+                contenttype = guess_type(name)
+
+            Klass.upload(response.content, '/', contenttype[0])
         
         return True
     return read_and_transfer
