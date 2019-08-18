@@ -142,7 +142,7 @@ class TransferManager(AWS):
     def __init__(self, bucket_name, access_key, secret_key, region_name):
         session = super().session(access_key, secret_key, region_name=region_name)
         self.client = session.client('s3')
-
+        
         self.bucket_name = bucket_name
         self.region_name = region_name
 
@@ -162,17 +162,13 @@ class TransferManager(AWS):
 
         try:
             response = self.client.put_object(**base_params)
-
         except boto3.exceptions.S3TransferFailedError:
             print('[%s]: Upload failed. %s was not uploaded.' 
                     % (self.__class__.__name__, subfolder_path))
-
         else:
             return response
     
     def upload_from_local(self, file_to_upload, model=None, request=None):
-        # We have to test weither the file comes from
-        # a path or weither it comes from a form e.g. django
         is_local_file = os.path.isfile(file_to_upload)
         if is_local_file:
             item_name = os.path.basename(file_to_upload)
@@ -186,10 +182,10 @@ class TransferManager(AWS):
                 response = self.upload(data, path['object_path'], contenttype[0])
             return response
 
-bucket_name = 'jobswebsite'
-access_key = 'AKIAJQZHLNUQVX7Q5QFA'
-secret_key = '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'
-region_name = 'eu-west-3'
+# bucket_name = 'jobswebsite'
+# access_key = 'AKIAJQZHLNUQVX7Q5QFA'
+# secret_key = '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'
+# region_name = 'eu-west-3'
 
 # s=QueryManager(bucket_name, access_key, secret_key, region_name)
 # s.get_file_url('test', '3e7e208c6a3b27df0ca556e0f5d1207748e3f277/sophie.jpg')

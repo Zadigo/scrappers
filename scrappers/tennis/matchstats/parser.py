@@ -6,7 +6,7 @@ import time
 import requests
 from bs4 import BeautifulSoup
 
-from scrappers.engine.user_agent import get_rand_agent
+from scrappers.scrappers.config.http.user_agent import get_rand_agent
 
 
 class MatchStats:

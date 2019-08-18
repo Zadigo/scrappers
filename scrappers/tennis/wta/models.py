@@ -126,14 +126,14 @@ class TournamentMatch(Tournament):
     ---------
 
         {
-            'match_round': match_round,
-            'result': result,
-            'score': score,
-            'sets_played': two,
-            'first_set': W,
-            'rank': 1,
-            'seed': 1,
-            'opponent_details': []
+            match_round: match_round,
+            result: result,
+            score: score,
+            sets_played: two,
+            first_set: W,
+            rank: 1,
+            seed: 1,
+            opponent_details: []
         }
 
     `opponent_details` is a dict

@@ -1,9 +1,10 @@
 import re
 
-from scrappers.scrappers.config.http.engine import Requestor
-from scrappers.scrappers.config.utilities import writer, create_request
-from scrappers.scrappers.config.utilities import prepare_values, prepare_for_s3
 from scrappers.scrappers.config.decorators import write_image
+from scrappers.scrappers.config.http.engine import Requestor
+from scrappers.scrappers.config.utilities import (create_request,
+                                                  prepare_for_s3,
+                                                  prepare_values, writer)
 
 
 class SawFirst(Requestor):
@@ -61,10 +62,6 @@ class SawFirst(Requestor):
         return self.urls
     
     @write_image
-    def to_local(self):
+    def to_local(self, celibrity=None):
         for url in self.urls:
             return create_request(url, data=True)
-
-url = 'https://www.sawfirst.com/adriana-lima-booty-in-bikini-on-the-beach-in-miami-2019-08-14.html/supermodel-adriana-lima-wears-a-tiny-string-bikini-as-she-hits-the-beach-in-miami-2'
-s = SawFirst(url)
-s.to_local()
