@@ -25,18 +25,6 @@ DATA_DIRS = {
     'player_csv': os.path.join(BASE_DIR, 'data')
 }
 
-
-
-# TODO: Erase countries -- unnecessary at this stage
-# COUNTRIES = ['arg-argentina', 'aze-azerbaijan', 'bra-brazil',
-#             'bul-bulgaria', 'cmr-cameroon', 'can-canada',
-#             'chn-china', 'cub-cuba', 'dom-dominican%20republic',
-#             'ger-germany', 'ita-italy', 'jpn-japan', 'kaz-kazakhstan',
-#             'ken-kenya', 'kor-korea', 'mex-mexico',
-#             'ned-netherlands', 'pur-puerto%20rico', 'rus-russia',
-#             'srb-serbia', 'tha-thailand', 'tto-trinidad%20%20tobago',
-#             'tur-turkey', 'usa-usa']
-
 # ENHANCEMENT: Subclass a list instead?
 class Player(namedtuple('Player', ['name', 'link', 'date_of_birth',
                          'age', 'height', 'weight', 'spike', 'block'])):
@@ -80,9 +68,15 @@ class WriteCSV:
 
 class Requestor:
     def create_request(self, url, user_agent=get_rand_agent(), **kwargs):
-        """Create a request and return a list
-        containing the response and it's BeautifulSoup
-        object for further actions.
+        """Create a request and return a list containing the response 
+        and it's BeautifulSoup object for further actions.
+
+        Description
+        -----------
+
+            [
+                response, BeautifulSoup()
+            ]
         """
         # Get URL's different parts
         # and construct the base url
@@ -100,19 +94,9 @@ class Requestor:
 
     @staticmethod
     def create_soup(response):
+        """Create an return a BeautifulSoup object
+        """
         return BeautifulSoup(response.text, 'html.parser')
-
-    # TODO: Delete this method
-    # def get_countries(self, path):
-    #     """Return the countries with their paths
-    #     present on a team's page.
-    #     '/en/vnl/women/teams/dom-dominican%20republic'
-    #     """
-    #     relative_link = unquote(path)
-    #     country = re.search(r'\w+\-(\w+\s?\w+)', relative_link)
-    #     if country:
-    #         return (country.group(1).capitalize(), path)
-    #     return None
 
     def parse_links(self, links):
         parsed_links = []
@@ -121,10 +105,13 @@ class Requestor:
         return parsed_links
 
     def clean_text(self, text):
+        """Return a text stripped from the trailing and
+        starting spaces
+        """
         return text.strip()
 
 class TeamsPage(Requestor, WriteCSV):
-    """This analyzes the page referencing the teams and parses the
+    """This analyzes the page referencing all the teams and parses the
     different countries present on that page with their urls.
     """
     def __init__(self, url=None, file_name=None):
@@ -152,8 +139,19 @@ class TeamsPage(Requestor, WriteCSV):
         """Parse the links on the teams page and returns a 
         `list` such as [(link, country), ...].
 
-        If `relative` is true, the definition returns the path
-        of the link instead of the full url.
+        Description
+        -----------
+
+            [
+                (url, country),
+                (...)
+            ]
+        
+        Parameters
+        ----------
+
+            If *relative* is true, the definition returns the path
+            of the link instead of the full url
         """
         parsed_links = []
 
@@ -181,8 +179,7 @@ class TeamsPage(Requestor, WriteCSV):
 class TeamPage(TeamsPage):
     def get_team_page(self):
         """Parse a specific volleyball team's page. By doing so,
-        we are trying to gather all the statistics of given players
-        in a volleyball team.
+        we are trying to gather all the statistics of the players.
         """
         print('-'*15)
         responses = []
@@ -299,8 +296,12 @@ class PlayerPage(Requestor):
         return splitted_url[0] + '?' + params
 
     def transform_position(self, position):
-        """Transform position from string to number. For instance,
-        `middle blocker` becomes `3`.
+        """Transform position from string to number.
+        
+        Description
+        -----------
+
+            For instance, *middle blocker* becomes *3*.
         """
         positions = {
             'Middle blocker': 3
@@ -311,38 +312,3 @@ class PlayerPage(Requestor):
         except KeyError:
             pass
         return position_number
-
-class EnrichPlayer:
-    def __init__(self, player_name):
-        try:
-            from googlesearch import search, search_images
-        except ImportError:
-            raise
-
-        # response = search(player_name, stop=5, pause=2)
-        response = search_images(player_name, stop=5, pause=2, extra_params={'biw':1024,'bih':768})
-        print(list(response))
-
-# if __name__ == "__main__":
-#     args = argparse.ArgumentParser(description='FiVB page parser')
-#     args.add_argument('-u', '--url', help='URL to query')
-#     args.add_argument('-a', '--adjust-age', type=int, help='Adjust age to the year the tournament was played')
-#     args.add_argument('-o', '--output_filename', help='Name to associate with the CSV file')
-#     parsed_args = args.parse_args()
-
-#     # if parsed_args.output_filename:
-#     # data = TeamPage(url=parsed_args.url)
-#     # data.get_team_page()
-
-#     data = TeamPage(url=parsed_args.url)
-#     data.get_team_page()
-
-
-#     # ENHANCEMENT: Create threading
-#     # first_thread = threading.Thread(target=Requestor.create_request, args=(Requestor, 'https://www.volleyball.world/en/vnl/women/teams'))
-#     # second_thread = threading.Thread(target=TeamPage.__init__, args=(TeamPage,))
-#     # first_thread.start()
-#     # second_thread.start()
-
-#     # PlayerPage('https://www.volleyball.world/en/vnl/women/teams/ita-italy/players/cristina-chirichella?id=71297')
-EnrichPlayer('Bieke Kindt')
