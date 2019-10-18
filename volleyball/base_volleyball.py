@@ -15,6 +15,8 @@ from bs4 import BeautifulSoup
 
 from volleyball.user_agent import get_rand_agent
 
+
+
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 DATA_DIR = os.path.join(BASE_DIR, 'data')
@@ -22,6 +24,8 @@ DATA_DIR = os.path.join(BASE_DIR, 'data')
 DATA_DIRS = {
     'player_csv': os.path.join(BASE_DIR, 'data')
 }
+
+
 
 # TODO: Erase countries -- unnecessary at this stage
 # COUNTRIES = ['arg-argentina', 'aze-azerbaijan', 'bra-brazil',
