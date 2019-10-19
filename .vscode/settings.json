@@ -4,7 +4,7 @@
         "-s",
         "./scrappers/tests",
         "-p",
-        "test_*.py"
+        "/tests/test_*.py"
     ],
     "python.testing.pytestEnabled": false,
     "python.testing.nosetestsEnabled": false,
