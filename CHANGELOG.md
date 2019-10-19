@@ -1,3 +1,11 @@
+### Version 1.2
+* Improved overall testing classes
+* Refactored classes and modules for better unification
+* New __engine.config()__ module
+* New __engine.requestor()__ module
+* Created __setup.py__
+* Folder restucturing
+
 ### Version 1.1
 
 * Refactoring of the different modules. Added _wta.tennis.models_.

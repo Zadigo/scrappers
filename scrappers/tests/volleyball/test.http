@@ -1,0 +1,15 @@
+# GET https://www.volleyball.world/en/vnl/women/teams HTTP/1.
+# Content-Type: application/json
+
+# GET https://www.volleyball.world/en/vnl/women/teams HTTP/1.1
+# Content-Type:  application/json
+
+# {
+#     "test": "test"
+# }
+
+# GET https://www.volleyball.world/en/vnl/women/teams/dom-dominican%20republic/team_roster HTTP/1.1
+
+# GET https://www.volleyball.world/en/vnl/women/teams/ita-italy/players/cris
+
+OPTIONS http://www.sawfirst.com/rachel-mccord-booty-in-photohoot-in-los-angeles-2019-07-04.html.com
