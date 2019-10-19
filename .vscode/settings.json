@@ -2,7 +2,7 @@
     "python.testing.unittestArgs": [
         "-v",
         "-s",
-        ".",
+        "./scrappers/tests",
         "-p",
         "/tests/test_*.py"
     ],
@@ -10,4 +10,5 @@
     "python.testing.nosetestsEnabled": false,
     "python.testing.unittestEnabled": true,
     "restructuredtext.confPath": "",
+    // "restructuredtext.confPath": "",
 }

@@ -1,5 +1,5 @@
 """These are series of helpers created to optimize the design
-of the components for the JSON file
+of the components for the JSON file.
 """
 
 import re
@@ -7,7 +7,7 @@ import re
 class Tournament(dict):
     """Object representing the details of a WTA tournament
     """
-    def __init__(self, tour_id, tournament, date, level, surface, rank, seed):
+    def __init__(self, tour_id, tournament, date, level, surface, rank, seed, **kwargs):
         self.update(
             {
                 'id': tour_id,
@@ -23,11 +23,16 @@ class Tournament(dict):
     
     @staticmethod
     def normalize(value):
-        """ Normalizes `eugenie bouchard\\s` to `Eugenie Bouchard`
+        """ Normalizes names `eugenie bouchard\\s` to `Eugenie Bouchard`
         """
         if not value:
             return None
-        return value.strip().lower().capitalize()
+        # DELETE: Old way of normalizing values
+        # return value.strip().lower().capitalize()
+        names = value.split(' ')
+        for name in names:
+            names[names.index(name)] = name.lower().capitalize()
+        return ' '.join(names).strip()
 
     @staticmethod
     def normalize_date(d):
@@ -67,7 +72,7 @@ class Tournament(dict):
             # it would not be to split the unexpected format
             tournament, country = tour_name.split(',', 1)
         except ValueError:
-            print('[INFO:] The format is unexpected. Searching for %s but got %s'
+            print("[INFO:] The tournament name's format is unexpected. Searching for %s but got %s"
                     % ('test', tour_name))
             return None
 
@@ -107,28 +112,28 @@ class TournamentMatch(Tournament):
     Parameters
     ----------
 
-        match_round: test
+        match_round: Round 128, Round 64...
 
-        result: test
+        result: W/L
 
-        score: test
+        score: 6-1 6-1...
 
-        rank: test
+        rank: 1, 2...
 
-        seed: test
+        seed: 1, 2...
 
     Structure
     ---------
 
         {
-            'match_round': match_round,
-            'result': result,
-            'score': score,
-            'sets_played': two,
-            'first_set': W,
-            'rank': 1,
-            'seed': 1,
-            'opponent_details': []
+            match_round: match_round,
+            result: result,
+            score: score,
+            sets_played: two,
+            first_set: W,
+            rank: 1,
+            seed: 1,
+            opponent_details: []
         }
 
     `opponent_details` is a dict
@@ -177,7 +182,7 @@ class TournamentMatch(Tournament):
                 # 6-7(6) 6-4
                 is_match = re.search(r'^(\d+\-(?:6|7))', score)
                 if is_match:
-                    return 'win'
+                    return 'won'
         elif result == 'W':
             is_match = re.search(r'^((?:6|7)\-?\d+)', score)
             if is_match:
@@ -220,10 +225,23 @@ class TournamentMatch(Tournament):
 class Player(TournamentMatch):
     """Object representing a tennis player:
 
+    Parameters
+    ----------
+
+        name: Eugénie Bouchard, 
+
+        country: CAN, 
+
+        url_path: /url/to/eugenie
+
+
+    Structure
+    ---------
+
         {
-            'name': 'Eugénie Bouchard', 
-            'country': 'CAN', 
-            'url_path': '/url/to/eugenie'
+            name: Eugénie Bouchard, 
+            country: CAN, 
+            url_path: /url/to/eugenie
         }
     """
     def __init__(self, name, country, url_path):
