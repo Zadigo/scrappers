@@ -91,10 +91,10 @@ def parse_university_table(headers=[]):
 
 # _write()
 
-if __name__ == "__main__":
-    args = argparse.ArgumentParser(description='Parse a Wikipedia table content')
-    args.add_argument('--filename', help='Override the automated filename')
-    args.add_argument('--headers', help='Indicate file headers', type=list)
-    parsed_args = args.parse_args()
+# if __name__ == "__main__":
+#     args = argparse.ArgumentParser(description='Parse a Wikipedia table content')
+#     args.add_argument('--filename', help='Override the automated filename')
+#     args.add_argument('--headers', help='Indicate file headers', type=list)
+#     parsed_args = args.parse_args()
 
-    parse_university_table()
+#     parse_university_table()
