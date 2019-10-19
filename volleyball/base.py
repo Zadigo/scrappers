@@ -113,6 +113,19 @@ class Requestor:
 class TeamsPage(Requestor, WriteCSV):
     """This analyzes the page referencing all the teams and parses the
     different countries present on that page with their urls.
+
+    Description
+    -----------
+
+        If you wish to get data and statistics for all players, it is better to
+        use the TeamPage() class as opposed to this one.
+
+        This class will only return teams and the URL to their page:
+
+            [
+                (url, country),
+                (...)
+            ]
     """
     def __init__(self, url=None, file_name=None):
         if file_name:
@@ -177,7 +190,7 @@ class TeamsPage(Requestor, WriteCSV):
         return self.teams
 
 class TeamPage(TeamsPage):
-    def get_team_page(self):
+    def parse_page(self):
         """Parse a specific volleyball team's page. By doing so,
         we are trying to gather all the statistics of the players.
         """
@@ -312,3 +325,6 @@ class PlayerPage(Requestor):
         except KeyError:
             pass
         return position_number
+
+team = TeamPage(url='http://u20.women.2019.volleyball.fivb.com/en/teams/rus-russia/players')
+print(team.parse_page())
