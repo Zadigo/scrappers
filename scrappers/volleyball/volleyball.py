@@ -8,6 +8,8 @@ Description
 The ParticipatingTeamsPage class allows you to parse the whole teams
 that would be present on the main competition page. It references the
 urls for the individual team's page of that specific section.
+
+author: pendenquejohn@gmail.com
 """
 
 import argparse
@@ -398,4 +400,3 @@ class PlayerPage(Requestor, Mixin):
     #     except KeyError:
     #         pass
     #     return position_number
-

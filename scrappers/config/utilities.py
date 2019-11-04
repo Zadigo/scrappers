@@ -234,7 +234,7 @@ def create_request(url, data=False):
 
 def prepare_for_s3(func):
     def read_and_transfer(self, manager=TransferManager, **kwargs):
-        """Use this function to read an image from and url in order
+        """Use this decorator function to read an image from an url in order
         to upload it to an Amazon S3 bucket.
 
         Parameters

@@ -1,12 +1,12 @@
-from bs4 import BeautifulSoup
-import re
+import argparse
 import csv
-import os
 import datetime
+import os
+import re
 import secrets
 from urllib.parse import unquote
-import argparse
 
+from bs4 import BeautifulSoup
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 

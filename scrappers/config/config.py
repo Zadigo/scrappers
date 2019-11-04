@@ -1,6 +1,7 @@
 import os
 
-from scrappers.engine.aws import AWS, TransferManager
+from scrappers.scrappers.config.config import TransferManager, AWS
+
 
 environment = os.environ
 

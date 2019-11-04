@@ -1,6 +1,8 @@
 import unittest
 from collections import namedtuple
+
 from scrappers.scrappers.volleyball.volleyball import IndivualTeamPage
+
 
 class TestTeamPage(unittest.TestCase):
     def setUp(self):
