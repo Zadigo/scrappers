@@ -53,4 +53,5 @@ class Connector:
         self.cursor.close()
 
 
-Connector().create_table(table_name='players', headers=['name TEXT', 'surname TEXT'])
+# Connector().create_table(table_name='players', headers=['name TEXT', 'surname TEXT'])
+# Connector().create_table(table_name='players', headers=['name TEXT', 'surname TEXT'])

@@ -8,7 +8,7 @@ from urllib import parse
 import requests
 from bs4 import BeautifulSoup
 
-from scrappers.engine.utilities import prepare_values
+from scrappers.scrappers.config import decorators
 
 BASE_PATH = os.path.dirname(os.path.abspath(__file__))
 
