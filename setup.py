@@ -1,22 +1,22 @@
 from setuptools import setup
 import os
 
+BASE_PATH = os.path.abspath(__file__)
+
 def install_requires():
-    base_path = os.path.abspath(__file__)
-    with open(os.path.join(base_path, 'requirements.txt'), 'r', encoding='utf-8') as f:
+    with open(os.path.join(BASE_PATH, 'requirements.txt'), 'r', encoding='utf-8') as f:
         f.readlines()
 
 def local_file():
-    base_path = os.path.abspath(__file__)
-    with open(os.path.join(base_path, 'README.rst'), 'r', encoding='utf-8') as f:
+    with open(os.path.join(BASE_PATH, 'README.rst'), 'r', encoding='utf-8') as f:
         f.read()
 
 setup(
-    name = "scrappers",
-    version = '1.2',
+    name = 'scrappers',
+    version = '1.1',
     author = "John Pendenque",
     author_email = "pendenquejohn@gmail.com",
-    description = "Scrappers API for Python",
+    description = "Various scrappers API for Python",
     license = "MIT",
     keywords = "scrappers scrapping",
     url = "https://github.com/scrappers/Wikipedia",
@@ -24,7 +24,7 @@ setup(
     packages = ['scrappers'],
     long_description = local_file(),
     classifiers = [
-        'Development Status :: 1.2',
+        'Development Status :: 1.1',
         'Topic :: Software Development :: Libraries',
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python',
