@@ -7,7 +7,10 @@ from timeit import default_timer as timer
 
 from bs4 import BeautifulSoup
 from requests import Request, Session
+from urllib.parse import urlparse
 
+from scrappers.apps.config.messages import Info, Error
+from scrappers.apps.config.http import user_agent
 from scrappers.apps.config.http.utilities import UtilitiesMixin
 
 
@@ -38,22 +41,22 @@ class WriteFile:
         with open(filename, 'w', encoding='utf-8') as f:
             json.dump(data, f, indent=4)
 
-    def to_database(self, table_name, headers:list, db_name=None, **kwargs):
-        create = f'CREATE {table_name} WITH {",".join(headers)}'
-        insert = f'INSERT INTO {table_name} VALUES({",".join([])})'
+    # def to_database(self, table_name, headers:list, db_name=None, **kwargs):
+    #     create = f'CREATE {table_name} WITH {",".join(headers)}'
+    #     insert = f'INSERT INTO {table_name} VALUES({",".join([])})'
 
-        try:
-            database = sqlite3.connect(db_name, timeout=4)
-        except sqlite3.DatabaseError:
-            return False
+    #     try:
+    #         database = sqlite3.connect(db_name, timeout=4)
+    #     except sqlite3.DatabaseError:
+    #         return False
 
-        with database as db:
-            cursor = db.cursor()
-            # If the table does not exist, then we need
-            # to create it in the database
-            cursor.execute(create)
-            cursor.execute(insert)
-            db.commit()
+    #     with database as db:
+    #         cursor = db.cursor()
+    #         # If the table does not exist, then we need
+    #         # to create it in the database
+    #         cursor.execute(create)
+    #         cursor.execute(insert)
+    #         db.commit()
 
     def image(self, filename=None):
         pass
@@ -78,6 +81,13 @@ class RequestsManager(UtilitiesMixin):
         with cls.session as new_session:
             for url in urls:
                 start = timer()
+
+                # *urls is a tuple of lists e.g. ([url]).
+                # In order to get the url, we need to get
+                # the first index of the list
+                if isinstance(url, (tuple, list)):
+                    url = url[0]
+
                 response = new_session.send(cls.prepare(cls, url, **kwargs))
                 end = timer()
 
@@ -86,20 +96,28 @@ class RequestsManager(UtilitiesMixin):
                     return response
                 else:
                     elapsed_time = end - start
-                    print(Info("Request successful for %s in %s" % (url, elapsed_time)))
+                    print(Info("Request successful for %s in %ss" % (url, round(elapsed_time, 2))))
                     return response.text
 
-    def prepare(self, url, **kwargs):
+    def prepare(self, url, **headers):
         """This definition prepares a request to send to the web.
         This definition was structured so that the prepared request
         can be modified until the last moment.
         """
-        headers = {
+        base_headers = {
             'User-Agent': user_agent.get_rand_agent()
         }
+        if headers:
+            base_headers = {**base_headers, **headers}
+
         request = Request(method='GET', url=url, headers=headers)
         prepared_request = self.session.prepare_request(request)
         return prepared_request
+
+    def update(self, url, **kwargs):
+        """Updates the request error stack
+        """
+        return self.request_errors.append((url, Error('The request with "%s" was not successful' % url)))
 
     def beautify(self, *urls, **kwargs):
         """Returns BeautifulSoup objects
@@ -112,8 +130,3 @@ class RequestsManager(UtilitiesMixin):
         # Transform the single url into a list
         # so that we can iterate over it
         return BeautifulSoup(self.get([url]), 'html.parser')
-
-    def update(self, url, **kwargs):
-        """Updates the request error stack
-        """
-        return self.request_errors.append((url, Error('The request with "%s" was not successful' % url)))
