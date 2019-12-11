@@ -94,4 +94,4 @@ class TennisDetailView(View):
             if int(tour_id) == tournament['id']:
                 break
         return render(request, 'pages/detail.html', {'tournament': tournament})
-
+        
