@@ -1,7 +1,23 @@
 """This module regroups all the necessary functionalities
 to generate user agent for web requests.
 
-John Pendenque @ pendenquejohn@gmail.com
+Description
+-----------
+
+    You can find three main functions which are the following
+        - get_user_agent()
+        - get_user_agents()
+        - get_rand_agent()
+        - get__rand_unique_agent()
+
+You can also use the main AGENTS_LIST which is an array that regroups
+the list of user agents that can be used for the applications.
+
+Finally, to add a user agent, you can just do the following:
+
+    AGENTS_LIST += "Your agent here"
+
+author: pendenquejohn@gmail.com
 """
 
 from collections import namedtuple
