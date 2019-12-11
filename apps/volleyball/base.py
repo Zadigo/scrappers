@@ -145,7 +145,7 @@ class TeamsPage(Requestor, WriteCSV):
         # TODO: If we send relative path to requests,
         # there could be an issue
         parsed_links = self.parse_links(unparsed_links)
-        
+ 
         self.teams = parsed_links
 
     def parse_links(self, links, relative=False):

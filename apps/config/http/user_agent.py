@@ -1,5 +1,7 @@
 """This module regroups all the necessary functionalities
 to generate user agent for web requests.
+
+John Pendenque @ pendenquejohn@gmail.com
 """
 
 from collections import namedtuple
@@ -75,4 +77,3 @@ def get_rand_unique_agent():
     Returns a user agent as string
     """
     return choice(AGENTS_LIST)
- 
