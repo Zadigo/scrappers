@@ -93,4 +93,3 @@ def get_rand_unique_agent():
     Returns a user agent as string
     """
     return choice(AGENTS_LIST)
- 
