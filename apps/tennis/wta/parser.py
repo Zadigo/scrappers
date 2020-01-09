@@ -20,17 +20,17 @@ import time
 import requests
 from bs4 import BeautifulSoup
 
-from scrappers.scrappers.config.config import configuration
-from scrappers.scrappers.config.utilities import check_path, new_filename
-from scrappers.scrappers.tennis.wta.models import (Player, Tournament,
-                                                   TournamentMatch)
+# from scrappers.scrappers.config.config import configuration
+# from scrappers.scrappers.config.utilities import check_path, new_filename
+# from scrappers.scrappers.tennis.wta.models import (Player, Tournament,
+#                                                    TournamentMatch)
 
-environment = os.environ
+# environment = os.environ
 
-HOME_DRIVE = '%s\\Users\\%s\\Documents' % (
-    environment.get('HOMEDRIVE'),
-    environment.get('USERNAME')
-)
+# HOME_DRIVE = '%s\\Users\\%s\\Documents' % (
+#     environment.get('HOMEDRIVE'),
+#     environment.get('USERNAME')
+# )
 
 OUTPUT_DIR = 'WTA_Data'
 
@@ -66,124 +66,139 @@ OUTPUT_DIR = 'WTA_Data'
 #     token = secrets.token_hex(3)
 #     return f'{name.lower()}_{current_date.year}_{current_date.month}_{token}.json'
 
-class ParsePage:
-    """Parse the WTA's player matches' page to extract
-    the statistics. This class requires the source page to be
-    downloaded or copy/pasted on the local storage of the
-    computer in `.html` file.
-    
-    The top level `div`, if extracted, should be
-    `div.horizontal-tabs` containing all the sections for
-    the matches (or relevant statistics). For example:
 
-        <html>
-            <body>
-                <div class="horizontal-tabs">
+# from scrappers.apps.config.utilities import check_path
+from scrappers.apps.tennis.wta.models import Player, Tournament, TournamentMatch
+
+class ParsePage:
+    """Parse the WTA's player matches' page to extract the statistics. 
+    This class requires the source page to be downloaded or copy/pasted 
+    on the local storage of the computer in `.html` file.
+    
+    The top level `div`, if extracted, should be `div.horizontal-tabs` containing 
+    all the sections for the matches (or relevant statistics):
+
+        html
+            body
+                div class="horizontal-tabs"
                     ...
-                </div>
-            </body>
-        </html>
+                ddiv
+            body
+        html
+
+    Parameters
+    ----------
+
+        page_name:
+
+        output_dir: 
     """
-    def __init__(self, page_name=None, output_dir=OUTPUT_DIR):
+    def __init__(self, page_name=None, output_dir=OUTPUT_DIR, class_attr='player-matches__content'):
         # FIXME: When the user enters the filename 'test' as
         # opposed to 'test.html', raises a FileNotFoundError
         
         # Path to the file to parse -- Check the path
         # and return it if it exists
         # path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'html.html')
-        path = os.path.join(check_path(OUTPUT_DIR), page_name)
+        # path = os.path.join(check_path(OUTPUT_DIR), page_name)
+        path = 'C:\\Users\\Pende\\Documents\\myapps\\scrappers\\apps\\tennis\\wta\\test.html'
         with open(path, 'r', encoding='utf-8') as f:
             soup = BeautifulSoup(f, 'html.parser')
             
-            # div.data-player-matches
-            sections = soup.find_all('div', attrs={'class': 'data-player-matches'})
+            # Isolate the section that contains
+            # all the matches for a given player
+            # div.player-matches__content
+            matches_section = soup.find('div', attrs={'class': class_attr})
+            
+            # Isolate each tennis match
+            # div.player-matches__tournament-header
+            sections = matches_section.find_all('div', attrs={'class': 'player-matches__tournament'})
 
             tournaments = []
             matches = []
             tour_id = 1
 
             for section in sections:
-                # ex. WATERLOO , CANADA
-                tournament = section.find('span', attrs={'class': 'tour-name'}).text
+                # Work with the header
+                header = section.find('div', attrs={'class': 'player-matches__tournament-header'})
 
-                # span.tour-detail
-                tour_details = section.find_all('span', attrs={'class': 'tour-detail'})
-                # ex. October 20, 2008
-                tour_date = tour_details[0].text
-                # ex. ITF, Tier I...
-                level = tour_details[1].text
-                # ex. Clay
-                surface = tour_details[2].text
+                try:
+                    # It appears that the link does not always contain
+                    # a title, in which case, we have to get the name
+                    # directly from the link text
+                    link_for_tournament = header.find('a', attrs={'class': 'player-matches__tournament-title-link'})
+                    # ex. Oracle Challenger Series
+                    tournament_name = link_for_tournament['title']
+                except:
+                    tournament_name = None
 
-                # div.row-item
-                tour_infos = section.find('div', attrs={'class': 'last-row'}) \
-                                        .find_all('div', attrs={'class': 'row-item'})
-                # ex. 15
-                rank = tour_infos[2].text
-                # ex. 6
-                seed = tour_infos[3].text
+                # ex. HOUSTON, USA, TX
+                tournament_location = header.find('span', attrs={'class': 'player-matches__tournament-location'}).text
+                # ex. Nov 10-Nov 17, 2019
+                tournament_date = header.find('span', attrs={'class': 'player-matches__tournament-date'}).text
 
-                # tbody
-                matches_table_row = section.find('tbody').find_all('tr')
-                for row in matches_table_row:
+                # Tournament details
+                tour_details = header.find_all('div', attrs={'class': 'player-matches__tournament-meta-item'})
+                level = tour_details[0].find(attrs={'class': 'player-matches__tournament-meta-value'}).text
+                surface = tour_details[2].find(attrs={'class': 'player-matches__tournament-meta-value'}).text
+
+                matches_table_body = section.find('table', attrs={'class': 'player-matches__matches-table'}).find('tbody')
+                rows = matches_table_body.find_all('tr')
+
+                for row in rows:
                     # ex. Round 16
-                    match_round = row.find('td', attrs={'class': 'round'}).text
-                    # ex. L
-                    result = row.find('td', attrs={'class': 'result'}).text
+                    match_round = row.find('td', attrs={'class': 'player-matches__match-cell--round'}).text
+
+                    opponent = row.find('div', attrs={'class': 'player-matches__match-opponent'})
+                    # Path to profile
+                    link_for_opponent = opponent.find('a')
+                    path_to_profile = link_for_opponent['href']
+                    # ex. Eugenie Bouchard
+                    opponent_name = link_for_opponent['title']
+                    # ex. CAN
+                    opponent_country = opponent.find('span', attrs={'class': 'player-matches__match-opponent-country'}).text
+                    # ex. W or L
+                    result = row.find('td', attrs={'class': 'player-matches__match-cell--winloss'}).text
+                    
                     try:
+                        # ex. 3
+                        opponent_rank = row.find('td', attrs={'class': 'player-matches__match-cell--opp-rank'}).text
                         # IMPORTANT: These values can be null or incorrect
                         # and can then throw attribute errors on normalization
                         # so we have to protect against that
                         # ex. [3]
-                        opponent_seed = row.find('div', attrs={'class': 'opponent-seed'}).text
-
-                        # ex. 45
-                        rank = row.find('td', attrs={'class': 'rank'}).text
+                        opponent_seed = row.find('div', attrs={'class': 'player-matches__match-opponent-seed'}).text
                     except AttributeError:
+                        # Opponent rank is often
+                        # provided so we protect it
+                        # just in case
+                        if not opponent_rank:
+                            opponent_rank = None
                         opponent_seed = None
-                        rank = None
 
                     # ex. 6-1 6-1
-                    score = row.find('td', attrs={'class': 'score'}).text
-
-                    # td.opponent
-                    opponent_row = row.find('td', attrs={'class': 'opponent'})
-
-                    # <a href="">...</a>
-                    opponent_details = opponent_row.findChild('a')
-                    # Use REGEX to parse that row since
-                    # there are lots of \s and \n e.g
-                    # \n
-                    # [Q] Carmen\n
-                    #                  Klaschka (GER)
-                    # Get a group such as ('Carmen', 'Klaschka', 'GER')
-                    parsed_text = re.search(r'^\n?(?:\[(\d+|\w+)\]\s+)?(\w+)\n?\s+(\w+)\s+(?:\((\w+)\))', opponent_row.text)
-                    try:
-                        # If no match, protect!
-                        # ex. Carmen Klaschka
-                        opponent_name = ' '.join([parsed_text.group(2), parsed_text.group(3)])
-
-                        # ex. CAN
-                        opponent_country = parsed_text.group(4)
-                    except AttributeError:
-                        opponent_name = None
-                        opponent_country = None
-                    
-                    try:
-                        # ex. /players/player/311649/title/carmen-klaschka
-                        profile_url_path = opponent_details['href']
-                    except TypeError:
-                        profile_url_path = None
+                    score = row.find('td', attrs={'class': 'player-matches__match-cell--score'}).text
 
                     # Create the opponent
-                    opponent = Player(opponent_name, opponent_country, profile_url_path)
+                    opponent = Player(opponent_name, opponent_country, path_to_profile)
                     # [{match A}, {...}]
-                    tournament_match = TournamentMatch(match_round, result, score, rank, opponent_seed)
+                    tournament_match = TournamentMatch(match_round, result, score, opponent_rank, opponent_seed)
                     tournament_match.update({'opponent_details': opponent})
                     matches.append(tournament_match)
 
+                footer = section.find('div', attrs={'class': 'player-matches__tournament-footer'})
+                meta_values = footer.find_all('span', attrs={'class': 'player-matches__tournament-meta-value'})
+                # ex. 1
+                player_rank = meta_values[0].text
+
+                try:
+                    # ex. 1
+                    player_seed = meta_values[1].text
+                except:
+                    player_seed = None
+
                 # [{tournament A}, ...]
-                tournament = Tournament(tour_id, tournament, tour_date, level, surface, rank, seed)
+                tournament = Tournament(tour_id, tournament_name, tournament_date, level, surface, player_rank, player_seed, tournament_location=tournament_location)
                 # [{tournament A, matches: []}, ...]
                 tournament.update({'matches': matches})
                 tournaments.append(tournament)
@@ -203,9 +218,9 @@ class ParsePage:
             }
 
             # Construct output path
-            output_path = os.path.join(configuration.homedrive, OUTPUT_DIR, new_filename('eugenie_bouchard'))
+            # output_path = os.path.join(configuration.homedrive, OUTPUT_DIR, new_filename('eugenie_bouchard'))
+            output_path = 'C:\\Users\\Pende\\Documents\\myapps\\scrappers\\apps\\tennis\\wta\\test.json'
 
-            # TODO: Replace with writer()
             with open(output_path, 'w', encoding='utf-8') as f:
                 json.dump(refactored_stats, f, indent=4)
                 print('Created file! (%s)' % output_path)
@@ -230,3 +245,5 @@ class ParsePage:
 #         # Playing hand
 #         playing_hand = soup.find('div', attrs={'class': 'field--name-field-playhand'})\
 #                             .find('div', attrs={'class': 'field__item'}).text
+
+p = ParsePage()

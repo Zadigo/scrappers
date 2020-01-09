@@ -3,57 +3,77 @@ of the components for the JSON file.
 """
 
 import re
+import datetime
 
 class Tournament(dict):
     """Object representing the details of a WTA tournament
     """
     def __init__(self, tour_id, tournament, date, level, surface, rank, seed, **kwargs):
+        normalized_date = self.normalize_date(date)
+        if kwargs:
+            self.update(**kwargs)
         self.update(
             {
                 'id': tour_id,
-                'tournament': self.parse_tour_name(tournament, tour_or_country=True),
-                'country': self.parse_tour_name(tournament),
-                'date': self.normalize_date(date),
-                'level': self.normalize(level),
-                'surface': self.normalize(surface),
-                'rank': self.parse_integer_regex(rank),
-                'seed': self.parse_integer_regex(seed)
+                'tournament': tournament,
+                'country': self.parse_location(kwargs['tournament_location'])['country'],
+                'date': str(normalized_date),
+                'year': normalized_date.year,
+                'level': self.clean(level),
+                'surface': self.clean(surface),
+                'rank': self.convert_integer(rank),
+                'seed': self.convert_integer(seed)
             }
         )
     
     @staticmethod
     def normalize(value):
-        """ Normalizes names `eugenie bouchard\\s` to `Eugenie Bouchard`
+        """ Normalize a value by capitalizing, lowering
+        and stripping the white spaces
         """
         if not value:
             return None
-        # DELETE: Old way of normalizing values
-        # return value.strip().lower().capitalize()
         names = value.split(' ')
         for name in names:
             names[names.index(name)] = name.lower().capitalize()
         return ' '.join(names).strip()
 
     @staticmethod
+    def clean(value):
+        """Strips any whitespaces"""
+        return value.strip()
+
+    @staticmethod
+    def parse_location(value):
+        """Parse the location in the string"""
+        is_match = re.match(r'(?<!\\)[a-zA-Z]+', value)
+        if is_match:
+            items = is_match.groups()
+            country = items[0]
+            city = items[1].lower().capitalize() + ', ' + items[2].lower().capitalize()
+        return {'country': country, 'city': city}
+
+    @staticmethod
     def normalize_date(d):
-        """Transforms a date such as `October 3rd, 2019` to `2019-10-03`.
+        """Transforms a date such as `Mar 19 - Mar 21 2019` 
+        becomes a standard date `2019-10-03`
 
         Parameters
         ----------
 
-        `d` should be a date written as `October 3rd, 2019` for the converter
-        to work. If not, returns null
+            d: a date written as `Mar 19 - Mar 21 2019`
+            for the converter to work
         """
-        months = ['January', 'February', 'March', 'April', 'May', 'June',
-                    'July', 'August', 'September', 'October', 'November', 'December']
-        is_valid = re.match(r'^([A-Z]\w+)\s+(\d+)\S\s+(\d+)', d)
+        months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+                    'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+        is_valid = re.match(r'^(\w+\s+\d+).*(\d{4})$', d)
         if is_valid:
-            day = is_valid.group(2)
-            month = is_valid.group(1).strip()
-            year = is_valid.group(3)
-            month_index = months.index(month) + 1
-            formatted_date = f'{year}-{month_index}-{day}'
-        return formatted_date
+            sticked_date = is_valid.group(1)
+            year = is_valid.group(2)
+            month, date = sticked_date.split(' ')
+            month_number = months.index(month) + 1
+            formatted_date = f'{year}-{month_number}-{date}'
+        return datetime.datetime.strptime(formatted_date, '%Y-%M-%d')
 
     def parse_tour_name(self, tour_name, tour_or_country=False):
         """Get the tournament's name.
@@ -82,8 +102,8 @@ class Tournament(dict):
             return self.normalize(country)
 
     @staticmethod
-    def parse_integer(value):
-        """Converts/parses an integer from `"1"` to `1`.
+    def convert_integer(value):
+        """Converts an integer within a string to number
         """
         if not value:
             return None
@@ -139,15 +159,15 @@ class TournamentMatch(Tournament):
     `opponent_details` is a dict
     """
     def __init__(self, match_round, result, score, rank, seed):
-        score = self.normalize(score)
-        match_round = self.normalize(match_round)
-        rank = self.parse_integer_regex(rank)
-        seed = self.parse_integer_regex(seed)
+        score = self.clean(score)
+        match_round = self.clean(match_round)
+        rank = self.convert_integer(rank)
+        seed = self.convert_integer(seed)
 
         self.update(
             {
                 'match_round': match_round,
-                'result': result,
+                'result': self.clean(result),
                 'score': score,
                 'sets_played': self.sets_played(score),
                 'first_set': self.first_set(score, result),
@@ -197,6 +217,10 @@ class TournamentMatch(Tournament):
         """A piece of logic that determines the number of sets
         that were played
         """
+        # There are certain cases where there was literally
+        # no sets played -; for example 2-1. In which case,
+        # we need to deal with that
+
         patterns = [
             # 6-2 6-3
             # 7-5 6-3
@@ -252,3 +276,7 @@ class Player(TournamentMatch):
                 'url_path': url_path,
             }
         )
+
+
+# w = Tournament('sezzf', 'Google', 'Mar 19-Mar 30, 2019', '', '', 345, 345)
+# print(w)
