@@ -2,6 +2,7 @@
 in order to send requests to the web or dowload data or images.
 """
 
+import re
 import timeit
 from collections import deque
 from pathlib import Path
@@ -206,6 +207,14 @@ class RequestsManager:
     
     @classmethod
     def prepare(cls, *urls, **headers):
+        """A definition that prepares a list of urls to be
+        sent to the web.
+
+        Result
+        ------
+
+            [ prepared_request, ... ] generator
+        """
         base_headers = {
             'User-Agent': user_agent.get_rand_agent()
         }
@@ -213,6 +222,19 @@ class RequestsManager:
             base_headers = {**base_headers, **headers}
 
         for url in urls:
+            # If by any means the url is a tuple
+            # or a list, then try to get the first
+            # item -- this is useful because when
+            # passing the *urls args, sometimes, the
+            # we get ((..., ...)) instead of (..., ...) 
+            # and which can break the application
+            if isinstance(url, (tuple, list)):
+                first_value = 0
+                url = url[first_value]
+                first_value = first_value + 1
+
+
+
             request = Request(method='GET', url=url, headers=base_headers)
             prepared_request = cls.session.prepare_request(request)
             yield prepared_request
@@ -229,7 +251,8 @@ class RequestsManager:
                 if response.status_code != 200:
                     self.stack.append(prepared_request.url)
                 else:
-                    elapsed_time = end - start
+                    # elapsed_time = end - start
+                    elapsed_time = 0
                     print(Info("Request successful for %s in %s" % (prepared_request.url, elapsed_time)))
                     responses = yield response
 
@@ -249,6 +272,6 @@ class RequestsManager:
 
     manager = Manager().as_handle()
 
-r = RequestsManager()
-s = r.get('http://www.example.com')
-print(list(s))
+# r = RequestsManager()
+# s = r.get('http://www.example.com')
+# print(list(s))

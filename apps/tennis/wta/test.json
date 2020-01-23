@@ -1,0 +1,602 @@
+{
+    "records": [
+        {
+            "tournament_location": "HOUSTON,\n                    USA, TX",
+            "id": 1,
+            "tournament": "Oracle Challenger Series",
+            "date": "2019-01-10 00:11:00",
+            "year": 2019,
+            "level": "125K",
+            "surface": "Hard",
+            "rank": 220,
+            "seed": 15,
+            "matches": [
+                {
+                    "match_round": "Round of 16 \n R16",
+                    "result": "L",
+                    "score": "2-1",
+                    "sets_played": "two",
+                    "first_set": null,
+                    "rank": 144,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": "Mandy Minella",
+                        "country": "LUX",
+                        "url_path": "//www.wtatennis.com/players/310431/mandy-minella"
+                    }
+                },
+                {
+                    "match_round": "Round of 32 \n R32",
+                    "result": "W",
+                    "score": "6-2 3-1",
+                    "sets_played": "two",
+                    "first_set": null,
+                    "rank": 120,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": "Francesca Di Lorenzo",
+                        "country": "USA",
+                        "url_path": "//www.wtatennis.com/players/324188/francesca-di-lorenzo"
+                    }
+                },
+                {
+                    "match_round": "Round of 64 \n R64",
+                    "result": "W",
+                    "score": "7-6(4) 6-4",
+                    "sets_played": "two",
+                    "first_set": null,
+                    "rank": 284,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": "Valentini Grammatikopoulou",
+                        "country": "GRE",
+                        "url_path": "//www.wtatennis.com/players/319250/valentini-grammatikopoulou"
+                    }
+                }
+            ]
+        },
+        {
+            "tournament_location": "UNITED\n                    STATES",
+            "id": 2,
+            "tournament": null,
+            "date": "2019-01-24 00:09:00",
+            "year": 2019,
+            "level": "ITF",
+            "surface": "Hard",
+            "rank": 157,
+            "seed": 3,
+            "matches": [
+                {
+                    "match_round": "Round of 32 \n R32",
+                    "result": "L",
+                    "score": "6-4 4-6 6-4",
+                    "sets_played": "three",
+                    "first_set": null,
+                    "rank": 272,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": "Gabriela Talaba",
+                        "country": "ROU",
+                        "url_path": "//www.wtatennis.com/players/319454/gabriela-talaba"
+                    }
+                }
+            ]
+        },
+        {
+            "tournament_location": "FLUSHING\n                    MEADOWS, USA, NY",
+            "id": 3,
+            "tournament": "2019 US OPEN TENNIS CHAMPIONSHIPS",
+            "date": "2019-01-26 00:08:00",
+            "year": 2019,
+            "level": "Grand Slam",
+            "surface": "Hard",
+            "rank": 119,
+            "seed": 10,
+            "matches": [
+                {
+                    "match_round": "Round of 128 \n R128",
+                    "result": "L",
+                    "score": "6-3 6-3",
+                    "sets_played": "two",
+                    "first_set": null,
+                    "rank": 11,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": "Anastasija Sevastova",
+                        "country": "LAT",
+                        "url_path": "//www.wtatennis.com/players/313987/anastasija-sevastova"
+                    }
+                }
+            ]
+        },
+        {
+            "tournament_location": "NEW YORK,\n                    UNITED STATES, NY",
+            "id": 4,
+            "tournament": "Bronx Open",
+            "date": "2019-01-18 00:08:00",
+            "year": 2019,
+            "level": "International",
+            "surface": "Hard",
+            "rank": 119,
+            "seed": 1,
+            "matches": [
+                {
+                    "match_round": "Qualifying R1 \n Qual. R1",
+                    "result": "L",
+                    "score": "6-4 3-6 6-3",
+                    "sets_played": "three",
+                    "first_set": null,
+                    "rank": 83,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": "Kaia Kanepi",
+                        "country": "EST",
+                        "url_path": "//www.wtatennis.com/players/110536/kaia-kanepi"
+                    }
+                }
+            ]
+        },
+        {
+            "tournament_location": "CANADA",
+            "id": 5,
+            "tournament": null,
+            "date": "2019-01-13 00:08:00",
+            "year": 2019,
+            "level": "ITF",
+            "surface": "Hard",
+            "rank": 114,
+            "seed": 5,
+            "matches": [
+                {
+                    "match_round": "Round of 32 \n R32",
+                    "result": "L",
+                    "score": "3-6 6-3 6-1",
+                    "sets_played": "three",
+                    "first_set": null,
+                    "rank": 125,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": "Timea Babos",
+                        "country": "HUN",
+                        "url_path": "//www.wtatennis.com/players/317070/timea-babos"
+                    }
+                }
+            ]
+        },
+        {
+            "tournament_location": "TORONTO,\n                    CANADA",
+            "id": 6,
+            "tournament": "Rogers Cup presented by National Bank",
+            "date": "2019-01-05 00:08:00",
+            "year": 2019,
+            "level": "Premier 5",
+            "surface": "Hard",
+            "rank": 112,
+            "seed": 1,
+            "matches": [
+                {
+                    "match_round": "Round of 64 \n R64",
+                    "result": "L",
+                    "score": "4-6 6-1 6-4",
+                    "sets_played": "three",
+                    "first_set": null,
+                    "rank": 27,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": "Bianca Andreescu",
+                        "country": "CAN",
+                        "url_path": "//www.wtatennis.com/players/325088/bianca-andreescu"
+                    }
+                }
+            ]
+        },
+        {
+            "tournament_location": "WASHINGTON DC, UNITED STATES, DC",
+            "id": 7,
+            "tournament": "Citi Open",
+            "date": "2019-01-29 00:07:00",
+            "year": 2019,
+            "level": "International",
+            "surface": "Hard",
+            "rank": 114,
+            "seed": 1,
+            "matches": [
+                {
+                    "match_round": "Round of 32 \n R32",
+                    "result": "L",
+                    "score": "6-1 6-2",
+                    "sets_played": "two",
+                    "first_set": null,
+                    "rank": 75,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": "Lauren Davis",
+                        "country": "USA",
+                        "url_path": "//www.wtatennis.com/players/317414/lauren-davis"
+                    }
+                }
+            ]
+        },
+        {
+            "tournament_location": "LAUSANNE,\n                    SWITZERLAND",
+            "id": 8,
+            "tournament": "Ladies Open Lausanne",
+            "date": "2019-01-15 00:07:00",
+            "year": 2019,
+            "level": "International",
+            "surface": "Clay",
+            "rank": 95,
+            "seed": 8,
+            "matches": [
+                {
+                    "match_round": "Round of 32 \n R32",
+                    "result": "L",
+                    "score": "2-6 6-4 7-5",
+                    "sets_played": "three",
+                    "first_set": null,
+                    "rank": 142,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": "Tamara Korpatsch",
+                        "country": "GER",
+                        "url_path": "//www.wtatennis.com/players/319571/tamara-korpatsch"
+                    }
+                }
+            ]
+        },
+        {
+            "tournament_location": "WIMBLEDON, GREAT BRITAIN",
+            "id": 9,
+            "tournament": "The Championships",
+            "date": "2019-01-01 00:07:00",
+            "year": 2019,
+            "level": "Grand Slam",
+            "surface": "Grass",
+            "rank": 79,
+            "seed": 10,
+            "matches": [
+                {
+                    "match_round": "Round of 128 \n R128",
+                    "result": "L",
+                    "score": "6-3 5-7 8-6",
+                    "sets_played": "three",
+                    "first_set": null,
+                    "rank": 61,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": "Tamara Zidansek",
+                        "country": "SLO",
+                        "url_path": "//www.wtatennis.com/players/323079/tamara-zidansek"
+                    }
+                }
+            ]
+        },
+        {
+            "tournament_location": "EASTBOURNE, GREAT BRITAIN",
+            "id": 10,
+            "tournament": "Nature Valley International Eastbourne",
+            "date": "2019-01-23 00:06:00",
+            "year": 2019,
+            "level": "Premier",
+            "surface": "Grass",
+            "rank": 79,
+            "seed": 8,
+            "matches": [
+                {
+                    "match_round": "Qualifying R1 \n Qual. R1",
+                    "result": "L",
+                    "score": "6-2 6-0",
+                    "sets_played": "two",
+                    "first_set": null,
+                    "rank": 99,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": "Fiona Ferro",
+                        "country": "FRA",
+                        "url_path": "//www.wtatennis.com/players/319969/fiona-ferro"
+                    }
+                }
+            ]
+        },
+        {
+            "tournament_location": "PARIS,\n                    FRANCE",
+            "id": 11,
+            "tournament": "Championnats Internationaux de France",
+            "date": "2019-01-26 00:05:00",
+            "year": 2019,
+            "level": "Grand Slam",
+            "surface": "Clay",
+            "rank": 77,
+            "seed": 10,
+            "matches": [
+                {
+                    "match_round": "Round of 128 \n R128",
+                    "result": "L",
+                    "score": "6-2 6-2",
+                    "sets_played": "two",
+                    "first_set": null,
+                    "rank": 27,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": "Lesia Tsurenko",
+                        "country": "UKR",
+                        "url_path": "//www.wtatennis.com/players/315295/lesia-tsurenko"
+                    }
+                }
+            ]
+        },
+        {
+            "tournament_location": "MIAMI,\n                    USA, FL",
+            "id": 12,
+            "tournament": "Miami Open presented by Itau",
+            "date": "2019-01-19 00:03:00",
+            "year": 2019,
+            "level": "Premier Mandatory",
+            "surface": "Hard",
+            "rank": 72,
+            "seed": 2,
+            "matches": [
+                {
+                    "match_round": "Qualifying R1 \n Qual. R1",
+                    "result": "L",
+                    "score": "4-6 6-0 6-4",
+                    "sets_played": "three",
+                    "first_set": null,
+                    "rank": 119,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": "Nao Hibino",
+                        "country": "JPN",
+                        "url_path": "//www.wtatennis.com/players/320238/nao-hibino"
+                    }
+                }
+            ]
+        },
+        {
+            "tournament_location": "INDIAN\n                    WELLS, USA, CA",
+            "id": 13,
+            "tournament": "BNP Paribas Open",
+            "date": "2019-01-06 00:03:00",
+            "year": 2019,
+            "level": "Premier Mandatory",
+            "surface": "Hard",
+            "rank": 73,
+            "seed": 10,
+            "matches": [
+                {
+                    "match_round": "Round of 128 \n R128",
+                    "result": "L",
+                    "score": "7-5 3-6 7-5",
+                    "sets_played": "three",
+                    "first_set": null,
+                    "rank": 56,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": "Kirsten Flipkens",
+                        "country": "BEL",
+                        "url_path": "//www.wtatennis.com/players/310331/kirsten-flipkens"
+                    }
+                }
+            ]
+        },
+        {
+            "tournament_location": "DUBAI,\n                    UNITED ARAB EMIRATES",
+            "id": 14,
+            "tournament": "Dubai Duty Free Tennis Championships",
+            "date": "2019-01-17 00:02:00",
+            "year": 2019,
+            "level": "Premier 5",
+            "surface": "Hard",
+            "rank": 79,
+            "seed": 60,
+            "matches": [
+                {
+                    "match_round": "Round of 32 \n R32",
+                    "result": "L",
+                    "score": "7-6(4) 6-4",
+                    "sets_played": "two",
+                    "first_set": null,
+                    "rank": 2,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": "Simona Halep",
+                        "country": "ROU",
+                        "url_path": "//www.wtatennis.com/players/314320/simona-halep"
+                    }
+                },
+                {
+                    "match_round": "Round of 64 \n R64",
+                    "result": "W",
+                    "score": "6-3 6-4",
+                    "sets_played": "two",
+                    "first_set": null,
+                    "rank": 60,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": "Vera Lapko",
+                        "country": "BLR",
+                        "url_path": "//www.wtatennis.com/players/322730/vera-lapko"
+                    }
+                }
+            ]
+        },
+        {
+            "tournament_location": "DOHA,\n                    QATAR",
+            "id": 15,
+            "tournament": "Qatar Total Open 2019",
+            "date": "2019-01-11 00:02:00",
+            "year": 2019,
+            "level": "Premier",
+            "surface": "Hard",
+            "rank": 80,
+            "seed": 5,
+            "matches": [
+                {
+                    "match_round": "Qualifying R1 \n Qual. R1",
+                    "result": "L",
+                    "score": "5-7 6-3 6-4",
+                    "sets_played": "three",
+                    "first_set": null,
+                    "rank": 97,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": "Madison Brengle",
+                        "country": "USA",
+                        "url_path": "//www.wtatennis.com/players/312328/madison-brengle"
+                    }
+                }
+            ]
+        },
+        {
+            "tournament_location": "NEWPORT\n                    BEACH, UNITED STATES",
+            "id": 16,
+            "tournament": "Oracle Challenger Series",
+            "date": "2019-01-21 00:01:00",
+            "year": 2019,
+            "level": "125K",
+            "surface": "Hard",
+            "rank": 3,
+            "seed": 29,
+            "matches": [
+                {
+                    "match_round": "Quarterfinal \n Quarter",
+                    "result": "L",
+                    "score": "6-2 6-0",
+                    "sets_played": "two",
+                    "first_set": null,
+                    "rank": 0,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": "Bianca Andreescu",
+                        "country": "CAN",
+                        "url_path": "//www.wtatennis.com/players/325088/bianca-andreescu"
+                    }
+                },
+                {
+                    "match_round": "Round of 16 \n R16",
+                    "result": "W",
+                    "score": "6-2 6-2",
+                    "sets_played": "two",
+                    "first_set": null,
+                    "rank": 0,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": "Jil Teichmann",
+                        "country": "SUI",
+                        "url_path": "//www.wtatennis.com/players/320926/jil-teichmann"
+                    }
+                },
+                {
+                    "match_round": "Round of 32 \n R32",
+                    "result": "W",
+                    "score": "2-6 6-3 6-2",
+                    "sets_played": "three",
+                    "first_set": null,
+                    "rank": 0,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": "Kayla Day",
+                        "country": "USA",
+                        "url_path": "//www.wtatennis.com/players/322534/kayla-day"
+                    }
+                }
+            ]
+        },
+        {
+            "tournament_location": "MELBOURNE, AUSTRALIA",
+            "id": 17,
+            "tournament": "Australian Open",
+            "date": "2019-01-14 00:01:00",
+            "year": 2019,
+            "level": "Grand Slam",
+            "surface": "Hard",
+            "rank": 79,
+            "seed": 70,
+            "matches": [
+                {
+                    "match_round": "Round of 64 \n R64",
+                    "result": "L",
+                    "score": "6-2 6-2",
+                    "sets_played": "two",
+                    "first_set": null,
+                    "rank": 16,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": "Serena Williams",
+                        "country": "USA",
+                        "url_path": "//www.wtatennis.com/players/230234/serena-williams"
+                    }
+                },
+                {
+                    "match_round": "Round of 128 \n R128",
+                    "result": "W",
+                    "score": "6-2 6-1",
+                    "sets_played": "two",
+                    "first_set": null,
+                    "rank": 128,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": "Shuai Peng",
+                        "country": "CHN",
+                        "url_path": "//www.wtatennis.com/players/160471/shuai-peng"
+                    }
+                }
+            ]
+        },
+        {
+            "tournament_location": "AUCKLAND,\n                    NEW ZEALAND",
+            "id": 18,
+            "tournament": "ASB Classic 2019",
+            "date": "2019-01-31 00:12:00",
+            "year": 2019,
+            "level": "International",
+            "surface": "Hard",
+            "rank": 87,
+            "seed": 60,
+            "matches": [
+                {
+                    "match_round": "Quarterfinal \n Quarter",
+                    "result": "L",
+                    "score": "3-6 6-3 7-6(6)",
+                    "sets_played": "three",
+                    "first_set": null,
+                    "rank": 14,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": "Julia Goerges",
+                        "country": "GER",
+                        "url_path": "//www.wtatennis.com/players/313381/julia-goerges"
+                    }
+                },
+                {
+                    "match_round": "Round of 16 \n R16",
+                    "result": "W",
+                    "score": "6-7(5) 6-4 6-4",
+                    "sets_played": "three",
+                    "first_set": null,
+                    "rank": 174,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": "Bibiane Schoofs",
+                        "country": "NED",
+                        "url_path": "//www.wtatennis.com/players/311597/bibiane-schoofs"
+                    }
+                },
+                {
+                    "match_round": "Round of 32 \n R32",
+                    "result": "W",
+                    "score": "6-3 6-3",
+                    "sets_played": "two",
+                    "first_set": null,
+                    "rank": 88,
+                    "seed": null,
+                    "opponent_details": {
+                        "name": "Madison Brengle",
+                        "country": "USA",
+                        "url_path": "//www.wtatennis.com/players/312328/madison-brengle"
+                    }
+                }
+            ]
+        }
+    ]
+}

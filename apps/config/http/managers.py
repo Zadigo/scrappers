@@ -1,17 +1,20 @@
+import asyncio
 import csv
 import datetime
 import json
 import secrets
 import sqlite3
+from asyncio import Task
 from timeit import default_timer as timer
+from urllib.parse import urlparse
+from collections import deque
 
 from bs4 import BeautifulSoup
 from requests import Request, Session
-from urllib.parse import urlparse
 
-from scrappers.apps.config.messages import Info, Error
 from scrappers.apps.config.http import user_agent
 from scrappers.apps.config.http.utilities import UtilitiesMixin
+from scrappers.apps.config.messages import Error, Info
 
 
 class WriteFile:
@@ -65,11 +68,13 @@ class RequestsManager(UtilitiesMixin):
     """Base manager used to send requests to the internet
     """
     session = Session()
+    request_errors = []
 
     def __init__(self):
         # A dictionnary that stores links
-        # after a request error was received
-        self.request_errors = []
+        # after request error was received
+        # self.request_errors = []
+        pass
 
     def __call__(self, url):
         pass
@@ -78,6 +83,7 @@ class RequestsManager(UtilitiesMixin):
     def get(cls, *urls, **kwargs):
         """Sends a prepared request to the internet
         """
+        responses = deque()
         with cls.session as new_session:
             for url in urls:
                 start = timer()
@@ -93,11 +99,17 @@ class RequestsManager(UtilitiesMixin):
 
                 if response.status_code != 200:
                     cls.update(cls, url)
-                    return response
                 else:
                     elapsed_time = end - start
                     print(Info("Request successful for %s in %ss" % (url, round(elapsed_time, 2))))
-                    return response.text
+                    # return response.text
+                    # return response.json()
+                    responses.append(response)
+        return responses
+
+    def get_as_json(self, *urls):
+        """Returns JSON data instead of the response object"""
+        return {data for data in self.get(*urls)}
 
     def prepare(self, url, **headers):
         """This definition prepares a request to send to the web.
@@ -119,14 +131,14 @@ class RequestsManager(UtilitiesMixin):
         """
         return self.request_errors.append((url, Error('The request with "%s" was not successful' % url)))
 
-    def beautify(self, *urls, **kwargs):
+    def beautify(self, *urls):
         """Returns BeautifulSoup objects
         """
         yield BeautifulSoup(self.get(urls), 'html.parser')
 
-    def beautify_single(self, url, **kwargs):
+    def beautify_single(self, url):
         """Returns a BeautifulSoup object
         """
-        # Transform the single url into a list
-        # so that we can iterate over it
-        return BeautifulSoup(self.get([url]), 'html.parser')
+        responses = self.get(url)
+        if len(responses) > 0:
+            return BeautifulSoup(responses[0].text, 'html.parser')

@@ -46,11 +46,12 @@ class Tournament(dict):
     @staticmethod
     def parse_location(value):
         """Parse the location in the string"""
-        is_match = re.match(r'(?<!\\)[a-zA-Z]+', value)
+        is_match = re.match(r'(?<!\\)([a-zA-Z]+)', value)
         if is_match:
             items = is_match.groups()
-            country = items[0]
-            city = items[1].lower().capitalize() + ', ' + items[2].lower().capitalize()
+            city = items[0]
+            country = None
+            # city = items[1].lower().capitalize() + ', ' + items[2].lower().capitalize()
         return {'country': country, 'city': city}
 
     @staticmethod
@@ -159,8 +160,8 @@ class TournamentMatch(Tournament):
     `opponent_details` is a dict
     """
     def __init__(self, match_round, result, score, rank, seed):
-        score = self.clean(score)
         match_round = self.clean(match_round)
+        score = self.clean(score)
         rank = self.convert_integer(rank)
         seed = self.convert_integer(seed)
 

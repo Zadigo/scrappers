@@ -1,3 +1,17 @@
+"""This module references a variety of scrappers that can be used
+to get data from the FiVB website. It is composed of three main
+classes which allows a variety of different actions.
+
+Description
+-----------
+
+The ParticipatingTeamsPage class allows you to parse the whole teams
+that would be present on the main competition page. It references the
+urls for the individual team's page of that specific section.
+
+author: pendenquejohn@gmail.com
+"""
+
 import argparse
 import csv
 import datetime
@@ -5,139 +19,151 @@ import os
 import pickle
 import re
 import secrets
+import sys
 import threading
 import time
 from collections import deque, namedtuple
 from urllib.parse import splitquery, unquote, urlencode, urljoin, urlparse
 
 import requests
-from bs4 import BeautifulSoup
 
-from volleyball.user_agent import get_rand_agent
-
+from scrappers.apps.config.http.managers import RequestsManager
 
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+def prepare_values(func):
+    """A decorator that takes a list of values and writes
+    them to a file of your choice"""
+    def write(self, file_name, fieldnames:list=None):
+        with open(file_name, 'w',  newline='', encoding='utf-8') as f:
+            values = func(self)
 
-DATA_DIR = os.path.join(BASE_DIR, 'data')
+            csv_writer = csv.DictWriter(f, values[0])
+            csv_writer.writeheader()
 
-DATA_DIRS = {
-    'player_csv': os.path.join(BASE_DIR, 'data')
-}
+            for player in values[1]:
+                csv_writer.writerow(player)
+        return True
+    return write
 
-# ENHANCEMENT: Subclass a list instead?
-class Player(namedtuple('Player', ['name', 'link', 'date_of_birth',
-                         'age', 'height', 'weight', 'spike', 'block'])):
-    """Player class used to create a volleyball player
-    """
-    __slots__ = ()
+class Mixins:
+    base_url = None
 
-class WriteCSV:
-    """Use this class to write a CSV file containing
-    the data obtained from the website.
-    """
-    current_file = None
-
-    def _write(self, players=[]):
-        """Write a volleyball player.
-        """
-        if self.current_file is None:
-            self.current_file = self.create_new_file
-
-            try:
-                # Create file and/or
-                # necessary directories
-                os.makedirs(os.path.dirname(self.current_file))
-            except FileExistsError:
-                pass
-
-        with open(self.current_file, mode='a', encoding='utf-8', newline='') as f:
-            print('Writing players...')
-            csv_file = csv.writer(f, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-            for player in players:
-                csv_file.writerow(player)       
-
-    @property
-    def create_new_file(self):
-        """Return a new CSV file path such as `month_year_token`.
-        """
-        current_date = datetime.datetime.now().date()
-        token = secrets.token_hex(5)
-        filename = f'{current_date.month}_{current_date.year}_{token}.csv'
-        return os.path.join(DATA_DIR, filename)
-
-class Requestor:
-    def create_request(self, url, user_agent=get_rand_agent(), **kwargs):
-        """Create a request and return a list containing the response 
-        and it's BeautifulSoup object for further actions.
-
-        Description
-        -----------
-
-            [
-                response, BeautifulSoup()
-            ]
-        """
-        # Get URL's different parts
-        # and construct the base url
-        splitted_url = urlparse(url)
-        self.base_url = f'{splitted_url[0]}://{splitted_url[1]}'
-
-        try:
-            response = requests.get(url, user_agent)
-        except requests.ConnectionError:
-            raise
-        else:
-            if response.status_code == 200:
-                return [response, self.create_soup(response)]
-            return None
+    @classmethod
+    def as_class(cls, url, **kwargs):
+        """Recreates the class"""
+        parsed_url = urlparse(url)
+        klass = cls()
+        klass.base_url = f'{parsed_url[0]}://{parsed_url[1]}'
+        return klass
 
     @staticmethod
-    def create_soup(response):
-        """Create an return a BeautifulSoup object
-        """
-        return BeautifulSoup(response.text, 'html.parser')
-
-    def parse_links(self, links):
-        parsed_links = []
-        for link in links:
-            parsed_links.append((link.href, link.text))
-        return parsed_links
-
-    def clean_text(self, text):
-        """Return a text stripped from the trailing and
-        starting spaces
-        """
+    def clean_text(text):
         return text.strip()
 
-class TeamsPage(Requestor, WriteCSV):
-    """This analyzes the page referencing all the teams and parses the
+class Player(dict):
+    """A wrapper that represents a player"""
+    def __init__(self, name, link, date_of_birth,
+                        height, weight, spike, block, **kwargs):
+        if 'adjust_to_year' in kwargs:
+            adjust_to_year = kwargs.pop('adjust_to_year')
+
+        self.player = {
+            'name': name,
+            'link': link,
+            'date_of_birth': date_of_birth,
+            'age': self.get_age(date_of_birth),
+            'height': height,
+            'weight': weight,
+            'spike': spike,
+            'block': block
+        }
+        self.update({**self.player, **kwargs})
+
+    def __str__(self):
+        return str(self.player)
+
+    def __getitem__(self, key):
+        try:
+            return self.player[key]
+        except KeyError:
+            return {'error': {'title': 'Key error', 'message': ''}}
+
+    def sanitize_values(self):
+        """Clean the values"""
+        return {key: value.strip() for key, value in self.player.items()}
+
+    @staticmethod
+    def get_age(date_of_birth, adjust_to_year:int=None):
+        """Takes the date of birth of a player and calculates
+        his age
+
+        Parameters
+        ----------
+
+            date_of_birth: date of birth of the player such as 1/1/1987
+
+            adjusted: adjust the age relative to the year when the competition was played
+        """
+        current_year = datetime.datetime.now().year
+        date = datetime.datetime.strptime(date_of_birth, '%d/%m/%Y')
+        return adjust_to_year - date.year if adjust_to_year else current_year - date.year
+
+    @staticmethod
+    def convert_height(height:int):
+        """Convert a player's height from centimeters to feet"""
+        return round(height / 30.48, 1)
+
+class ParticipatingTeamsPage(RequestsManager):
+    """This analyzes the page referencing the teams and parses the
     different countries present on that page with their urls.
 
-    Description
-    -----------
+    This parser should not really be used individually unless you need
+    the raw values for doing something else. It is preferable to use the
+    `TeamPage()` class which will pull the teams and then get each individual
+    player's data.
 
-        If you wish to get data and statistics for all players, it is better to
-        use the TeamPage() class as opposed to this one.
+    You can also subclass this class if you wish to do something different.
 
-        This class will only return teams and the URL to their page:
+    Parameters
+    ----------
 
-            [
-                (url, country),
-                (...)
-            ]
+    `url` is the page referencing all participating teams.
+
+    Result
+    ------
+
+        [
+            (https://path/to/team, Dominican Republic),
+            (...)
+        ]
     """
-    def __init__(self, url=None, file_name=None):
-        if file_name:
-            self.current_file = file_name
+    errors = []
 
-        # ENHANCEMENT: Test that the url follows the
-        # pattern /??/teams
-        response = self.create_request(url)
-        soup = response[1]
+    def __init__(self):
+        self.mixins = Mixins.as_class(url)
 
+    def get_teams(self, url, section, attrs:dict):
+    # def get_teams(self, url, section, attrs:dict):
+        """
+        Parameters
+        ----------
+
+            section_to_parse: is a dict containing the attributes
+            of the section to parse e.g. {class: section_to_parse}
+        """
+
+        if not url.endswith('/teams'):
+            self.errors.append({'error': {'title': 'Incorrect url', 'message': ''}})
+            sys.exit(0)
+
+        soup = self.beautify_single(url)
+        
         # section#pools
-        section = soup.find('section', id='pools')
+        section = soup.find(section, attrs=attrs)
+
+        if not section:
+            self.errors.append({'error': {'title': '', 'message': ''}})
+            sys.exit(0)
         
         # <a></a>
         unparsed_links = section.find_all('a')
@@ -145,30 +171,40 @@ class TeamsPage(Requestor, WriteCSV):
         # TODO: If we send relative path to requests,
         # there could be an issue
         parsed_links = self.parse_links(unparsed_links)
- 
-        self.teams = parsed_links
+
+        return parsed_links
+
+    # def __repr__(self):
+    #     return f'{self.__class__.__name__}(n={len(self.team_roster_urls)})'
+
+    def __unicode__(self):
+        return self.__str__()
+
+    # def __str__(self):
+    #     return str(self.team_roster_urls)
+
+    # def __enter__(self):
+    #     return self.team_roster_urls
 
     def parse_links(self, links, relative=False):
-        """Parse the links on the teams page and returns a 
-        `list` such as [(link, country), ...].
+        """Parse the links on the page referencing the teams playing in
+        the competition and return a `list` such as [(link, country), ...].
 
-        Description
-        -----------
+        If `relative` is true, the definition returns the path
+        of the link instead of the full url.
+
+        Result
+        ------
 
             [
-                (url, country),
-                (...)
+                (http://path/to/..., USA)
             ]
-        
-        Parameters
-        ----------
-
-            If *relative* is true, the definition returns the path
-            of the link instead of the full url
         """
         parsed_links = []
 
-        # Delete the two first links
+        # Delete the two first links which
+        # do not really correspond to links
+        # related to volleyball teams
         links.pop(0)
         links.pop(0)
 
@@ -179,45 +215,61 @@ class TeamsPage(Requestor, WriteCSV):
                 # Add a trailing slash so that python
                 # appends additional paths instead of
                 # cutting it off
-                href = urljoin(self.base_url, link['href'] + '/')
-            country = self.clean_text(link.find('figcaption').text)
+                href = urljoin(self.mixins.base_url, link['href'] + '/team_roster')
+            country = self.mixins.clean_text(link.find('figcaption').text)
             parsed_links.append((href, country))
-
         return parsed_links
 
-    @property
-    def get_teams(self):
-        return self.teams
+class IndividualTeamPage(ParticipatingTeamsPage):
+    # def __call__(self, url):
+    #     return self.page(url)
 
-class TeamPage(TeamsPage):
-    def parse_page(self):
+    def __init__(self, url, section, attrs, limit:int=0):
         """Parse a specific volleyball team's page. By doing so,
         we are trying to gather all the statistics of the players.
         """
+        super().__init__()
+
         print('-'*15)
-        responses = []
-        # t = 0
-        for team in self.get_teams:
-            team_roster_url = urljoin(team[0], 'team_roster')
+
+        if limit != 0:
+            limit_value = limit
+        else:
+            limit_value = 0
+
+        team_roster_urls = self.get_teams(url, section, attrs)
+
+        url_errors = html_pages = []
+
+        # Iterator that requests the page
+        # for each individual team
+        for i, team_roster_url in enumerate(team_roster_urls):
+            # .../en/teams/.../team_roster
             current_date = datetime.datetime.now()
-            print('GET HTTP/1.1', str(current_date), team_roster_url)
-            response = self.create_request(team_roster_url)
 
-            # section#roster
-            response[1] = response[1].find('section', id='roster')
-            responses.append(response)
+            print('GET HTTP/1.1', str(current_date), team_roster_url[0])
 
-            # if t == 2:
-            #     break
+            html_page = self.beautify_single(team_roster_url)
 
-            # t += 1
+            if not html_page.is_empty_element:
+                # section#roster
+                html_page = html_page.find('section', attrs={'id': 'roster'})
+                html_pages.append(html_page)
+
+                if limit_value != 0:
+                    if i == limit_value:
+                        break
+            else:
+                url_errors.append(team_roster_url)
+                self.errors.append({'error': {'title': 'Request errors', 'message': url_errors}})
 
         players = []
 
-        # [(response, sections#roster), ...]
-        for response in responses:
+        # Iterator that iterates over the
+        # HTML objects that we received
+        for html_page in html_pages:
             # <tr>...</tr>
-            rows = response[1].find_all('tr')
+            rows = html_page.find_all('tr')
 
             # Pop <tr><th>...</th></tr>
             rows.pop(0)
@@ -232,7 +284,6 @@ class TeamPage(TeamsPage):
                 player_profile_link = items[1].find('a')['href']
                 # 02/03/2000
                 date_of_birth = items[2].text
-                age = self.get_age(date_of_birth)
                 # 196 (cm)
                 height = items[3].text
                 # 45 (kg)
@@ -243,42 +294,38 @@ class TeamPage(TeamsPage):
                 block = items[6].text
 
                 # Player object
-                player = Player(player_name, player_profile_link, date_of_birth,
-                            age, height, weight, spike, block)
+                player = Player(player_name, player_profile_link, date_of_birth, 
+                            height, weight, spike, block)
 
                 # Append player object to an
                 # array that will then be passed to
                 # the WriteCSV class
                 players.append(player)
+                
+        # Although we are not calculating the age directly here,
+        # we have to include it in the header in order to prevent errors
+        self.header = ['name', 'link', 'date_of_birth', 'age',
+                            'height', 'weight', 'spike', 'block']
+        self.players = players
 
-        # TODO: Delete
-        self._write(players)
+    @prepare_values
+    def to_file(self):
+        return self.header, self.players
 
-    @staticmethod
-    def get_age(date_of_birth, adjusted=False):
-        current_year = datetime.datetime.now().year
-        date = datetime.datetime.strptime(date_of_birth, '%d/%m/%Y')
-        return current_year - date.year
-
-    @staticmethod
-    def convert_height(height):
-        pass
-
-class PlayerPage(Requestor):
+class IndividualPlayerPage(RequestsManager, Mixins):
     """Parse a player's profile page. Use this class to add
     extra information on an existing player profile.
     """
-    def __init__(self, url):
-        response = self.create_request(url)
-        self.soup = soup = response[1]
+    def __init__(self, url, limit:int=0):
+        self.soup = self.beautify_single(url)
 
         # Construct image URL ...
         # section#playerDetails > img
         image_url = self.image_url()
 
         # ... > ul.line-list > span.role + strong
-        position = soup.find('section', id='playerCareer').find('ul') \
-                        .findChild('li').find('strong').getText()
+        position = self.soup.find('section', id='playerCareer').find('ul') \
+                                .findChild('li').find('strong').getText()
         
         update_values = [image_url, self.clean_text(position)]
 
@@ -302,8 +349,8 @@ class PlayerPage(Requestor):
         new_query = {
             'No': number,
             'type': action_type,
-            'height': '1200',
-            'width': '800'
+            'height': height,
+            'width': width
         }
         params = urlencode(new_query)
         return splitted_url[0] + '?' + params
@@ -326,5 +373,17 @@ class PlayerPage(Requestor):
             pass
         return position_number
 
-team = TeamPage(url='http://u20.women.2019.volleyball.fivb.com/en/teams/rus-russia/players')
-print(team.parse_page())
+url = 'http://japan2018.fivb.com/en/competition/teams'
+i = IndividualTeamPage(url, 'ul', {'class': 'team-list'}, limit=0)
+i.to_file('japan_2018.csv', [])
+
+# if __name__ == "__main__":
+#     args = argparse.ArgumentParser(description='Get players from the FIVB website')
+#     args.add_argument('-s', '--scrapper')
+#     args.add_argument('-u', '--url')
+#     parsed_args = args.parse_args()
+
+#     if parsed_args.url:
+#         page = IndividualTeamPage(parsed_args.url, 'ul', {'class': 'team-list'}, limit=0)
+#         page.to_file('japan_2018.csv')
+

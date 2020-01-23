@@ -106,7 +106,7 @@ class BaseDabatabase(type):
             cursor = connection_items[1]
             # Create the table and all the necessary
             # configurations for the database
-            cls.create_table(cursor=cursor, fields=cls_dict['fields'])
+            cls.create_table(table_name='', cursor=cursor, fields=cls_dict['fields'])
             # For every model created, we put the
             # actual connection and the cursor in
             # the body of the class
@@ -150,8 +150,9 @@ class BaseDabatabase(type):
     @staticmethod
     def create_table(**kwargs):
         if 'cursor' in kwargs:
+            sql = f'CREATE TABLE {kwargs['table_name']} ({','.join(kwargs['fields'])})'
             # .. cursor() method
-            return kwargs['cursor']().execute('')
+            return kwargs['cursor']().execute(sql)
 
 class Database(metaclass=BaseDabatabase):
     # Base manager for manipulating
@@ -176,21 +177,3 @@ class Models(Database):
         """Commits the data to the database
         """
         pass
-
-
-
-
-class MyDatabase(Models):
-    db_name = 'local'
-    fields = ['name', 'age']
-
-    using = 'sqlite'
-    plural = 'locals'
-
-    class Meta:
-        something = 'A'
-
-    def test(self):
-        pass
-
-print(MyDatabase().manager.get())

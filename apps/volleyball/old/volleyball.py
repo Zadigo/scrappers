@@ -26,16 +26,28 @@ from urllib.parse import splitquery, unquote, urlencode, urljoin, urlparse
 
 import requests
 
-from scrappers.scrappers.config.config import configuration
-from scrappers.scrappers.config.http.engine import Requestor
-from scrappers.scrappers.config.http.user_agent import get_rand_agent
-from scrappers.scrappers.config.utilities import (position_to_number,
-                                                  prepare_values)
-from scrappers.scrappers.utils.mixins import Mixin
-from scrappers.scrappers.volleyball.models import Player
+# from scrappers.scrappers.config.config import configuration
+# from scrappers.scrappers.config.http.engine import Requestor
+from scrappers.apps.config.http.managers import RequestsManager
+# from scrappers.scrappers.config.http.user_agent import get_rand_agent
+# from scrappers.scrappers.config.utilities import (position_to_number,
+#                                                   prepare_values)
+# from scrappers.scrappers.utils.mixins import Mixin
+from scrappers.apps.volleyball.models import Player
 
 
-class ParticipatingTeamsPage(Requestor, Mixin):
+class Mixins:
+    base_url = None
+
+    def __init__(self, url):
+        parsed_url = urlparse(url)
+        self.base_url = f'{parsed_url[0]}://{parsed_url[1]}'
+
+    @staticmethod
+    def clean_text(text):
+        return text.strip()
+
+class ParticipatingTeamsPage(RequestsManager, Mixins):
     """This analyzes the page referencing the teams and parses the
     different countries present on that page with their urls.
 
@@ -62,11 +74,36 @@ class ParticipatingTeamsPage(Requestor, Mixin):
     def __init__(self):
         self.teams = []
 
-    def get_teams(self, url):
-        soup = self.create_request(url)
+    def __repr__(self):
+        return f'{self.__class__.__name__}(n={len(self.teams)})'
+
+    def __unicode__(self):
+        return self.__str__()
+
+    def __str__(self):
+        return str(self.teams)
+
+    def __enter__(self):
+        return self.teams
+
+    def get_teams(self, url, section, attrs:dict):
+        """
+        Parameters
+        ----------
+
+            section_to_parse: is a dict containing the attributes
+            of the section to parse e.g. {class: section_to_parse}
+        """
+        if not url.endswith('/teams'):
+            return {'error': {'title': 'Incorrect url', 'message': ''}}
+
+        soup = self.beautify_single(url)
         
         # section#pools
-        section = soup.find('section', id='pools')
+        section = soup.find(section, attrs=attrs)
+
+        if not section:
+            return {'error': {'title': '', 'message': ''}}
         
         # <a></a>
         unparsed_links = section.find_all('a')
@@ -77,12 +114,6 @@ class ParticipatingTeamsPage(Requestor, Mixin):
 
         self.teams = parsed_links
         return parsed_links
-
-    def __repr__(self):
-        return self.__unicode__()
-
-    def __unicode__(self):
-        return str(self.teams)
 
     def parse_links(self, links, relative=False):
         """Parse the links on the page referencing the teams playing in
@@ -182,7 +213,7 @@ class IndivualTeamPage(ParticipatingTeamsPage):
         players = []
 
         # <tr>...</tr>
-        rows = soup.findAll('tr')
+        rows = soup.find_all('tr')
 
         # Pop <tr><th>...</th></tr>
         rows.pop(0)
@@ -245,35 +276,35 @@ class IndivualTeamPage(ParticipatingTeamsPage):
         """
         return round(height / 30.48, 1)
 
-    @prepare_values
-    def to_file(self, file_type='csv'):
-        """Use this definition directly to write
-        the players to a given file.
+    # @prepare_values
+    # def to_file(self, file_type='csv'):
+    #     """Use this definition directly to write
+    #     the players to a given file.
 
-        This definition calls directly the .etc function that
-        retrieves the players on the team.
-        """
-        pass
+    #     This definition calls directly the .etc function that
+    #     retrieves the players on the team.
+    #     """
+    #     pass
     
     # @connect_to_database
-    def to_database(self, database, **kwargs):
-        """Write the values to a database of choice. The default
-        database is SQLite.
-        """
-        if 'using' in kwargs:
-            if kwargs['using'] == 'postgres':
-                try:
-                    import psycopg2
-                except ImportError:
-                    pass
+    # def to_database(self, database, **kwargs):
+    #     """Write the values to a database of choice. The default
+    #     database is SQLite.
+    #     """
+    #     if 'using' in kwargs:
+    #         if kwargs['using'] == 'postgres':
+    #             try:
+    #                 import psycopg2
+    #             except ImportError:
+    #                 pass
 
-                return psycopg2.connect
+    #             return psycopg2.connect
 
-            else:
-                import sqlite3
-                return sqlite3.connect
+    #         else:
+    #             import sqlite3
+    #             return sqlite3.connect
 
-class PlayerPage(Requestor, Mixin):
+class PlayerPage(RequestsManager, Mixins):
     links = []
 
     def from_json(self, path):
@@ -295,8 +326,8 @@ class PlayerPage(Requestor, Mixin):
         opened_file = open(path, 'r', encoding='utf-8')
         return opened_file, opened_file.close
 
-    def player_page(self, link):
-        soup = self.create_request(link)
+    def player_page(self, url):
+        soup = self.beautify_single(url)
 
         # Construct image URL ...
         # section#playerDetails > img
@@ -400,3 +431,12 @@ class PlayerPage(Requestor, Mixin):
     #     except KeyError:
     #         pass
     #     return position_number
+
+
+url = 'http://clubworldchampionships.2019.women.fivb.com/en/teams'
+# s = ParticipatingTeamsPage()
+# print(s.get_teams(url, 'ul', {'class': 'team-list'}))
+# print(Mixins(url).base_url)
+
+i = IndivualTeamPage()
+i.

@@ -3,8 +3,9 @@ import re
 from asyncio import tasks
 from collections import namedtuple
 
+from scrappers.apps.config.http.utilities import asynchronous_requests
 from scrappers.apps.config.http.managers import RequestsManager
-
+from scrappers.apps.config.http.aws import TransferManager
 
 class ImagesScrapper:
     """A base class for all image scrappers
@@ -23,6 +24,9 @@ class ImagesScrapper:
 
     def __getitem__(self, index):
         return self.urls[index]
+
+    def __enter__(self):
+        return self.urls
 
     def init_kwargs(self, **kwargs):
         """Initializes the keyword arguments making sure that
@@ -49,6 +53,13 @@ class ImagesScrapper:
 
         return kwargs
 
+    @classmethod
+    def download_images(cls, images):
+        """A special definition that sends requests using the scrapped
+        urls in order to download or upload the images to a host
+        """
+        return asynchronous_requests(cls.urls)
+
     @staticmethod
     def guess_celebrity(url, pattern=None):
         celebrity = re.match(r'([a-zA-Z\-]+)(?=\-\d{1,3})', url)
@@ -56,6 +67,10 @@ class ImagesScrapper:
             name = celebrity.group(1).replace('-', ' ')
             return name
         return ''
+
+    def upload_to_aws(self, data):
+        """Upload a given image to AWS S3 bucket"""
+        pass
 
 class SawFirst(RequestsManager, ImagesScrapper):
     """This class is the base class to send requests
@@ -83,15 +98,6 @@ class SawFirst(RequestsManager, ImagesScrapper):
         # Get the HTML elements of the page
         soup = self.beautify_single(url)
         
-        # Get celebrity name
-        # if not celebrity:
-        #     celebrity = re.match(r'([a-zA-Z\-]+)(?=\-\d{1,3})', url)
-        #     if celebrity:
-        #         name = celebrity.group(1).replace('-', ' ')
-
-        # if not 'div_id' in kwargs:
-        #     div_id = ''
-
         urls = []
 
         # div#gallery-1
@@ -123,3 +129,7 @@ class SawFirst(RequestsManager, ImagesScrapper):
 class PicturePub(RequestsManager, ImagesScrapper):
     def __init__(self, url, **kwargs):
         soup = self.beautify_single(url)
+
+# url = 'https://www.sawfirst.com/christine-mcguinness-booty-in-tights-leaving-the-gym-in-cheshire-2019-12-23.html'
+# manager = SawFirst(url)
+# print(manager.name)

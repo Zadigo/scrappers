@@ -1,40 +1,77 @@
+"""This module regroups a series of classes and utilities that can be useful
+for interacting with AWS within Django (e.g. uploading items...)
+
+Base
+----
+
+    There are three main classes:
+        - AWS
+        - QueryManager
+        - TransferManager
+
+    The two last classes are subclasses of AWS so you might want to use the latter
+    directly as opposed to the main one.
+
+Utilities
+---------
+
+    The utilities definitions are useful for doing common stuffs when dealing with
+    AWS -; for instance creating a file name and path:
+
+        - object_size_creator
+        - aws_url_for
+        - unique_path_creator
+
+author: pendenquejohn@gmail.com
+"""
+
 import os
 import secrets
 from mimetypes import guess_extension, guess_type
 
 import boto3
 
+SETTINGS = {
+    'url': 'https://s3.%s.amazonaws.com/%s/%s',
 
-def image_size_creator(image_or_path):
+    'bucket_name': os.environ.get('AWS_BUCKET_NAME'),
+    'region_name': os.environ.get('AWS_REGION_NAME'),
+
+    'access_keys': {
+        'secret_key': os.environ.get('AWS_SECRET_KEY'),
+        'access_key': os.environ.get('AWS_ACCESS_KEY')
+    }
+}
+
+def object_size_creator(image_or_path):
     """
     Create three different types of image sizes for the
     S3 bucket. The original one, small, medium and large.
-    """
-    # If local path, we need to get 
-    # the basename
-    if os.path.isfile(image_or_path):
-        name, extension = os.path.basename(image_or_path).split('.', 1)
-    else:
-        # Otherwise, just split the element
-        name, extension = image_or_path.split('.', 1)
 
-    images_sizes = {
-        'original': name,
+    Creates a dictionnary of values such as:
+        {
+            original: file.txt, 
+            small: file-small.txt, 
+            medium: file-medium.txt, 
+            large: file-large.txt
+        }
+    """
+    name, extension = image_or_path.split('.', 1)
+    images_size = {
+        'original': image_or_path,
         'small': name + '-small',
         'medium': name + '-medium',
         'large': name + '-large'
     }
 
-    # Append the extension
-    for key, value in images_sizes.items():
-        images_sizes.update({key: value + '.' + extension})
-    
-    # Put the content type in case we would need it
-    images_sizes.update({'contenttype': guess_type(image_or_path)})
+    for key, value in images_size.items():
+        if key != 'original':
+            images_size.update({key: value + '.' + extension})
 
-    return images_sizes
+    return images_size
 
-def create_object_url(object_path, region=None, bucket=None):
+def object_bucket_url(object_path, region=SETTINGS['region_name'], 
+                        bucket=SETTINGS['bucket_name']):
     """
     Create a base url for an object that was previously
     created in a bucket in order to save it to a local
@@ -49,11 +86,8 @@ def create_object_url(object_path, region=None, bucket=None):
     Example link
     ------------
 
-    -https://s3.eu-west-3.amazonaws.com/jobswebsite/banners/object.jpg-
+        https://s3.eu-west-3.amazonaws.com/jobswebsite/banners/object.jpg
     """
-    # region = region or AWS_REGION
-    # bucket = bucket or AWS_BUCKET
-
     return f'https://s3.{region}.amazonaws.com/{bucket}/{object_path}'
 
 def unique_path_creator(folder, filename, rename=False):
@@ -66,7 +100,7 @@ def unique_path_creator(folder, filename, rename=False):
     ----------
 
     `folder` is the folder to access within the bucket. You can
-    use a path such as path/to/
+    also use a path such as path/to/
 
     `filename` is the name of the file
 
@@ -100,216 +134,189 @@ def unique_path_creator(folder, filename, rename=False):
     object_path = '%s/%s/%s.%s' % (folder, unique_entry, name, extension)
     # Create the objet's URL to save to a database for example
     # FIXME: Find a way to pass the bucket and the region
-    object_url = create_object_url(object_path)
+    object_url = object_bucket_url(object_path)
     
     return {'object_name': [name, guess_type(filename)], 'object_path': object_path, 
                 'object_url': object_url, 'unique_entry': unique_entry}
 
-class AWS:
-    """This is the base used to connect to an AWS bucket.
 
-    Parameters
-    ----------
-        
-    `access_key` is the access key to the S3 account
-    
-    `secret_key` is the secret key to the S3 account
-            
-    `region` is the region of your bucket
-    
-    `bucket` is your bucket's name
-    """
-    def __init__(self, access_key, secret_key, region, bucket):
-        session = boto3.Session(aws_access_key_id=access_key, aws_secret_access_key=secret_key)
-        client = session.resource('s3', region_name=region)
-        print('[%s]: Connection. Connected to %s' % (self.__class__.__name__, bucket))
-        self.bucket = client.Bucket(bucket)
+class AWS:
+    session = boto3.Session
+
+    def create_session(self, access_key, secret_key, region_name):
+        session = self.session(access_key, secret_key, region_name=region_name)
+        return session
 
 class QueryManager(AWS):
-    def get_all(self):
+    def __init__(self, bucket_name, access_key, secret_key, region_name):
+        # Use .resource() to perform actions from a
+        # bucket standpoint eg. .filter(), .all()
+        session = super().create_session(access_key, secret_key, region_name)
+        resource = session.resource('s3')
+        self.bucket = resource.Bucket(bucket_name)
+
+        self.bucket_name = bucket_name
+        self.region_name = region_name
+
+    def list_bucket(self):
+        """Lists the items withing a bucket
+        """
         return [item for item in self.bucket.objects.all()]
 
-    def get_folder(self, folder, choices=False):
-        """Get the specific items of a folder
+    def list_folder(self, folder):
+        """List the specific items of a folder
 
         Description
         -----------
 
-        For example, let's return the folder ./test in a bucket:
+            For example, return the folder ./test in a bucket:
 
-            (
-                ('test/', 'item'), 
-                ('test/subfolder/to.jpg', 'item'), 
-                ...
-            )
+                (
+                    ('test/', 'item'), 
+                    ('test/subfolder/to.jpg', 'item'), 
+                    ...
+                )
         """
-        obj = tuple((item.key, 'item') for item in self.bucket.objects.filter(Prefix=folder))
-        return obj
+        items = list((item.key, item.last_modified) for item in self.bucket.objects.filter(Prefix=folder))
+        items.pop(0)
+        return items
 
-    def get_folder_links(self, folder):
+    def list_folder_urls(self, folder):
         """Get the specific items' links in a folder
+
+        Description
+        -----------
+
+            [
+                https://s3...,
+                ...
+            ]
         """
-        objs = self.get_folder(folder)
+        items = self.list_folder(folder)
+        for item in items:
+            yield object_bucket_url(item[0], self.region_name, self.bucket_name)
 
-        # Delete root path
-        # e.g. (test/, item)
-        # list(objs).pop(0)
+class TransferManager(AWS):
+    def __init__(self, bucket_name, access_key, secret_key, region_name):
+        session = super().session(access_key, secret_key, region_name=region_name)
+        self.client = session.client('s3')
+        
+        self.bucket_name = bucket_name
+        self.region_name = region_name
 
-        for obj in objs:
-             yield create_object_url(obj[0], region='eu-west-3', bucket='jobswebsite')
+    def upload(self, data, subfolder_path, contenttype, **params):
+        """This is the overall definition used to upload objects to
+        a given AWS bucket.
 
-    def get_file_url(self, root, path):
-        """`root` main folder to use
-        `path` is the path to the file
+        Parameters
+        ----------
+            data: the content of the file to upload in bytes
+
+            subfolder_path: is the subfolder to upload the file to
+
+            contenttype: the content disposition of the file e.g. image/jpeg
         """
-        item = self.bucket.objects.filter(Prefix=root, Delimiter='/', Key='sophie.jpg')
-        if item:
-            # Reconcile the base path
-            # with the relative one to
-            # create a fully qualified
-            # relative path 
-            # ex. root/subfolder/to.jpg
-            path = root + '/' + path
-            return create_object_url(path, region='eu-west-3', bucket='jobswebsite')
-        return None
+        base_params = {
+            'Bucket': self.bucket_name,
+            'Key': subfolder_path,
+            'Body': data,
+            'ACL': 'public-read',
+            'ContentType': contenttype,
+            'CacheControl': f'max-age=24000'
+        }
+        if params:
+            base_params.update(params)
 
-    def delete_file(self, relative_path):
-        """Deletes a file in the bucket
+        try:
+            response = self.client.put_object(**base_params)
+        except boto3.exceptions.S3TransferFailedError:
+            print('[%s]: Upload failed. %s was not uploaded.' 
+                    % (self.__class__.__name__, subfolder_path))
+        else:
+            return response
+    
+    def upload_from_local(self, file_to_upload, upload_to, model=None, request=None):
+        """Uploads a file from a local path
 
         Parameters
         ----------
 
-        `relative_path` as fully qualified e.g. subfolder/path/to.jpg
+            file_to_upload: the absolute path of the file to upload
+
+            upload_to: path in your AWS bucket in which to upload the file
+            e.g. path/to/folder
+
+            model: if you need to save items to a Django model after upload,
+            then pass your model here
         """
-        obj = self.bucket.Object('test/3e7e208c6a3b27df0ca556e0f5d1207748e3f277/sophie.jpg')
-        obj.delete()
-        if isinstance(obj, dict):
-            print('[%s]: Deletion. Deleted file, was %s' % (self.__class__.__name__, obj['VersionId']))
-        return print('[%s]: Deletion. Object does not exist or is already deleted.' % self.__class__.__name__)
-
-class TransferManager(AWS):
-    def upload_from_post_request(self, file_to_upload, bucket, model=None, request=None):
-        item_name = file_to_upload.name
-        contenttype = file_to_upload.content_type
-
-        items = unique_path_creator('test', item_name, rename=False)
-
-        try:
-            self.bucket.put_object(Key=items['object_path'], Body=file_to_upload, ACL='public-read',
-                                        ContentType=contenttype[0], CacheControl='max-age=24000')
-
-        except boto3.exceptions.S3TransferFailedError:
-            print('[%s]: Upload failed. %s was not uploaded.' 
-                    % (self.__class__.__name__, items['object_path']))
-
-    def upload_from_local(self, file_to_upload, bucket, model=None, request=None):
-        # We have to test weither the file comes from
-        # a path or weither it comes from a form e.g. django
         is_local_file = os.path.isfile(file_to_upload)
-        # No? It's a Django uploaded file
         if is_local_file:
             item_name = os.path.basename(file_to_upload)
-            contenttype = guess_type(file_to_upload)
+            # Guess the type of the file for AWS
+            # .. Transform to list to have better flexibility
+            # as opposed to using a tuple
+            contenttype = list(guess_type(file_to_upload))
+
+            # HACK: If content type is none, we
+            # have to find something here!
+            if contenttype[0] is None:
+                contenttype[0] = 'image/jpeg'
 
             with open(file_to_upload, 'rb') as f:
                 data = f.read()
+                # Create the unique path for the file
+                # within the subfolder
+                path = unique_path_creator(upload_to, item_name)
+                response = self.upload(data, path['object_path'], contenttype[0])
+            return response
 
-                # Create the paths
-                items = unique_path_creator('test', item_name, rename=False)
-
-                # Upload the file
-                try:
-                    self.bucket.put_object(Key=items['object_path'], Body=data, ACL='public-read',
-                                                ContentType=contenttype[0], CacheControl='max-age=24000')
-                except boto3.exceptions.S3TransferFailedError:
-                    print('[%s]: Upload failed. %s was not uploaded.' 
-                            % (self.__class__.__name__, items['object_path']))
-
-    def from_local_to_existing(self, file_to_upload, folder_name='test/3e7e208c6a3b27df0ca556e0f5d1207748e3f277'):
-        # We have to test weither the file comes from
-        # a path or weither it comes from a form e.g. django
+    def local_to_existing(self, file_to_upload, aws_path):
+        """Upload a file to an existing folder path
+        """
         is_local_file = os.path.isfile(file_to_upload)
-
         if is_local_file:
             item_name = os.path.basename(file_to_upload)
-            contenttype = guess_type(file_to_upload)
+            # Guess the type of the file for AWS
+            # .. Transform to list to have better flexibility
+            # as opposed to using a tuple
+            contenttype = list(guess_type(file_to_upload))
+
+            # HACK: If content type is none, we
+            # have to find something here!
+            if contenttype[0] is None:
+                contenttype[0] = 'image/jpeg'
 
             with open(file_to_upload, 'rb') as f:
                 data = f.read()
+                complete_path = aws_path + '/' + item_name
+                response = self.upload(data, complete_path, contenttype[0])
+                print('[AWS MANAGER] : File uploaded. (%s)' % complete_path)
+            return response
 
-                # Upload the file
-                try:
-                    response = self.bucket.put_object(Key=folder_name + '/' + item_name, Body=data, ACL='public-read',
-                                                ContentType=contenttype[0], CacheControl='max-age=24000')
-                except boto3.exceptions.S3TransferFailedError:
-                    print('[%s]: Upload failed. %s was not uploaded.' 
-                            % (self.__class__.__name__, item_name))
-                else:
-                    return response
+    # def delete_object(self, aws_path):        
+    #     return self.client.delete_object(aws_path)
 
+    # def upload_to_model(self, file_to_upload, model, **kwargs):
+    #     if isinstance(model, type):
+    #         obj = model.objects.create(**kwargs)
+    #         return obj
+    #     self.upload_from_local(file_to_upload, upload_to)
 
+bucket_name = 'mybusinesses'
+access_key = 'AKIAZP4QDMZRKNE6VASE'
+secret_key = '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'
+region_name = 'eu-west-3'
 
-    # def upload(self, file_to_upload, bucket, model=None, request=None):
-    #     # We have to test weither the file comes from
-    #     # a path or weither it comes from a form e.g. django
-    #     is_local_file = os.path.isfile(file_to_upload.name)
-    #     # No? It's a Django uploaded file
-    #     if not is_local_file:
-    #         item_name = file_to_upload.name
-    #         contenttype = file_to_upload.content_type
-    #     else:
-    #         item_name = os.path.basename(file_to_upload.name)
-    #         contenttype = guess_type(file_to_upload)
+# query = QueryManager(bucket_name, access_key, secret_key, region_name)
+# print(query.list_folder('nawoka/products'))
+# s.get_file_url('test', '3e7e208c6a3b27df0ca556e0f5d1207748e3f277/sophie.jpg')
+# items = q.list_folder_urls('nawoka/shop')
+# print(list(items))
 
-    #     # Create the paths
-    #     items = unique_path_creator('test', item_name, rename=False)
+# path='C:\\Users\\Pende\\Pictures\\taylor.png'
+# t = TransferManager(bucket_name, access_key, secret_key, region_name)
+# t.upload_from_local(path, 'nawoka/products')
 
-    #     # Correct the file name if needed
-    #     # and create the bucket path
-    #     # Upload the file to AMAZON bucket
-    #     try:
-    #         self.bucket.put_object(Key=items['object_path'], Body=file_to_upload, ACL='public-read',
-    #                                     ContentType=contenttype, CacheControl='max-age=24000')
-    #     except boto3.exceptions.S3TransferFailedError:
-    #         print('[%s]: Upload failed. %s was not uploaded.' 
-    #                 % (self.__class__.__name__, items['object_path']))
-
-access_key = 'AKIAJQZHLNUQVX7Q5QFA'
-secret_key = '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'
-# path='C:\\Users\\Zadigo\\Documents\\Koding\\scrappers\\scrappers\\config\\http\\tumblr_pbpegtKkNF1uokzn6o3_1280.jpg'
-# path2='C:\\Users\\Zadigo\\Documents\\Koding\\scrappers\\scrappers\\config\\http\\sophie.jpg'
-path3='C:\\Users\\Zadigo\\Documents\\Koding\\scrappers\\scrappers\\config\\http\\ge8h9s99m7d11.jpg'
-# t=TransferManager(access_key, secret_key, 'eu-west-3', 'jobswebsite')
-# # t.upload_from_local(path,'eu-west-3')
-# print(t.from_local_to_existing(path2).data)
-# q=QueryManager(access_key, secret_key, 'eu-west-3', 'jobswebsite')
-# print(list(q.get_folder_links('test/3e7e208c6a3b27df0ca556e0f5d1207748e3f277')))
-# print(q.get_file_url('test', '3e7e208c6a3b27df0ca556e0f5d1207748e3f277/sophie.jpg'))
-# q.delete_file('/')
-
-
-session = boto3.Session(access_key, secret_key, region_name='eu-west-3')
-resource = session.resource('s3')
-client = session.client('s3')
-
-data = open(path3, 'rb')
-items = {
-    'Bucket': 'jobswebsite',
-    'Key': 'test/3e7e208c6a3b27df0ca556e0f5d1207748e3f277/ge8h9s99m7d11.jpg',
-    'Body': data.read(),
-    'ACL': 'public-read',
-    'ContentType': guess_type(path3)[0],
-    'CacheControl': 'max-age=24000'
-}
-# print(client.put_object(**items))
-data.close()
-
-items = {
-    'Bucket': 'jobswebsite',
-    'Key': 'test/3e7e208c6a3b27df0ca556e0f5d1207748e3f277/ge8h9s99m7d11.jpg',
-}
-
-# print(client.get_object(**items))
-
-# bucket = resource.Bucket('jobswebsite')
-# print(bucket.objects)
+# path = 'C:\\Users\\Zadigo\\Pictures\\nawoka\\shop\\chain_crystal4.webp'
+# t = TransferManager(bucket_name, access_key, secret_key, region_name)
+# t.local_to_existing(path, 'nawoka/shop/85683d41a91f84cbea6e45b1229931014474a693')

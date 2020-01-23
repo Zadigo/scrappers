@@ -192,8 +192,15 @@ class ParsePage:
                 player_rank = meta_values[0].text
 
                 try:
-                    # ex. 1
-                    player_seed = meta_values[1].text
+                    # When the seed is present in the tags,
+                    # we have four values instead of 3.
+                    # If it's 4, we know the tag is in the
+                    # list of tags
+                    if len(meta_values) == 4:
+                        # ex. 1
+                        player_seed = meta_values[1].text
+                    else:
+                        player_seed = None
                 except:
                     player_seed = None
 
@@ -246,4 +253,9 @@ class ParsePage:
 #         playing_hand = soup.find('div', attrs={'class': 'field--name-field-playhand'})\
 #                             .find('div', attrs={'class': 'field__item'}).text
 
-p = ParsePage()
+# p = ParsePage()
+
+import requests
+
+response = requests.get('https://www.google.com/maps?q=Paris')
+print(response.content)
