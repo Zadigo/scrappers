@@ -1,0 +1,15 @@
+FROM python
+
+ARG PORT=80
+
+WORKDIR /app/
+
+COPY . app/
+
+EXPOSE 80
+
+VOLUME [ "/var/db " ]
+
+ENTRYPOINT [ "sender" "-p", ${PORT} ]
+
+CMD [ "python", "-m" ]
