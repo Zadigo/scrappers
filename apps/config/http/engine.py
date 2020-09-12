@@ -28,7 +28,7 @@ class Stack:
         return self.__str__()
 
     def __str__(self):
-        return self.stack
+        return str(self.stack)
 
     def __repr__(self):
         return self.__str__()
@@ -54,6 +54,12 @@ class RequestsManager:
     stack = Stack()
     is_image = False
     proxies = {}
+
+    def __setattr__(self, name, value):
+        if name == 'proxies':
+            if not isinstance(value, dict):
+                raise TypeError(f"'proxies' should be of type dict. Got {type(self.proxies)}")
+        super().__setattr__(name, value)
     
     @classmethod
     def prepare(cls, urls:list, **headers):
@@ -90,34 +96,44 @@ class RequestsManager:
     def threaded_get(self, *urls, **headers):
         responses = []
 
-        def wrapper(new_session, request, responses:list):
-            response = new_session.send(request, stream=True, **other_params)
-            if response.status_code == 200:
-                responses.append(response)
+        logger = default(self.__class__.__name__)
+
+        def wrapper(new_session, request, responses:list, proxies:dict):
+            try:
+                response = new_session.send(
+                    request, 
+                    stream=True, 
+                    proxies=proxies, 
+                    timeout=5
+                )
+            except Exception as e:
+                logger.error(e)
+                self.stack.append(e.args)
+            else:
+                if response.status_code == 200:
+                    responses.append(response)
+                    logger.warning('Sent request for')
+                else:
+                    pass
 
         threads = []
 
         with self.session as new_session:
             prepared_requests = self.prepare(list(urls))
             for prepared_request in prepared_requests:
-                other_params = {}
-                if self.proxies:
-                    other_params.update({'proxies': self.proxies})
-
                 params = {
                     'new_session': new_session,
                     'request': prepared_request,
-                    'responses': responses
-                    **other_params
+                    'responses': responses,
+                    'proxies': self.proxies
                 }
-                threads.append(threading.Thread(target=wrapper), kwargs=params)
+                threads.append(threading.Thread(target=wrapper, kwargs=params))
 
         for thread in threads:
             thread.start()
             if thread.is_alive():
                 thread.join()
         return responses
-
         
     def get(self, *urls, **headers):
         """Get a complete response for a given url
