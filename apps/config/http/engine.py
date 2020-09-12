@@ -2,7 +2,10 @@
 in order to send requests to the web or dowload data or images.
 """
 
+import functools
+import os
 import re
+import threading
 import timeit
 from collections import deque
 from pathlib import Path
@@ -13,129 +16,8 @@ from bs4 import BeautifulSoup
 from requests import Request, Session
 
 from scrappers.apps.config.http import user_agent
+from scrappers.apps.config.logs import default
 from scrappers.apps.config.messages import Info
-
-# class Requestor:
-#     """Base class to send requests to the web.
-
-#     Parameters
-#     ----------
-
-#     `url` to use in order to send the request
-
-#     `headers` to include in the request. `User-Agent` is generated
-#     by default.
-#     """
-#     def create_request(self, url, **headers):
-#         """Creates a request and returns the soup version
-#         of the response. The returned object is the HTML
-#         parse of the page.
-#         """
-#         base_headers = {
-#             'User-Agent': user_agent.get_rand_agent()
-#         }
-
-#         if headers:
-#             base_headers.update(headers)
-
-#         # ENHANCEMENT: Test that the url follows the
-#         # pattern /??/teams
-
-#         # Get URL's different parts
-#         # and construct the base url
-#         splitted_url = urlparse(url)
-#         self.base_url = f'{splitted_url[0]}://{splitted_url[1]}'
-
-#         try:
-#             response = requests.get(url, headers=base_headers)
-#         except requests.HTTPError:
-#             pass
-#         else:
-#             self.response = response
-#             return self.create_soup(response)
-
-#     def __repr__(self):
-#         return '%s(%s)' % (
-#             self.__class__.__name__,
-#             self.response
-#         )
-
-#     @staticmethod
-#     def create_soup(response):
-#         return BeautifulSoup(response.text, 'html.parser')
-
-# class DownloadImage:
-#     """This class can download [an] images to the computer's
-#     images path folder.
-
-#     Parameters
-#     ----------
-    
-#     The `url` should end with a .jpg/.jpeg/.png extension
-#     """
-#     # def __init__(self, url):
-#     #     base_headers = {
-#     #         'User-Agent': get_rand_agent()
-#     #     }
-
-#     #     if not url.endswith('jpg') or \
-#     #         not url.endswith('jpeg') or \
-#     #             not url.endswith('png'):
-#     #         raise TypeError()
-
-#     #     try:
-#     #         response = requests.get(url, headers=base_headers)
-#     #     except requests.HTTPError:
-#     #         pass
-        
-#     #     # Path to output image
-#     #     path = Path('C:\\Users\\Zadigo\\Pictures\\Test')
-#     #     with open(path, 'wb') as f:
-#     #         for block in response.iter_content(1024):
-#     #             if not response.ok:
-#     #                 print('[FAILED]', response)
-
-#     #             if not block:
-#     #                 break
-#     #             f.write(block)
-
-#     def _download_image(self, response):
-#         # Path to output image
-#         path = Path('C:\\Users\\Zadigo\\Pictures\\Test')
-#         with open(path, 'wb') as f:
-#             for block in response.iter_content(1024):
-#                 if not response.ok:
-#                     print('[FAILED]', response)
-
-#                 if not block:
-#                     break
-#                 f.write(block)
-
-#     def _send_request(self, url):
-#         base_headers = {
-#             'User-Agent': get_rand_agent()
-#         }
-
-#         if not url.endswith('jpg') or \
-#             not url.endswith('jpeg') or \
-#                 not url.endswith('png'):
-#             raise TypeError()
-
-#         try:
-#             response = requests.get(url, headers=base_headers)
-#         except requests.HTTPError:
-#             pass
-
-#         return response
-
-#     def from_file(self, path):
-#         with open(path, 'r', encoding='utf-8') as f:
-#             urls = f.readlines()
-#             for url in urls:
-#                 self._download_image(self._send_request(url))
-
-#     def from_url(self, url):
-#         self._send_request(url)
 
 
 class Stack:
@@ -166,54 +48,22 @@ class Stack:
     def first(self, key):
         return self.stack[key][:1]
 
-class Manager:
-    response = None
-    responses = []
-
-    @property
-    def content(self):
-        return self.response.content
-
-    def download_image(self, new_name=None):
-        path = Path('C:\\Users\\Zadigo\\Pictures\\Test')
-
-        with open(path, 'wb') as f:
-            for block in self.response.iter_content(1024):
-                if not self.response.ok:
-                    print('[FAILED]', self.response)
-
-                if not block:
-                    break
-
-                f.write(block)
-
-    def download_images(self, filepath):
-        with open(filepath, 'r', encoding='utf-8') as f:
-            urls = f.readlines()
-
-    def to_aws(self):
-        return
-    
-    @classmethod
-    def as_handle(cls, response=None):
-        instance = cls()
-        instance.response = response
-        return instance
 
 class RequestsManager:
     session = Session()
     stack = Stack()
     is_image = False
+    proxies = {}
     
     @classmethod
-    def prepare(cls, *urls, **headers):
+    def prepare(cls, urls:list, **headers):
         """A definition that prepares a list of urls to be
         sent to the web.
 
         Result
         ------
 
-            [ prepared_request, ... ] generator
+            [ prepared_request, ... ]
         """
         base_headers = {
             'User-Agent': user_agent.get_rand_agent()
@@ -232,21 +82,55 @@ class RequestsManager:
                 first_value = 0
                 url = url[first_value]
                 first_value = first_value + 1
-
-
-
+            
             request = Request(method='GET', url=url, headers=base_headers)
             prepared_request = cls.session.prepare_request(request)
             yield prepared_request
 
+    def threaded_get(self, *urls, **headers):
+        responses = []
+
+        def wrapper(new_session, request, responses:list):
+            response = new_session.send(request, stream=True, **other_params)
+            if response.status_code == 200:
+                responses.append(response)
+
+        threads = []
+
+        with self.session as new_session:
+            prepared_requests = self.prepare(list(urls))
+            for prepared_request in prepared_requests:
+                other_params = {}
+                if self.proxies:
+                    other_params.update({'proxies': self.proxies})
+
+                params = {
+                    'new_session': new_session,
+                    'request': prepared_request,
+                    'responses': responses
+                    **other_params
+                }
+                threads.append(threading.Thread(target=wrapper), kwargs=params)
+
+        for thread in threads:
+            thread.start()
+            if thread.is_alive():
+                thread.join()
+        return responses
+
+        
     def get(self, *urls, **headers):
         """Get a complete response for a given url
         """
         with self.session as new_session:
-            for prepared_request in self.prepare(urls):
-                start = timeit.Timer()
-                response = new_session.send(prepared_request)
-                end = timeit.Timer()
+            prepared_requests = self.prepare(list(urls))
+            for prepared_request in prepared_requests:
+                # start = timeit.Timer()
+                other_params = {}
+                if self.proxies:
+                    other_params.update({'proxies': self.proxies})
+                response = new_session.send(prepared_request, stream=True, **other_params)
+                # end = timeit.Timer()
 
                 if response.status_code != 200:
                     self.stack.append(prepared_request.url)
@@ -256,22 +140,26 @@ class RequestsManager:
                     print(Info("Request successful for %s in %s" % (prepared_request.url, elapsed_time)))
                     responses = yield response
 
-        setattr(self.manager, 'responses', responses)
         return responses
 
     def get_html(self, *urls, **headers):
         """Same as get() but returns a BeautifulSoup object of the page
         """
         responses = list(self.get(*urls, **headers))
+        # responses = list(self.threaded_get(*urls, **headers))
 
-        if list(responses) == 1:
+        if len(responses) == 1:
             return BeautifulSoup(responses[0], 'html.parser')
         else:
             for response in responses:
                 yield BeautifulSoup(response.text, 'html.parser')
 
-    manager = Manager().as_handle()
-
-# r = RequestsManager()
-# s = r.get('http://www.example.com')
-# print(list(s))
+    def lazy_request(self, path):
+        if os.path.exists(path):
+            if path.endswith('.html'):
+                with open(path, 'r') as html:
+                    return BeautifulSoup(html, 'html.parser')
+            else:
+                TypeError(f'File should be of type HTML but got ""')
+        else:
+            FileNotFoundError('The file you are trying to parse does not exist')

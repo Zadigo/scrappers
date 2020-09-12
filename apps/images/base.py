@@ -1,78 +1,17 @@
-import asyncio
+import argparse
+import csv
+import json
+import os
 import re
-from asyncio import tasks
-from collections import namedtuple
+from collections import OrderedDict
+from functools import lru_cache
 
-from scrappers.apps.config.http.utilities import asynchronous_requests
-from scrappers.apps.config.http.managers import RequestsManager
-from scrappers.apps.config.http.aws import TransferManager
+from scrappers.apps.config.http.engine import RequestsManager
+from scrappers.apps.config.logs import default
+from scrappers.apps.images.mixins import ScrapperMixins
 
-class ImagesScrapper:
-    """A base class for all image scrappers
-    """
-    urls = []
 
-    def __repr__(self):
-        return self.__str__()
-
-    def __unicode__(self):
-        return self.__str__()
-
-    def __str__(self):
-        urls = namedtuple('Images', ['links'])
-        return str(urls(self.urls))
-
-    def __getitem__(self, index):
-        return self.urls[index]
-
-    def __enter__(self):
-        return self.urls
-
-    def init_kwargs(self, **kwargs):
-        """Initializes the keyword arguments making sure that
-        everything is present and that the applications can proceed
-        without any difficulties
-        """
-        if 'celebrity_name' not in kwargs:
-            if 'url' in kwargs:
-                name = self.guess_celebrity(kwargs['url'])
-                kwargs['celebrity_name'] = name
-            else:
-                kwargs['celebrity_name'] = ''
-        else:
-            pass
-
-        if 'div_id' not in kwargs:
-            # Initialize the div_id with a default iD
-            # that the website uses. This can be
-            # overrided in case there has been a change
-            kwargs['div_id'] = 'gallery-1'
-        else:
-            if kwargs['div_id'] == '' or kwargs['div_id'] is None:
-                kwargs['div_id'] = 'gallery-1'
-
-        return kwargs
-
-    @classmethod
-    def download_images(cls, images):
-        """A special definition that sends requests using the scrapped
-        urls in order to download or upload the images to a host
-        """
-        return asynchronous_requests(cls.urls)
-
-    @staticmethod
-    def guess_celebrity(url, pattern=None):
-        celebrity = re.match(r'([a-zA-Z\-]+)(?=\-\d{1,3})', url)
-        if celebrity:
-            name = celebrity.group(1).replace('-', ' ')
-            return name
-        return ''
-
-    def upload_to_aws(self, data):
-        """Upload a given image to AWS S3 bucket"""
-        pass
-
-class SawFirst(RequestsManager, ImagesScrapper):
+class ImageDownloader(ScrapperMixins, RequestsManager):
     """This class is the base class to send requests
     to the SawFirst website.
 
@@ -93,43 +32,213 @@ class SawFirst(RequestsManager, ImagesScrapper):
 
         headers: add additional headers to the request
     """
-    def __init__(self, url, **kwargs):
-        kwargs = super().init_kwargs(url=url, **kwargs)
-        # Get the HTML elements of the page
-        soup = self.beautify_single(url)
-        
-        urls = []
+    memory = OrderedDict(csv=[], json=[], html=[])
 
-        # div#gallery-1
-        gallery = soup.find('div', attrs={'id': kwargs['div_id']})
+    def __init__(self, current_file, url=None, 
+                 html_path=None, download_dir=None):
+        self.current_dir = os.path.dirname(current_file)
+        self.logger = default(
+            self.__class__.__name__, 
+            logfile_name=os.path.join(self.current_dir, 'scrappers.log')
+        )
+        self.url = url
+        self.html_path = html_path
 
-        # dl
-        gallery_items = gallery.find_all('figure', attrs={'class': 'gallery-item'})
+        path, _, files = list(os.walk(os.path.dirname(current_file)))[0]
 
-        for gallery_item in gallery_items:
-            if not gallery_item.is_empty_element:
-                # img
-                image_url = gallery_item.find('img')['src']
+        self.memory.update({'path': path})
+        for item in files:
+            self._sort_files(item)
 
-                # Get the url without the -130x70.jpg
-                clean_url = re.match(r'(.*(?=\-\d+x\d+\.(jpg)))', image_url)
+        state = self._construct_download_dir(download_dir=download_dir)
+        if not state:
+            raise FileExistsError('Could not create or find a download directory for your application')
 
-                if clean_url:
-                    # In order to get the real image and not the thumbnail,
-                    # we have to recompose the url from 
-                    # 'celebrity-1-130x170.jpg' to 'celebrity-1.jpg'
-                    composed_url = clean_url.group(1) + '.%s' % clean_url.group(2)
-                    urls.append(composed_url)
-            else:
+    def _sort_files(self, item, base_path=None):
+        if '.':
+            _, extension = item.split('.', 1)
+            try:
+                self.memory[extension].append(item)
+            except KeyError:
                 pass
+        else:
+            return False
 
-        self.urls = urls
-        self.name = kwargs['celebrity_name']
+    # @lru_cache(maxsize=1)
+    # def load_images(self):
+    #     base, _, images = os.walk(self._scrappers_dir)
+    #     for image in images:
+    #         self.saved_images.append(Image.load(image))
+    #     return self.saved_images
 
-class PicturePub(RequestsManager, ImagesScrapper):
-    def __init__(self, url, **kwargs):
-        soup = self.beautify_single(url)
+    @lru_cache(maxsize=1)
+    def load(self, filename, run_request=False, limit=0):
+        extension, _, full_path  = self.lookup(filename, just_path=False)
+        with open(full_path, 'r') as f:
+            if extension == 'csv':
+                reader = csv.reader(f)
+                self.urls = list(reader)
+                self.urls.pop(0)
+                self.urls = [url[1] for url in self.urls]
 
-# url = 'https://www.sawfirst.com/christine-mcguinness-booty-in-tights-leaving-the-gym-in-cheshire-2019-12-23.html'
-# manager = SawFirst(url)
-# print(manager.name)
+            if extension == 'json':
+                data = json.load(f)
+                for item in data['gallery']:
+                    self.urls.append(item['link'])
+
+        if run_request:
+            self._download_images(limit=limit)
+        return self.urls
+
+    def save_gallery(self, filename, depth=3, f=None):
+        """
+        Save the links and their parents in an HTML file
+        """        
+        sample_tag = self.raw_tags[0]
+        parents = sample_tag.find_parents()
+        
+        if f is not None:
+            parent = None
+            for item in parents:
+                parent = item.parent()[0]
+                if 'class' in parent.attrs or 'id' in parent.attrs:
+                    for _, values in parent.attrs.items():
+                        if f in values:
+                            parent = item
+                            break
+        else:
+            parent = parents[depth]
+            
+        with open(os.path.join(self.current_dir, filename), 'w') as f:
+            f.write(str(parent))
+
+    def save_links(self, filename=None, file_type='csv',
+                   headers=[], with_index=False):
+        if filename is not None:
+            filename = f'{filename}.{file_type}'
+
+        full_path = os.path.join(self.current_dir, filename)            
+
+        with open(full_path, 'w', newline='') as f:
+            if file_type == 'csv':
+                writer = csv.writer(f)
+                if with_index:
+                    if not 'index' in headers:
+                        headers.insert(0, 'index')
+                    new_urls = [[index, url]
+                                for index, url in enumerate(self.urls)]
+                else:
+                    new_urls = [[url] for url in self.urls]
+                if headers:
+                    new_urls.insert(0, headers)
+                writer.writerows(new_urls)
+                print(f'Saved {len(self.urls)} images in {full_path}')
+
+            if file_type == 'json':
+                base = {
+                    'gallery': []
+                }
+                for index, link in enumerate(self.urls):
+                    base['gallery'].append(
+                        {'index': index, 'link': link}
+                    )
+                json.dump(base, f, indent=4)
+
+    def _construct_download_dir(self, download_dir=None, using=None):
+        if download_dir is None:
+            path = os.path.join(
+                os.environ.get('HOMEDRIVE'),
+                os.environ.get('HOMEPATH')
+            )
+            images_dir = os.path.join(path, 'Pictures')
+            self.logger.info(f'Created download directory in {path}')
+            self.images_dir = images_dir
+            return True
+        else:
+            if using is not None:
+                pass
+            else:
+                self.images_dir = download_dir
+            return True
+        return False
+
+    def lookup(self, filename, just_path=False):
+        """
+        Result
+        ------
+
+            (key, filename.ext, /path/to/file.ext)
+        """
+        if '.' not in filename:
+            raise ValueError('Please specify a file with an extension')
+
+        found = False
+
+        for key, values in self.memory.items():
+            if filename in values:
+                found = True
+                break
+        
+        if found:
+            full_path = os.path.join(self.memory['path'], values[values.index(filename)])
+            self.html_path = full_path
+            if just_path:
+                return full_path
+            return (key, values[values.index(filename)], full_path)
+        else:
+            return found
+
+    def _download_images(self, limit=0):
+        responses = self.get(self.url)
+        path_exists = os.path.exists(self._scrappers_dir)
+        if not path_exists:
+            os.mkdir(self._scrappers_dir)
+
+        for index, response in enumerate(responses, start=1):
+            if limit != 0:
+                if index == limit:
+                    break
+            if response.status_code == 200:
+                name = os.path.join(self._scrappers_dir, f'{index}.jpg')
+                with open(name, 'wb') as f:
+                    for data in response.iter_content(chunk_size=1024):
+                        if not data:
+                            break
+                        f.write(data)
+                        # self.saved_images.append(
+                        #     Image.load(os.path.join(self._scrappers_dir, name))
+                        # )
+
+        self.logger.warning(f'downloaded {len(self.urls)} images to {self._scrappers_dir}')
+    
+    def build(self, f, limit=0, regex=None, replace_with=None, pop_value:int=None):
+        if self.html_path is not None:
+            soup = self.lazy_request(path=self.html_path)
+        
+        if self.url is not None:
+            soup = self.get_html(*(self.url))
+
+        if self.html_path is None and self.url is None:
+            raise ValueError('You need to provide either a URL or an HTML path to use for parsing the images. You can also use the .lookup() method.')
+        
+        try:
+            images = soup.find_all('img')
+        except Exception:
+            raise
+        else:
+            for image in images:
+                url = image['src']
+                if f in url and url.endswith('jpg'):
+                    self.raw_tags.append(image)
+                    if regex:
+                        if replace_with is None:
+                            replace_with = '.jpg'
+                        self.urls.append(
+                            self.replace_with_regex(url, regex, replace_with)
+                        )
+                    else:
+                        self.urls.append(url)
+            if pop_value is not None:
+                self.urls.pop(pop_value)
+            print(f'Found {len(self.urls)} images')
+            # self._download_images(limit=limit)
