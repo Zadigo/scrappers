@@ -1,4 +1,5 @@
 import csv
+import datetime
 import functools
 import json
 import logging
@@ -52,3 +53,7 @@ class ScrapperMixins:
         
     def replace_with_regex(self, url, regex, replace_with):
         return re.sub(regex, replace_with, url)
+
+    def create_name(self, index):
+        d = datetime.datetime.now().date()
+        return f"{d.year}-{d.month}-{d.day}-{index}"

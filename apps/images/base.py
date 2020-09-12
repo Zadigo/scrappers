@@ -3,8 +3,11 @@ import csv
 import json
 import os
 import re
+import zipfile
 from collections import OrderedDict
 from functools import lru_cache
+
+from PIL import Image
 
 from scrappers.apps.config.http.engine import RequestsManager
 from scrappers.apps.config.logs import default
@@ -64,12 +67,21 @@ class ImageDownloader(ScrapperMixins, RequestsManager):
         else:
             return False
 
-    # @lru_cache(maxsize=1)
-    # def load_images(self):
-    #     base, _, images = os.walk(self._scrappers_dir)
-    #     for image in images:
-    #         self.saved_images.append(Image.load(image))
-    #     return self.saved_images
+    @lru_cache(maxsize=1)
+    def load_images(self):
+        loaded_images = []
+        base, _, images = list(os.walk(self._scrappers_dir))[0]
+        for image in images:
+            full_path = os.path.join(base, image)
+            if full_path.endswith('jpg'):
+                loaded_images.append(
+                    (
+                        full_path,
+                        Image.open(full_path)
+                    )
+                )
+        return loaded_images
+
 
     @lru_cache(maxsize=1)
     def load(self, filename, run_request=False, limit=0):
@@ -189,7 +201,8 @@ class ImageDownloader(ScrapperMixins, RequestsManager):
             return found
 
     def _download_images(self, limit=0):
-        responses = self.get(self.url)
+        # responses = self.get(self.urls)
+        responses = self.threaded_get(*self.urls)
         path_exists = os.path.exists(self._scrappers_dir)
         if not path_exists:
             os.mkdir(self._scrappers_dir)
@@ -199,19 +212,21 @@ class ImageDownloader(ScrapperMixins, RequestsManager):
                 if index == limit:
                     break
             if response.status_code == 200:
-                name = os.path.join(self._scrappers_dir, f'{index}.jpg')
-                with open(name, 'wb') as f:
+                new_name = self.create_name(index)
+                full_path = os.path.join(self._scrappers_dir, f'{new_name}.jpg')
+                with open(full_path, 'wb') as f:
                     for data in response.iter_content(chunk_size=1024):
                         if not data:
                             break
                         f.write(data)
+                        self.saved_images.append(full_path)
                         # self.saved_images.append(
                         #     Image.load(os.path.join(self._scrappers_dir, name))
                         # )
 
         self.logger.warning(f'downloaded {len(self.urls)} images to {self._scrappers_dir}')
     
-    def build(self, f, limit=0, regex=None, replace_with=None, pop_value:int=None):
+    def build(self, f, limit=0, regex=None, replace_with=None, pop_value:int=None, zip_files=False):
         if self.html_path is not None:
             soup = self.lazy_request(path=self.html_path)
         
@@ -242,3 +257,10 @@ class ImageDownloader(ScrapperMixins, RequestsManager):
                 self.urls.pop(pop_value)
             print(f'Found {len(self.urls)} images')
             # self._download_images(limit=limit)
+
+        if zip_files is not None:
+            images = self.load_images()
+            with zipfile.ZipFile(os.path.join(self._scrappers_dir, 'images.zip'), mode='w') as z:
+                for image in images:
+                    with open(image[0], 'rb') as img:
+                        z.write(img.read())

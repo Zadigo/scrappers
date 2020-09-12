@@ -161,8 +161,8 @@ class RequestsManager:
     def get_html(self, *urls, **headers):
         """Same as get() but returns a BeautifulSoup object of the page
         """
-        responses = list(self.get(*urls, **headers))
-        # responses = list(self.threaded_get(*urls, **headers))
+        # responses = list(self.get(*urls, **headers))
+        responses = list(self.threaded_get(*urls, **headers))
 
         if len(responses) == 1:
             return BeautifulSoup(responses[0], 'html.parser')
