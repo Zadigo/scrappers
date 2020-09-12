@@ -5,6 +5,7 @@ import os
 import re
 import zipfile
 from collections import OrderedDict
+from configparser import ConfigParser
 from functools import lru_cache
 
 from PIL import Image
@@ -35,6 +36,7 @@ class ImageDownloader(ScrapperMixins, RequestsManager):
 
         headers: add additional headers to the request
     """
+    app_name = 'image_downloader'
     memory = OrderedDict(csv=[], json=[], html=[])
 
     def __init__(self, current_file, url=None, 
