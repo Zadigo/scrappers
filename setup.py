@@ -1,33 +1,48 @@
+import setuptools
+from os import path
 from setuptools import setup
 import os
 
-BASE_PATH = os.path.abspath(__file__)
+root = path.abspath(path.dirname(__file__))
+
+def read_files(filename):
+    with open(path.join(root, filename), 'r', encoding='utf-8') as f:
+        return f.read()
+
 
 def install_requires():
-    with open(os.path.join(BASE_PATH, 'requirements.txt'), 'r', encoding='utf-8') as f:
+    with open(os.path.join(root, 'requirements.txt'), 'r', encoding='utf-8') as f:
         f.readlines()
 
-def local_file():
-    with open(os.path.join(BASE_PATH, 'README.rst'), 'r', encoding='utf-8') as f:
-        f.read()
+
+classifiers = [
+    'Development Status :: 2 - Pre-Alpha',
+
+    'Programming Language :: Python :: 3',
+
+    'License :: OSI Approved :: MIT License',
+
+    'Operating System :: MacOS :: MacOS X',
+    'Operating System :: Microsoft :: Windows',
+    'Operating System :: POSIX',
+
+    # 'Topic :: Scientific/Engineering :: Physics',
+    'Topic :: Software Development :: Libraries',
+]
+
 
 setup(
     name = 'scrappers',
-    version = '1.1',
-    author = "John Pendenque",
-    author_email = "pendenquejohn@gmail.com",
-    description = "Various scrappers API for Python",
-    license = "MIT",
-    keywords = "scrappers scrapping",
-    url = "https://github.com/scrappers/Wikipedia",
+    version=exec(open(path.join(root, 'version.py')).read()),
+    author = 'John Pendenque',
+    author_email = 'pendenquejohn@gmail.com',
+    description = 'Various scrappers API for Python',
+    license = 'MIT',
+    long_description=read_files('README.md'),
+    long_description_content_type='text/markdown',
+    url='https://github.com/Zadigo/scrappers',
+    keywords = 'scrappers scrapping',
     install_requires = install_requires(),
     packages = ['scrappers'],
-    long_description = local_file(),
-    classifiers = [
-        'Development Status :: 1.1',
-        'Topic :: Software Development :: Libraries',
-        'License :: OSI Approved :: MIT License',
-        'Programming Language :: Python',
-        'Programming Language :: Python :: 3'
-    ]
+    classifiers = classifiers
 )
