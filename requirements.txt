@@ -4,6 +4,6 @@ jupyter==1.0.0
 numpy==1.18.1
 pandas==1.0.1
 pipenv==2018.11.26
-psycopg2==2.8.4
+psycopg2==2.8.6
 requests==2.23.0
 s3transfer==0.3.3
