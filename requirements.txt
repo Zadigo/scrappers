@@ -2,7 +2,7 @@ beautifulsoup4==4.8.2
 boto3==1.12.21
 jupyter==1.0.0
 numpy==1.18.1
-pandas==1.0.1
+pandas==1.2.0
 pipenv==2018.11.26
 psycopg2==2.8.4
 requests==2.23.0
